@@ -22,11 +22,11 @@ class Factory:
 class Board:
     def __init__(self):
         self.pattern = np.array([
-            [Color.YELLOW, Color.BLUE, Color.BLUE, Color.BLUE, Color.BLUE],
-            [Color.BLACK, Color.YELLOW, Color.YELLOW, Color.YELLOW, Color.YELLOW],
-            [Color.RED, Color.BLACK, Color.BLACK, Color.BLACK, Color.BLACK],
-            [Color.GREEN, Color.RED, Color.RED, Color.RED, Color.RED],
-            [Color.BLUE, Color.GREEN, Color.GREEN, Color.GREEN, Color.GREEN]
+            [Color.YELLOW, Color.BLUE, Color.GREEN, Color.RED, Color.BLACK],
+            [Color.BLACK, Color.YELLOW, Color.BLUE, Color.GREEN, Color.RED],
+            [Color.RED, Color.BLACK, Color.YELLOW, Color.BLUE, Color.GREEN],
+            [Color.GREEN, Color.RED, Color.BLACK, Color.YELLOW, Color.BLUE],
+            [Color.BLUE, Color.GREEN, Color.RED, Color.BLACK, Color.YELLOW]
         ], dtype=object)  # 5x5 pattern for accepted colors
         self.occupancy = np.zeros((5, 5), dtype=int)  # 5x5 occupancy: 0 empty, 1 occupied
         self.color_positions = {color: [] for color in Color}
