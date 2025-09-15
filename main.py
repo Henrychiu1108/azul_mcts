@@ -33,46 +33,53 @@ def main():
         print("Game initialized.")
         print_game_state(game)
 
-        round_count = 0
-        while not game.is_terminal() and round_count < 20:
+        while not game.is_terminal():
             print(f"\n--- Player {game.current_player}'s Turn ---")
             legal_moves = game.get_legal_moves()
-            if not legal_moves:
-                print("No legal moves available. Ending round.")
+            
+            # print("Legal Moves:")
+            # for idx, move in enumerate(legal_moves):
+            #     source_type, source_index, color, dest_type, dest_index = move
+            #     print(f"  {idx}: {source_type} {source_index} -> {dest_type} {dest_index} ({color.value})")
+            
+            # For testing, choose a random move from legal moves
+            # Use MCTS to choose the best move
+            root = Node(game.copy())
+            mcts = MCTS(root)
+            mcts.search(iterations=100)  # Adjust iterations as needed
+            best_move = mcts.get_best_move()
+            if best_move:
+                move = best_move
+                print(f"MCTS Chosen Move: {move}")
+            else:
+                if legal_moves:
+                    chosen_idx = random.randint(0, len(legal_moves) - 1)
+                    move = legal_moves[chosen_idx]
+                    print(f"Random Chosen Move: {move}")
+                else:
+                    print("No legal moves, skipping turn.")
+                    continue
+            game.make_move(move)
+            print("Move applied.")
+            print_game_state(game)
+            
+            # Check if round should end: all factories empty and center empty
+            if all(not factory.tiles for factory in game.factories) and not game.center.tiles:
+                print("All sources empty. Ending round.")
                 game.end_round()
                 print("Round ended.")
                 print_game_state(game)
-                round_count += 1
-                continue
-            
-            print("Legal Moves:")
-            for idx, move in enumerate(legal_moves):
-                source_type, source_index, color, dest_type, dest_index = move
-                print(f"  {idx}: {source_type} {source_index} -> {dest_type} {dest_index} ({color.value})")
-            
-            # For testing, choose a random move from legal moves
-            chosen_idx = random.randint(0, len(legal_moves) - 1)
-            if chosen_idx < len(legal_moves):
-                move = legal_moves[chosen_idx]
-                print(f"Chosen Move: {move}")
-                game.make_move(move)
-                print("Move applied.")
-                print_game_state(game)
-                
-                # Check if round should end: all factories empty and center empty
-                if all(not factory.tiles for factory in game.factories) and not game.center.tiles:
-                    print("All sources empty. Ending round.")
-                    game.end_round()
-                    print("Round ended.")
-                    print_game_state(game)
-                    round_count += 1
             else:
-                print("Invalid choice.")
-            
-            # Switch player
-            game.current_player = 1 - game.current_player
+                # Switch player
+                game.current_player = 1 - game.current_player
 
-        winner = game.get_winner()
+        result = game.get_winner()
+        if isinstance(result, tuple):
+            winner, bonuses = result
+            for idx, (row_b, col_b, color_b) in enumerate(bonuses):
+                print(f"Player {idx} bonuses: {row_b} rows (+{row_b*2}), {col_b} columns (+{col_b*7}), {color_b} colors (+{color_b*10})")
+        else:
+            winner = result
         print(f"\nGame Over. Winner: Player {winner}")
     # Restore stdout
     sys.stdout = original_stdout
