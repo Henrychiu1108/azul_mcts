@@ -3,11 +3,11 @@ Game initialized.
 Current Player: 0
 First Player Marker Holder: None
 Factories:
-  Factory 0: ['yellow', 'green', 'green', 'blue']
-  Factory 1: ['yellow', 'black', 'yellow', 'blue']
-  Factory 2: ['green', 'black', 'yellow', 'yellow']
-  Factory 3: ['black', 'yellow', 'green', 'red']
-  Factory 4: ['red', 'yellow', 'green', 'black']
+  Factory 0: ['black', 'red', 'yellow', 'yellow']
+  Factory 1: ['black', 'blue', 'black', 'black']
+  Factory 2: ['green', 'black', 'blue', 'black']
+  Factory 3: ['yellow', 'black', 'blue', 'yellow']
+  Factory 4: ['red', 'red', 'red', 'black']
 Center: [] (Marker: True)
 Players:
   Player 0 Score: 0
@@ -42,1753 +42,229 @@ Bag: 80 tiles
 Discard: 0 tiles
 
 --- Player 0's Turn ---
-MCTS Chosen Move: ('factory', 0, <Color.BLUE: 'blue'>, 'pattern_line', 0)
+MCTS Chosen Move: ('factory', 0, <Color.YELLOW: 'yellow'>, 'floor', None)
 Move applied.
 
 Current Player: 0
 First Player Marker Holder: None
 Factories:
   Factory 0: []
-  Factory 1: ['yellow', 'black', 'yellow', 'blue']
-  Factory 2: ['green', 'black', 'yellow', 'yellow']
-  Factory 3: ['black', 'yellow', 'green', 'red']
-  Factory 4: ['red', 'yellow', 'green', 'black']
-Center: ['yellow', 'green', 'green'] (Marker: True)
+  Factory 1: ['black', 'blue', 'black', 'black']
+  Factory 2: ['green', 'black', 'blue', 'black']
+  Factory 3: ['yellow', 'black', 'blue', 'yellow']
+  Factory 4: ['red', 'red', 'red', 'black']
+Center: ['black', 'red'] (Marker: True)
 Players:
   Player 0 Score: 0
-    Pattern Lines:
-      Line 0: ['blue']
-      Line 1: []
-      Line 2: []
-      Line 3: []
-      Line 4: []
-    Floor: [None, None, None, None, None, None, None]
-    Board Occupancy:
-[[0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]]
-  Player 1 Score: 0
     Pattern Lines:
       Line 0: []
       Line 1: []
       Line 2: []
       Line 3: []
       Line 4: []
-    Floor: [None, None, None, None, None, None, None]
-    Board Occupancy:
-[[0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]]
-Bag: 80 tiles
-Discard: 0 tiles
-
---- Player 1's Turn ---
-MCTS Chosen Move: ('factory', 1, <Color.BLUE: 'blue'>, 'pattern_line', 0)
-Move applied.
-
-Current Player: 1
-First Player Marker Holder: None
-Factories:
-  Factory 0: []
-  Factory 1: []
-  Factory 2: ['green', 'black', 'yellow', 'yellow']
-  Factory 3: ['black', 'yellow', 'green', 'red']
-  Factory 4: ['red', 'yellow', 'green', 'black']
-Center: ['yellow', 'green', 'green', 'yellow', 'black', 'yellow'] (Marker: True)
-Players:
-  Player 0 Score: 0
-    Pattern Lines:
-      Line 0: ['blue']
-      Line 1: []
-      Line 2: []
-      Line 3: []
-      Line 4: []
-    Floor: [None, None, None, None, None, None, None]
-    Board Occupancy:
-[[0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]]
-  Player 1 Score: 0
-    Pattern Lines:
-      Line 0: ['blue']
-      Line 1: []
-      Line 2: []
-      Line 3: []
-      Line 4: []
-    Floor: [None, None, None, None, None, None, None]
-    Board Occupancy:
-[[0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]]
-Bag: 80 tiles
-Discard: 0 tiles
-
---- Player 0's Turn ---
-MCTS Chosen Move: ('factory', 2, <Color.YELLOW: 'yellow'>, 'pattern_line', 2)
-Move applied.
-
-Current Player: 0
-First Player Marker Holder: None
-Factories:
-  Factory 0: []
-  Factory 1: []
-  Factory 2: []
-  Factory 3: ['black', 'yellow', 'green', 'red']
-  Factory 4: ['red', 'yellow', 'green', 'black']
-Center: ['yellow', 'green', 'green', 'yellow', 'black', 'yellow', 'green', 'black'] (Marker: True)
-Players:
-  Player 0 Score: 0
-    Pattern Lines:
-      Line 0: ['blue']
-      Line 1: []
-      Line 2: ['yellow', 'yellow']
-      Line 3: []
-      Line 4: []
-    Floor: [None, None, None, None, None, None, None]
-    Board Occupancy:
-[[0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]]
-  Player 1 Score: 0
-    Pattern Lines:
-      Line 0: ['blue']
-      Line 1: []
-      Line 2: []
-      Line 3: []
-      Line 4: []
-    Floor: [None, None, None, None, None, None, None]
-    Board Occupancy:
-[[0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]]
-Bag: 80 tiles
-Discard: 0 tiles
-
---- Player 1's Turn ---
-MCTS Chosen Move: ('factory', 3, <Color.RED: 'red'>, 'floor', None)
-Move applied.
-
-Current Player: 1
-First Player Marker Holder: None
-Factories:
-  Factory 0: []
-  Factory 1: []
-  Factory 2: []
-  Factory 3: []
-  Factory 4: ['red', 'yellow', 'green', 'black']
-Center: ['yellow', 'green', 'green', 'yellow', 'black', 'yellow', 'green', 'black', 'black', 'yellow', 'green'] (Marker: True)
-Players:
-  Player 0 Score: 0
-    Pattern Lines:
-      Line 0: ['blue']
-      Line 1: []
-      Line 2: ['yellow', 'yellow']
-      Line 3: []
-      Line 4: []
-    Floor: [None, None, None, None, None, None, None]
-    Board Occupancy:
-[[0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]]
-  Player 1 Score: 0
-    Pattern Lines:
-      Line 0: ['blue']
-      Line 1: []
-      Line 2: []
-      Line 3: []
-      Line 4: []
-    Floor: ['Tile', None, None, None, None, None, None]
-    Board Occupancy:
-[[0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]]
-Bag: 80 tiles
-Discard: 0 tiles
-
---- Player 0's Turn ---
-MCTS Chosen Move: ('center', None, <Color.BLACK: 'black'>, 'pattern_line', 1)
-Move applied.
-
-Current Player: 0
-First Player Marker Holder: 0
-Factories:
-  Factory 0: []
-  Factory 1: []
-  Factory 2: []
-  Factory 3: []
-  Factory 4: ['red', 'yellow', 'green', 'black']
-Center: ['yellow', 'green', 'green', 'yellow', 'yellow', 'green', 'yellow', 'green'] (Marker: False)
-Players:
-  Player 0 Score: 0
-    Pattern Lines:
-      Line 0: ['blue']
-      Line 1: ['black', 'black']
-      Line 2: ['yellow', 'yellow']
-      Line 3: []
-      Line 4: []
-    Floor: ['FirstPlayerMarker', 'Tile', None, None, None, None, None]
-    Board Occupancy:
-[[0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]]
-  Player 1 Score: 0
-    Pattern Lines:
-      Line 0: ['blue']
-      Line 1: []
-      Line 2: []
-      Line 3: []
-      Line 4: []
-    Floor: ['Tile', None, None, None, None, None, None]
-    Board Occupancy:
-[[0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]]
-Bag: 80 tiles
-Discard: 0 tiles
-
---- Player 1's Turn ---
-MCTS Chosen Move: ('factory', 4, <Color.RED: 'red'>, 'pattern_line', 3)
-Move applied.
-
-Current Player: 1
-First Player Marker Holder: 0
-Factories:
-  Factory 0: []
-  Factory 1: []
-  Factory 2: []
-  Factory 3: []
-  Factory 4: []
-Center: ['yellow', 'green', 'green', 'yellow', 'yellow', 'green', 'yellow', 'green', 'yellow', 'green', 'black'] (Marker: False)
-Players:
-  Player 0 Score: 0
-    Pattern Lines:
-      Line 0: ['blue']
-      Line 1: ['black', 'black']
-      Line 2: ['yellow', 'yellow']
-      Line 3: []
-      Line 4: []
-    Floor: ['FirstPlayerMarker', 'Tile', None, None, None, None, None]
-    Board Occupancy:
-[[0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]]
-  Player 1 Score: 0
-    Pattern Lines:
-      Line 0: ['blue']
-      Line 1: []
-      Line 2: []
-      Line 3: ['red']
-      Line 4: []
-    Floor: ['Tile', None, None, None, None, None, None]
-    Board Occupancy:
-[[0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]]
-Bag: 80 tiles
-Discard: 0 tiles
-
---- Player 0's Turn ---
-MCTS Chosen Move: ('center', None, <Color.GREEN: 'green'>, 'pattern_line', 4)
-Move applied.
-
-Current Player: 0
-First Player Marker Holder: 0
-Factories:
-  Factory 0: []
-  Factory 1: []
-  Factory 2: []
-  Factory 3: []
-  Factory 4: []
-Center: ['yellow', 'yellow', 'yellow', 'yellow', 'yellow', 'black'] (Marker: False)
-Players:
-  Player 0 Score: 0
-    Pattern Lines:
-      Line 0: ['blue']
-      Line 1: ['black', 'black']
-      Line 2: ['yellow', 'yellow']
-      Line 3: []
-      Line 4: ['green', 'green', 'green', 'green', 'green']
-    Floor: ['FirstPlayerMarker', 'Tile', None, None, None, None, None]
-    Board Occupancy:
-[[0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]]
-  Player 1 Score: 0
-    Pattern Lines:
-      Line 0: ['blue']
-      Line 1: []
-      Line 2: []
-      Line 3: ['red']
-      Line 4: []
-    Floor: ['Tile', None, None, None, None, None, None]
-    Board Occupancy:
-[[0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]]
-Bag: 80 tiles
-Discard: 0 tiles
-
---- Player 1's Turn ---
-MCTS Chosen Move: ('center', None, <Color.YELLOW: 'yellow'>, 'pattern_line', 2)
-Move applied.
-
-Current Player: 1
-First Player Marker Holder: 0
-Factories:
-  Factory 0: []
-  Factory 1: []
-  Factory 2: []
-  Factory 3: []
-  Factory 4: []
-Center: ['black'] (Marker: False)
-Players:
-  Player 0 Score: 0
-    Pattern Lines:
-      Line 0: ['blue']
-      Line 1: ['black', 'black']
-      Line 2: ['yellow', 'yellow']
-      Line 3: []
-      Line 4: ['green', 'green', 'green', 'green', 'green']
-    Floor: ['FirstPlayerMarker', 'Tile', None, None, None, None, None]
-    Board Occupancy:
-[[0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]]
-  Player 1 Score: 0
-    Pattern Lines:
-      Line 0: ['blue']
-      Line 1: []
-      Line 2: ['yellow', 'yellow', 'yellow']
-      Line 3: ['red']
-      Line 4: []
-    Floor: ['Tile', 'Tile', 'Tile', None, None, None, None]
-    Board Occupancy:
-[[0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]]
-Bag: 80 tiles
-Discard: 0 tiles
-
---- Player 0's Turn ---
-MCTS Chosen Move: ('center', None, <Color.BLACK: 'black'>, 'pattern_line', 3)
-Move applied.
-
-Current Player: 0
-First Player Marker Holder: 0
-Factories:
-  Factory 0: []
-  Factory 1: []
-  Factory 2: []
-  Factory 3: []
-  Factory 4: []
-Center: [] (Marker: False)
-Players:
-  Player 0 Score: 0
-    Pattern Lines:
-      Line 0: ['blue']
-      Line 1: ['black', 'black']
-      Line 2: ['yellow', 'yellow']
-      Line 3: ['black']
-      Line 4: ['green', 'green', 'green', 'green', 'green']
-    Floor: ['FirstPlayerMarker', 'Tile', None, None, None, None, None]
-    Board Occupancy:
-[[0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]]
-  Player 1 Score: 0
-    Pattern Lines:
-      Line 0: ['blue']
-      Line 1: []
-      Line 2: ['yellow', 'yellow', 'yellow']
-      Line 3: ['red']
-      Line 4: []
-    Floor: ['Tile', 'Tile', 'Tile', None, None, None, None]
-    Board Occupancy:
-[[0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]]
-Bag: 80 tiles
-Discard: 0 tiles
-All sources empty. Ending round.
-Round ended.
-
-Current Player: 0
-First Player Marker Holder: 0
-Factories:
-  Factory 0: ['yellow', 'black', 'red', 'yellow']
-  Factory 1: ['blue', 'red', 'blue', 'green']
-  Factory 2: ['blue', 'yellow', 'yellow', 'green']
-  Factory 3: ['yellow', 'blue', 'black', 'black']
-  Factory 4: ['green', 'green', 'red', 'red']
-Center: [] (Marker: True)
-Players:
-  Player 0 Score: 2
-    Pattern Lines:
-      Line 0: []
-      Line 1: []
-      Line 2: ['yellow', 'yellow']
-      Line 3: ['black']
-      Line 4: []
-    Floor: [None, None, None, None, None, None, None]
-    Board Occupancy:
-[[0 1 0 0 0]
- [1 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 0
-    Pattern Lines:
-      Line 0: []
-      Line 1: []
-      Line 2: []
-      Line 3: ['red']
-      Line 4: []
-    Floor: [None, None, None, None, None, None, None]
-    Board Occupancy:
-[[0 1 0 0 0]
- [0 0 0 0 0]
- [0 0 1 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]]
-Bag: 60 tiles
-Discard: 11 tiles
-
---- Player 0's Turn ---
-MCTS Chosen Move: ('factory', 0, <Color.RED: 'red'>, 'pattern_line', 4)
-Move applied.
-
-Current Player: 0
-First Player Marker Holder: 0
-Factories:
-  Factory 0: []
-  Factory 1: ['blue', 'red', 'blue', 'green']
-  Factory 2: ['blue', 'yellow', 'yellow', 'green']
-  Factory 3: ['yellow', 'blue', 'black', 'black']
-  Factory 4: ['green', 'green', 'red', 'red']
-Center: ['yellow', 'black', 'yellow'] (Marker: True)
-Players:
-  Player 0 Score: 2
-    Pattern Lines:
-      Line 0: []
-      Line 1: []
-      Line 2: ['yellow', 'yellow']
-      Line 3: ['black']
-      Line 4: ['red']
-    Floor: [None, None, None, None, None, None, None]
-    Board Occupancy:
-[[0 1 0 0 0]
- [1 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 0
-    Pattern Lines:
-      Line 0: []
-      Line 1: []
-      Line 2: []
-      Line 3: ['red']
-      Line 4: []
-    Floor: [None, None, None, None, None, None, None]
-    Board Occupancy:
-[[0 1 0 0 0]
- [0 0 0 0 0]
- [0 0 1 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]]
-Bag: 60 tiles
-Discard: 11 tiles
-
---- Player 1's Turn ---
-MCTS Chosen Move: ('factory', 3, <Color.BLACK: 'black'>, 'pattern_line', 0)
-Move applied.
-
-Current Player: 1
-First Player Marker Holder: 0
-Factories:
-  Factory 0: []
-  Factory 1: ['blue', 'red', 'blue', 'green']
-  Factory 2: ['blue', 'yellow', 'yellow', 'green']
-  Factory 3: []
-  Factory 4: ['green', 'green', 'red', 'red']
-Center: ['yellow', 'black', 'yellow', 'yellow', 'blue'] (Marker: True)
-Players:
-  Player 0 Score: 2
-    Pattern Lines:
-      Line 0: []
-      Line 1: []
-      Line 2: ['yellow', 'yellow']
-      Line 3: ['black']
-      Line 4: ['red']
-    Floor: [None, None, None, None, None, None, None]
-    Board Occupancy:
-[[0 1 0 0 0]
- [1 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 0
-    Pattern Lines:
-      Line 0: ['black']
-      Line 1: []
-      Line 2: []
-      Line 3: ['red']
-      Line 4: []
-    Floor: ['Tile', None, None, None, None, None, None]
-    Board Occupancy:
-[[0 1 0 0 0]
- [0 0 0 0 0]
- [0 0 1 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]]
-Bag: 60 tiles
-Discard: 11 tiles
-
---- Player 0's Turn ---
-MCTS Chosen Move: ('factory', 1, <Color.RED: 'red'>, 'pattern_line', 1)
-Move applied.
-
-Current Player: 0
-First Player Marker Holder: 0
-Factories:
-  Factory 0: []
-  Factory 1: []
-  Factory 2: ['blue', 'yellow', 'yellow', 'green']
-  Factory 3: []
-  Factory 4: ['green', 'green', 'red', 'red']
-Center: ['yellow', 'black', 'yellow', 'yellow', 'blue', 'blue', 'blue', 'green'] (Marker: True)
-Players:
-  Player 0 Score: 2
-    Pattern Lines:
-      Line 0: []
-      Line 1: ['red']
-      Line 2: ['yellow', 'yellow']
-      Line 3: ['black']
-      Line 4: ['red']
-    Floor: [None, None, None, None, None, None, None]
-    Board Occupancy:
-[[0 1 0 0 0]
- [1 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 0
-    Pattern Lines:
-      Line 0: ['black']
-      Line 1: []
-      Line 2: []
-      Line 3: ['red']
-      Line 4: []
-    Floor: ['Tile', None, None, None, None, None, None]
-    Board Occupancy:
-[[0 1 0 0 0]
- [0 0 0 0 0]
- [0 0 1 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]]
-Bag: 60 tiles
-Discard: 11 tiles
-
---- Player 1's Turn ---
-MCTS Chosen Move: ('center', None, <Color.BLUE: 'blue'>, 'pattern_line', 4)
-Move applied.
-
-Current Player: 1
-First Player Marker Holder: 1
-Factories:
-  Factory 0: []
-  Factory 1: []
-  Factory 2: ['blue', 'yellow', 'yellow', 'green']
-  Factory 3: []
-  Factory 4: ['green', 'green', 'red', 'red']
-Center: ['yellow', 'black', 'yellow', 'yellow', 'green'] (Marker: False)
-Players:
-  Player 0 Score: 2
-    Pattern Lines:
-      Line 0: []
-      Line 1: ['red']
-      Line 2: ['yellow', 'yellow']
-      Line 3: ['black']
-      Line 4: ['red']
-    Floor: [None, None, None, None, None, None, None]
-    Board Occupancy:
-[[0 1 0 0 0]
- [1 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 0
-    Pattern Lines:
-      Line 0: ['black']
-      Line 1: []
-      Line 2: []
-      Line 3: ['red']
-      Line 4: ['blue', 'blue', 'blue']
-    Floor: ['FirstPlayerMarker', 'Tile', None, None, None, None, None]
-    Board Occupancy:
-[[0 1 0 0 0]
- [0 0 0 0 0]
- [0 0 1 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]]
-Bag: 60 tiles
-Discard: 11 tiles
-
---- Player 0's Turn ---
-MCTS Chosen Move: ('factory', 2, <Color.YELLOW: 'yellow'>, 'floor', None)
-Move applied.
-
-Current Player: 0
-First Player Marker Holder: 1
-Factories:
-  Factory 0: []
-  Factory 1: []
-  Factory 2: []
-  Factory 3: []
-  Factory 4: ['green', 'green', 'red', 'red']
-Center: ['yellow', 'black', 'yellow', 'yellow', 'green', 'blue', 'green'] (Marker: False)
-Players:
-  Player 0 Score: 2
-    Pattern Lines:
-      Line 0: []
-      Line 1: ['red']
-      Line 2: ['yellow', 'yellow']
-      Line 3: ['black']
-      Line 4: ['red']
     Floor: ['Tile', 'Tile', None, None, None, None, None]
     Board Occupancy:
-[[0 1 0 0 0]
- [1 0 0 0 0]
+[[0 0 0 0 0]
  [0 0 0 0 0]
  [0 0 0 0 0]
- [0 1 0 0 0]]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: []
+      Line 3: []
+      Line 4: []
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+Bag: 80 tiles
+Discard: 0 tiles
+
+--- Player 1's Turn ---
+MCTS Chosen Move: ('factory', 2, <Color.BLACK: 'black'>, 'pattern_line', 0)
+Move applied.
+
+Current Player: 1
+First Player Marker Holder: None
+Factories:
+  Factory 0: []
+  Factory 1: ['black', 'blue', 'black', 'black']
+  Factory 2: []
+  Factory 3: ['yellow', 'black', 'blue', 'yellow']
+  Factory 4: ['red', 'red', 'red', 'black']
+Center: ['black', 'red', 'green', 'blue'] (Marker: True)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: []
+      Line 3: []
+      Line 4: []
+    Floor: ['Tile', 'Tile', None, None, None, None, None]
+    Board Occupancy:
+[[0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
   Player 1 Score: 0
     Pattern Lines:
       Line 0: ['black']
       Line 1: []
       Line 2: []
-      Line 3: ['red']
-      Line 4: ['blue', 'blue', 'blue']
-    Floor: ['FirstPlayerMarker', 'Tile', None, None, None, None, None]
-    Board Occupancy:
-[[0 1 0 0 0]
- [0 0 0 0 0]
- [0 0 1 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]]
-Bag: 60 tiles
-Discard: 11 tiles
-
---- Player 1's Turn ---
-MCTS Chosen Move: ('factory', 4, <Color.RED: 'red'>, 'pattern_line', 2)
-Move applied.
-
-Current Player: 1
-First Player Marker Holder: 1
-Factories:
-  Factory 0: []
-  Factory 1: []
-  Factory 2: []
-  Factory 3: []
-  Factory 4: []
-Center: ['yellow', 'black', 'yellow', 'yellow', 'green', 'blue', 'green', 'green', 'green'] (Marker: False)
-Players:
-  Player 0 Score: 2
-    Pattern Lines:
-      Line 0: []
-      Line 1: ['red']
-      Line 2: ['yellow', 'yellow']
-      Line 3: ['black']
-      Line 4: ['red']
-    Floor: ['Tile', 'Tile', None, None, None, None, None]
-    Board Occupancy:
-[[0 1 0 0 0]
- [1 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 0
-    Pattern Lines:
-      Line 0: ['black']
-      Line 1: []
-      Line 2: ['red', 'red']
-      Line 3: ['red']
-      Line 4: ['blue', 'blue', 'blue']
-    Floor: ['FirstPlayerMarker', 'Tile', None, None, None, None, None]
-    Board Occupancy:
-[[0 1 0 0 0]
- [0 0 0 0 0]
- [0 0 1 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]]
-Bag: 60 tiles
-Discard: 11 tiles
-
---- Player 0's Turn ---
-MCTS Chosen Move: ('center', None, <Color.BLACK: 'black'>, 'floor', None)
-Move applied.
-
-Current Player: 0
-First Player Marker Holder: 1
-Factories:
-  Factory 0: []
-  Factory 1: []
-  Factory 2: []
-  Factory 3: []
-  Factory 4: []
-Center: ['yellow', 'yellow', 'yellow', 'green', 'blue', 'green', 'green', 'green'] (Marker: False)
-Players:
-  Player 0 Score: 2
-    Pattern Lines:
-      Line 0: []
-      Line 1: ['red']
-      Line 2: ['yellow', 'yellow']
-      Line 3: ['black']
-      Line 4: ['red']
-    Floor: ['Tile', 'Tile', 'Tile', None, None, None, None]
-    Board Occupancy:
-[[0 1 0 0 0]
- [1 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 0
-    Pattern Lines:
-      Line 0: ['black']
-      Line 1: []
-      Line 2: ['red', 'red']
-      Line 3: ['red']
-      Line 4: ['blue', 'blue', 'blue']
-    Floor: ['FirstPlayerMarker', 'Tile', None, None, None, None, None]
-    Board Occupancy:
-[[0 1 0 0 0]
- [0 0 0 0 0]
- [0 0 1 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]]
-Bag: 60 tiles
-Discard: 11 tiles
-
---- Player 1's Turn ---
-MCTS Chosen Move: ('center', None, <Color.YELLOW: 'yellow'>, 'pattern_line', 1)
-Move applied.
-
-Current Player: 1
-First Player Marker Holder: 1
-Factories:
-  Factory 0: []
-  Factory 1: []
-  Factory 2: []
-  Factory 3: []
-  Factory 4: []
-Center: ['green', 'blue', 'green', 'green', 'green'] (Marker: False)
-Players:
-  Player 0 Score: 2
-    Pattern Lines:
-      Line 0: []
-      Line 1: ['red']
-      Line 2: ['yellow', 'yellow']
-      Line 3: ['black']
-      Line 4: ['red']
-    Floor: ['Tile', 'Tile', 'Tile', None, None, None, None]
-    Board Occupancy:
-[[0 1 0 0 0]
- [1 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 0
-    Pattern Lines:
-      Line 0: ['black']
-      Line 1: ['yellow', 'yellow']
-      Line 2: ['red', 'red']
-      Line 3: ['red']
-      Line 4: ['blue', 'blue', 'blue']
-    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', None, None, None, None]
-    Board Occupancy:
-[[0 1 0 0 0]
- [0 0 0 0 0]
- [0 0 1 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]]
-Bag: 60 tiles
-Discard: 11 tiles
-
---- Player 0's Turn ---
-MCTS Chosen Move: ('center', None, <Color.GREEN: 'green'>, 'pattern_line', 0)
-Move applied.
-
-Current Player: 0
-First Player Marker Holder: 1
-Factories:
-  Factory 0: []
-  Factory 1: []
-  Factory 2: []
-  Factory 3: []
-  Factory 4: []
-Center: ['blue'] (Marker: False)
-Players:
-  Player 0 Score: 2
-    Pattern Lines:
-      Line 0: ['green']
-      Line 1: ['red']
-      Line 2: ['yellow', 'yellow']
-      Line 3: ['black']
-      Line 4: ['red']
-    Floor: ['Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile', None]
-    Board Occupancy:
-[[0 1 0 0 0]
- [1 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 0
-    Pattern Lines:
-      Line 0: ['black']
-      Line 1: ['yellow', 'yellow']
-      Line 2: ['red', 'red']
-      Line 3: ['red']
-      Line 4: ['blue', 'blue', 'blue']
-    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', None, None, None, None]
-    Board Occupancy:
-[[0 1 0 0 0]
- [0 0 0 0 0]
- [0 0 1 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]]
-Bag: 60 tiles
-Discard: 11 tiles
-
---- Player 1's Turn ---
-MCTS Chosen Move: ('center', None, <Color.BLUE: 'blue'>, 'pattern_line', 4)
-Move applied.
-
-Current Player: 1
-First Player Marker Holder: 1
-Factories:
-  Factory 0: []
-  Factory 1: []
-  Factory 2: []
-  Factory 3: []
-  Factory 4: []
-Center: [] (Marker: False)
-Players:
-  Player 0 Score: 2
-    Pattern Lines:
-      Line 0: ['green']
-      Line 1: ['red']
-      Line 2: ['yellow', 'yellow']
-      Line 3: ['black']
-      Line 4: ['red']
-    Floor: ['Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile', None]
-    Board Occupancy:
-[[0 1 0 0 0]
- [1 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 0
-    Pattern Lines:
-      Line 0: ['black']
-      Line 1: ['yellow', 'yellow']
-      Line 2: ['red', 'red']
-      Line 3: ['red']
-      Line 4: ['blue', 'blue', 'blue', 'blue']
-    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', None, None, None, None]
-    Board Occupancy:
-[[0 1 0 0 0]
- [0 0 0 0 0]
- [0 0 1 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]]
-Bag: 60 tiles
-Discard: 11 tiles
-All sources empty. Ending round.
-Round ended.
-
-Current Player: 1
-First Player Marker Holder: 1
-Factories:
-  Factory 0: ['red', 'red', 'blue', 'black']
-  Factory 1: ['black', 'black', 'blue', 'green']
-  Factory 2: ['black', 'yellow', 'yellow', 'blue']
-  Factory 3: ['red', 'red', 'black', 'blue']
-  Factory 4: ['red', 'blue', 'green', 'blue']
-Center: [] (Marker: True)
-Players:
-  Player 0 Score: 0
-    Pattern Lines:
-      Line 0: []
-      Line 1: ['red']
-      Line 2: ['yellow', 'yellow']
-      Line 3: ['black']
-      Line 4: ['red']
-    Floor: [None, None, None, None, None, None, None]
-    Board Occupancy:
-[[0 1 1 0 0]
- [1 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 0
-    Pattern Lines:
-      Line 0: []
-      Line 1: []
-      Line 2: ['red', 'red']
-      Line 3: ['red']
-      Line 4: ['blue', 'blue', 'blue', 'blue']
-    Floor: [None, None, None, None, None, None, None]
-    Board Occupancy:
-[[0 1 0 0 1]
- [0 1 0 0 0]
- [0 0 1 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]]
-Bag: 40 tiles
-Discard: 20 tiles
-
---- Player 1's Turn ---
-MCTS Chosen Move: ('factory', 2, <Color.BLACK: 'black'>, 'pattern_line', 1)
-Move applied.
-
-Current Player: 1
-First Player Marker Holder: 1
-Factories:
-  Factory 0: ['red', 'red', 'blue', 'black']
-  Factory 1: ['black', 'black', 'blue', 'green']
-  Factory 2: []
-  Factory 3: ['red', 'red', 'black', 'blue']
-  Factory 4: ['red', 'blue', 'green', 'blue']
-Center: ['yellow', 'yellow', 'blue'] (Marker: True)
-Players:
-  Player 0 Score: 0
-    Pattern Lines:
-      Line 0: []
-      Line 1: ['red']
-      Line 2: ['yellow', 'yellow']
-      Line 3: ['black']
-      Line 4: ['red']
-    Floor: [None, None, None, None, None, None, None]
-    Board Occupancy:
-[[0 1 1 0 0]
- [1 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 0
-    Pattern Lines:
-      Line 0: []
-      Line 1: ['black']
-      Line 2: ['red', 'red']
-      Line 3: ['red']
-      Line 4: ['blue', 'blue', 'blue', 'blue']
-    Floor: [None, None, None, None, None, None, None]
-    Board Occupancy:
-[[0 1 0 0 1]
- [0 1 0 0 0]
- [0 0 1 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]]
-Bag: 40 tiles
-Discard: 20 tiles
-
---- Player 0's Turn ---
-MCTS Chosen Move: ('center', None, <Color.BLUE: 'blue'>, 'floor', None)
-Move applied.
-
-Current Player: 0
-First Player Marker Holder: 0
-Factories:
-  Factory 0: ['red', 'red', 'blue', 'black']
-  Factory 1: ['black', 'black', 'blue', 'green']
-  Factory 2: []
-  Factory 3: ['red', 'red', 'black', 'blue']
-  Factory 4: ['red', 'blue', 'green', 'blue']
-Center: ['yellow', 'yellow'] (Marker: False)
-Players:
-  Player 0 Score: 0
-    Pattern Lines:
-      Line 0: []
-      Line 1: ['red']
-      Line 2: ['yellow', 'yellow']
-      Line 3: ['black']
-      Line 4: ['red']
-    Floor: ['FirstPlayerMarker', 'Tile', None, None, None, None, None]
-    Board Occupancy:
-[[0 1 1 0 0]
- [1 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 0
-    Pattern Lines:
-      Line 0: []
-      Line 1: ['black']
-      Line 2: ['red', 'red']
-      Line 3: ['red']
-      Line 4: ['blue', 'blue', 'blue', 'blue']
-    Floor: [None, None, None, None, None, None, None]
-    Board Occupancy:
-[[0 1 0 0 1]
- [0 1 0 0 0]
- [0 0 1 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]]
-Bag: 40 tiles
-Discard: 20 tiles
-
---- Player 1's Turn ---
-MCTS Chosen Move: ('factory', 1, <Color.BLUE: 'blue'>, 'pattern_line', 4)
-Move applied.
-
-Current Player: 1
-First Player Marker Holder: 0
-Factories:
-  Factory 0: ['red', 'red', 'blue', 'black']
-  Factory 1: []
-  Factory 2: []
-  Factory 3: ['red', 'red', 'black', 'blue']
-  Factory 4: ['red', 'blue', 'green', 'blue']
-Center: ['yellow', 'yellow', 'black', 'black', 'green'] (Marker: False)
-Players:
-  Player 0 Score: 0
-    Pattern Lines:
-      Line 0: []
-      Line 1: ['red']
-      Line 2: ['yellow', 'yellow']
-      Line 3: ['black']
-      Line 4: ['red']
-    Floor: ['FirstPlayerMarker', 'Tile', None, None, None, None, None]
-    Board Occupancy:
-[[0 1 1 0 0]
- [1 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 0
-    Pattern Lines:
-      Line 0: []
-      Line 1: ['black']
-      Line 2: ['red', 'red']
-      Line 3: ['red']
-      Line 4: ['blue', 'blue', 'blue', 'blue', 'blue']
-    Floor: [None, None, None, None, None, None, None]
-    Board Occupancy:
-[[0 1 0 0 1]
- [0 1 0 0 0]
- [0 0 1 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]]
-Bag: 40 tiles
-Discard: 20 tiles
-
---- Player 0's Turn ---
-MCTS Chosen Move: ('factory', 4, <Color.RED: 'red'>, 'pattern_line', 1)
-Move applied.
-
-Current Player: 0
-First Player Marker Holder: 0
-Factories:
-  Factory 0: ['red', 'red', 'blue', 'black']
-  Factory 1: []
-  Factory 2: []
-  Factory 3: ['red', 'red', 'black', 'blue']
-  Factory 4: []
-Center: ['yellow', 'yellow', 'black', 'black', 'green', 'blue', 'green', 'blue'] (Marker: False)
-Players:
-  Player 0 Score: 0
-    Pattern Lines:
-      Line 0: []
-      Line 1: ['red', 'red']
-      Line 2: ['yellow', 'yellow']
-      Line 3: ['black']
-      Line 4: ['red']
-    Floor: ['FirstPlayerMarker', 'Tile', None, None, None, None, None]
-    Board Occupancy:
-[[0 1 1 0 0]
- [1 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 0
-    Pattern Lines:
-      Line 0: []
-      Line 1: ['black']
-      Line 2: ['red', 'red']
-      Line 3: ['red']
-      Line 4: ['blue', 'blue', 'blue', 'blue', 'blue']
-    Floor: [None, None, None, None, None, None, None]
-    Board Occupancy:
-[[0 1 0 0 1]
- [0 1 0 0 0]
- [0 0 1 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]]
-Bag: 40 tiles
-Discard: 20 tiles
-
---- Player 1's Turn ---
-MCTS Chosen Move: ('factory', 0, <Color.RED: 'red'>, 'pattern_line', 3)
-Move applied.
-
-Current Player: 1
-First Player Marker Holder: 0
-Factories:
-  Factory 0: []
-  Factory 1: []
-  Factory 2: []
-  Factory 3: ['red', 'red', 'black', 'blue']
-  Factory 4: []
-Center: ['yellow', 'yellow', 'black', 'black', 'green', 'blue', 'green', 'blue', 'blue', 'black'] (Marker: False)
-Players:
-  Player 0 Score: 0
-    Pattern Lines:
-      Line 0: []
-      Line 1: ['red', 'red']
-      Line 2: ['yellow', 'yellow']
-      Line 3: ['black']
-      Line 4: ['red']
-    Floor: ['FirstPlayerMarker', 'Tile', None, None, None, None, None]
-    Board Occupancy:
-[[0 1 1 0 0]
- [1 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 0
-    Pattern Lines:
-      Line 0: []
-      Line 1: ['black']
-      Line 2: ['red', 'red']
-      Line 3: ['red', 'red', 'red']
-      Line 4: ['blue', 'blue', 'blue', 'blue', 'blue']
-    Floor: [None, None, None, None, None, None, None]
-    Board Occupancy:
-[[0 1 0 0 1]
- [0 1 0 0 0]
- [0 0 1 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]]
-Bag: 40 tiles
-Discard: 20 tiles
-
---- Player 0's Turn ---
-MCTS Chosen Move: ('center', None, <Color.YELLOW: 'yellow'>, 'pattern_line', 2)
-Move applied.
-
-Current Player: 0
-First Player Marker Holder: 0
-Factories:
-  Factory 0: []
-  Factory 1: []
-  Factory 2: []
-  Factory 3: ['red', 'red', 'black', 'blue']
-  Factory 4: []
-Center: ['black', 'black', 'green', 'blue', 'green', 'blue', 'blue', 'black'] (Marker: False)
-Players:
-  Player 0 Score: 0
-    Pattern Lines:
-      Line 0: []
-      Line 1: ['red', 'red']
-      Line 2: ['yellow', 'yellow', 'yellow']
-      Line 3: ['black']
-      Line 4: ['red']
-    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', None, None, None, None]
-    Board Occupancy:
-[[0 1 1 0 0]
- [1 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 0
-    Pattern Lines:
-      Line 0: []
-      Line 1: ['black']
-      Line 2: ['red', 'red']
-      Line 3: ['red', 'red', 'red']
-      Line 4: ['blue', 'blue', 'blue', 'blue', 'blue']
-    Floor: [None, None, None, None, None, None, None]
-    Board Occupancy:
-[[0 1 0 0 1]
- [0 1 0 0 0]
- [0 0 1 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]]
-Bag: 40 tiles
-Discard: 20 tiles
-
---- Player 1's Turn ---
-MCTS Chosen Move: ('factory', 3, <Color.RED: 'red'>, 'pattern_line', 3)
-Move applied.
-
-Current Player: 1
-First Player Marker Holder: 0
-Factories:
-  Factory 0: []
-  Factory 1: []
-  Factory 2: []
-  Factory 3: []
-  Factory 4: []
-Center: ['black', 'black', 'green', 'blue', 'green', 'blue', 'blue', 'black', 'black', 'blue'] (Marker: False)
-Players:
-  Player 0 Score: 0
-    Pattern Lines:
-      Line 0: []
-      Line 1: ['red', 'red']
-      Line 2: ['yellow', 'yellow', 'yellow']
-      Line 3: ['black']
-      Line 4: ['red']
-    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', None, None, None, None]
-    Board Occupancy:
-[[0 1 1 0 0]
- [1 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 0
-    Pattern Lines:
-      Line 0: []
-      Line 1: ['black']
-      Line 2: ['red', 'red']
-      Line 3: ['red', 'red', 'red', 'red']
-      Line 4: ['blue', 'blue', 'blue', 'blue', 'blue']
+      Line 3: []
+      Line 4: []
     Floor: ['Tile', None, None, None, None, None, None]
     Board Occupancy:
-[[0 1 0 0 1]
- [0 1 0 0 0]
- [0 0 1 0 0]
+[[0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
  [0 0 0 0 0]
  [0 0 0 0 0]]
-Bag: 40 tiles
-Discard: 20 tiles
+Bag: 80 tiles
+Discard: 0 tiles
 
 --- Player 0's Turn ---
-MCTS Chosen Move: ('center', None, <Color.GREEN: 'green'>, 'floor', None)
+MCTS Chosen Move: ('factory', 3, <Color.YELLOW: 'yellow'>, 'pattern_line', 0)
 Move applied.
 
 Current Player: 0
-First Player Marker Holder: 0
+First Player Marker Holder: None
 Factories:
   Factory 0: []
-  Factory 1: []
+  Factory 1: ['black', 'blue', 'black', 'black']
   Factory 2: []
   Factory 3: []
-  Factory 4: []
-Center: ['black', 'black', 'blue', 'blue', 'blue', 'black', 'black', 'blue'] (Marker: False)
+  Factory 4: ['red', 'red', 'red', 'black']
+Center: ['black', 'red', 'green', 'blue', 'black', 'blue'] (Marker: True)
 Players:
   Player 0 Score: 0
     Pattern Lines:
-      Line 0: []
-      Line 1: ['red', 'red']
-      Line 2: ['yellow', 'yellow', 'yellow']
-      Line 3: ['black']
-      Line 4: ['red']
-    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', 'Tile', 'Tile', None, None]
+      Line 0: ['yellow']
+      Line 1: []
+      Line 2: []
+      Line 3: []
+      Line 4: []
+    Floor: ['Tile', 'Tile', 'Tile', None, None, None, None]
     Board Occupancy:
-[[0 1 1 0 0]
- [1 0 0 0 0]
+[[0 0 0 0 0]
  [0 0 0 0 0]
  [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 0
-    Pattern Lines:
-      Line 0: []
-      Line 1: ['black']
-      Line 2: ['red', 'red']
-      Line 3: ['red', 'red', 'red', 'red']
-      Line 4: ['blue', 'blue', 'blue', 'blue', 'blue']
-    Floor: ['Tile', None, None, None, None, None, None]
-    Board Occupancy:
-[[0 1 0 0 1]
- [0 1 0 0 0]
- [0 0 1 0 0]
  [0 0 0 0 0]
  [0 0 0 0 0]]
-Bag: 40 tiles
-Discard: 20 tiles
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: ['black']
+      Line 1: []
+      Line 2: []
+      Line 3: []
+      Line 4: []
+    Floor: ['Tile', None, None, None, None, None, None]
+    Board Occupancy:
+[[0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+Bag: 80 tiles
+Discard: 0 tiles
 
 --- Player 1's Turn ---
-MCTS Chosen Move: ('center', None, <Color.BLACK: 'black'>, 'pattern_line', 1)
+MCTS Chosen Move: ('factory', 4, <Color.BLACK: 'black'>, 'pattern_line', 4)
 Move applied.
 
 Current Player: 1
-First Player Marker Holder: 0
+First Player Marker Holder: None
+Factories:
+  Factory 0: []
+  Factory 1: ['black', 'blue', 'black', 'black']
+  Factory 2: []
+  Factory 3: []
+  Factory 4: []
+Center: ['black', 'red', 'green', 'blue', 'black', 'blue', 'red', 'red', 'red'] (Marker: True)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: ['yellow']
+      Line 1: []
+      Line 2: []
+      Line 3: []
+      Line 4: []
+    Floor: ['Tile', 'Tile', 'Tile', None, None, None, None]
+    Board Occupancy:
+[[0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: ['black']
+      Line 1: []
+      Line 2: []
+      Line 3: []
+      Line 4: ['black']
+    Floor: ['Tile', None, None, None, None, None, None]
+    Board Occupancy:
+[[0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+Bag: 80 tiles
+Discard: 0 tiles
+
+--- Player 0's Turn ---
+MCTS Chosen Move: ('factory', 1, <Color.BLUE: 'blue'>, 'floor', None)
+Move applied.
+
+Current Player: 0
+First Player Marker Holder: None
 Factories:
   Factory 0: []
   Factory 1: []
   Factory 2: []
   Factory 3: []
   Factory 4: []
-Center: ['blue', 'blue', 'blue', 'blue'] (Marker: False)
+Center: ['black', 'red', 'green', 'blue', 'black', 'blue', 'red', 'red', 'red', 'black', 'black', 'black'] (Marker: True)
 Players:
   Player 0 Score: 0
     Pattern Lines:
-      Line 0: []
-      Line 1: ['red', 'red']
-      Line 2: ['yellow', 'yellow', 'yellow']
-      Line 3: ['black']
-      Line 4: ['red']
-    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', 'Tile', 'Tile', None, None]
-    Board Occupancy:
-[[0 1 1 0 0]
- [1 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 0
-    Pattern Lines:
-      Line 0: []
-      Line 1: ['black', 'black']
-      Line 2: ['red', 'red']
-      Line 3: ['red', 'red', 'red', 'red']
-      Line 4: ['blue', 'blue', 'blue', 'blue', 'blue']
+      Line 0: ['yellow']
+      Line 1: []
+      Line 2: []
+      Line 3: []
+      Line 4: []
     Floor: ['Tile', 'Tile', 'Tile', 'Tile', None, None, None]
     Board Occupancy:
-[[0 1 0 0 1]
- [0 1 0 0 0]
- [0 0 1 0 0]
+[[0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
  [0 0 0 0 0]
  [0 0 0 0 0]]
-Bag: 40 tiles
-Discard: 20 tiles
-
---- Player 0's Turn ---
-MCTS Chosen Move: ('center', None, <Color.BLUE: 'blue'>, 'floor', None)
-Move applied.
-
-Current Player: 0
-First Player Marker Holder: 0
-Factories:
-  Factory 0: []
-  Factory 1: []
-  Factory 2: []
-  Factory 3: []
-  Factory 4: []
-Center: [] (Marker: False)
-Players:
-  Player 0 Score: 0
-    Pattern Lines:
-      Line 0: []
-      Line 1: ['red', 'red']
-      Line 2: ['yellow', 'yellow', 'yellow']
-      Line 3: ['black']
-      Line 4: ['red']
-    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile']
-    Board Occupancy:
-[[0 1 1 0 0]
- [1 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 1 0 0 0]]
   Player 1 Score: 0
     Pattern Lines:
-      Line 0: []
-      Line 1: ['black', 'black']
-      Line 2: ['red', 'red']
-      Line 3: ['red', 'red', 'red', 'red']
-      Line 4: ['blue', 'blue', 'blue', 'blue', 'blue']
-    Floor: ['Tile', 'Tile', 'Tile', 'Tile', None, None, None]
+      Line 0: ['black']
+      Line 1: []
+      Line 2: []
+      Line 3: []
+      Line 4: ['black']
+    Floor: ['Tile', None, None, None, None, None, None]
     Board Occupancy:
-[[0 1 0 0 1]
- [0 1 0 0 0]
- [0 0 1 0 0]
+[[0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
  [0 0 0 0 0]
  [0 0 0 0 0]]
-Bag: 40 tiles
-Discard: 22 tiles
-All sources empty. Ending round.
-Round ended.
-
-Current Player: 0
-First Player Marker Holder: 0
-Factories:
-  Factory 0: ['green', 'black', 'green', 'blue']
-  Factory 1: ['red', 'blue', 'yellow', 'blue']
-  Factory 2: ['red', 'red', 'green', 'black']
-  Factory 3: ['blue', 'red', 'green', 'red']
-  Factory 4: ['black', 'yellow', 'red', 'black']
-Center: [] (Marker: True)
-Players:
-  Player 0 Score: 0
-    Pattern Lines:
-      Line 0: []
-      Line 1: []
-      Line 2: []
-      Line 3: ['black']
-      Line 4: ['red']
-    Floor: [None, None, None, None, None, None, None]
-    Board Occupancy:
-[[0 1 1 0 0]
- [1 0 0 0 1]
- [0 0 1 0 0]
- [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 1
-    Pattern Lines:
-      Line 0: []
-      Line 1: []
-      Line 2: ['red', 'red']
-      Line 3: []
-      Line 4: []
-    Floor: [None, None, None, None, None, None, None]
-    Board Occupancy:
-[[0 1 0 0 1]
- [1 1 0 0 0]
- [0 0 1 0 0]
- [0 1 0 0 0]
- [1 0 0 0 0]]
-Bag: 20 tiles
-Discard: 43 tiles
-
---- Player 0's Turn ---
-MCTS Chosen Move: ('factory', 1, <Color.BLUE: 'blue'>, 'pattern_line', 1)
-Move applied.
-
-Current Player: 0
-First Player Marker Holder: 0
-Factories:
-  Factory 0: ['green', 'black', 'green', 'blue']
-  Factory 1: []
-  Factory 2: ['red', 'red', 'green', 'black']
-  Factory 3: ['blue', 'red', 'green', 'red']
-  Factory 4: ['black', 'yellow', 'red', 'black']
-Center: ['red', 'yellow'] (Marker: True)
-Players:
-  Player 0 Score: 0
-    Pattern Lines:
-      Line 0: []
-      Line 1: ['blue', 'blue']
-      Line 2: []
-      Line 3: ['black']
-      Line 4: ['red']
-    Floor: [None, None, None, None, None, None, None]
-    Board Occupancy:
-[[0 1 1 0 0]
- [1 0 0 0 1]
- [0 0 1 0 0]
- [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 1
-    Pattern Lines:
-      Line 0: []
-      Line 1: []
-      Line 2: ['red', 'red']
-      Line 3: []
-      Line 4: []
-    Floor: [None, None, None, None, None, None, None]
-    Board Occupancy:
-[[0 1 0 0 1]
- [1 1 0 0 0]
- [0 0 1 0 0]
- [0 1 0 0 0]
- [1 0 0 0 0]]
-Bag: 20 tiles
-Discard: 43 tiles
-
---- Player 1's Turn ---
-MCTS Chosen Move: ('factory', 0, <Color.GREEN: 'green'>, 'pattern_line', 0)
-Move applied.
-
-Current Player: 1
-First Player Marker Holder: 0
-Factories:
-  Factory 0: []
-  Factory 1: []
-  Factory 2: ['red', 'red', 'green', 'black']
-  Factory 3: ['blue', 'red', 'green', 'red']
-  Factory 4: ['black', 'yellow', 'red', 'black']
-Center: ['red', 'yellow', 'black', 'blue'] (Marker: True)
-Players:
-  Player 0 Score: 0
-    Pattern Lines:
-      Line 0: []
-      Line 1: ['blue', 'blue']
-      Line 2: []
-      Line 3: ['black']
-      Line 4: ['red']
-    Floor: [None, None, None, None, None, None, None]
-    Board Occupancy:
-[[0 1 1 0 0]
- [1 0 0 0 1]
- [0 0 1 0 0]
- [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 1
-    Pattern Lines:
-      Line 0: ['green']
-      Line 1: []
-      Line 2: ['red', 'red']
-      Line 3: []
-      Line 4: []
-    Floor: ['Tile', None, None, None, None, None, None]
-    Board Occupancy:
-[[0 1 0 0 1]
- [1 1 0 0 0]
- [0 0 1 0 0]
- [0 1 0 0 0]
- [1 0 0 0 0]]
-Bag: 20 tiles
-Discard: 43 tiles
-
---- Player 0's Turn ---
-MCTS Chosen Move: ('factory', 4, <Color.YELLOW: 'yellow'>, 'floor', None)
-Move applied.
-
-Current Player: 0
-First Player Marker Holder: 0
-Factories:
-  Factory 0: []
-  Factory 1: []
-  Factory 2: ['red', 'red', 'green', 'black']
-  Factory 3: ['blue', 'red', 'green', 'red']
-  Factory 4: []
-Center: ['red', 'yellow', 'black', 'blue', 'black', 'red', 'black'] (Marker: True)
-Players:
-  Player 0 Score: 0
-    Pattern Lines:
-      Line 0: []
-      Line 1: ['blue', 'blue']
-      Line 2: []
-      Line 3: ['black']
-      Line 4: ['red']
-    Floor: ['Tile', None, None, None, None, None, None]
-    Board Occupancy:
-[[0 1 1 0 0]
- [1 0 0 0 1]
- [0 0 1 0 0]
- [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 1
-    Pattern Lines:
-      Line 0: ['green']
-      Line 1: []
-      Line 2: ['red', 'red']
-      Line 3: []
-      Line 4: []
-    Floor: ['Tile', None, None, None, None, None, None]
-    Board Occupancy:
-[[0 1 0 0 1]
- [1 1 0 0 0]
- [0 0 1 0 0]
- [0 1 0 0 0]
- [1 0 0 0 0]]
-Bag: 20 tiles
-Discard: 43 tiles
-
---- Player 1's Turn ---
-MCTS Chosen Move: ('factory', 3, <Color.RED: 'red'>, 'pattern_line', 4)
-Move applied.
-
-Current Player: 1
-First Player Marker Holder: 0
-Factories:
-  Factory 0: []
-  Factory 1: []
-  Factory 2: ['red', 'red', 'green', 'black']
-  Factory 3: []
-  Factory 4: []
-Center: ['red', 'yellow', 'black', 'blue', 'black', 'red', 'black', 'blue', 'green'] (Marker: True)
-Players:
-  Player 0 Score: 0
-    Pattern Lines:
-      Line 0: []
-      Line 1: ['blue', 'blue']
-      Line 2: []
-      Line 3: ['black']
-      Line 4: ['red']
-    Floor: ['Tile', None, None, None, None, None, None]
-    Board Occupancy:
-[[0 1 1 0 0]
- [1 0 0 0 1]
- [0 0 1 0 0]
- [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 1
-    Pattern Lines:
-      Line 0: ['green']
-      Line 1: []
-      Line 2: ['red', 'red']
-      Line 3: []
-      Line 4: ['red', 'red']
-    Floor: ['Tile', None, None, None, None, None, None]
-    Board Occupancy:
-[[0 1 0 0 1]
- [1 1 0 0 0]
- [0 0 1 0 0]
- [0 1 0 0 0]
- [1 0 0 0 0]]
-Bag: 20 tiles
-Discard: 43 tiles
-
---- Player 0's Turn ---
-MCTS Chosen Move: ('factory', 2, <Color.RED: 'red'>, 'pattern_line', 0)
-Move applied.
-
-Current Player: 0
-First Player Marker Holder: 0
-Factories:
-  Factory 0: []
-  Factory 1: []
-  Factory 2: []
-  Factory 3: []
-  Factory 4: []
-Center: ['red', 'yellow', 'black', 'blue', 'black', 'red', 'black', 'blue', 'green', 'green', 'black'] (Marker: True)
-Players:
-  Player 0 Score: 0
-    Pattern Lines:
-      Line 0: ['red']
-      Line 1: ['blue', 'blue']
-      Line 2: []
-      Line 3: ['black']
-      Line 4: ['red']
-    Floor: ['Tile', 'Tile', None, None, None, None, None]
-    Board Occupancy:
-[[0 1 1 0 0]
- [1 0 0 0 1]
- [0 0 1 0 0]
- [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 1
-    Pattern Lines:
-      Line 0: ['green']
-      Line 1: []
-      Line 2: ['red', 'red']
-      Line 3: []
-      Line 4: ['red', 'red']
-    Floor: ['Tile', None, None, None, None, None, None]
-    Board Occupancy:
-[[0 1 0 0 1]
- [1 1 0 0 0]
- [0 0 1 0 0]
- [0 1 0 0 0]
- [1 0 0 0 0]]
-Bag: 20 tiles
-Discard: 43 tiles
-
---- Player 1's Turn ---
-MCTS Chosen Move: ('center', None, <Color.BLUE: 'blue'>, 'pattern_line', 3)
-Move applied.
-
-Current Player: 1
-First Player Marker Holder: 1
-Factories:
-  Factory 0: []
-  Factory 1: []
-  Factory 2: []
-  Factory 3: []
-  Factory 4: []
-Center: ['red', 'yellow', 'black', 'black', 'red', 'black', 'green', 'green', 'black'] (Marker: False)
-Players:
-  Player 0 Score: 0
-    Pattern Lines:
-      Line 0: ['red']
-      Line 1: ['blue', 'blue']
-      Line 2: []
-      Line 3: ['black']
-      Line 4: ['red']
-    Floor: ['Tile', 'Tile', None, None, None, None, None]
-    Board Occupancy:
-[[0 1 1 0 0]
- [1 0 0 0 1]
- [0 0 1 0 0]
- [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 1
-    Pattern Lines:
-      Line 0: ['green']
-      Line 1: []
-      Line 2: ['red', 'red']
-      Line 3: ['blue', 'blue']
-      Line 4: ['red', 'red']
-    Floor: ['FirstPlayerMarker', 'Tile', None, None, None, None, None]
-    Board Occupancy:
-[[0 1 0 0 1]
- [1 1 0 0 0]
- [0 0 1 0 0]
- [0 1 0 0 0]
- [1 0 0 0 0]]
-Bag: 20 tiles
-Discard: 43 tiles
-
---- Player 0's Turn ---
-MCTS Chosen Move: ('center', None, <Color.BLACK: 'black'>, 'pattern_line', 2)
-Move applied.
-
-Current Player: 0
-First Player Marker Holder: 1
-Factories:
-  Factory 0: []
-  Factory 1: []
-  Factory 2: []
-  Factory 3: []
-  Factory 4: []
-Center: ['red', 'yellow', 'red', 'green', 'green'] (Marker: False)
-Players:
-  Player 0 Score: 0
-    Pattern Lines:
-      Line 0: ['red']
-      Line 1: ['blue', 'blue']
-      Line 2: ['black', 'black', 'black']
-      Line 3: ['black']
-      Line 4: ['red']
-    Floor: ['Tile', 'Tile', 'Tile', None, None, None, None]
-    Board Occupancy:
-[[0 1 1 0 0]
- [1 0 0 0 1]
- [0 0 1 0 0]
- [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 1
-    Pattern Lines:
-      Line 0: ['green']
-      Line 1: []
-      Line 2: ['red', 'red']
-      Line 3: ['blue', 'blue']
-      Line 4: ['red', 'red']
-    Floor: ['FirstPlayerMarker', 'Tile', None, None, None, None, None]
-    Board Occupancy:
-[[0 1 0 0 1]
- [1 1 0 0 0]
- [0 0 1 0 0]
- [0 1 0 0 0]
- [1 0 0 0 0]]
-Bag: 20 tiles
-Discard: 43 tiles
+Bag: 80 tiles
+Discard: 0 tiles
 
 --- Player 1's Turn ---
 MCTS Chosen Move: ('center', None, <Color.GREEN: 'green'>, 'pattern_line', 1)
@@ -1802,38 +278,128 @@ Factories:
   Factory 2: []
   Factory 3: []
   Factory 4: []
-Center: ['red', 'yellow', 'red'] (Marker: False)
+Center: ['black', 'red', 'blue', 'black', 'blue', 'red', 'red', 'red', 'black', 'black', 'black'] (Marker: False)
 Players:
   Player 0 Score: 0
     Pattern Lines:
-      Line 0: ['red']
-      Line 1: ['blue', 'blue']
-      Line 2: ['black', 'black', 'black']
-      Line 3: ['black']
-      Line 4: ['red']
-    Floor: ['Tile', 'Tile', 'Tile', None, None, None, None]
+      Line 0: ['yellow']
+      Line 1: []
+      Line 2: []
+      Line 3: []
+      Line 4: []
+    Floor: ['Tile', 'Tile', 'Tile', 'Tile', None, None, None]
     Board Occupancy:
-[[0 1 1 0 0]
- [1 0 0 0 1]
- [0 0 1 0 0]
+[[0 0 0 0 0]
  [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 1
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
     Pattern Lines:
-      Line 0: ['green']
-      Line 1: ['green', 'green']
-      Line 2: ['red', 'red']
-      Line 3: ['blue', 'blue']
-      Line 4: ['red', 'red']
+      Line 0: ['black']
+      Line 1: ['green']
+      Line 2: []
+      Line 3: []
+      Line 4: ['black']
     Floor: ['FirstPlayerMarker', 'Tile', None, None, None, None, None]
     Board Occupancy:
-[[0 1 0 0 1]
- [1 1 0 0 0]
- [0 0 1 0 0]
- [0 1 0 0 0]
- [1 0 0 0 0]]
-Bag: 20 tiles
-Discard: 43 tiles
+[[0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+Bag: 80 tiles
+Discard: 0 tiles
+
+--- Player 0's Turn ---
+MCTS Chosen Move: ('center', None, <Color.BLUE: 'blue'>, 'pattern_line', 1)
+Move applied.
+
+Current Player: 0
+First Player Marker Holder: 1
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: []
+  Factory 4: []
+Center: ['black', 'red', 'black', 'red', 'red', 'red', 'black', 'black', 'black'] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: ['yellow']
+      Line 1: ['blue', 'blue']
+      Line 2: []
+      Line 3: []
+      Line 4: []
+    Floor: ['Tile', 'Tile', 'Tile', 'Tile', None, None, None]
+    Board Occupancy:
+[[0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: ['black']
+      Line 1: ['green']
+      Line 2: []
+      Line 3: []
+      Line 4: ['black']
+    Floor: ['FirstPlayerMarker', 'Tile', None, None, None, None, None]
+    Board Occupancy:
+[[0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+Bag: 80 tiles
+Discard: 0 tiles
+
+--- Player 1's Turn ---
+MCTS Chosen Move: ('center', None, <Color.BLACK: 'black'>, 'pattern_line', 3)
+Move applied.
+
+Current Player: 1
+First Player Marker Holder: 1
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: []
+  Factory 4: []
+Center: ['red', 'red', 'red', 'red'] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: ['yellow']
+      Line 1: ['blue', 'blue']
+      Line 2: []
+      Line 3: []
+      Line 4: []
+    Floor: ['Tile', 'Tile', 'Tile', 'Tile', None, None, None]
+    Board Occupancy:
+[[0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: ['black']
+      Line 1: ['green']
+      Line 2: []
+      Line 3: ['black', 'black', 'black', 'black']
+      Line 4: ['black']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', None, None, None, None]
+    Board Occupancy:
+[[0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+Bag: 80 tiles
+Discard: 0 tiles
 
 --- Player 0's Turn ---
 MCTS Chosen Move: ('center', None, <Color.RED: 'red'>, 'floor', None)
@@ -1847,45 +413,628 @@ Factories:
   Factory 2: []
   Factory 3: []
   Factory 4: []
-Center: ['yellow'] (Marker: False)
+Center: [] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: ['yellow']
+      Line 1: ['blue', 'blue']
+      Line 2: []
+      Line 3: []
+      Line 4: []
+    Floor: ['Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile']
+    Board Occupancy:
+[[0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: ['black']
+      Line 1: ['green']
+      Line 2: []
+      Line 3: ['black', 'black', 'black', 'black']
+      Line 4: ['black']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', None, None, None, None]
+    Board Occupancy:
+[[0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+Bag: 80 tiles
+Discard: 1 tiles
+All sources empty. Ending round.
+Round ended.
+
+Current Player: 1
+First Player Marker Holder: 1
+Factories:
+  Factory 0: ['blue', 'black', 'red', 'green']
+  Factory 1: ['yellow', 'red', 'green', 'blue']
+  Factory 2: ['red', 'green', 'yellow', 'yellow']
+  Factory 3: ['yellow', 'black', 'yellow', 'yellow']
+  Factory 4: ['black', 'green', 'yellow', 'blue']
+Center: [] (Marker: True)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: []
+      Line 3: []
+      Line 4: []
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[1 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['green']
+      Line 2: []
+      Line 3: []
+      Line 4: ['black']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[0 0 0 0 1]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 60 tiles
+Discard: 14 tiles
+
+--- Player 1's Turn ---
+MCTS Chosen Move: ('factory', 0, <Color.GREEN: 'green'>, 'pattern_line', 1)
+Move applied.
+
+Current Player: 1
+First Player Marker Holder: 1
+Factories:
+  Factory 0: []
+  Factory 1: ['yellow', 'red', 'green', 'blue']
+  Factory 2: ['red', 'green', 'yellow', 'yellow']
+  Factory 3: ['yellow', 'black', 'yellow', 'yellow']
+  Factory 4: ['black', 'green', 'yellow', 'blue']
+Center: ['blue', 'black', 'red'] (Marker: True)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: []
+      Line 3: []
+      Line 4: []
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[1 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['green', 'green']
+      Line 2: []
+      Line 3: []
+      Line 4: ['black']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[0 0 0 0 1]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 60 tiles
+Discard: 14 tiles
+
+--- Player 0's Turn ---
+MCTS Chosen Move: ('factory', 1, <Color.RED: 'red'>, 'pattern_line', 0)
+Move applied.
+
+Current Player: 0
+First Player Marker Holder: 1
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: ['red', 'green', 'yellow', 'yellow']
+  Factory 3: ['yellow', 'black', 'yellow', 'yellow']
+  Factory 4: ['black', 'green', 'yellow', 'blue']
+Center: ['blue', 'black', 'red', 'yellow', 'green', 'blue'] (Marker: True)
 Players:
   Player 0 Score: 0
     Pattern Lines:
       Line 0: ['red']
-      Line 1: ['blue', 'blue']
-      Line 2: ['black', 'black', 'black']
-      Line 3: ['black']
-      Line 4: ['red']
-    Floor: ['Tile', 'Tile', 'Tile', 'Tile', 'Tile', None, None]
+      Line 1: []
+      Line 2: []
+      Line 3: []
+      Line 4: []
+    Floor: [None, None, None, None, None, None, None]
     Board Occupancy:
-[[0 1 1 0 0]
- [1 0 0 0 1]
+[[1 0 0 0 0]
  [0 0 1 0 0]
  [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 1
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
     Pattern Lines:
-      Line 0: ['green']
+      Line 0: []
       Line 1: ['green', 'green']
-      Line 2: ['red', 'red']
-      Line 3: ['blue', 'blue']
-      Line 4: ['red', 'red']
+      Line 2: []
+      Line 3: []
+      Line 4: ['black']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[0 0 0 0 1]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 60 tiles
+Discard: 14 tiles
+
+--- Player 1's Turn ---
+MCTS Chosen Move: ('factory', 4, <Color.GREEN: 'green'>, 'pattern_line', 3)
+Move applied.
+
+Current Player: 1
+First Player Marker Holder: 1
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: ['red', 'green', 'yellow', 'yellow']
+  Factory 3: ['yellow', 'black', 'yellow', 'yellow']
+  Factory 4: []
+Center: ['blue', 'black', 'red', 'yellow', 'green', 'blue', 'black', 'yellow', 'blue'] (Marker: True)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: ['red']
+      Line 1: []
+      Line 2: []
+      Line 3: []
+      Line 4: []
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[1 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['green', 'green']
+      Line 2: []
+      Line 3: ['green']
+      Line 4: ['black']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[0 0 0 0 1]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 60 tiles
+Discard: 14 tiles
+
+--- Player 0's Turn ---
+MCTS Chosen Move: ('center', None, <Color.GREEN: 'green'>, 'pattern_line', 3)
+Move applied.
+
+Current Player: 0
+First Player Marker Holder: 0
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: ['red', 'green', 'yellow', 'yellow']
+  Factory 3: ['yellow', 'black', 'yellow', 'yellow']
+  Factory 4: []
+Center: ['blue', 'black', 'red', 'yellow', 'blue', 'black', 'yellow', 'blue'] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: ['red']
+      Line 1: []
+      Line 2: []
+      Line 3: ['green']
+      Line 4: []
+    Floor: ['FirstPlayerMarker', None, None, None, None, None, None]
+    Board Occupancy:
+[[1 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['green', 'green']
+      Line 2: []
+      Line 3: ['green']
+      Line 4: ['black']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[0 0 0 0 1]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 60 tiles
+Discard: 14 tiles
+
+--- Player 1's Turn ---
+MCTS Chosen Move: ('center', None, <Color.YELLOW: 'yellow'>, 'pattern_line', 2)
+Move applied.
+
+Current Player: 1
+First Player Marker Holder: 0
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: ['red', 'green', 'yellow', 'yellow']
+  Factory 3: ['yellow', 'black', 'yellow', 'yellow']
+  Factory 4: []
+Center: ['blue', 'black', 'red', 'blue', 'black', 'blue'] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: ['red']
+      Line 1: []
+      Line 2: []
+      Line 3: ['green']
+      Line 4: []
+    Floor: ['FirstPlayerMarker', None, None, None, None, None, None]
+    Board Occupancy:
+[[1 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['green', 'green']
+      Line 2: ['yellow', 'yellow']
+      Line 3: ['green']
+      Line 4: ['black']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[0 0 0 0 1]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 60 tiles
+Discard: 14 tiles
+
+--- Player 0's Turn ---
+MCTS Chosen Move: ('factory', 3, <Color.BLACK: 'black'>, 'floor', None)
+Move applied.
+
+Current Player: 0
+First Player Marker Holder: 0
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: ['red', 'green', 'yellow', 'yellow']
+  Factory 3: []
+  Factory 4: []
+Center: ['blue', 'black', 'red', 'blue', 'black', 'blue', 'yellow', 'yellow', 'yellow'] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: ['red']
+      Line 1: []
+      Line 2: []
+      Line 3: ['green']
+      Line 4: []
     Floor: ['FirstPlayerMarker', 'Tile', None, None, None, None, None]
     Board Occupancy:
-[[0 1 0 0 1]
- [1 1 0 0 0]
+[[1 0 0 0 0]
  [0 0 1 0 0]
- [0 1 0 0 0]
- [1 0 0 0 0]]
-Bag: 20 tiles
-Discard: 43 tiles
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['green', 'green']
+      Line 2: ['yellow', 'yellow']
+      Line 3: ['green']
+      Line 4: ['black']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[0 0 0 0 1]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 60 tiles
+Discard: 14 tiles
+
+--- Player 1's Turn ---
+MCTS Chosen Move: ('center', None, <Color.YELLOW: 'yellow'>, 'pattern_line', 0)
+Move applied.
+
+Current Player: 1
+First Player Marker Holder: 0
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: ['red', 'green', 'yellow', 'yellow']
+  Factory 3: []
+  Factory 4: []
+Center: ['blue', 'black', 'red', 'blue', 'black', 'blue'] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: ['red']
+      Line 1: []
+      Line 2: []
+      Line 3: ['green']
+      Line 4: []
+    Floor: ['FirstPlayerMarker', 'Tile', None, None, None, None, None]
+    Board Occupancy:
+[[1 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: ['yellow']
+      Line 1: ['green', 'green']
+      Line 2: ['yellow', 'yellow']
+      Line 3: ['green']
+      Line 4: ['black']
+    Floor: ['Tile', 'Tile', None, None, None, None, None]
+    Board Occupancy:
+[[0 0 0 0 1]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 60 tiles
+Discard: 14 tiles
+
+--- Player 0's Turn ---
+MCTS Chosen Move: ('center', None, <Color.RED: 'red'>, 'pattern_line', 1)
+Move applied.
+
+Current Player: 0
+First Player Marker Holder: 0
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: ['red', 'green', 'yellow', 'yellow']
+  Factory 3: []
+  Factory 4: []
+Center: ['blue', 'black', 'blue', 'black', 'blue'] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: ['red']
+      Line 1: ['red']
+      Line 2: []
+      Line 3: ['green']
+      Line 4: []
+    Floor: ['FirstPlayerMarker', 'Tile', None, None, None, None, None]
+    Board Occupancy:
+[[1 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: ['yellow']
+      Line 1: ['green', 'green']
+      Line 2: ['yellow', 'yellow']
+      Line 3: ['green']
+      Line 4: ['black']
+    Floor: ['Tile', 'Tile', None, None, None, None, None]
+    Board Occupancy:
+[[0 0 0 0 1]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 60 tiles
+Discard: 14 tiles
+
+--- Player 1's Turn ---
+MCTS Chosen Move: ('center', None, <Color.BLUE: 'blue'>, 'floor', None)
+Move applied.
+
+Current Player: 1
+First Player Marker Holder: 0
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: ['red', 'green', 'yellow', 'yellow']
+  Factory 3: []
+  Factory 4: []
+Center: ['black', 'black'] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: ['red']
+      Line 1: ['red']
+      Line 2: []
+      Line 3: ['green']
+      Line 4: []
+    Floor: ['FirstPlayerMarker', 'Tile', None, None, None, None, None]
+    Board Occupancy:
+[[1 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: ['yellow']
+      Line 1: ['green', 'green']
+      Line 2: ['yellow', 'yellow']
+      Line 3: ['green']
+      Line 4: ['black']
+    Floor: ['Tile', 'Tile', 'Tile', 'Tile', 'Tile', None, None]
+    Board Occupancy:
+[[0 0 0 0 1]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 60 tiles
+Discard: 14 tiles
+
+--- Player 0's Turn ---
+MCTS Chosen Move: ('factory', 2, <Color.RED: 'red'>, 'pattern_line', 1)
+Move applied.
+
+Current Player: 0
+First Player Marker Holder: 0
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: []
+  Factory 4: []
+Center: ['black', 'black', 'green', 'yellow', 'yellow'] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: ['red']
+      Line 1: ['red', 'red']
+      Line 2: []
+      Line 3: ['green']
+      Line 4: []
+    Floor: ['FirstPlayerMarker', 'Tile', None, None, None, None, None]
+    Board Occupancy:
+[[1 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: ['yellow']
+      Line 1: ['green', 'green']
+      Line 2: ['yellow', 'yellow']
+      Line 3: ['green']
+      Line 4: ['black']
+    Floor: ['Tile', 'Tile', 'Tile', 'Tile', 'Tile', None, None]
+    Board Occupancy:
+[[0 0 0 0 1]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 60 tiles
+Discard: 14 tiles
 
 --- Player 1's Turn ---
 MCTS Chosen Move: ('center', None, <Color.YELLOW: 'yellow'>, 'floor', None)
 Move applied.
 
 Current Player: 1
-First Player Marker Holder: 1
+First Player Marker Holder: 0
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: []
+  Factory 4: []
+Center: ['black', 'black', 'green'] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: ['red']
+      Line 1: ['red', 'red']
+      Line 2: []
+      Line 3: ['green']
+      Line 4: []
+    Floor: ['FirstPlayerMarker', 'Tile', None, None, None, None, None]
+    Board Occupancy:
+[[1 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: ['yellow']
+      Line 1: ['green', 'green']
+      Line 2: ['yellow', 'yellow']
+      Line 3: ['green']
+      Line 4: ['black']
+    Floor: ['Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile']
+    Board Occupancy:
+[[0 0 0 0 1]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 60 tiles
+Discard: 14 tiles
+
+--- Player 0's Turn ---
+MCTS Chosen Move: ('center', None, <Color.GREEN: 'green'>, 'pattern_line', 3)
+Move applied.
+
+Current Player: 0
+First Player Marker Holder: 0
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: []
+  Factory 4: []
+Center: ['black', 'black'] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: ['red']
+      Line 1: ['red', 'red']
+      Line 2: []
+      Line 3: ['green', 'green']
+      Line 4: []
+    Floor: ['FirstPlayerMarker', 'Tile', None, None, None, None, None]
+    Board Occupancy:
+[[1 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: ['yellow']
+      Line 1: ['green', 'green']
+      Line 2: ['yellow', 'yellow']
+      Line 3: ['green']
+      Line 4: ['black']
+    Floor: ['Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile']
+    Board Occupancy:
+[[0 0 0 0 1]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 60 tiles
+Discard: 14 tiles
+
+--- Player 1's Turn ---
+MCTS Chosen Move: ('center', None, <Color.BLACK: 'black'>, 'pattern_line', 4)
+Move applied.
+
+Current Player: 1
+First Player Marker Holder: 0
 Factories:
   Factory 0: []
   Factory 1: []
@@ -1897,44 +1046,537 @@ Players:
   Player 0 Score: 0
     Pattern Lines:
       Line 0: ['red']
-      Line 1: ['blue', 'blue']
-      Line 2: ['black', 'black', 'black']
-      Line 3: ['black']
-      Line 4: ['red']
-    Floor: ['Tile', 'Tile', 'Tile', 'Tile', 'Tile', None, None]
+      Line 1: ['red', 'red']
+      Line 2: []
+      Line 3: ['green', 'green']
+      Line 4: []
+    Floor: ['FirstPlayerMarker', 'Tile', None, None, None, None, None]
     Board Occupancy:
-[[0 1 1 0 0]
- [1 0 0 0 1]
+[[1 0 0 0 0]
  [0 0 1 0 0]
  [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 1
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
     Pattern Lines:
-      Line 0: ['green']
+      Line 0: ['yellow']
       Line 1: ['green', 'green']
-      Line 2: ['red', 'red']
-      Line 3: ['blue', 'blue']
-      Line 4: ['red', 'red']
-    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', None, None, None, None]
+      Line 2: ['yellow', 'yellow']
+      Line 3: ['green']
+      Line 4: ['black', 'black', 'black']
+    Floor: ['Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile']
     Board Occupancy:
-[[0 1 0 0 1]
- [1 1 0 0 0]
+[[0 0 0 0 1]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
  [0 0 1 0 0]
- [0 1 0 0 0]
- [1 0 0 0 0]]
-Bag: 20 tiles
-Discard: 43 tiles
+ [0 0 0 0 0]]
+Bag: 60 tiles
+Discard: 14 tiles
 All sources empty. Ending round.
 Round ended.
 
-Current Player: 1
-First Player Marker Holder: 1
+Current Player: 0
+First Player Marker Holder: 0
 Factories:
-  Factory 0: ['black', 'yellow', 'blue', 'black']
-  Factory 1: ['black', 'green', 'blue', 'green']
-  Factory 2: ['red', 'blue', 'yellow', 'green']
-  Factory 3: ['yellow', 'green', 'blue', 'green']
-  Factory 4: ['red', 'red', 'yellow', 'black']
+  Factory 0: ['blue', 'yellow', 'red', 'black']
+  Factory 1: ['green', 'yellow', 'blue', 'black']
+  Factory 2: ['red', 'blue', 'green', 'yellow']
+  Factory 3: ['green', 'blue', 'red', 'black']
+  Factory 4: ['blue', 'blue', 'green', 'green']
+Center: [] (Marker: True)
+Players:
+  Player 0 Score: 2
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: []
+      Line 3: ['green', 'green']
+      Line 4: []
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[1 0 0 1 0]
+ [0 0 1 0 1]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: ['yellow', 'yellow']
+      Line 3: ['green']
+      Line 4: ['black', 'black', 'black']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[1 0 0 0 1]
+ [0 0 0 1 0]
+ [0 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 40 tiles
+Discard: 24 tiles
+
+--- Player 0's Turn ---
+MCTS Chosen Move: ('factory', 0, <Color.BLACK: 'black'>, 'floor', None)
+Move applied.
+
+Current Player: 0
+First Player Marker Holder: 0
+Factories:
+  Factory 0: []
+  Factory 1: ['green', 'yellow', 'blue', 'black']
+  Factory 2: ['red', 'blue', 'green', 'yellow']
+  Factory 3: ['green', 'blue', 'red', 'black']
+  Factory 4: ['blue', 'blue', 'green', 'green']
+Center: ['blue', 'yellow', 'red'] (Marker: True)
+Players:
+  Player 0 Score: 2
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: []
+      Line 3: ['green', 'green']
+      Line 4: []
+    Floor: ['Tile', None, None, None, None, None, None]
+    Board Occupancy:
+[[1 0 0 1 0]
+ [0 0 1 0 1]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: ['yellow', 'yellow']
+      Line 3: ['green']
+      Line 4: ['black', 'black', 'black']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[1 0 0 0 1]
+ [0 0 0 1 0]
+ [0 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 40 tiles
+Discard: 24 tiles
+
+--- Player 1's Turn ---
+MCTS Chosen Move: ('factory', 2, <Color.GREEN: 'green'>, 'pattern_line', 0)
+Move applied.
+
+Current Player: 1
+First Player Marker Holder: 0
+Factories:
+  Factory 0: []
+  Factory 1: ['green', 'yellow', 'blue', 'black']
+  Factory 2: []
+  Factory 3: ['green', 'blue', 'red', 'black']
+  Factory 4: ['blue', 'blue', 'green', 'green']
+Center: ['blue', 'yellow', 'red', 'red', 'blue', 'yellow'] (Marker: True)
+Players:
+  Player 0 Score: 2
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: []
+      Line 3: ['green', 'green']
+      Line 4: []
+    Floor: ['Tile', None, None, None, None, None, None]
+    Board Occupancy:
+[[1 0 0 1 0]
+ [0 0 1 0 1]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: ['green']
+      Line 1: []
+      Line 2: ['yellow', 'yellow']
+      Line 3: ['green']
+      Line 4: ['black', 'black', 'black']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[1 0 0 0 1]
+ [0 0 0 1 0]
+ [0 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 40 tiles
+Discard: 24 tiles
+
+--- Player 0's Turn ---
+MCTS Chosen Move: ('factory', 3, <Color.RED: 'red'>, 'pattern_line', 2)
+Move applied.
+
+Current Player: 0
+First Player Marker Holder: 0
+Factories:
+  Factory 0: []
+  Factory 1: ['green', 'yellow', 'blue', 'black']
+  Factory 2: []
+  Factory 3: []
+  Factory 4: ['blue', 'blue', 'green', 'green']
+Center: ['blue', 'yellow', 'red', 'red', 'blue', 'yellow', 'green', 'blue', 'black'] (Marker: True)
+Players:
+  Player 0 Score: 2
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: ['red']
+      Line 3: ['green', 'green']
+      Line 4: []
+    Floor: ['Tile', None, None, None, None, None, None]
+    Board Occupancy:
+[[1 0 0 1 0]
+ [0 0 1 0 1]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: ['green']
+      Line 1: []
+      Line 2: ['yellow', 'yellow']
+      Line 3: ['green']
+      Line 4: ['black', 'black', 'black']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[1 0 0 0 1]
+ [0 0 0 1 0]
+ [0 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 40 tiles
+Discard: 24 tiles
+
+--- Player 1's Turn ---
+MCTS Chosen Move: ('factory', 1, <Color.YELLOW: 'yellow'>, 'floor', None)
+Move applied.
+
+Current Player: 1
+First Player Marker Holder: 0
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: []
+  Factory 4: ['blue', 'blue', 'green', 'green']
+Center: ['blue', 'yellow', 'red', 'red', 'blue', 'yellow', 'green', 'blue', 'black', 'green', 'blue', 'black'] (Marker: True)
+Players:
+  Player 0 Score: 2
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: ['red']
+      Line 3: ['green', 'green']
+      Line 4: []
+    Floor: ['Tile', None, None, None, None, None, None]
+    Board Occupancy:
+[[1 0 0 1 0]
+ [0 0 1 0 1]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: ['green']
+      Line 1: []
+      Line 2: ['yellow', 'yellow']
+      Line 3: ['green']
+      Line 4: ['black', 'black', 'black']
+    Floor: ['Tile', None, None, None, None, None, None]
+    Board Occupancy:
+[[1 0 0 0 1]
+ [0 0 0 1 0]
+ [0 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 40 tiles
+Discard: 24 tiles
+
+--- Player 0's Turn ---
+MCTS Chosen Move: ('center', None, <Color.GREEN: 'green'>, 'pattern_line', 4)
+Move applied.
+
+Current Player: 0
+First Player Marker Holder: 0
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: []
+  Factory 4: ['blue', 'blue', 'green', 'green']
+Center: ['blue', 'yellow', 'red', 'red', 'blue', 'yellow', 'blue', 'black', 'blue', 'black'] (Marker: False)
+Players:
+  Player 0 Score: 2
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: ['red']
+      Line 3: ['green', 'green']
+      Line 4: ['green', 'green']
+    Floor: ['FirstPlayerMarker', 'Tile', None, None, None, None, None]
+    Board Occupancy:
+[[1 0 0 1 0]
+ [0 0 1 0 1]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: ['green']
+      Line 1: []
+      Line 2: ['yellow', 'yellow']
+      Line 3: ['green']
+      Line 4: ['black', 'black', 'black']
+    Floor: ['Tile', None, None, None, None, None, None]
+    Board Occupancy:
+[[1 0 0 0 1]
+ [0 0 0 1 0]
+ [0 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 40 tiles
+Discard: 24 tiles
+
+--- Player 1's Turn ---
+MCTS Chosen Move: ('center', None, <Color.BLACK: 'black'>, 'pattern_line', 4)
+Move applied.
+
+Current Player: 1
+First Player Marker Holder: 0
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: []
+  Factory 4: ['blue', 'blue', 'green', 'green']
+Center: ['blue', 'yellow', 'red', 'red', 'blue', 'yellow', 'blue', 'blue'] (Marker: False)
+Players:
+  Player 0 Score: 2
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: ['red']
+      Line 3: ['green', 'green']
+      Line 4: ['green', 'green']
+    Floor: ['FirstPlayerMarker', 'Tile', None, None, None, None, None]
+    Board Occupancy:
+[[1 0 0 1 0]
+ [0 0 1 0 1]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: ['green']
+      Line 1: []
+      Line 2: ['yellow', 'yellow']
+      Line 3: ['green']
+      Line 4: ['black', 'black', 'black', 'black', 'black']
+    Floor: ['Tile', None, None, None, None, None, None]
+    Board Occupancy:
+[[1 0 0 0 1]
+ [0 0 0 1 0]
+ [0 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 40 tiles
+Discard: 24 tiles
+
+--- Player 0's Turn ---
+MCTS Chosen Move: ('factory', 4, <Color.GREEN: 'green'>, 'pattern_line', 0)
+Move applied.
+
+Current Player: 0
+First Player Marker Holder: 0
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: []
+  Factory 4: []
+Center: ['blue', 'yellow', 'red', 'red', 'blue', 'yellow', 'blue', 'blue', 'blue', 'blue'] (Marker: False)
+Players:
+  Player 0 Score: 2
+    Pattern Lines:
+      Line 0: ['green']
+      Line 1: []
+      Line 2: ['red']
+      Line 3: ['green', 'green']
+      Line 4: ['green', 'green']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', None, None, None, None]
+    Board Occupancy:
+[[1 0 0 1 0]
+ [0 0 1 0 1]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: ['green']
+      Line 1: []
+      Line 2: ['yellow', 'yellow']
+      Line 3: ['green']
+      Line 4: ['black', 'black', 'black', 'black', 'black']
+    Floor: ['Tile', None, None, None, None, None, None]
+    Board Occupancy:
+[[1 0 0 0 1]
+ [0 0 0 1 0]
+ [0 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 40 tiles
+Discard: 24 tiles
+
+--- Player 1's Turn ---
+MCTS Chosen Move: ('center', None, <Color.YELLOW: 'yellow'>, 'floor', None)
+Move applied.
+
+Current Player: 1
+First Player Marker Holder: 0
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: []
+  Factory 4: []
+Center: ['blue', 'red', 'red', 'blue', 'blue', 'blue', 'blue', 'blue'] (Marker: False)
+Players:
+  Player 0 Score: 2
+    Pattern Lines:
+      Line 0: ['green']
+      Line 1: []
+      Line 2: ['red']
+      Line 3: ['green', 'green']
+      Line 4: ['green', 'green']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', None, None, None, None]
+    Board Occupancy:
+[[1 0 0 1 0]
+ [0 0 1 0 1]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: ['green']
+      Line 1: []
+      Line 2: ['yellow', 'yellow']
+      Line 3: ['green']
+      Line 4: ['black', 'black', 'black', 'black', 'black']
+    Floor: ['Tile', 'Tile', 'Tile', None, None, None, None]
+    Board Occupancy:
+[[1 0 0 0 1]
+ [0 0 0 1 0]
+ [0 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 40 tiles
+Discard: 24 tiles
+
+--- Player 0's Turn ---
+MCTS Chosen Move: ('center', None, <Color.RED: 'red'>, 'pattern_line', 2)
+Move applied.
+
+Current Player: 0
+First Player Marker Holder: 0
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: []
+  Factory 4: []
+Center: ['blue', 'blue', 'blue', 'blue', 'blue', 'blue'] (Marker: False)
+Players:
+  Player 0 Score: 2
+    Pattern Lines:
+      Line 0: ['green']
+      Line 1: []
+      Line 2: ['red', 'red', 'red']
+      Line 3: ['green', 'green']
+      Line 4: ['green', 'green']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', None, None, None, None]
+    Board Occupancy:
+[[1 0 0 1 0]
+ [0 0 1 0 1]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: ['green']
+      Line 1: []
+      Line 2: ['yellow', 'yellow']
+      Line 3: ['green']
+      Line 4: ['black', 'black', 'black', 'black', 'black']
+    Floor: ['Tile', 'Tile', 'Tile', None, None, None, None]
+    Board Occupancy:
+[[1 0 0 0 1]
+ [0 0 0 1 0]
+ [0 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 40 tiles
+Discard: 24 tiles
+
+--- Player 1's Turn ---
+MCTS Chosen Move: ('center', None, <Color.BLUE: 'blue'>, 'pattern_line', 1)
+Move applied.
+
+Current Player: 1
+First Player Marker Holder: 0
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: []
+  Factory 4: []
+Center: [] (Marker: False)
+Players:
+  Player 0 Score: 2
+    Pattern Lines:
+      Line 0: ['green']
+      Line 1: []
+      Line 2: ['red', 'red', 'red']
+      Line 3: ['green', 'green']
+      Line 4: ['green', 'green']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', None, None, None, None]
+    Board Occupancy:
+[[1 0 0 1 0]
+ [0 0 1 0 1]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: ['green']
+      Line 1: ['blue', 'blue']
+      Line 2: ['yellow', 'yellow']
+      Line 3: ['green']
+      Line 4: ['black', 'black', 'black', 'black', 'black']
+    Floor: ['Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile']
+    Board Occupancy:
+[[1 0 0 0 1]
+ [0 0 0 1 0]
+ [0 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 40 tiles
+Discard: 24 tiles
+All sources empty. Ending round.
+Round ended.
+
+Current Player: 0
+First Player Marker Holder: 0
+Factories:
+  Factory 0: ['yellow', 'red', 'green', 'green']
+  Factory 1: ['black', 'green', 'yellow', 'yellow']
+  Factory 2: ['green', 'red', 'green', 'green']
+  Factory 3: ['red', 'black', 'green', 'yellow']
+  Factory 4: ['yellow', 'blue', 'red', 'red']
 Center: [] (Marker: True)
 Players:
   Player 0 Score: 4
@@ -1942,209 +1584,567 @@ Players:
       Line 0: []
       Line 1: []
       Line 2: []
-      Line 3: ['black']
-      Line 4: ['red']
+      Line 3: ['green', 'green']
+      Line 4: ['green', 'green']
     Floor: [None, None, None, None, None, None, None]
     Board Occupancy:
-[[0 1 1 1 0]
- [1 0 1 0 1]
- [0 1 1 0 0]
+[[1 0 1 1 0]
+ [0 0 1 0 1]
+ [1 0 0 0 0]
  [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 4
+ [0 0 0 0 0]]
+  Player 1 Score: 0
     Pattern Lines:
       Line 0: []
       Line 1: []
-      Line 2: ['red', 'red']
-      Line 3: ['blue', 'blue']
-      Line 4: ['red', 'red']
+      Line 2: ['yellow', 'yellow']
+      Line 3: ['green']
+      Line 4: []
     Floor: [None, None, None, None, None, None, None]
     Board Occupancy:
-[[0 1 1 0 1]
- [1 1 0 1 0]
- [0 0 1 0 0]
- [0 1 0 0 0]
- [1 0 0 0 0]]
-Bag: 0 tiles
-Discard: 54 tiles
-
---- Player 1's Turn ---
-MCTS Chosen Move: ('factory', 2, <Color.RED: 'red'>, 'floor', None)
-Move applied.
-
-Current Player: 1
-First Player Marker Holder: 1
-Factories:
-  Factory 0: ['black', 'yellow', 'blue', 'black']
-  Factory 1: ['black', 'green', 'blue', 'green']
-  Factory 2: []
-  Factory 3: ['yellow', 'green', 'blue', 'green']
-  Factory 4: ['red', 'red', 'yellow', 'black']
-Center: ['blue', 'yellow', 'green'] (Marker: True)
-Players:
-  Player 0 Score: 4
-    Pattern Lines:
-      Line 0: []
-      Line 1: []
-      Line 2: []
-      Line 3: ['black']
-      Line 4: ['red']
-    Floor: [None, None, None, None, None, None, None]
-    Board Occupancy:
-[[0 1 1 1 0]
- [1 0 1 0 1]
- [0 1 1 0 0]
+[[1 0 1 0 1]
+ [0 0 1 1 0]
  [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 4
-    Pattern Lines:
-      Line 0: []
-      Line 1: []
-      Line 2: ['red', 'red']
-      Line 3: ['blue', 'blue']
-      Line 4: ['red', 'red']
-    Floor: ['Tile', None, None, None, None, None, None]
-    Board Occupancy:
-[[0 1 1 0 1]
- [1 1 0 1 0]
  [0 0 1 0 0]
- [0 1 0 0 0]
- [1 0 0 0 0]]
-Bag: 0 tiles
-Discard: 54 tiles
+ [0 0 0 1 0]]
+Bag: 20 tiles
+Discard: 40 tiles
 
 --- Player 0's Turn ---
-MCTS Chosen Move: ('center', None, <Color.YELLOW: 'yellow'>, 'pattern_line', 1)
+MCTS Chosen Move: ('factory', 4, <Color.BLUE: 'blue'>, 'pattern_line', 0)
 Move applied.
 
 Current Player: 0
 First Player Marker Holder: 0
 Factories:
-  Factory 0: ['black', 'yellow', 'blue', 'black']
-  Factory 1: ['black', 'green', 'blue', 'green']
-  Factory 2: []
-  Factory 3: ['yellow', 'green', 'blue', 'green']
-  Factory 4: ['red', 'red', 'yellow', 'black']
-Center: ['blue', 'green'] (Marker: False)
+  Factory 0: ['yellow', 'red', 'green', 'green']
+  Factory 1: ['black', 'green', 'yellow', 'yellow']
+  Factory 2: ['green', 'red', 'green', 'green']
+  Factory 3: ['red', 'black', 'green', 'yellow']
+  Factory 4: []
+Center: ['yellow', 'red', 'red'] (Marker: True)
 Players:
   Player 0 Score: 4
     Pattern Lines:
-      Line 0: []
-      Line 1: ['yellow']
+      Line 0: ['blue']
+      Line 1: []
       Line 2: []
-      Line 3: ['black']
-      Line 4: ['red']
-    Floor: ['FirstPlayerMarker', None, None, None, None, None, None]
+      Line 3: ['green', 'green']
+      Line 4: ['green', 'green']
+    Floor: [None, None, None, None, None, None, None]
     Board Occupancy:
-[[0 1 1 1 0]
- [1 0 1 0 1]
- [0 1 1 0 0]
+[[1 0 1 1 0]
+ [0 0 1 0 1]
+ [1 0 0 0 0]
  [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 4
+ [0 0 0 0 0]]
+  Player 1 Score: 0
     Pattern Lines:
       Line 0: []
       Line 1: []
-      Line 2: ['red', 'red']
-      Line 3: ['blue', 'blue']
-      Line 4: ['red', 'red']
-    Floor: ['Tile', None, None, None, None, None, None]
+      Line 2: ['yellow', 'yellow']
+      Line 3: ['green']
+      Line 4: []
+    Floor: [None, None, None, None, None, None, None]
     Board Occupancy:
-[[0 1 1 0 1]
- [1 1 0 1 0]
+[[1 0 1 0 1]
+ [0 0 1 1 0]
+ [0 0 0 0 0]
  [0 0 1 0 0]
- [0 1 0 0 0]
- [1 0 0 0 0]]
-Bag: 0 tiles
-Discard: 54 tiles
+ [0 0 0 1 0]]
+Bag: 20 tiles
+Discard: 40 tiles
 
 --- Player 1's Turn ---
-MCTS Chosen Move: ('factory', 0, <Color.BLUE: 'blue'>, 'pattern_line', 3)
+MCTS Chosen Move: ('factory', 1, <Color.YELLOW: 'yellow'>, 'pattern_line', 1)
+Move applied.
+
+Current Player: 1
+First Player Marker Holder: 0
+Factories:
+  Factory 0: ['yellow', 'red', 'green', 'green']
+  Factory 1: []
+  Factory 2: ['green', 'red', 'green', 'green']
+  Factory 3: ['red', 'black', 'green', 'yellow']
+  Factory 4: []
+Center: ['yellow', 'red', 'red', 'black', 'green'] (Marker: True)
+Players:
+  Player 0 Score: 4
+    Pattern Lines:
+      Line 0: ['blue']
+      Line 1: []
+      Line 2: []
+      Line 3: ['green', 'green']
+      Line 4: ['green', 'green']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[1 0 1 1 0]
+ [0 0 1 0 1]
+ [1 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['yellow', 'yellow']
+      Line 2: ['yellow', 'yellow']
+      Line 3: ['green']
+      Line 4: []
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[1 0 1 0 1]
+ [0 0 1 1 0]
+ [0 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 1 0]]
+Bag: 20 tiles
+Discard: 40 tiles
+
+--- Player 0's Turn ---
+MCTS Chosen Move: ('center', None, <Color.BLACK: 'black'>, 'pattern_line', 2)
+Move applied.
+
+Current Player: 0
+First Player Marker Holder: 0
+Factories:
+  Factory 0: ['yellow', 'red', 'green', 'green']
+  Factory 1: []
+  Factory 2: ['green', 'red', 'green', 'green']
+  Factory 3: ['red', 'black', 'green', 'yellow']
+  Factory 4: []
+Center: ['yellow', 'red', 'red', 'green'] (Marker: False)
+Players:
+  Player 0 Score: 4
+    Pattern Lines:
+      Line 0: ['blue']
+      Line 1: []
+      Line 2: ['black']
+      Line 3: ['green', 'green']
+      Line 4: ['green', 'green']
+    Floor: ['FirstPlayerMarker', None, None, None, None, None, None]
+    Board Occupancy:
+[[1 0 1 1 0]
+ [0 0 1 0 1]
+ [1 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['yellow', 'yellow']
+      Line 2: ['yellow', 'yellow']
+      Line 3: ['green']
+      Line 4: []
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[1 0 1 0 1]
+ [0 0 1 1 0]
+ [0 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 1 0]]
+Bag: 20 tiles
+Discard: 40 tiles
+
+--- Player 1's Turn ---
+MCTS Chosen Move: ('factory', 0, <Color.RED: 'red'>, 'floor', None)
 Move applied.
 
 Current Player: 1
 First Player Marker Holder: 0
 Factories:
   Factory 0: []
-  Factory 1: ['black', 'green', 'blue', 'green']
-  Factory 2: []
-  Factory 3: ['yellow', 'green', 'blue', 'green']
-  Factory 4: ['red', 'red', 'yellow', 'black']
-Center: ['blue', 'green', 'black', 'yellow', 'black'] (Marker: False)
+  Factory 1: []
+  Factory 2: ['green', 'red', 'green', 'green']
+  Factory 3: ['red', 'black', 'green', 'yellow']
+  Factory 4: []
+Center: ['yellow', 'red', 'red', 'green', 'yellow', 'green', 'green'] (Marker: False)
 Players:
   Player 0 Score: 4
     Pattern Lines:
-      Line 0: []
-      Line 1: ['yellow']
-      Line 2: []
-      Line 3: ['black']
-      Line 4: ['red']
+      Line 0: ['blue']
+      Line 1: []
+      Line 2: ['black']
+      Line 3: ['green', 'green']
+      Line 4: ['green', 'green']
     Floor: ['FirstPlayerMarker', None, None, None, None, None, None]
     Board Occupancy:
-[[0 1 1 1 0]
- [1 0 1 0 1]
- [0 1 1 0 0]
+[[1 0 1 1 0]
+ [0 0 1 0 1]
+ [1 0 0 0 0]
  [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 4
+ [0 0 0 0 0]]
+  Player 1 Score: 0
     Pattern Lines:
       Line 0: []
-      Line 1: []
-      Line 2: ['red', 'red']
-      Line 3: ['blue', 'blue', 'blue']
-      Line 4: ['red', 'red']
+      Line 1: ['yellow', 'yellow']
+      Line 2: ['yellow', 'yellow']
+      Line 3: ['green']
+      Line 4: []
     Floor: ['Tile', None, None, None, None, None, None]
     Board Occupancy:
-[[0 1 1 0 1]
- [1 1 0 1 0]
+[[1 0 1 0 1]
+ [0 0 1 1 0]
+ [0 0 0 0 0]
  [0 0 1 0 0]
- [0 1 0 0 0]
- [1 0 0 0 0]]
-Bag: 0 tiles
-Discard: 54 tiles
+ [0 0 0 1 0]]
+Bag: 20 tiles
+Discard: 40 tiles
 
 --- Player 0's Turn ---
-MCTS Chosen Move: ('factory', 3, <Color.YELLOW: 'yellow'>, 'floor', None)
+MCTS Chosen Move: ('factory', 2, <Color.GREEN: 'green'>, 'pattern_line', 3)
 Move applied.
 
 Current Player: 0
 First Player Marker Holder: 0
 Factories:
   Factory 0: []
-  Factory 1: ['black', 'green', 'blue', 'green']
+  Factory 1: []
   Factory 2: []
-  Factory 3: []
-  Factory 4: ['red', 'red', 'yellow', 'black']
-Center: ['blue', 'green', 'black', 'yellow', 'black', 'green', 'blue', 'green'] (Marker: False)
+  Factory 3: ['red', 'black', 'green', 'yellow']
+  Factory 4: []
+Center: ['yellow', 'red', 'red', 'green', 'yellow', 'green', 'green', 'red'] (Marker: False)
 Players:
   Player 0 Score: 4
     Pattern Lines:
-      Line 0: []
-      Line 1: ['yellow']
-      Line 2: []
-      Line 3: ['black']
-      Line 4: ['red']
+      Line 0: ['blue']
+      Line 1: []
+      Line 2: ['black']
+      Line 3: ['green', 'green', 'green', 'green']
+      Line 4: ['green', 'green']
     Floor: ['FirstPlayerMarker', 'Tile', None, None, None, None, None]
     Board Occupancy:
-[[0 1 1 1 0]
- [1 0 1 0 1]
- [0 1 1 0 0]
+[[1 0 1 1 0]
+ [0 0 1 0 1]
+ [1 0 0 0 0]
  [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 4
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['yellow', 'yellow']
+      Line 2: ['yellow', 'yellow']
+      Line 3: ['green']
+      Line 4: []
+    Floor: ['Tile', None, None, None, None, None, None]
+    Board Occupancy:
+[[1 0 1 0 1]
+ [0 0 1 1 0]
+ [0 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 1 0]]
+Bag: 20 tiles
+Discard: 40 tiles
+
+--- Player 1's Turn ---
+MCTS Chosen Move: ('center', None, <Color.GREEN: 'green'>, 'pattern_line', 3)
+Move applied.
+
+Current Player: 1
+First Player Marker Holder: 0
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: ['red', 'black', 'green', 'yellow']
+  Factory 4: []
+Center: ['yellow', 'red', 'red', 'yellow', 'red'] (Marker: False)
+Players:
+  Player 0 Score: 4
+    Pattern Lines:
+      Line 0: ['blue']
+      Line 1: []
+      Line 2: ['black']
+      Line 3: ['green', 'green', 'green', 'green']
+      Line 4: ['green', 'green']
+    Floor: ['FirstPlayerMarker', 'Tile', None, None, None, None, None]
+    Board Occupancy:
+[[1 0 1 1 0]
+ [0 0 1 0 1]
+ [1 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['yellow', 'yellow']
+      Line 2: ['yellow', 'yellow']
+      Line 3: ['green', 'green', 'green', 'green']
+      Line 4: []
+    Floor: ['Tile', None, None, None, None, None, None]
+    Board Occupancy:
+[[1 0 1 0 1]
+ [0 0 1 1 0]
+ [0 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 1 0]]
+Bag: 20 tiles
+Discard: 40 tiles
+
+--- Player 0's Turn ---
+MCTS Chosen Move: ('factory', 3, <Color.BLACK: 'black'>, 'floor', None)
+Move applied.
+
+Current Player: 0
+First Player Marker Holder: 0
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: []
+  Factory 4: []
+Center: ['yellow', 'red', 'red', 'yellow', 'red', 'red', 'green', 'yellow'] (Marker: False)
+Players:
+  Player 0 Score: 4
+    Pattern Lines:
+      Line 0: ['blue']
+      Line 1: []
+      Line 2: ['black']
+      Line 3: ['green', 'green', 'green', 'green']
+      Line 4: ['green', 'green']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', None, None, None, None]
+    Board Occupancy:
+[[1 0 1 1 0]
+ [0 0 1 0 1]
+ [1 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['yellow', 'yellow']
+      Line 2: ['yellow', 'yellow']
+      Line 3: ['green', 'green', 'green', 'green']
+      Line 4: []
+    Floor: ['Tile', None, None, None, None, None, None]
+    Board Occupancy:
+[[1 0 1 0 1]
+ [0 0 1 1 0]
+ [0 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 1 0]]
+Bag: 20 tiles
+Discard: 40 tiles
+
+--- Player 1's Turn ---
+MCTS Chosen Move: ('center', None, <Color.RED: 'red'>, 'pattern_line', 4)
+Move applied.
+
+Current Player: 1
+First Player Marker Holder: 0
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: []
+  Factory 4: []
+Center: ['yellow', 'yellow', 'green', 'yellow'] (Marker: False)
+Players:
+  Player 0 Score: 4
+    Pattern Lines:
+      Line 0: ['blue']
+      Line 1: []
+      Line 2: ['black']
+      Line 3: ['green', 'green', 'green', 'green']
+      Line 4: ['green', 'green']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', None, None, None, None]
+    Board Occupancy:
+[[1 0 1 1 0]
+ [0 0 1 0 1]
+ [1 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['yellow', 'yellow']
+      Line 2: ['yellow', 'yellow']
+      Line 3: ['green', 'green', 'green', 'green']
+      Line 4: ['red', 'red', 'red', 'red']
+    Floor: ['Tile', None, None, None, None, None, None]
+    Board Occupancy:
+[[1 0 1 0 1]
+ [0 0 1 1 0]
+ [0 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 1 0]]
+Bag: 20 tiles
+Discard: 40 tiles
+
+--- Player 0's Turn ---
+MCTS Chosen Move: ('center', None, <Color.GREEN: 'green'>, 'pattern_line', 1)
+Move applied.
+
+Current Player: 0
+First Player Marker Holder: 0
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: []
+  Factory 4: []
+Center: ['yellow', 'yellow', 'yellow'] (Marker: False)
+Players:
+  Player 0 Score: 4
+    Pattern Lines:
+      Line 0: ['blue']
+      Line 1: ['green']
+      Line 2: ['black']
+      Line 3: ['green', 'green', 'green', 'green']
+      Line 4: ['green', 'green']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', None, None, None, None]
+    Board Occupancy:
+[[1 0 1 1 0]
+ [0 0 1 0 1]
+ [1 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['yellow', 'yellow']
+      Line 2: ['yellow', 'yellow']
+      Line 3: ['green', 'green', 'green', 'green']
+      Line 4: ['red', 'red', 'red', 'red']
+    Floor: ['Tile', None, None, None, None, None, None]
+    Board Occupancy:
+[[1 0 1 0 1]
+ [0 0 1 1 0]
+ [0 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 1 0]]
+Bag: 20 tiles
+Discard: 40 tiles
+
+--- Player 1's Turn ---
+MCTS Chosen Move: ('center', None, <Color.YELLOW: 'yellow'>, 'pattern_line', 2)
+Move applied.
+
+Current Player: 1
+First Player Marker Holder: 0
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: []
+  Factory 4: []
+Center: [] (Marker: False)
+Players:
+  Player 0 Score: 4
+    Pattern Lines:
+      Line 0: ['blue']
+      Line 1: ['green']
+      Line 2: ['black']
+      Line 3: ['green', 'green', 'green', 'green']
+      Line 4: ['green', 'green']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', None, None, None, None]
+    Board Occupancy:
+[[1 0 1 1 0]
+ [0 0 1 0 1]
+ [1 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['yellow', 'yellow']
+      Line 2: ['yellow', 'yellow', 'yellow']
+      Line 3: ['green', 'green', 'green', 'green']
+      Line 4: ['red', 'red', 'red', 'red']
+    Floor: ['Tile', 'Tile', 'Tile', None, None, None, None]
+    Board Occupancy:
+[[1 0 1 0 1]
+ [0 0 1 1 0]
+ [0 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 1 0]]
+Bag: 20 tiles
+Discard: 40 tiles
+All sources empty. Ending round.
+Round ended.
+
+Current Player: 0
+First Player Marker Holder: 0
+Factories:
+  Factory 0: ['black', 'red', 'yellow', 'black']
+  Factory 1: ['blue', 'red', 'green', 'blue']
+  Factory 2: ['black', 'red', 'blue', 'green']
+  Factory 3: ['blue', 'black', 'blue', 'green']
+  Factory 4: ['blue', 'blue', 'red', 'red']
+Center: [] (Marker: True)
+Players:
+  Player 0 Score: 7
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['green']
+      Line 2: ['black']
+      Line 3: []
+      Line 4: ['green', 'green']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[1 1 1 1 0]
+ [0 0 1 0 1]
+ [1 0 0 0 0]
+ [1 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 6
     Pattern Lines:
       Line 0: []
       Line 1: []
-      Line 2: ['red', 'red']
-      Line 3: ['blue', 'blue', 'blue']
-      Line 4: ['red', 'red']
-    Floor: ['Tile', None, None, None, None, None, None]
+      Line 2: []
+      Line 3: []
+      Line 4: ['red', 'red', 'red', 'red']
+    Floor: [None, None, None, None, None, None, None]
     Board Occupancy:
-[[0 1 1 0 1]
- [1 1 0 1 0]
+[[1 0 1 0 1]
+ [0 1 1 1 0]
  [0 0 1 0 0]
- [0 1 0 0 0]
- [1 0 0 0 0]]
+ [1 0 1 0 0]
+ [0 0 0 1 0]]
+Bag: 0 tiles
+Discard: 54 tiles
+
+--- Player 0's Turn ---
+MCTS Chosen Move: ('factory', 2, <Color.BLACK: 'black'>, 'pattern_line', 3)
+Move applied.
+
+Current Player: 0
+First Player Marker Holder: 0
+Factories:
+  Factory 0: ['black', 'red', 'yellow', 'black']
+  Factory 1: ['blue', 'red', 'green', 'blue']
+  Factory 2: []
+  Factory 3: ['blue', 'black', 'blue', 'green']
+  Factory 4: ['blue', 'blue', 'red', 'red']
+Center: ['red', 'blue', 'green'] (Marker: True)
+Players:
+  Player 0 Score: 7
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['green']
+      Line 2: ['black']
+      Line 3: ['black']
+      Line 4: ['green', 'green']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[1 1 1 1 0]
+ [0 0 1 0 1]
+ [1 0 0 0 0]
+ [1 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 6
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: []
+      Line 3: []
+      Line 4: ['red', 'red', 'red', 'red']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[1 0 1 0 1]
+ [0 1 1 1 0]
+ [0 0 1 0 0]
+ [1 0 1 0 0]
+ [0 0 0 1 0]]
 Bag: 0 tiles
 Discard: 54 tiles
 
@@ -2155,94 +2155,139 @@ Move applied.
 Current Player: 1
 First Player Marker Holder: 0
 Factories:
-  Factory 0: []
-  Factory 1: ['black', 'green', 'blue', 'green']
+  Factory 0: ['black', 'red', 'yellow', 'black']
+  Factory 1: ['blue', 'red', 'green', 'blue']
   Factory 2: []
-  Factory 3: []
+  Factory 3: ['blue', 'black', 'blue', 'green']
   Factory 4: []
-Center: ['blue', 'green', 'black', 'yellow', 'black', 'green', 'blue', 'green', 'yellow', 'black'] (Marker: False)
+Center: ['red', 'blue', 'green', 'blue', 'blue'] (Marker: True)
 Players:
-  Player 0 Score: 4
+  Player 0 Score: 7
     Pattern Lines:
       Line 0: []
-      Line 1: ['yellow']
-      Line 2: []
+      Line 1: ['green']
+      Line 2: ['black']
       Line 3: ['black']
-      Line 4: ['red']
-    Floor: ['FirstPlayerMarker', 'Tile', None, None, None, None, None]
+      Line 4: ['green', 'green']
+    Floor: [None, None, None, None, None, None, None]
     Board Occupancy:
-[[0 1 1 1 0]
- [1 0 1 0 1]
- [0 1 1 0 0]
- [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 4
+[[1 1 1 1 0]
+ [0 0 1 0 1]
+ [1 0 0 0 0]
+ [1 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 6
     Pattern Lines:
       Line 0: []
       Line 1: ['red', 'red']
-      Line 2: ['red', 'red']
-      Line 3: ['blue', 'blue', 'blue']
-      Line 4: ['red', 'red']
-    Floor: ['Tile', None, None, None, None, None, None]
+      Line 2: []
+      Line 3: []
+      Line 4: ['red', 'red', 'red', 'red']
+    Floor: [None, None, None, None, None, None, None]
     Board Occupancy:
-[[0 1 1 0 1]
- [1 1 0 1 0]
+[[1 0 1 0 1]
+ [0 1 1 1 0]
  [0 0 1 0 0]
- [0 1 0 0 0]
- [1 0 0 0 0]]
+ [1 0 1 0 0]
+ [0 0 0 1 0]]
 Bag: 0 tiles
 Discard: 54 tiles
 
 --- Player 0's Turn ---
-MCTS Chosen Move: ('center', None, <Color.BLUE: 'blue'>, 'floor', None)
+MCTS Chosen Move: ('factory', 0, <Color.BLACK: 'black'>, 'pattern_line', 2)
 Move applied.
 
 Current Player: 0
 First Player Marker Holder: 0
 Factories:
   Factory 0: []
-  Factory 1: ['black', 'green', 'blue', 'green']
+  Factory 1: ['blue', 'red', 'green', 'blue']
   Factory 2: []
-  Factory 3: []
+  Factory 3: ['blue', 'black', 'blue', 'green']
   Factory 4: []
-Center: ['green', 'black', 'yellow', 'black', 'green', 'green', 'yellow', 'black'] (Marker: False)
+Center: ['red', 'blue', 'green', 'blue', 'blue', 'red', 'yellow'] (Marker: True)
 Players:
-  Player 0 Score: 4
+  Player 0 Score: 7
     Pattern Lines:
       Line 0: []
-      Line 1: ['yellow']
-      Line 2: []
+      Line 1: ['green']
+      Line 2: ['black', 'black', 'black']
       Line 3: ['black']
-      Line 4: ['red']
-    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', 'Tile', None, None, None]
+      Line 4: ['green', 'green']
+    Floor: [None, None, None, None, None, None, None]
     Board Occupancy:
-[[0 1 1 1 0]
- [1 0 1 0 1]
- [0 1 1 0 0]
- [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 4
+[[1 1 1 1 0]
+ [0 0 1 0 1]
+ [1 0 0 0 0]
+ [1 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 6
     Pattern Lines:
       Line 0: []
       Line 1: ['red', 'red']
-      Line 2: ['red', 'red']
-      Line 3: ['blue', 'blue', 'blue']
-      Line 4: ['red', 'red']
-    Floor: ['Tile', None, None, None, None, None, None]
+      Line 2: []
+      Line 3: []
+      Line 4: ['red', 'red', 'red', 'red']
+    Floor: [None, None, None, None, None, None, None]
     Board Occupancy:
-[[0 1 1 0 1]
- [1 1 0 1 0]
+[[1 0 1 0 1]
+ [0 1 1 1 0]
  [0 0 1 0 0]
- [0 1 0 0 0]
- [1 0 0 0 0]]
+ [1 0 1 0 0]
+ [0 0 0 1 0]]
 Bag: 0 tiles
 Discard: 54 tiles
 
 --- Player 1's Turn ---
-MCTS Chosen Move: ('factory', 1, <Color.GREEN: 'green'>, 'floor', None)
+MCTS Chosen Move: ('factory', 3, <Color.BLACK: 'black'>, 'floor', None)
 Move applied.
 
 Current Player: 1
+First Player Marker Holder: 0
+Factories:
+  Factory 0: []
+  Factory 1: ['blue', 'red', 'green', 'blue']
+  Factory 2: []
+  Factory 3: []
+  Factory 4: []
+Center: ['red', 'blue', 'green', 'blue', 'blue', 'red', 'yellow', 'blue', 'blue', 'green'] (Marker: True)
+Players:
+  Player 0 Score: 7
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['green']
+      Line 2: ['black', 'black', 'black']
+      Line 3: ['black']
+      Line 4: ['green', 'green']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[1 1 1 1 0]
+ [0 0 1 0 1]
+ [1 0 0 0 0]
+ [1 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 6
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['red', 'red']
+      Line 2: []
+      Line 3: []
+      Line 4: ['red', 'red', 'red', 'red']
+    Floor: ['Tile', None, None, None, None, None, None]
+    Board Occupancy:
+[[1 0 1 0 1]
+ [0 1 1 1 0]
+ [0 0 1 0 0]
+ [1 0 1 0 0]
+ [0 0 0 1 0]]
+Bag: 0 tiles
+Discard: 54 tiles
+
+--- Player 0's Turn ---
+MCTS Chosen Move: ('factory', 1, <Color.GREEN: 'green'>, 'pattern_line', 4)
+Move applied.
+
+Current Player: 0
 First Player Marker Holder: 0
 Factories:
   Factory 0: []
@@ -2250,180 +2295,180 @@ Factories:
   Factory 2: []
   Factory 3: []
   Factory 4: []
-Center: ['green', 'black', 'yellow', 'black', 'green', 'green', 'yellow', 'black', 'black', 'blue'] (Marker: False)
+Center: ['red', 'blue', 'green', 'blue', 'blue', 'red', 'yellow', 'blue', 'blue', 'green', 'blue', 'red', 'blue'] (Marker: True)
 Players:
-  Player 0 Score: 4
+  Player 0 Score: 7
     Pattern Lines:
       Line 0: []
-      Line 1: ['yellow']
-      Line 2: []
+      Line 1: ['green']
+      Line 2: ['black', 'black', 'black']
       Line 3: ['black']
-      Line 4: ['red']
-    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', 'Tile', None, None, None]
+      Line 4: ['green', 'green', 'green']
+    Floor: [None, None, None, None, None, None, None]
     Board Occupancy:
-[[0 1 1 1 0]
- [1 0 1 0 1]
- [0 1 1 0 0]
- [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 4
+[[1 1 1 1 0]
+ [0 0 1 0 1]
+ [1 0 0 0 0]
+ [1 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 6
     Pattern Lines:
       Line 0: []
       Line 1: ['red', 'red']
-      Line 2: ['red', 'red']
-      Line 3: ['blue', 'blue', 'blue']
-      Line 4: ['red', 'red']
-    Floor: ['Tile', 'Tile', 'Tile', None, None, None, None]
+      Line 2: []
+      Line 3: []
+      Line 4: ['red', 'red', 'red', 'red']
+    Floor: ['Tile', None, None, None, None, None, None]
     Board Occupancy:
-[[0 1 1 0 1]
- [1 1 0 1 0]
+[[1 0 1 0 1]
+ [0 1 1 1 0]
  [0 0 1 0 0]
- [0 1 0 0 0]
- [1 0 0 0 0]]
+ [1 0 1 0 0]
+ [0 0 0 1 0]]
 Bag: 0 tiles
 Discard: 54 tiles
+
+--- Player 1's Turn ---
+MCTS Chosen Move: ('center', None, <Color.BLUE: 'blue'>, 'pattern_line', 0)
+Move applied.
+
+Current Player: 1
+First Player Marker Holder: 1
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: []
+  Factory 4: []
+Center: ['red', 'green', 'red', 'yellow', 'green', 'red'] (Marker: False)
+Players:
+  Player 0 Score: 7
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['green']
+      Line 2: ['black', 'black', 'black']
+      Line 3: ['black']
+      Line 4: ['green', 'green', 'green']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[1 1 1 1 0]
+ [0 0 1 0 1]
+ [1 0 0 0 0]
+ [1 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 6
+    Pattern Lines:
+      Line 0: ['blue']
+      Line 1: ['red', 'red']
+      Line 2: []
+      Line 3: []
+      Line 4: ['red', 'red', 'red', 'red']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile']
+    Board Occupancy:
+[[1 0 1 0 1]
+ [0 1 1 1 0]
+ [0 0 1 0 0]
+ [1 0 1 0 0]
+ [0 0 0 1 0]]
+Bag: 0 tiles
+Discard: 55 tiles
+
+--- Player 0's Turn ---
+MCTS Chosen Move: ('center', None, <Color.GREEN: 'green'>, 'pattern_line', 4)
+Move applied.
+
+Current Player: 0
+First Player Marker Holder: 1
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: []
+  Factory 4: []
+Center: ['red', 'red', 'yellow', 'red'] (Marker: False)
+Players:
+  Player 0 Score: 7
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['green']
+      Line 2: ['black', 'black', 'black']
+      Line 3: ['black']
+      Line 4: ['green', 'green', 'green', 'green', 'green']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[1 1 1 1 0]
+ [0 0 1 0 1]
+ [1 0 0 0 0]
+ [1 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 6
+    Pattern Lines:
+      Line 0: ['blue']
+      Line 1: ['red', 'red']
+      Line 2: []
+      Line 3: []
+      Line 4: ['red', 'red', 'red', 'red']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile']
+    Board Occupancy:
+[[1 0 1 0 1]
+ [0 1 1 1 0]
+ [0 0 1 0 0]
+ [1 0 1 0 0]
+ [0 0 0 1 0]]
+Bag: 0 tiles
+Discard: 55 tiles
+
+--- Player 1's Turn ---
+MCTS Chosen Move: ('center', None, <Color.RED: 'red'>, 'pattern_line', 2)
+Move applied.
+
+Current Player: 1
+First Player Marker Holder: 1
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: []
+  Factory 4: []
+Center: ['yellow'] (Marker: False)
+Players:
+  Player 0 Score: 7
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['green']
+      Line 2: ['black', 'black', 'black']
+      Line 3: ['black']
+      Line 4: ['green', 'green', 'green', 'green', 'green']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[1 1 1 1 0]
+ [0 0 1 0 1]
+ [1 0 0 0 0]
+ [1 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 6
+    Pattern Lines:
+      Line 0: ['blue']
+      Line 1: ['red', 'red']
+      Line 2: ['red', 'red', 'red']
+      Line 3: []
+      Line 4: ['red', 'red', 'red', 'red']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile']
+    Board Occupancy:
+[[1 0 1 0 1]
+ [0 1 1 1 0]
+ [0 0 1 0 0]
+ [1 0 1 0 0]
+ [0 0 0 1 0]]
+Bag: 0 tiles
+Discard: 55 tiles
 
 --- Player 0's Turn ---
 MCTS Chosen Move: ('center', None, <Color.YELLOW: 'yellow'>, 'floor', None)
 Move applied.
 
 Current Player: 0
-First Player Marker Holder: 0
-Factories:
-  Factory 0: []
-  Factory 1: []
-  Factory 2: []
-  Factory 3: []
-  Factory 4: []
-Center: ['green', 'black', 'black', 'green', 'green', 'black', 'black', 'blue'] (Marker: False)
-Players:
-  Player 0 Score: 4
-    Pattern Lines:
-      Line 0: []
-      Line 1: ['yellow']
-      Line 2: []
-      Line 3: ['black']
-      Line 4: ['red']
-    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile', None]
-    Board Occupancy:
-[[0 1 1 1 0]
- [1 0 1 0 1]
- [0 1 1 0 0]
- [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 4
-    Pattern Lines:
-      Line 0: []
-      Line 1: ['red', 'red']
-      Line 2: ['red', 'red']
-      Line 3: ['blue', 'blue', 'blue']
-      Line 4: ['red', 'red']
-    Floor: ['Tile', 'Tile', 'Tile', None, None, None, None]
-    Board Occupancy:
-[[0 1 1 0 1]
- [1 1 0 1 0]
- [0 0 1 0 0]
- [0 1 0 0 0]
- [1 0 0 0 0]]
-Bag: 0 tiles
-Discard: 54 tiles
-
---- Player 1's Turn ---
-MCTS Chosen Move: ('center', None, <Color.BLACK: 'black'>, 'floor', None)
-Move applied.
-
-Current Player: 1
-First Player Marker Holder: 0
-Factories:
-  Factory 0: []
-  Factory 1: []
-  Factory 2: []
-  Factory 3: []
-  Factory 4: []
-Center: ['green', 'green', 'green', 'blue'] (Marker: False)
-Players:
-  Player 0 Score: 4
-    Pattern Lines:
-      Line 0: []
-      Line 1: ['yellow']
-      Line 2: []
-      Line 3: ['black']
-      Line 4: ['red']
-    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile', None]
-    Board Occupancy:
-[[0 1 1 1 0]
- [1 0 1 0 1]
- [0 1 1 0 0]
- [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 4
-    Pattern Lines:
-      Line 0: []
-      Line 1: ['red', 'red']
-      Line 2: ['red', 'red']
-      Line 3: ['blue', 'blue', 'blue']
-      Line 4: ['red', 'red']
-    Floor: ['Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile']
-    Board Occupancy:
-[[0 1 1 0 1]
- [1 1 0 1 0]
- [0 0 1 0 0]
- [0 1 0 0 0]
- [1 0 0 0 0]]
-Bag: 0 tiles
-Discard: 54 tiles
-
---- Player 0's Turn ---
-MCTS Chosen Move: ('center', None, <Color.BLUE: 'blue'>, 'floor', None)
-Move applied.
-
-Current Player: 0
-First Player Marker Holder: 0
-Factories:
-  Factory 0: []
-  Factory 1: []
-  Factory 2: []
-  Factory 3: []
-  Factory 4: []
-Center: ['green', 'green', 'green'] (Marker: False)
-Players:
-  Player 0 Score: 4
-    Pattern Lines:
-      Line 0: []
-      Line 1: ['yellow']
-      Line 2: []
-      Line 3: ['black']
-      Line 4: ['red']
-    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile']
-    Board Occupancy:
-[[0 1 1 1 0]
- [1 0 1 0 1]
- [0 1 1 0 0]
- [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 4
-    Pattern Lines:
-      Line 0: []
-      Line 1: ['red', 'red']
-      Line 2: ['red', 'red']
-      Line 3: ['blue', 'blue', 'blue']
-      Line 4: ['red', 'red']
-    Floor: ['Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile']
-    Board Occupancy:
-[[0 1 1 0 1]
- [1 1 0 1 0]
- [0 0 1 0 0]
- [0 1 0 0 0]
- [1 0 0 0 0]]
-Bag: 0 tiles
-Discard: 54 tiles
-
---- Player 1's Turn ---
-MCTS Chosen Move: ('center', None, <Color.GREEN: 'green'>, 'floor', None)
-Move applied.
-
-Current Player: 1
-First Player Marker Holder: 0
+First Player Marker Holder: 1
 Factories:
   Factory 0: []
   Factory 1: []
@@ -2432,77 +2477,122 @@ Factories:
   Factory 4: []
 Center: [] (Marker: False)
 Players:
-  Player 0 Score: 4
+  Player 0 Score: 7
     Pattern Lines:
       Line 0: []
-      Line 1: ['yellow']
-      Line 2: []
+      Line 1: ['green']
+      Line 2: ['black', 'black', 'black']
       Line 3: ['black']
-      Line 4: ['red']
+      Line 4: ['green', 'green', 'green', 'green', 'green']
+    Floor: ['Tile', None, None, None, None, None, None]
+    Board Occupancy:
+[[1 1 1 1 0]
+ [0 0 1 0 1]
+ [1 0 0 0 0]
+ [1 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 6
+    Pattern Lines:
+      Line 0: ['blue']
+      Line 1: ['red', 'red']
+      Line 2: ['red', 'red', 'red']
+      Line 3: []
+      Line 4: ['red', 'red', 'red', 'red']
     Floor: ['FirstPlayerMarker', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile']
     Board Occupancy:
-[[0 1 1 1 0]
- [1 0 1 0 1]
- [0 1 1 0 0]
- [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 4
-    Pattern Lines:
-      Line 0: []
-      Line 1: ['red', 'red']
-      Line 2: ['red', 'red']
-      Line 3: ['blue', 'blue', 'blue']
-      Line 4: ['red', 'red']
-    Floor: ['Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile']
-    Board Occupancy:
-[[0 1 1 0 1]
- [1 1 0 1 0]
+[[1 0 1 0 1]
+ [0 1 1 1 0]
  [0 0 1 0 0]
- [0 1 0 0 0]
- [1 0 0 0 0]]
+ [1 0 1 0 0]
+ [0 0 0 1 0]]
 Bag: 0 tiles
-Discard: 57 tiles
+Discard: 55 tiles
 All sources empty. Ending round.
 Round ended.
 
-Current Player: 0
-First Player Marker Holder: 0
+Current Player: 1
+First Player Marker Holder: 1
 Factories:
-  Factory 0: ['blue', 'yellow', 'red', 'black']
-  Factory 1: ['green', 'black', 'blue', 'red']
-  Factory 2: ['yellow', 'blue', 'black', 'red']
-  Factory 3: ['black', 'red', 'green', 'black']
-  Factory 4: ['black', 'black', 'green', 'yellow']
+  Factory 0: ['green', 'red', 'yellow', 'black']
+  Factory 1: ['yellow', 'green', 'yellow', 'yellow']
+  Factory 2: ['blue', 'red', 'blue', 'black']
+  Factory 3: ['green', 'green', 'red', 'red']
+  Factory 4: ['green', 'black', 'blue', 'yellow']
 Center: [] (Marker: True)
 Players:
-  Player 0 Score: 0
+  Player 0 Score: 12
     Pattern Lines:
       Line 0: []
-      Line 1: ['yellow']
+      Line 1: ['green']
       Line 2: []
       Line 3: ['black']
-      Line 4: ['red']
+      Line 4: []
     Floor: [None, None, None, None, None, None, None]
     Board Occupancy:
-[[0 1 1 1 0]
- [1 0 1 0 1]
- [0 1 1 0 0]
- [0 0 0 0 0]
+[[1 1 1 1 0]
+ [0 0 1 0 1]
+ [1 1 0 0 0]
+ [1 0 0 0 0]
  [0 1 0 0 0]]
-  Player 1 Score: 0
+  Player 1 Score: 6
     Pattern Lines:
       Line 0: []
       Line 1: []
-      Line 2: ['red', 'red']
-      Line 3: ['blue', 'blue', 'blue']
-      Line 4: ['red', 'red']
+      Line 2: []
+      Line 3: []
+      Line 4: ['red', 'red', 'red', 'red']
     Floor: [None, None, None, None, None, None, None]
     Board Occupancy:
-[[0 1 1 0 1]
- [1 1 0 1 1]
- [0 0 1 0 0]
- [0 1 0 0 0]
- [1 0 0 0 0]]
+[[1 1 1 0 1]
+ [0 1 1 1 1]
+ [1 0 1 0 0]
+ [1 0 1 0 0]
+ [0 0 0 1 0]]
+Bag: 51 tiles
+Discard: 0 tiles
+
+--- Player 1's Turn ---
+MCTS Chosen Move: ('factory', 4, <Color.GREEN: 'green'>, 'pattern_line', 2)
+Move applied.
+
+Current Player: 1
+First Player Marker Holder: 1
+Factories:
+  Factory 0: ['green', 'red', 'yellow', 'black']
+  Factory 1: ['yellow', 'green', 'yellow', 'yellow']
+  Factory 2: ['blue', 'red', 'blue', 'black']
+  Factory 3: ['green', 'green', 'red', 'red']
+  Factory 4: []
+Center: ['black', 'blue', 'yellow'] (Marker: True)
+Players:
+  Player 0 Score: 12
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['green']
+      Line 2: []
+      Line 3: ['black']
+      Line 4: []
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[1 1 1 1 0]
+ [0 0 1 0 1]
+ [1 1 0 0 0]
+ [1 0 0 0 0]
+ [0 1 0 0 0]]
+  Player 1 Score: 6
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: ['green']
+      Line 3: []
+      Line 4: ['red', 'red', 'red', 'red']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[1 1 1 0 1]
+ [0 1 1 1 1]
+ [1 0 1 0 0]
+ [1 0 1 0 0]
+ [0 0 0 1 0]]
 Bag: 51 tiles
 Discard: 0 tiles
 
@@ -2511,1032 +2601,449 @@ MCTS Chosen Move: ('factory', 1, <Color.GREEN: 'green'>, 'pattern_line', 2)
 Move applied.
 
 Current Player: 0
-First Player Marker Holder: 0
+First Player Marker Holder: 1
 Factories:
-  Factory 0: ['blue', 'yellow', 'red', 'black']
+  Factory 0: ['green', 'red', 'yellow', 'black']
   Factory 1: []
-  Factory 2: ['yellow', 'blue', 'black', 'red']
-  Factory 3: ['black', 'red', 'green', 'black']
-  Factory 4: ['black', 'black', 'green', 'yellow']
-Center: ['black', 'blue', 'red'] (Marker: True)
+  Factory 2: ['blue', 'red', 'blue', 'black']
+  Factory 3: ['green', 'green', 'red', 'red']
+  Factory 4: []
+Center: ['black', 'blue', 'yellow', 'yellow', 'yellow', 'yellow'] (Marker: True)
 Players:
-  Player 0 Score: 0
+  Player 0 Score: 12
     Pattern Lines:
       Line 0: []
-      Line 1: ['yellow']
+      Line 1: ['green']
       Line 2: ['green']
       Line 3: ['black']
-      Line 4: ['red']
-    Floor: [None, None, None, None, None, None, None]
-    Board Occupancy:
-[[0 1 1 1 0]
- [1 0 1 0 1]
- [0 1 1 0 0]
- [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 0
-    Pattern Lines:
-      Line 0: []
-      Line 1: []
-      Line 2: ['red', 'red']
-      Line 3: ['blue', 'blue', 'blue']
-      Line 4: ['red', 'red']
-    Floor: [None, None, None, None, None, None, None]
-    Board Occupancy:
-[[0 1 1 0 1]
- [1 1 0 1 1]
- [0 0 1 0 0]
- [0 1 0 0 0]
- [1 0 0 0 0]]
-Bag: 51 tiles
-Discard: 0 tiles
-
---- Player 1's Turn ---
-MCTS Chosen Move: ('factory', 2, <Color.RED: 'red'>, 'pattern_line', 0)
-Move applied.
-
-Current Player: 1
-First Player Marker Holder: 0
-Factories:
-  Factory 0: ['blue', 'yellow', 'red', 'black']
-  Factory 1: []
-  Factory 2: []
-  Factory 3: ['black', 'red', 'green', 'black']
-  Factory 4: ['black', 'black', 'green', 'yellow']
-Center: ['black', 'blue', 'red', 'yellow', 'blue', 'black'] (Marker: True)
-Players:
-  Player 0 Score: 0
-    Pattern Lines:
-      Line 0: []
-      Line 1: ['yellow']
-      Line 2: ['green']
-      Line 3: ['black']
-      Line 4: ['red']
-    Floor: [None, None, None, None, None, None, None]
-    Board Occupancy:
-[[0 1 1 1 0]
- [1 0 1 0 1]
- [0 1 1 0 0]
- [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 0
-    Pattern Lines:
-      Line 0: ['red']
-      Line 1: []
-      Line 2: ['red', 'red']
-      Line 3: ['blue', 'blue', 'blue']
-      Line 4: ['red', 'red']
-    Floor: [None, None, None, None, None, None, None]
-    Board Occupancy:
-[[0 1 1 0 1]
- [1 1 0 1 1]
- [0 0 1 0 0]
- [0 1 0 0 0]
- [1 0 0 0 0]]
-Bag: 51 tiles
-Discard: 0 tiles
-
---- Player 0's Turn ---
-MCTS Chosen Move: ('factory', 3, <Color.BLACK: 'black'>, 'pattern_line', 3)
-Move applied.
-
-Current Player: 0
-First Player Marker Holder: 0
-Factories:
-  Factory 0: ['blue', 'yellow', 'red', 'black']
-  Factory 1: []
-  Factory 2: []
-  Factory 3: []
-  Factory 4: ['black', 'black', 'green', 'yellow']
-Center: ['black', 'blue', 'red', 'yellow', 'blue', 'black', 'red', 'green'] (Marker: True)
-Players:
-  Player 0 Score: 0
-    Pattern Lines:
-      Line 0: []
-      Line 1: ['yellow']
-      Line 2: ['green']
-      Line 3: ['black', 'black', 'black']
-      Line 4: ['red']
-    Floor: [None, None, None, None, None, None, None]
-    Board Occupancy:
-[[0 1 1 1 0]
- [1 0 1 0 1]
- [0 1 1 0 0]
- [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 0
-    Pattern Lines:
-      Line 0: ['red']
-      Line 1: []
-      Line 2: ['red', 'red']
-      Line 3: ['blue', 'blue', 'blue']
-      Line 4: ['red', 'red']
-    Floor: [None, None, None, None, None, None, None]
-    Board Occupancy:
-[[0 1 1 0 1]
- [1 1 0 1 1]
- [0 0 1 0 0]
- [0 1 0 0 0]
- [1 0 0 0 0]]
-Bag: 51 tiles
-Discard: 0 tiles
-
---- Player 1's Turn ---
-MCTS Chosen Move: ('factory', 0, <Color.BLUE: 'blue'>, 'floor', None)
-Move applied.
-Current Player: 1
-
-First Player Marker Holder: 0
-Factories:
-  Factory 0: []
-  Factory 1: []
-  Factory 2: []
-  Factory 3: []
-  Factory 4: ['black', 'black', 'green', 'yellow']
-Center: ['black', 'blue', 'red', 'yellow', 'blue', 'black', 'red', 'green', 'yellow', 'red', 'black'] (Marker: True)
-Players:
-  Player 0 Score: 0
-    Pattern Lines:
-      Line 0: []
-      Line 1: ['yellow']
-      Line 2: ['green']
-      Line 3: ['black', 'black', 'black']
-      Line 4: ['red']
-    Floor: [None, None, None, None, None, None, None]
-    Board Occupancy:
-[[0 1 1 1 0]
- [1 0 1 0 1]
- [0 1 1 0 0]
- [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 0
-    Pattern Lines:
-      Line 0: ['red']
-      Line 1: []
-      Line 2: ['red', 'red']
-      Line 3: ['blue', 'blue', 'blue']
-      Line 4: ['red', 'red']
-    Floor: ['Tile', None, None, None, None, None, None]
-    Board Occupancy:
-[[0 1 1 0 1]
- [1 1 0 1 1]
- [0 0 1 0 0]
- [0 1 0 0 0]
- [1 0 0 0 0]]
-Bag: 51 tiles
-Discard: 0 tiles
-
---- Player 0's Turn ---
-MCTS Chosen Move: ('center', None, <Color.RED: 'red'>, 'pattern_line', 4)
-Move applied.
-
-Current Player: 0
-First Player Marker Holder: 0
-Factories:
-  Factory 0: []
-  Factory 1: []
-  Factory 2: []
-  Factory 3: []
-  Factory 4: ['black', 'black', 'green', 'yellow']
-Center: ['black', 'blue', 'yellow', 'blue', 'black', 'green', 'yellow', 'black'] (Marker: False)
-Players:
-  Player 0 Score: 0
-    Pattern Lines:
-      Line 0: []
-      Line 1: ['yellow']
-      Line 2: ['green']
-      Line 3: ['black', 'black', 'black']
-      Line 4: ['red', 'red', 'red', 'red']
-    Floor: ['FirstPlayerMarker', None, None, None, None, None, None]
-    Board Occupancy:
-[[0 1 1 1 0]
- [1 0 1 0 1]
- [0 1 1 0 0]
- [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 0
-    Pattern Lines:
-      Line 0: ['red']
-      Line 1: []
-      Line 2: ['red', 'red']
-      Line 3: ['blue', 'blue', 'blue']
-      Line 4: ['red', 'red']
-    Floor: ['Tile', None, None, None, None, None, None]
-    Board Occupancy:
-[[0 1 1 0 1]
- [1 1 0 1 1]
- [0 0 1 0 0]
- [0 1 0 0 0]
- [1 0 0 0 0]]
-Bag: 51 tiles
-Discard: 0 tiles
-
---- Player 1's Turn ---
-MCTS Chosen Move: ('factory', 4, <Color.YELLOW: 'yellow'>, 'floor', None)
-Move applied.
-
-Current Player: 1
-First Player Marker Holder: 0
-Factories:
-  Factory 0: []
-  Factory 1: []
-  Factory 2: []
-  Factory 3: []
-  Factory 4: []
-Center: ['black', 'blue', 'yellow', 'blue', 'black', 'green', 'yellow', 'black', 'black', 'black', 'green'] (Marker: False)
-Players:
-  Player 0 Score: 0
-    Pattern Lines:
-      Line 0: []
-      Line 1: ['yellow']
-      Line 2: ['green']
-      Line 3: ['black', 'black', 'black']
-      Line 4: ['red', 'red', 'red', 'red']
-    Floor: ['FirstPlayerMarker', None, None, None, None, None, None]
-    Board Occupancy:
-[[0 1 1 1 0]
- [1 0 1 0 1]
- [0 1 1 0 0]
- [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 0
-    Pattern Lines:
-      Line 0: ['red']
-      Line 1: []
-      Line 2: ['red', 'red']
-      Line 3: ['blue', 'blue', 'blue']
-      Line 4: ['red', 'red']
-    Floor: ['Tile', 'Tile', None, None, None, None, None]
-    Board Occupancy:
-[[0 1 1 0 1]
- [1 1 0 1 1]
- [0 0 1 0 0]
- [0 1 0 0 0]
- [1 0 0 0 0]]
-Bag: 51 tiles
-Discard: 0 tiles
-
---- Player 0's Turn ---
-MCTS Chosen Move: ('center', None, <Color.BLUE: 'blue'>, 'floor', None)
-Move applied.
-
-Current Player: 0
-First Player Marker Holder: 0
-Factories:
-  Factory 0: []
-  Factory 1: []
-  Factory 2: []
-  Factory 3: []
-  Factory 4: []
-Center: ['black', 'yellow', 'black', 'green', 'yellow', 'black', 'black', 'black', 'green'] (Marker: False)
-Players:
-  Player 0 Score: 0
-    Pattern Lines:
-      Line 0: []
-      Line 1: ['yellow']
-      Line 2: ['green']
-      Line 3: ['black', 'black', 'black']
-      Line 4: ['red', 'red', 'red', 'red']
-    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', None, None, None, None]
-    Board Occupancy:
-[[0 1 1 1 0]
- [1 0 1 0 1]
- [0 1 1 0 0]
- [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 0
-    Pattern Lines:
-      Line 0: ['red']
-      Line 1: []
-      Line 2: ['red', 'red']
-      Line 3: ['blue', 'blue', 'blue']
-      Line 4: ['red', 'red']
-    Floor: ['Tile', 'Tile', None, None, None, None, None]
-    Board Occupancy:
-[[0 1 1 0 1]
- [1 1 0 1 1]
- [0 0 1 0 0]
- [0 1 0 0 0]
- [1 0 0 0 0]]
-Bag: 51 tiles
-Discard: 0 tiles
-
---- Player 1's Turn ---
-MCTS Chosen Move: ('center', None, <Color.BLACK: 'black'>, 'floor', None)
-Move applied.
-
-Current Player: 1
-First Player Marker Holder: 0
-Factories:
-  Factory 0: []
-  Factory 1: []
-  Factory 2: []
-  Factory 3: []
-  Factory 4: []
-Center: ['yellow', 'green', 'yellow', 'green'] (Marker: False)
-Players:
-  Player 0 Score: 0
-    Pattern Lines:
-      Line 0: []
-      Line 1: ['yellow']
-      Line 2: ['green']
-      Line 3: ['black', 'black', 'black']
-      Line 4: ['red', 'red', 'red', 'red']
-    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', None, None, None, None]
-    Board Occupancy:
-[[0 1 1 1 0]
- [1 0 1 0 1]
- [0 1 1 0 0]
- [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 0
-    Pattern Lines:
-      Line 0: ['red']
-      Line 1: []
-      Line 2: ['red', 'red']
-      Line 3: ['blue', 'blue', 'blue']
-      Line 4: ['red', 'red']
-    Floor: ['Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile']
-    Board Occupancy:
-[[0 1 1 0 1]
- [1 1 0 1 1]
- [0 0 1 0 0]
- [0 1 0 0 0]
- [1 0 0 0 0]]
-Bag: 51 tiles
-Discard: 0 tiles
-
---- Player 0's Turn ---
-MCTS Chosen Move: ('center', None, <Color.GREEN: 'green'>, 'floor', None)
-Move applied.
-
-Current Player: 0
-First Player Marker Holder: 0
-Factories:
-  Factory 0: []
-  Factory 1: []
-  Factory 2: []
-  Factory 3: []
-  Factory 4: []
-Center: ['yellow', 'yellow'] (Marker: False)
-Players:
-  Player 0 Score: 0
-    Pattern Lines:
-      Line 0: []
-      Line 1: ['yellow']
-      Line 2: ['green']
-      Line 3: ['black', 'black', 'black']
-      Line 4: ['red', 'red', 'red', 'red']
-    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', 'Tile', 'Tile', None, None]
-    Board Occupancy:
-[[0 1 1 1 0]
- [1 0 1 0 1]
- [0 1 1 0 0]
- [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 0
-    Pattern Lines:
-      Line 0: ['red']
-      Line 1: []
-      Line 2: ['red', 'red']
-      Line 3: ['blue', 'blue', 'blue']
-      Line 4: ['red', 'red']
-    Floor: ['Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile']
-    Board Occupancy:
-[[0 1 1 0 1]
- [1 1 0 1 1]
- [0 0 1 0 0]
- [0 1 0 0 0]
- [1 0 0 0 0]]
-Bag: 51 tiles
-Discard: 0 tiles
-
---- Player 1's Turn ---
-MCTS Chosen Move: ('center', None, <Color.YELLOW: 'yellow'>, 'floor', None)
-Move applied.
-
-Current Player: 1
-First Player Marker Holder: 0
-Factories:
-  Factory 0: []
-  Factory 1: []
-  Factory 2: []
-  Factory 3: []
-  Factory 4: []
-Center: [] (Marker: False)
-Players:
-  Player 0 Score: 0
-    Pattern Lines:
-      Line 0: []
-      Line 1: ['yellow']
-      Line 2: ['green']
-      Line 3: ['black', 'black', 'black']
-      Line 4: ['red', 'red', 'red', 'red']
-    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', 'Tile', 'Tile', None, None]
-    Board Occupancy:
-[[0 1 1 1 0]
- [1 0 1 0 1]
- [0 1 1 0 0]
- [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 0
-    Pattern Lines:
-      Line 0: ['red']
-      Line 1: []
-      Line 2: ['red', 'red']
-      Line 3: ['blue', 'blue', 'blue']
-      Line 4: ['red', 'red']
-    Floor: ['Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile']
-    Board Occupancy:
-[[0 1 1 0 1]
- [1 1 0 1 1]
- [0 0 1 0 0]
- [0 1 0 0 0]
- [1 0 0 0 0]]
-Bag: 51 tiles
-Discard: 2 tiles
-All sources empty. Ending round.
-Round ended.
-
-Current Player: 0
-First Player Marker Holder: 0
-Factories:
-  Factory 0: ['yellow', 'red', 'yellow', 'black']
-  Factory 1: ['yellow', 'green', 'green', 'blue']
-  Factory 2: ['yellow', 'black', 'black', 'yellow']
-  Factory 3: ['black', 'green', 'red', 'blue']
-  Factory 4: ['blue', 'red', 'yellow', 'green']
-Center: [] (Marker: True)
-Players:
-  Player 0 Score: 0
-    Pattern Lines:
-      Line 0: []
-      Line 1: ['yellow']
-      Line 2: ['green']
-      Line 3: ['black', 'black', 'black']
-      Line 4: ['red', 'red', 'red', 'red']
-    Floor: [None, None, None, None, None, None, None]
-    Board Occupancy:
-[[0 1 1 1 0]
- [1 0 1 0 1]
- [0 1 1 0 0]
- [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 0
-    Pattern Lines:
-      Line 0: []
-      Line 1: []
-      Line 2: ['red', 'red']
-      Line 3: ['blue', 'blue', 'blue']
-      Line 4: ['red', 'red']
-    Floor: [None, None, None, None, None, None, None]
-    Board Occupancy:
-[[0 1 1 1 1]
- [1 1 0 1 1]
- [0 0 1 0 0]
- [0 1 0 0 0]
- [1 0 0 0 0]]
-Bag: 31 tiles
-Discard: 13 tiles
-
---- Player 0's Turn ---
-MCTS Chosen Move: ('factory', 0, <Color.RED: 'red'>, 'pattern_line', 4)
-Move applied.
-
-Current Player: 0
-First Player Marker Holder: 0
-Factories:
-  Factory 0: []
-  Factory 1: ['yellow', 'green', 'green', 'blue']
-  Factory 2: ['yellow', 'black', 'black', 'yellow']
-  Factory 3: ['black', 'green', 'red', 'blue']
-  Factory 4: ['blue', 'red', 'yellow', 'green']
-Center: ['yellow', 'yellow', 'black'] (Marker: True)
-Players:
-  Player 0 Score: 0
-    Pattern Lines:
-      Line 0: []
-      Line 1: ['yellow']
-      Line 2: ['green']
-      Line 3: ['black', 'black', 'black']
-      Line 4: ['red', 'red', 'red', 'red', 'red']
-    Floor: [None, None, None, None, None, None, None]
-    Board Occupancy:
-[[0 1 1 1 0]
- [1 0 1 0 1]
- [0 1 1 0 0]
- [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 0
-    Pattern Lines:
-      Line 0: []
-      Line 1: []
-      Line 2: ['red', 'red']
-      Line 3: ['blue', 'blue', 'blue']
-      Line 4: ['red', 'red']
-    Floor: [None, None, None, None, None, None, None]
-    Board Occupancy:
-[[0 1 1 1 1]
- [1 1 0 1 1]
- [0 0 1 0 0]
- [0 1 0 0 0]
- [1 0 0 0 0]]
-Bag: 31 tiles
-Discard: 13 tiles
-
---- Player 1's Turn ---
-MCTS Chosen Move: ('factory', 2, <Color.YELLOW: 'yellow'>, 'pattern_line', 0)
-Move applied.
-
-Current Player: 1
-First Player Marker Holder: 0
-Factories:
-  Factory 0: []
-  Factory 1: ['yellow', 'green', 'green', 'blue']
-  Factory 2: []
-  Factory 3: ['black', 'green', 'red', 'blue']
-  Factory 4: ['blue', 'red', 'yellow', 'green']
-Center: ['yellow', 'yellow', 'black', 'black', 'black'] (Marker: True)
-Players:
-  Player 0 Score: 0
-    Pattern Lines:
-      Line 0: []
-      Line 1: ['yellow']
-      Line 2: ['green']
-      Line 3: ['black', 'black', 'black']
-      Line 4: ['red', 'red', 'red', 'red', 'red']
-    Floor: [None, None, None, None, None, None, None]
-    Board Occupancy:
-[[0 1 1 1 0]
- [1 0 1 0 1]
- [0 1 1 0 0]
- [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 0
-    Pattern Lines:
-      Line 0: ['yellow']
-      Line 1: []
-      Line 2: ['red', 'red']
-      Line 3: ['blue', 'blue', 'blue']
-      Line 4: ['red', 'red']
-    Floor: ['Tile', None, None, None, None, None, None]
-    Board Occupancy:
-[[0 1 1 1 1]
- [1 1 0 1 1]
- [0 0 1 0 0]
- [0 1 0 0 0]
- [1 0 0 0 0]]
-Bag: 31 tiles
-Discard: 13 tiles
-
---- Player 0's Turn ---
-MCTS Chosen Move: ('factory', 4, <Color.GREEN: 'green'>, 'pattern_line', 2)
-Move applied.
-
-Current Player: 0
-First Player Marker Holder: 0
-Factories:
-  Factory 0: []
-  Factory 1: ['yellow', 'green', 'green', 'blue']
-  Factory 2: []
-  Factory 3: ['black', 'green', 'red', 'blue']
-  Factory 4: []
-Center: ['yellow', 'yellow', 'black', 'black', 'black', 'blue', 'red', 'yellow'] (Marker: True)
-Players:
-  Player 0 Score: 0
-    Pattern Lines:
-      Line 0: []
-      Line 1: ['yellow']
-      Line 2: ['green', 'green']
-      Line 3: ['black', 'black', 'black']
-      Line 4: ['red', 'red', 'red', 'red', 'red']
-    Floor: [None, None, None, None, None, None, None]
-    Board Occupancy:
-[[0 1 1 1 0]
- [1 0 1 0 1]
- [0 1 1 0 0]
- [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 0
-    Pattern Lines:
-      Line 0: ['yellow']
-      Line 1: []
-      Line 2: ['red', 'red']
-      Line 3: ['blue', 'blue', 'blue']
-      Line 4: ['red', 'red']
-    Floor: ['Tile', None, None, None, None, None, None]
-    Board Occupancy:
-[[0 1 1 1 1]
- [1 1 0 1 1]
- [0 0 1 0 0]
- [0 1 0 0 0]
- [1 0 0 0 0]]
-Bag: 31 tiles
-Discard: 13 tiles
-
---- Player 1's Turn ---
-MCTS Chosen Move: ('factory', 3, <Color.BLUE: 'blue'>, 'pattern_line', 3)
-Move applied.
-
-Current Player: 1
-First Player Marker Holder: 0
-Factories:
-  Factory 0: []
-  Factory 1: ['yellow', 'green', 'green', 'blue']
-  Factory 2: []
-  Factory 3: []
-  Factory 4: []
-Center: ['yellow', 'yellow', 'black', 'black', 'black', 'blue', 'red', 'yellow', 'black', 'green', 'red'] (Marker: True)
-Players:
-  Player 0 Score: 0
-    Pattern Lines:
-      Line 0: []
-      Line 1: ['yellow']
-      Line 2: ['green', 'green']
-      Line 3: ['black', 'black', 'black']
-      Line 4: ['red', 'red', 'red', 'red', 'red']
-    Floor: [None, None, None, None, None, None, None]
-    Board Occupancy:
-[[0 1 1 1 0]
- [1 0 1 0 1]
- [0 1 1 0 0]
- [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 0
-    Pattern Lines:
-      Line 0: ['yellow']
-      Line 1: []
-      Line 2: ['red', 'red']
-      Line 3: ['blue', 'blue', 'blue', 'blue']
-      Line 4: ['red', 'red']
-    Floor: ['Tile', None, None, None, None, None, None]
-    Board Occupancy:
-[[0 1 1 1 1]
- [1 1 0 1 1]
- [0 0 1 0 0]
- [0 1 0 0 0]
- [1 0 0 0 0]]
-Bag: 31 tiles
-Discard: 13 tiles
-
---- Player 0's Turn ---
-MCTS Chosen Move: ('center', None, <Color.GREEN: 'green'>, 'pattern_line', 2)
-Move applied.
-
-Current Player: 0
-First Player Marker Holder: 0
-Factories:
-  Factory 0: []
-  Factory 1: ['yellow', 'green', 'green', 'blue']
-  Factory 2: []
-  Factory 3: []
-  Factory 4: []
-Center: ['yellow', 'yellow', 'black', 'black', 'black', 'blue', 'red', 'yellow', 'black', 'red'] (Marker: False)
-Players:
-  Player 0 Score: 0
-    Pattern Lines:
-      Line 0: []
-      Line 1: ['yellow']
-      Line 2: ['green', 'green', 'green']
-      Line 3: ['black', 'black', 'black']
-      Line 4: ['red', 'red', 'red', 'red', 'red']
-    Floor: ['FirstPlayerMarker', None, None, None, None, None, None]
-    Board Occupancy:
-[[0 1 1 1 0]
- [1 0 1 0 1]
- [0 1 1 0 0]
- [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 0
-    Pattern Lines:
-      Line 0: ['yellow']
-      Line 1: []
-      Line 2: ['red', 'red']
-      Line 3: ['blue', 'blue', 'blue', 'blue']
-      Line 4: ['red', 'red']
-    Floor: ['Tile', None, None, None, None, None, None]
-    Board Occupancy:
-[[0 1 1 1 1]
- [1 1 0 1 1]
- [0 0 1 0 0]
- [0 1 0 0 0]
- [1 0 0 0 0]]
-Bag: 31 tiles
-Discard: 13 tiles
-
---- Player 1's Turn ---
-MCTS Chosen Move: ('center', None, <Color.RED: 'red'>, 'pattern_line', 2)
-Move applied.
-
-Current Player: 1
-First Player Marker Holder: 0
-Factories:
-  Factory 0: []
-  Factory 1: ['yellow', 'green', 'green', 'blue']
-  Factory 2: []
-  Factory 3: []
-  Factory 4: []
-Center: ['yellow', 'yellow', 'black', 'black', 'black', 'blue', 'yellow', 'black'] (Marker: False)
-Players:
-  Player 0 Score: 0
-    Pattern Lines:
-      Line 0: []
-      Line 1: ['yellow']
-      Line 2: ['green', 'green', 'green']
-      Line 3: ['black', 'black', 'black']
-      Line 4: ['red', 'red', 'red', 'red', 'red']
-    Floor: ['FirstPlayerMarker', None, None, None, None, None, None]
-    Board Occupancy:
-[[0 1 1 1 0]
- [1 0 1 0 1]
- [0 1 1 0 0]
- [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 0
-    Pattern Lines:
-      Line 0: ['yellow']
-      Line 1: []
-      Line 2: ['red', 'red', 'red']
-      Line 3: ['blue', 'blue', 'blue', 'blue']
-      Line 4: ['red', 'red']
-    Floor: ['Tile', 'Tile', None, None, None, None, None]
-    Board Occupancy:
-[[0 1 1 1 1]
- [1 1 0 1 1]
- [0 0 1 0 0]
- [0 1 0 0 0]
- [1 0 0 0 0]]
-Bag: 31 tiles
-Discard: 13 tiles
-
---- Player 0's Turn ---
-MCTS Chosen Move: ('center', None, <Color.BLUE: 'blue'>, 'floor', None)
-Move applied.
-
-Current Player: 0
-First Player Marker Holder: 0
-Factories:
-  Factory 0: []
-  Factory 1: ['yellow', 'green', 'green', 'blue']
-  Factory 2: []
-  Factory 3: []
-  Factory 4: []
-Center: ['yellow', 'yellow', 'black', 'black', 'black', 'yellow', 'black'] (Marker: False)
-Players:
-  Player 0 Score: 0
-    Pattern Lines:
-      Line 0: []
-      Line 1: ['yellow']
-      Line 2: ['green', 'green', 'green']
-      Line 3: ['black', 'black', 'black']
-      Line 4: ['red', 'red', 'red', 'red', 'red']
-    Floor: ['FirstPlayerMarker', 'Tile', None, None, None, None, None]
-    Board Occupancy:
-[[0 1 1 1 0]
- [1 0 1 0 1]
- [0 1 1 0 0]
- [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 0
-    Pattern Lines:
-      Line 0: ['yellow']
-      Line 1: []
-      Line 2: ['red', 'red', 'red']
-      Line 3: ['blue', 'blue', 'blue', 'blue']
-      Line 4: ['red', 'red']
-    Floor: ['Tile', 'Tile', None, None, None, None, None]
-    Board Occupancy:
-[[0 1 1 1 1]
- [1 1 0 1 1]
- [0 0 1 0 0]
- [0 1 0 0 0]
- [1 0 0 0 0]]
-Bag: 31 tiles
-Discard: 13 tiles
-
---- Player 1's Turn ---
-MCTS Chosen Move: ('factory', 1, <Color.BLUE: 'blue'>, 'floor', None)
-Move applied.
-
-Current Player: 1
-First Player Marker Holder: 0
-Factories:
-  Factory 0: []
-  Factory 1: []
-  Factory 2: []
-  Factory 3: []
-  Factory 4: []
-Center: ['yellow', 'yellow', 'black', 'black', 'black', 'yellow', 'black', 'yellow', 'green', 'green'] (Marker: False)
-Players:
-  Player 0 Score: 0
-    Pattern Lines:
-      Line 0: []
-      Line 1: ['yellow']
-      Line 2: ['green', 'green', 'green']
-      Line 3: ['black', 'black', 'black']
-      Line 4: ['red', 'red', 'red', 'red', 'red']
-    Floor: ['FirstPlayerMarker', 'Tile', None, None, None, None, None]
-    Board Occupancy:
-[[0 1 1 1 0]
- [1 0 1 0 1]
- [0 1 1 0 0]
- [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 0
-    Pattern Lines:
-      Line 0: ['yellow']
-      Line 1: []
-      Line 2: ['red', 'red', 'red']
-      Line 3: ['blue', 'blue', 'blue', 'blue']
-      Line 4: ['red', 'red']
-    Floor: ['Tile', 'Tile', 'Tile', None, None, None, None]
-    Board Occupancy:
-[[0 1 1 1 1]
- [1 1 0 1 1]
- [0 0 1 0 0]
- [0 1 0 0 0]
- [1 0 0 0 0]]
-Bag: 31 tiles
-Discard: 13 tiles
-
---- Player 0's Turn ---
-MCTS Chosen Move: ('center', None, <Color.YELLOW: 'yellow'>, 'pattern_line', 0)
-Move applied.
-
-Current Player: 0
-First Player Marker Holder: 0
-Factories:
-  Factory 0: []
-  Factory 1: []
-  Factory 2: []
-  Factory 3: []
-  Factory 4: []
-Center: ['black', 'black', 'black', 'black', 'green', 'green'] (Marker: False)
-Players:
-  Player 0 Score: 0
-    Pattern Lines:
-      Line 0: ['yellow']
-      Line 1: ['yellow']
-      Line 2: ['green', 'green', 'green']
-      Line 3: ['black', 'black', 'black']
-      Line 4: ['red', 'red', 'red', 'red', 'red']
-    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', 'Tile', 'Tile', None, None]
-    Board Occupancy:
-[[0 1 1 1 0]
- [1 0 1 0 1]
- [0 1 1 0 0]
- [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 0
-    Pattern Lines:
-      Line 0: ['yellow']
-      Line 1: []
-      Line 2: ['red', 'red', 'red']
-      Line 3: ['blue', 'blue', 'blue', 'blue']
-      Line 4: ['red', 'red']
-    Floor: ['Tile', 'Tile', 'Tile', None, None, None, None]
-    Board Occupancy:
-[[0 1 1 1 1]
- [1 1 0 1 1]
- [0 0 1 0 0]
- [0 1 0 0 0]
- [1 0 0 0 0]]
-Bag: 31 tiles
-Discard: 13 tiles
-
---- Player 1's Turn ---
-MCTS Chosen Move: ('center', None, <Color.GREEN: 'green'>, 'floor', None)
-Move applied.
-
-Current Player: 1
-First Player Marker Holder: 0
-Factories:
-  Factory 0: []
-  Factory 1: []
-  Factory 2: []
-  Factory 3: []
-  Factory 4: []
-Center: ['black', 'black', 'black', 'black'] (Marker: False)
-Players:
-  Player 0 Score: 0
-    Pattern Lines:
-      Line 0: ['yellow']
-      Line 1: ['yellow']
-      Line 2: ['green', 'green', 'green']
-      Line 3: ['black', 'black', 'black']
-      Line 4: ['red', 'red', 'red', 'red', 'red']
-    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', 'Tile', 'Tile', None, None]
-    Board Occupancy:
-[[0 1 1 1 0]
- [1 0 1 0 1]
- [0 1 1 0 0]
- [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 0
-    Pattern Lines:
-      Line 0: ['yellow']
-      Line 1: []
-      Line 2: ['red', 'red', 'red']
-      Line 3: ['blue', 'blue', 'blue', 'blue']
-      Line 4: ['red', 'red']
-    Floor: ['Tile', 'Tile', 'Tile', 'Tile', 'Tile', None, None]
-    Board Occupancy:
-[[0 1 1 1 1]
- [1 1 0 1 1]
- [0 0 1 0 0]
- [0 1 0 0 0]
- [1 0 0 0 0]]
-Bag: 31 tiles
-Discard: 13 tiles
-
---- Player 0's Turn ---
-MCTS Chosen Move: ('center', None, <Color.BLACK: 'black'>, 'pattern_line', 3)
-Move applied.
-
-Current Player: 0
-First Player Marker Holder: 0
-Factories:
-  Factory 0: []
-  Factory 1: []
-  Factory 2: []
-  Factory 3: []
-  Factory 4: []
-Center: [] (Marker: False)
-Players:
-  Player 0 Score: 0
-    Pattern Lines:
-      Line 0: ['yellow']
-      Line 1: ['yellow']
-      Line 2: ['green', 'green', 'green']
-      Line 3: ['black', 'black', 'black', 'black']
-      Line 4: ['red', 'red', 'red', 'red', 'red']
-    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile']
-    Board Occupancy:
-[[0 1 1 1 0]
- [1 0 1 0 1]
- [0 1 1 0 0]
- [0 0 0 0 0]
- [0 1 0 0 0]]
-  Player 1 Score: 0
-    Pattern Lines:
-      Line 0: ['yellow']
-      Line 1: []
-      Line 2: ['red', 'red', 'red']
-      Line 3: ['blue', 'blue', 'blue', 'blue']
-      Line 4: ['red', 'red']
-    Floor: ['Tile', 'Tile', 'Tile', 'Tile', 'Tile', None, None]
-    Board Occupancy:
-[[0 1 1 1 1]
- [1 1 0 1 1]
- [0 0 1 0 0]
- [0 1 0 0 0]
- [1 0 0 0 0]]
-Bag: 31 tiles
-Discard: 14 tiles
-All sources empty. Ending round.
-Round ended.
-
-Current Player: 0
-First Player Marker Holder: 0
-Factories:
-  Factory 0: ['red', 'yellow', 'yellow', 'black']
-  Factory 1: ['yellow', 'yellow', 'blue', 'green']
-  Factory 2: ['green', 'green', 'green', 'blue']
-  Factory 3: ['green', 'yellow', 'blue', 'blue']
-  Factory 4: ['red', 'yellow', 'blue', 'black']
-Center: [] (Marker: True)
-Players:
-  Player 0 Score: 5
-    Pattern Lines:
-      Line 0: []
-      Line 1: ['yellow']
-      Line 2: []
-      Line 3: []
       Line 4: []
     Floor: [None, None, None, None, None, None, None]
     Board Occupancy:
 [[1 1 1 1 0]
- [1 0 1 0 1]
- [0 1 1 0 1]
- [0 0 1 0 0]
- [0 1 1 0 0]]
-  Player 1 Score: 8
+ [0 0 1 0 1]
+ [1 1 0 0 0]
+ [1 0 0 0 0]
+ [0 1 0 0 0]]
+  Player 1 Score: 6
     Pattern Lines:
       Line 0: []
       Line 1: []
-      Line 2: []
+      Line 2: ['green']
       Line 3: []
-      Line 4: ['red', 'red']
+      Line 4: ['red', 'red', 'red', 'red']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[1 1 1 0 1]
+ [0 1 1 1 1]
+ [1 0 1 0 0]
+ [1 0 1 0 0]
+ [0 0 0 1 0]]
+Bag: 51 tiles
+Discard: 0 tiles
+
+--- Player 1's Turn ---
+MCTS Chosen Move: ('factory', 0, <Color.YELLOW: 'yellow'>, 'floor', None)
+Move applied.
+
+Current Player: 1
+First Player Marker Holder: 1
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: ['blue', 'red', 'blue', 'black']
+  Factory 3: ['green', 'green', 'red', 'red']
+  Factory 4: []
+Center: ['black', 'blue', 'yellow', 'yellow', 'yellow', 'yellow', 'green', 'red', 'black'] (Marker: True)
+Players:
+  Player 0 Score: 12
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['green']
+      Line 2: ['green']
+      Line 3: ['black']
+      Line 4: []
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[1 1 1 1 0]
+ [0 0 1 0 1]
+ [1 1 0 0 0]
+ [1 0 0 0 0]
+ [0 1 0 0 0]]
+  Player 1 Score: 6
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: ['green']
+      Line 3: []
+      Line 4: ['red', 'red', 'red', 'red']
+    Floor: ['Tile', None, None, None, None, None, None]
+    Board Occupancy:
+[[1 1 1 0 1]
+ [0 1 1 1 1]
+ [1 0 1 0 0]
+ [1 0 1 0 0]
+ [0 0 0 1 0]]
+Bag: 51 tiles
+Discard: 0 tiles
+
+--- Player 0's Turn ---
+MCTS Chosen Move: ('center', None, <Color.YELLOW: 'yellow'>, 'pattern_line', 4)
+Move applied.
+
+Current Player: 0
+First Player Marker Holder: 0
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: ['blue', 'red', 'blue', 'black']
+  Factory 3: ['green', 'green', 'red', 'red']
+  Factory 4: []
+Center: ['black', 'blue', 'green', 'red', 'black'] (Marker: False)
+Players:
+  Player 0 Score: 12
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['green']
+      Line 2: ['green']
+      Line 3: ['black']
+      Line 4: ['yellow', 'yellow', 'yellow', 'yellow']
+    Floor: ['FirstPlayerMarker', None, None, None, None, None, None]
+    Board Occupancy:
+[[1 1 1 1 0]
+ [0 0 1 0 1]
+ [1 1 0 0 0]
+ [1 0 0 0 0]
+ [0 1 0 0 0]]
+  Player 1 Score: 6
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: ['green']
+      Line 3: []
+      Line 4: ['red', 'red', 'red', 'red']
+    Floor: ['Tile', None, None, None, None, None, None]
+    Board Occupancy:
+[[1 1 1 0 1]
+ [0 1 1 1 1]
+ [1 0 1 0 0]
+ [1 0 1 0 0]
+ [0 0 0 1 0]]
+Bag: 51 tiles
+Discard: 0 tiles
+
+--- Player 1's Turn ---
+MCTS Chosen Move: ('center', None, <Color.GREEN: 'green'>, 'pattern_line', 2)
+Move applied.
+
+Current Player: 1
+First Player Marker Holder: 0
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: ['blue', 'red', 'blue', 'black']
+  Factory 3: ['green', 'green', 'red', 'red']
+  Factory 4: []
+Center: ['black', 'blue', 'red', 'black'] (Marker: False)
+Players:
+  Player 0 Score: 12
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['green']
+      Line 2: ['green']
+      Line 3: ['black']
+      Line 4: ['yellow', 'yellow', 'yellow', 'yellow']
+    Floor: ['FirstPlayerMarker', None, None, None, None, None, None]
+    Board Occupancy:
+[[1 1 1 1 0]
+ [0 0 1 0 1]
+ [1 1 0 0 0]
+ [1 0 0 0 0]
+ [0 1 0 0 0]]
+  Player 1 Score: 6
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: ['green', 'green']
+      Line 3: []
+      Line 4: ['red', 'red', 'red', 'red']
+    Floor: ['Tile', None, None, None, None, None, None]
+    Board Occupancy:
+[[1 1 1 0 1]
+ [0 1 1 1 1]
+ [1 0 1 0 0]
+ [1 0 1 0 0]
+ [0 0 0 1 0]]
+Bag: 51 tiles
+Discard: 0 tiles
+
+--- Player 0's Turn ---
+MCTS Chosen Move: ('factory', 3, <Color.GREEN: 'green'>, 'pattern_line', 2)
+Move applied.
+
+Current Player: 0
+First Player Marker Holder: 0
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: ['blue', 'red', 'blue', 'black']
+  Factory 3: []
+  Factory 4: []
+Center: ['black', 'blue', 'red', 'black', 'red', 'red'] (Marker: False)
+Players:
+  Player 0 Score: 12
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['green']
+      Line 2: ['green', 'green', 'green']
+      Line 3: ['black']
+      Line 4: ['yellow', 'yellow', 'yellow', 'yellow']
+    Floor: ['FirstPlayerMarker', None, None, None, None, None, None]
+    Board Occupancy:
+[[1 1 1 1 0]
+ [0 0 1 0 1]
+ [1 1 0 0 0]
+ [1 0 0 0 0]
+ [0 1 0 0 0]]
+  Player 1 Score: 6
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: ['green', 'green']
+      Line 3: []
+      Line 4: ['red', 'red', 'red', 'red']
+    Floor: ['Tile', None, None, None, None, None, None]
+    Board Occupancy:
+[[1 1 1 0 1]
+ [0 1 1 1 1]
+ [1 0 1 0 0]
+ [1 0 1 0 0]
+ [0 0 0 1 0]]
+Bag: 51 tiles
+Discard: 0 tiles
+
+--- Player 1's Turn ---
+MCTS Chosen Move: ('center', None, <Color.RED: 'red'>, 'pattern_line', 0)
+Move applied.
+
+Current Player: 1
+First Player Marker Holder: 0
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: ['blue', 'red', 'blue', 'black']
+  Factory 3: []
+  Factory 4: []
+Center: ['black', 'blue', 'black'] (Marker: False)
+Players:
+  Player 0 Score: 12
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['green']
+      Line 2: ['green', 'green', 'green']
+      Line 3: ['black']
+      Line 4: ['yellow', 'yellow', 'yellow', 'yellow']
+    Floor: ['FirstPlayerMarker', None, None, None, None, None, None]
+    Board Occupancy:
+[[1 1 1 1 0]
+ [0 0 1 0 1]
+ [1 1 0 0 0]
+ [1 0 0 0 0]
+ [0 1 0 0 0]]
+  Player 1 Score: 6
+    Pattern Lines:
+      Line 0: ['red']
+      Line 1: []
+      Line 2: ['green', 'green']
+      Line 3: []
+      Line 4: ['red', 'red', 'red', 'red']
+    Floor: ['Tile', 'Tile', 'Tile', None, None, None, None]
+    Board Occupancy:
+[[1 1 1 0 1]
+ [0 1 1 1 1]
+ [1 0 1 0 0]
+ [1 0 1 0 0]
+ [0 0 0 1 0]]
+Bag: 51 tiles
+Discard: 0 tiles
+
+--- Player 0's Turn ---
+MCTS Chosen Move: ('factory', 2, <Color.RED: 'red'>, 'floor', None)
+Move applied.
+
+Current Player: 0
+First Player Marker Holder: 0
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: []
+  Factory 4: []
+Center: ['black', 'blue', 'black', 'blue', 'blue', 'black'] (Marker: False)
+Players:
+  Player 0 Score: 12
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['green']
+      Line 2: ['green', 'green', 'green']
+      Line 3: ['black']
+      Line 4: ['yellow', 'yellow', 'yellow', 'yellow']
+    Floor: ['FirstPlayerMarker', 'Tile', None, None, None, None, None]
+    Board Occupancy:
+[[1 1 1 1 0]
+ [0 0 1 0 1]
+ [1 1 0 0 0]
+ [1 0 0 0 0]
+ [0 1 0 0 0]]
+  Player 1 Score: 6
+    Pattern Lines:
+      Line 0: ['red']
+      Line 1: []
+      Line 2: ['green', 'green']
+      Line 3: []
+      Line 4: ['red', 'red', 'red', 'red']
+    Floor: ['Tile', 'Tile', 'Tile', None, None, None, None]
+    Board Occupancy:
+[[1 1 1 0 1]
+ [0 1 1 1 1]
+ [1 0 1 0 0]
+ [1 0 1 0 0]
+ [0 0 0 1 0]]
+Bag: 51 tiles
+Discard: 0 tiles
+
+--- Player 1's Turn ---
+MCTS Chosen Move: ('center', None, <Color.BLACK: 'black'>, 'pattern_line', 1)
+Move applied.
+
+Current Player: 1
+First Player Marker Holder: 0
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: []
+  Factory 4: []
+Center: ['blue', 'blue', 'blue'] (Marker: False)
+Players:
+  Player 0 Score: 12
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['green']
+      Line 2: ['green', 'green', 'green']
+      Line 3: ['black']
+      Line 4: ['yellow', 'yellow', 'yellow', 'yellow']
+    Floor: ['FirstPlayerMarker', 'Tile', None, None, None, None, None]
+    Board Occupancy:
+[[1 1 1 1 0]
+ [0 0 1 0 1]
+ [1 1 0 0 0]
+ [1 0 0 0 0]
+ [0 1 0 0 0]]
+  Player 1 Score: 6
+    Pattern Lines:
+      Line 0: ['red']
+      Line 1: ['black', 'black']
+      Line 2: ['green', 'green']
+      Line 3: []
+      Line 4: ['red', 'red', 'red', 'red']
+    Floor: ['Tile', 'Tile', 'Tile', 'Tile', None, None, None]
+    Board Occupancy:
+[[1 1 1 0 1]
+ [0 1 1 1 1]
+ [1 0 1 0 0]
+ [1 0 1 0 0]
+ [0 0 0 1 0]]
+Bag: 51 tiles
+Discard: 0 tiles
+
+--- Player 0's Turn ---
+MCTS Chosen Move: ('center', None, <Color.BLUE: 'blue'>, 'floor', None)
+Move applied.
+
+Current Player: 0
+First Player Marker Holder: 0
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: []
+  Factory 4: []
+Center: [] (Marker: False)
+Players:
+  Player 0 Score: 12
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['green']
+      Line 2: ['green', 'green', 'green']
+      Line 3: ['black']
+      Line 4: ['yellow', 'yellow', 'yellow', 'yellow']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', 'Tile', 'Tile', None, None]
+    Board Occupancy:
+[[1 1 1 1 0]
+ [0 0 1 0 1]
+ [1 1 0 0 0]
+ [1 0 0 0 0]
+ [0 1 0 0 0]]
+  Player 1 Score: 6
+    Pattern Lines:
+      Line 0: ['red']
+      Line 1: ['black', 'black']
+      Line 2: ['green', 'green']
+      Line 3: []
+      Line 4: ['red', 'red', 'red', 'red']
+    Floor: ['Tile', 'Tile', 'Tile', 'Tile', None, None, None]
+    Board Occupancy:
+[[1 1 1 0 1]
+ [0 1 1 1 1]
+ [1 0 1 0 0]
+ [1 0 1 0 0]
+ [0 0 0 1 0]]
+Bag: 51 tiles
+Discard: 0 tiles
+All sources empty. Ending round.
+Round ended.
+
+Current Player: 0
+First Player Marker Holder: 0
+Factories:
+  Factory 0: ['black', 'green', 'yellow', 'yellow']
+  Factory 1: ['blue', 'black', 'black', 'black']
+  Factory 2: ['blue', 'black', 'yellow', 'red']
+  Factory 3: ['blue', 'yellow', 'blue', 'yellow']
+  Factory 4: ['green', 'blue', 'black', 'black']
+Center: [] (Marker: True)
+Players:
+  Player 0 Score: 8
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['green']
+      Line 2: []
+      Line 3: ['black']
+      Line 4: ['yellow', 'yellow', 'yellow', 'yellow']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[1 1 1 1 0]
+ [0 0 1 0 1]
+ [1 1 0 0 1]
+ [1 0 0 0 0]
+ [0 1 0 0 0]]
+  Player 1 Score: 15
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: ['green', 'green']
+      Line 3: []
+      Line 4: ['red', 'red', 'red', 'red']
     Floor: [None, None, None, None, None, None, None]
     Board Occupancy:
 [[1 1 1 1 1]
- [1 1 0 1 1]
+ [1 1 1 1 1]
  [1 0 1 0 0]
- [0 1 0 0 1]
- [1 0 0 0 0]]
-Bag: 11 tiles
-Discard: 39 tiles
-Player 0 bonuses: 0 rows (+0), 1 columns (+7), 0 colors (+0)
-Player 1 bonuses: 1 rows (+2), 0 columns (+0), 0 colors (+0)
+ [1 0 1 0 0]
+ [0 0 0 1 0]]
+Bag: 31 tiles
+Discard: 11 tiles
+Player 0 bonuses: 0 rows (+0), 0 columns (+0), 0 colors (+0)
+Player 1 bonuses: 2 rows (+4), 0 columns (+0), 0 colors (+0)
 
-Game Over. Winner: Player 0
+Game Over. Winner: Player 1

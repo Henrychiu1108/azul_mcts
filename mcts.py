@@ -37,7 +37,7 @@ class MCTS:
         self.root = root
         self.root_player = root.state.current_player
 
-    def search(self, iterations=1000):
+    def search(self, iterations=50000):
         for _ in range(iterations):
             node = self.select(self.root)
             if node.state.is_terminal():
@@ -56,18 +56,47 @@ class MCTS:
         return node
 
     def simulate(self, state: GameState):
-        # Random playout with bias towards pattern lines
+        # Random playout with heuristic bias
         while not state.is_terminal():
             moves = state.get_legal_moves()
             if not moves:
                 state.end_round()
                 continue
-            # Prefer pattern_line moves over floor moves
-            pattern_moves = [m for m in moves if m[3] == 'pattern_line']
-            if pattern_moves:
-                move = random.choice(pattern_moves)
-            else:
-                move = random.choice(moves)
+            
+            # Heuristic scoring for moves
+            def heuristic_score(move):
+                dest_type = move[3]
+                if dest_type == 'floor':
+                    return 0.1  # Low priority for floor
+                elif dest_type == 'pattern_line':
+                    dest_index = move[4]
+                    color = move[2]
+                    player = state.players[state.current_player]
+                    # Find the column for this color in the row
+                    column = None
+                    for col in range(5):
+                        if player.board.pattern[dest_index, col] == color:
+                            column = col
+                            break
+                    if column is not None:
+                        wall = player.board.occupancy
+                        if wall[dest_index][column] == 0:  # If not already occupied
+                            # Simulate placement
+                            temp_wall = wall.copy()
+                            temp_wall[dest_index][column] = 1
+                            # Check if row is full
+                            if all(temp_wall[dest_index]):
+                                return 20  # High bonus for completing a wall row
+                            # Check if column is full
+                            if all(temp_wall[i][column] for i in range(5)):
+                                return 20  # High bonus for completing a wall column
+                    # Prefer lower rows (easier to complete) if not completing
+                    return 1 + (4 - dest_index)
+                return 1
+            
+            scores = [heuristic_score(m) for m in moves]
+            move = random.choices(moves, weights=scores, k=1)[0]
+            
             state.make_move(move)
             # Switch player
             state.current_player = 1 - state.current_player
