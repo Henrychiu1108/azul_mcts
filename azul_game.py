@@ -224,6 +224,34 @@ class GameState:
         """Return the winner (player index) or None if tie."""
         if not self.is_terminal():
             return None
+        
+        # Calculate end-game bonuses
+        for player_idx, player in enumerate(self.players):
+            row_bonuses = 0
+            col_bonuses = 0
+            color_bonuses = 0
+            
+            # Bonus for complete rows: 2 points each
+            for i in range(5):
+                if all(player.board.occupancy[i, j] == 1 for j in range(5)):
+                    player.score += 2
+                    row_bonuses += 1
+            
+            # Bonus for complete columns: 7 points each
+            for j in range(5):
+                if all(player.board.occupancy[i, j] == 1 for i in range(5)):
+                    player.score += 7
+                    col_bonuses += 1
+            
+            # Bonus for complete color groups: 10 points each
+            for color in Color:
+                positions = player.board.color_positions[color]
+                if all(player.board.occupancy[pos[0], pos[1]] == 1 for pos in positions):
+                    player.score += 10
+                    color_bonuses += 1
+            
+            print(f"Player {player_idx} bonuses: {row_bonuses} rows (+{row_bonuses*2}), {col_bonuses} columns (+{col_bonuses*7}), {color_bonuses} colors (+{color_bonuses*10})")
+        
         scores = [player.score for player in self.players]
         max_score = max(scores)
         winners = [i for i, score in enumerate(scores) if score == max_score]
@@ -283,6 +311,9 @@ class GameState:
             for i in range(7):
                 if player.floor.tiles[i] is not None:
                     player.score += player.floor.penalties[i]
+            
+            # Ensure score does not go negative
+            player.score = max(0, player.score)
             
             # Move floor tiles to discard
             for i in range(7):

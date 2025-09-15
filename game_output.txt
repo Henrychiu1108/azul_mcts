@@ -3,11 +3,11 @@ Game initialized.
 Current Player: 0
 First Player Marker Holder: None
 Factories:
-  Factory 0: ['black', 'black', 'red', 'black']
-  Factory 1: ['black', 'black', 'blue', 'black']
-  Factory 2: ['yellow', 'blue', 'yellow', 'yellow']
-  Factory 3: ['green', 'black', 'red', 'green']
-  Factory 4: ['blue', 'green', 'blue', 'black']
+  Factory 0: ['blue', 'yellow', 'yellow', 'black']
+  Factory 1: ['yellow', 'red', 'black', 'black']
+  Factory 2: ['blue', 'green', 'black', 'green']
+  Factory 3: ['green', 'green', 'blue', 'green']
+  Factory 4: ['black', 'yellow', 'black', 'blue']
 Center: [] (Marker: True)
 Players:
   Player 0 Score: 0
@@ -49,93 +49,105 @@ Legal Moves:
   3: factory 0 -> pattern_line 3 (black)
   4: factory 0 -> pattern_line 4 (black)
   5: factory 0 -> floor None (black)
-  6: factory 0 -> pattern_line 0 (red)
-  7: factory 0 -> pattern_line 1 (red)
-  8: factory 0 -> pattern_line 2 (red)
-  9: factory 0 -> pattern_line 3 (red)
-  10: factory 0 -> pattern_line 4 (red)
-  11: factory 0 -> floor None (red)
-  12: factory 1 -> pattern_line 0 (blue)
-  13: factory 1 -> pattern_line 1 (blue)
-  14: factory 1 -> pattern_line 2 (blue)
-  15: factory 1 -> pattern_line 3 (blue)
-  16: factory 1 -> pattern_line 4 (blue)
-  17: factory 1 -> floor None (blue)
+  6: factory 0 -> pattern_line 0 (yellow)
+  7: factory 0 -> pattern_line 1 (yellow)
+  8: factory 0 -> pattern_line 2 (yellow)
+  9: factory 0 -> pattern_line 3 (yellow)
+  10: factory 0 -> pattern_line 4 (yellow)
+  11: factory 0 -> floor None (yellow)
+  12: factory 0 -> pattern_line 0 (blue)
+  13: factory 0 -> pattern_line 1 (blue)
+  14: factory 0 -> pattern_line 2 (blue)
+  15: factory 0 -> pattern_line 3 (blue)
+  16: factory 0 -> pattern_line 4 (blue)
+  17: factory 0 -> floor None (blue)
   18: factory 1 -> pattern_line 0 (black)
   19: factory 1 -> pattern_line 1 (black)
   20: factory 1 -> pattern_line 2 (black)
   21: factory 1 -> pattern_line 3 (black)
   22: factory 1 -> pattern_line 4 (black)
   23: factory 1 -> floor None (black)
-  24: factory 2 -> pattern_line 0 (blue)
-  25: factory 2 -> pattern_line 1 (blue)
-  26: factory 2 -> pattern_line 2 (blue)
-  27: factory 2 -> pattern_line 3 (blue)
-  28: factory 2 -> pattern_line 4 (blue)
-  29: factory 2 -> floor None (blue)
-  30: factory 2 -> pattern_line 0 (yellow)
-  31: factory 2 -> pattern_line 1 (yellow)
-  32: factory 2 -> pattern_line 2 (yellow)
-  33: factory 2 -> pattern_line 3 (yellow)
-  34: factory 2 -> pattern_line 4 (yellow)
-  35: factory 2 -> floor None (yellow)
-  36: factory 3 -> pattern_line 0 (black)
-  37: factory 3 -> pattern_line 1 (black)
-  38: factory 3 -> pattern_line 2 (black)
-  39: factory 3 -> pattern_line 3 (black)
-  40: factory 3 -> pattern_line 4 (black)
-  41: factory 3 -> floor None (black)
-  42: factory 3 -> pattern_line 0 (green)
-  43: factory 3 -> pattern_line 1 (green)
-  44: factory 3 -> pattern_line 2 (green)
-  45: factory 3 -> pattern_line 3 (green)
-  46: factory 3 -> pattern_line 4 (green)
-  47: factory 3 -> floor None (green)
-  48: factory 3 -> pattern_line 0 (red)
-  49: factory 3 -> pattern_line 1 (red)
-  50: factory 3 -> pattern_line 2 (red)
-  51: factory 3 -> pattern_line 3 (red)
-  52: factory 3 -> pattern_line 4 (red)
-  53: factory 3 -> floor None (red)
-  54: factory 4 -> pattern_line 0 (blue)
-  55: factory 4 -> pattern_line 1 (blue)
-  56: factory 4 -> pattern_line 2 (blue)
-  57: factory 4 -> pattern_line 3 (blue)
-  58: factory 4 -> pattern_line 4 (blue)
-  59: factory 4 -> floor None (blue)
-  60: factory 4 -> pattern_line 0 (black)
-  61: factory 4 -> pattern_line 1 (black)
-  62: factory 4 -> pattern_line 2 (black)
-  63: factory 4 -> pattern_line 3 (black)
-  64: factory 4 -> pattern_line 4 (black)
-  65: factory 4 -> floor None (black)
-  66: factory 4 -> pattern_line 0 (green)
-  67: factory 4 -> pattern_line 1 (green)
-  68: factory 4 -> pattern_line 2 (green)
-  69: factory 4 -> pattern_line 3 (green)
-  70: factory 4 -> pattern_line 4 (green)
-  71: factory 4 -> floor None (green)
-Chosen Move: ('factory', 3, <Color.GREEN: 'green'>, 'pattern_line', 4)
+  24: factory 1 -> pattern_line 0 (red)
+  25: factory 1 -> pattern_line 1 (red)
+  26: factory 1 -> pattern_line 2 (red)
+  27: factory 1 -> pattern_line 3 (red)
+  28: factory 1 -> pattern_line 4 (red)
+  29: factory 1 -> floor None (red)
+  30: factory 1 -> pattern_line 0 (yellow)
+  31: factory 1 -> pattern_line 1 (yellow)
+  32: factory 1 -> pattern_line 2 (yellow)
+  33: factory 1 -> pattern_line 3 (yellow)
+  34: factory 1 -> pattern_line 4 (yellow)
+  35: factory 1 -> floor None (yellow)
+  36: factory 2 -> pattern_line 0 (black)
+  37: factory 2 -> pattern_line 1 (black)
+  38: factory 2 -> pattern_line 2 (black)
+  39: factory 2 -> pattern_line 3 (black)
+  40: factory 2 -> pattern_line 4 (black)
+  41: factory 2 -> floor None (black)
+  42: factory 2 -> pattern_line 0 (green)
+  43: factory 2 -> pattern_line 1 (green)
+  44: factory 2 -> pattern_line 2 (green)
+  45: factory 2 -> pattern_line 3 (green)
+  46: factory 2 -> pattern_line 4 (green)
+  47: factory 2 -> floor None (green)
+  48: factory 2 -> pattern_line 0 (blue)
+  49: factory 2 -> pattern_line 1 (blue)
+  50: factory 2 -> pattern_line 2 (blue)
+  51: factory 2 -> pattern_line 3 (blue)
+  52: factory 2 -> pattern_line 4 (blue)
+  53: factory 2 -> floor None (blue)
+  54: factory 3 -> pattern_line 0 (green)
+  55: factory 3 -> pattern_line 1 (green)
+  56: factory 3 -> pattern_line 2 (green)
+  57: factory 3 -> pattern_line 3 (green)
+  58: factory 3 -> pattern_line 4 (green)
+  59: factory 3 -> floor None (green)
+  60: factory 3 -> pattern_line 0 (blue)
+  61: factory 3 -> pattern_line 1 (blue)
+  62: factory 3 -> pattern_line 2 (blue)
+  63: factory 3 -> pattern_line 3 (blue)
+  64: factory 3 -> pattern_line 4 (blue)
+  65: factory 3 -> floor None (blue)
+  66: factory 4 -> pattern_line 0 (black)
+  67: factory 4 -> pattern_line 1 (black)
+  68: factory 4 -> pattern_line 2 (black)
+  69: factory 4 -> pattern_line 3 (black)
+  70: factory 4 -> pattern_line 4 (black)
+  71: factory 4 -> floor None (black)
+  72: factory 4 -> pattern_line 0 (yellow)
+  73: factory 4 -> pattern_line 1 (yellow)
+  74: factory 4 -> pattern_line 2 (yellow)
+  75: factory 4 -> pattern_line 3 (yellow)
+  76: factory 4 -> pattern_line 4 (yellow)
+  77: factory 4 -> floor None (yellow)
+  78: factory 4 -> pattern_line 0 (blue)
+  79: factory 4 -> pattern_line 1 (blue)
+  80: factory 4 -> pattern_line 2 (blue)
+  81: factory 4 -> pattern_line 3 (blue)
+  82: factory 4 -> pattern_line 4 (blue)
+  83: factory 4 -> floor None (blue)
+Chosen Move: ('factory', 3, <Color.GREEN: 'green'>, 'pattern_line', 0)
 Move applied.
 
 Current Player: 0
 First Player Marker Holder: None
 Factories:
-  Factory 0: ['black', 'black', 'red', 'black']
-  Factory 1: ['black', 'black', 'blue', 'black']
-  Factory 2: ['yellow', 'blue', 'yellow', 'yellow']
+  Factory 0: ['blue', 'yellow', 'yellow', 'black']
+  Factory 1: ['yellow', 'red', 'black', 'black']
+  Factory 2: ['blue', 'green', 'black', 'green']
   Factory 3: []
-  Factory 4: ['blue', 'green', 'blue', 'black']
-Center: ['black', 'red'] (Marker: True)
+  Factory 4: ['black', 'yellow', 'black', 'blue']
+Center: ['blue'] (Marker: True)
 Players:
   Player 0 Score: 0
     Pattern Lines:
-      Line 0: []
+      Line 0: ['green']
       Line 1: []
       Line 2: []
       Line 3: []
-      Line 4: ['green', 'green']
-    Floor: [None, None, None, None, None, None, None]
+      Line 4: []
+    Floor: ['Tile', 'Tile', None, None, None, None, None]
     Board Occupancy:
 [[0 0 0 0 0]
  [0 0 0 0 0]
@@ -167,86 +179,112 @@ Legal Moves:
   3: factory 0 -> pattern_line 3 (black)
   4: factory 0 -> pattern_line 4 (black)
   5: factory 0 -> floor None (black)
-  6: factory 0 -> pattern_line 0 (red)
-  7: factory 0 -> pattern_line 1 (red)
-  8: factory 0 -> pattern_line 2 (red)
-  9: factory 0 -> pattern_line 3 (red)
-  10: factory 0 -> pattern_line 4 (red)
-  11: factory 0 -> floor None (red)
-  12: factory 1 -> pattern_line 0 (blue)
-  13: factory 1 -> pattern_line 1 (blue)
-  14: factory 1 -> pattern_line 2 (blue)
-  15: factory 1 -> pattern_line 3 (blue)
-  16: factory 1 -> pattern_line 4 (blue)
-  17: factory 1 -> floor None (blue)
+  6: factory 0 -> pattern_line 0 (yellow)
+  7: factory 0 -> pattern_line 1 (yellow)
+  8: factory 0 -> pattern_line 2 (yellow)
+  9: factory 0 -> pattern_line 3 (yellow)
+  10: factory 0 -> pattern_line 4 (yellow)
+  11: factory 0 -> floor None (yellow)
+  12: factory 0 -> pattern_line 0 (blue)
+  13: factory 0 -> pattern_line 1 (blue)
+  14: factory 0 -> pattern_line 2 (blue)
+  15: factory 0 -> pattern_line 3 (blue)
+  16: factory 0 -> pattern_line 4 (blue)
+  17: factory 0 -> floor None (blue)
   18: factory 1 -> pattern_line 0 (black)
   19: factory 1 -> pattern_line 1 (black)
   20: factory 1 -> pattern_line 2 (black)
   21: factory 1 -> pattern_line 3 (black)
   22: factory 1 -> pattern_line 4 (black)
   23: factory 1 -> floor None (black)
-  24: factory 2 -> pattern_line 0 (blue)
-  25: factory 2 -> pattern_line 1 (blue)
-  26: factory 2 -> pattern_line 2 (blue)
-  27: factory 2 -> pattern_line 3 (blue)
-  28: factory 2 -> pattern_line 4 (blue)
-  29: factory 2 -> floor None (blue)
-  30: factory 2 -> pattern_line 0 (yellow)
-  31: factory 2 -> pattern_line 1 (yellow)
-  32: factory 2 -> pattern_line 2 (yellow)
-  33: factory 2 -> pattern_line 3 (yellow)
-  34: factory 2 -> pattern_line 4 (yellow)
-  35: factory 2 -> floor None (yellow)
-  36: factory 4 -> pattern_line 0 (blue)
-  37: factory 4 -> pattern_line 1 (blue)
-  38: factory 4 -> pattern_line 2 (blue)
-  39: factory 4 -> pattern_line 3 (blue)
-  40: factory 4 -> pattern_line 4 (blue)
-  41: factory 4 -> floor None (blue)
-  42: factory 4 -> pattern_line 0 (black)
-  43: factory 4 -> pattern_line 1 (black)
-  44: factory 4 -> pattern_line 2 (black)
-  45: factory 4 -> pattern_line 3 (black)
-  46: factory 4 -> pattern_line 4 (black)
-  47: factory 4 -> floor None (black)
-  48: factory 4 -> pattern_line 0 (green)
-  49: factory 4 -> pattern_line 1 (green)
-  50: factory 4 -> pattern_line 2 (green)
-  51: factory 4 -> pattern_line 3 (green)
-  52: factory 4 -> pattern_line 4 (green)
-  53: factory 4 -> floor None (green)
-  54: center None -> pattern_line 0 (black)
-  55: center None -> pattern_line 1 (black)
-  56: center None -> pattern_line 2 (black)
-  57: center None -> pattern_line 3 (black)
-  58: center None -> pattern_line 4 (black)
-  59: center None -> floor None (black)
-  60: center None -> pattern_line 0 (red)
-  61: center None -> pattern_line 1 (red)
-  62: center None -> pattern_line 2 (red)
-  63: center None -> pattern_line 3 (red)
-  64: center None -> pattern_line 4 (red)
-  65: center None -> floor None (red)
-Chosen Move: ('factory', 4, <Color.BLUE: 'blue'>, 'pattern_line', 0)
+  24: factory 1 -> pattern_line 0 (red)
+  25: factory 1 -> pattern_line 1 (red)
+  26: factory 1 -> pattern_line 2 (red)
+  27: factory 1 -> pattern_line 3 (red)
+  28: factory 1 -> pattern_line 4 (red)
+  29: factory 1 -> floor None (red)
+  30: factory 1 -> pattern_line 0 (yellow)
+  31: factory 1 -> pattern_line 1 (yellow)
+  32: factory 1 -> pattern_line 2 (yellow)
+  33: factory 1 -> pattern_line 3 (yellow)
+  34: factory 1 -> pattern_line 4 (yellow)
+  35: factory 1 -> floor None (yellow)
+  36: factory 2 -> pattern_line 0 (black)
+  37: factory 2 -> pattern_line 1 (black)
+  38: factory 2 -> pattern_line 2 (black)
+  39: factory 2 -> pattern_line 3 (black)
+  40: factory 2 -> pattern_line 4 (black)
+  41: factory 2 -> floor None (black)
+  42: factory 2 -> pattern_line 0 (green)
+  43: factory 2 -> pattern_line 1 (green)
+  44: factory 2 -> pattern_line 2 (green)
+  45: factory 2 -> pattern_line 3 (green)
+  46: factory 2 -> pattern_line 4 (green)
+  47: factory 2 -> floor None (green)
+  48: factory 2 -> pattern_line 0 (blue)
+  49: factory 2 -> pattern_line 1 (blue)
+  50: factory 2 -> pattern_line 2 (blue)
+  51: factory 2 -> pattern_line 3 (blue)
+  52: factory 2 -> pattern_line 4 (blue)
+  53: factory 2 -> floor None (blue)
+  54: factory 4 -> pattern_line 0 (black)
+  55: factory 4 -> pattern_line 1 (black)
+  56: factory 4 -> pattern_line 2 (black)
+  57: factory 4 -> pattern_line 3 (black)
+  58: factory 4 -> pattern_line 4 (black)
+  59: factory 4 -> floor None (black)
+  60: factory 4 -> pattern_line 0 (yellow)
+  61: factory 4 -> pattern_line 1 (yellow)
+  62: factory 4 -> pattern_line 2 (yellow)
+  63: factory 4 -> pattern_line 3 (yellow)
+  64: factory 4 -> pattern_line 4 (yellow)
+  65: factory 4 -> floor None (yellow)
+  66: factory 4 -> pattern_line 0 (blue)
+  67: factory 4 -> pattern_line 1 (blue)
+  68: factory 4 -> pattern_line 2 (blue)
+  69: factory 4 -> pattern_line 3 (blue)
+  70: factory 4 -> pattern_line 4 (blue)
+  71: factory 4 -> floor None (blue)
+  72: center None -> pattern_line 0 (blue)
+  73: center None -> pattern_line 1 (blue)
+  74: center None -> pattern_line 2 (blue)
+  75: center None -> pattern_line 3 (blue)
+  76: center None -> pattern_line 4 (blue)
+  77: center None -> floor None (blue)
+Chosen Move: ('factory', 4, <Color.BLUE: 'blue'>, 'pattern_line', 4)
 Move applied.
 
 Current Player: 1
 First Player Marker Holder: None
 Factories:
-  Factory 0: ['black', 'black', 'red', 'black']
-  Factory 1: ['black', 'black', 'blue', 'black']
-  Factory 2: ['yellow', 'blue', 'yellow', 'yellow']
+  Factory 0: ['blue', 'yellow', 'yellow', 'black']
+  Factory 1: ['yellow', 'red', 'black', 'black']
+  Factory 2: ['blue', 'green', 'black', 'green']
   Factory 3: []
   Factory 4: []
-Center: ['black', 'red', 'green', 'black'] (Marker: True)
+Center: ['blue', 'black', 'yellow', 'black'] (Marker: True)
 Players:
   Player 0 Score: 0
+    Pattern Lines:
+      Line 0: ['green']
+      Line 1: []
+      Line 2: []
+      Line 3: []
+      Line 4: []
+    Floor: ['Tile', 'Tile', None, None, None, None, None]
+    Board Occupancy:
+[[0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
     Pattern Lines:
       Line 0: []
       Line 1: []
       Line 2: []
       Line 3: []
-      Line 4: ['green', 'green']
+      Line 4: ['blue']
     Floor: [None, None, None, None, None, None, None]
     Board Occupancy:
 [[0 0 0 0 0]
@@ -254,92 +292,92 @@ Players:
  [0 0 0 0 0]
  [0 0 0 0 0]
  [0 0 0 0 0]]
-  Player 1 Score: 0
-    Pattern Lines:
-      Line 0: ['blue']
-      Line 1: []
-      Line 2: []
-      Line 3: []
-      Line 4: []
-    Floor: ['Tile', None, None, None, None, None, None]
-    Board Occupancy:
-[[0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]]
 Bag: 80 tiles
 Discard: 0 tiles
 
 --- Player 0's Turn ---
 Legal Moves:
-  0: factory 0 -> pattern_line 0 (black)
-  1: factory 0 -> pattern_line 1 (black)
-  2: factory 0 -> pattern_line 2 (black)
-  3: factory 0 -> pattern_line 3 (black)
+  0: factory 0 -> pattern_line 1 (black)
+  1: factory 0 -> pattern_line 2 (black)
+  2: factory 0 -> pattern_line 3 (black)
+  3: factory 0 -> pattern_line 4 (black)
   4: factory 0 -> floor None (black)
-  5: factory 0 -> pattern_line 0 (red)
-  6: factory 0 -> pattern_line 1 (red)
-  7: factory 0 -> pattern_line 2 (red)
-  8: factory 0 -> pattern_line 3 (red)
-  9: factory 0 -> floor None (red)
-  10: factory 1 -> pattern_line 0 (blue)
-  11: factory 1 -> pattern_line 1 (blue)
-  12: factory 1 -> pattern_line 2 (blue)
-  13: factory 1 -> pattern_line 3 (blue)
-  14: factory 1 -> floor None (blue)
-  15: factory 1 -> pattern_line 0 (black)
-  16: factory 1 -> pattern_line 1 (black)
-  17: factory 1 -> pattern_line 2 (black)
-  18: factory 1 -> pattern_line 3 (black)
+  5: factory 0 -> pattern_line 1 (yellow)
+  6: factory 0 -> pattern_line 2 (yellow)
+  7: factory 0 -> pattern_line 3 (yellow)
+  8: factory 0 -> pattern_line 4 (yellow)
+  9: factory 0 -> floor None (yellow)
+  10: factory 0 -> pattern_line 1 (blue)
+  11: factory 0 -> pattern_line 2 (blue)
+  12: factory 0 -> pattern_line 3 (blue)
+  13: factory 0 -> pattern_line 4 (blue)
+  14: factory 0 -> floor None (blue)
+  15: factory 1 -> pattern_line 1 (black)
+  16: factory 1 -> pattern_line 2 (black)
+  17: factory 1 -> pattern_line 3 (black)
+  18: factory 1 -> pattern_line 4 (black)
   19: factory 1 -> floor None (black)
-  20: factory 2 -> pattern_line 0 (blue)
-  21: factory 2 -> pattern_line 1 (blue)
-  22: factory 2 -> pattern_line 2 (blue)
-  23: factory 2 -> pattern_line 3 (blue)
-  24: factory 2 -> floor None (blue)
-  25: factory 2 -> pattern_line 0 (yellow)
-  26: factory 2 -> pattern_line 1 (yellow)
-  27: factory 2 -> pattern_line 2 (yellow)
-  28: factory 2 -> pattern_line 3 (yellow)
-  29: factory 2 -> floor None (yellow)
-  30: center None -> pattern_line 0 (green)
-  31: center None -> pattern_line 1 (green)
-  32: center None -> pattern_line 2 (green)
-  33: center None -> pattern_line 3 (green)
-  34: center None -> pattern_line 4 (green)
-  35: center None -> floor None (green)
-  36: center None -> pattern_line 0 (black)
-  37: center None -> pattern_line 1 (black)
-  38: center None -> pattern_line 2 (black)
-  39: center None -> pattern_line 3 (black)
-  40: center None -> floor None (black)
-  41: center None -> pattern_line 0 (red)
-  42: center None -> pattern_line 1 (red)
-  43: center None -> pattern_line 2 (red)
-  44: center None -> pattern_line 3 (red)
-  45: center None -> floor None (red)
-Chosen Move: ('center', None, <Color.BLACK: 'black'>, 'pattern_line', 3)
+  20: factory 1 -> pattern_line 1 (red)
+  21: factory 1 -> pattern_line 2 (red)
+  22: factory 1 -> pattern_line 3 (red)
+  23: factory 1 -> pattern_line 4 (red)
+  24: factory 1 -> floor None (red)
+  25: factory 1 -> pattern_line 1 (yellow)
+  26: factory 1 -> pattern_line 2 (yellow)
+  27: factory 1 -> pattern_line 3 (yellow)
+  28: factory 1 -> pattern_line 4 (yellow)
+  29: factory 1 -> floor None (yellow)
+  30: factory 2 -> pattern_line 1 (black)
+  31: factory 2 -> pattern_line 2 (black)
+  32: factory 2 -> pattern_line 3 (black)
+  33: factory 2 -> pattern_line 4 (black)
+  34: factory 2 -> floor None (black)
+  35: factory 2 -> pattern_line 1 (green)
+  36: factory 2 -> pattern_line 2 (green)
+  37: factory 2 -> pattern_line 3 (green)
+  38: factory 2 -> pattern_line 4 (green)
+  39: factory 2 -> floor None (green)
+  40: factory 2 -> pattern_line 1 (blue)
+  41: factory 2 -> pattern_line 2 (blue)
+  42: factory 2 -> pattern_line 3 (blue)
+  43: factory 2 -> pattern_line 4 (blue)
+  44: factory 2 -> floor None (blue)
+  45: center None -> pattern_line 1 (black)
+  46: center None -> pattern_line 2 (black)
+  47: center None -> pattern_line 3 (black)
+  48: center None -> pattern_line 4 (black)
+  49: center None -> floor None (black)
+  50: center None -> pattern_line 1 (yellow)
+  51: center None -> pattern_line 2 (yellow)
+  52: center None -> pattern_line 3 (yellow)
+  53: center None -> pattern_line 4 (yellow)
+  54: center None -> floor None (yellow)
+  55: center None -> pattern_line 1 (blue)
+  56: center None -> pattern_line 2 (blue)
+  57: center None -> pattern_line 3 (blue)
+  58: center None -> pattern_line 4 (blue)
+  59: center None -> floor None (blue)
+Chosen Move: ('center', None, <Color.YELLOW: 'yellow'>, 'pattern_line', 2)
 Move applied.
 
 Current Player: 0
 First Player Marker Holder: 0
 Factories:
-  Factory 0: ['black', 'black', 'red', 'black']
-  Factory 1: ['black', 'black', 'blue', 'black']
-  Factory 2: ['yellow', 'blue', 'yellow', 'yellow']
+  Factory 0: ['blue', 'yellow', 'yellow', 'black']
+  Factory 1: ['yellow', 'red', 'black', 'black']
+  Factory 2: ['blue', 'green', 'black', 'green']
   Factory 3: []
   Factory 4: []
-Center: ['red', 'green'] (Marker: False)
+Center: ['blue', 'black', 'black'] (Marker: False)
 Players:
   Player 0 Score: 0
     Pattern Lines:
-      Line 0: []
+      Line 0: ['green']
       Line 1: []
-      Line 2: []
-      Line 3: ['black', 'black']
-      Line 4: ['green', 'green']
-    Floor: ['FirstPlayerMarker', None, None, None, None, None, None]
+      Line 2: ['yellow']
+      Line 3: []
+      Line 4: []
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', None, None, None, None]
     Board Occupancy:
 [[0 0 0 0 0]
  [0 0 0 0 0]
@@ -348,12 +386,12 @@ Players:
  [0 0 0 0 0]]
   Player 1 Score: 0
     Pattern Lines:
-      Line 0: ['blue']
+      Line 0: []
       Line 1: []
       Line 2: []
       Line 3: []
-      Line 4: []
-    Floor: ['Tile', None, None, None, None, None, None]
+      Line 4: ['blue']
+    Floor: [None, None, None, None, None, None, None]
     Board Occupancy:
 [[0 0 0 0 0]
  [0 0 0 0 0]
@@ -365,67 +403,85 @@ Discard: 0 tiles
 
 --- Player 1's Turn ---
 Legal Moves:
-  0: factory 0 -> pattern_line 1 (black)
-  1: factory 0 -> pattern_line 2 (black)
-  2: factory 0 -> pattern_line 3 (black)
-  3: factory 0 -> pattern_line 4 (black)
+  0: factory 0 -> pattern_line 0 (black)
+  1: factory 0 -> pattern_line 1 (black)
+  2: factory 0 -> pattern_line 2 (black)
+  3: factory 0 -> pattern_line 3 (black)
   4: factory 0 -> floor None (black)
-  5: factory 0 -> pattern_line 1 (red)
-  6: factory 0 -> pattern_line 2 (red)
-  7: factory 0 -> pattern_line 3 (red)
-  8: factory 0 -> pattern_line 4 (red)
-  9: factory 0 -> floor None (red)
-  10: factory 1 -> pattern_line 1 (blue)
-  11: factory 1 -> pattern_line 2 (blue)
-  12: factory 1 -> pattern_line 3 (blue)
-  13: factory 1 -> pattern_line 4 (blue)
-  14: factory 1 -> floor None (blue)
-  15: factory 1 -> pattern_line 1 (black)
-  16: factory 1 -> pattern_line 2 (black)
-  17: factory 1 -> pattern_line 3 (black)
-  18: factory 1 -> pattern_line 4 (black)
-  19: factory 1 -> floor None (black)
-  20: factory 2 -> pattern_line 1 (blue)
-  21: factory 2 -> pattern_line 2 (blue)
-  22: factory 2 -> pattern_line 3 (blue)
-  23: factory 2 -> pattern_line 4 (blue)
-  24: factory 2 -> floor None (blue)
-  25: factory 2 -> pattern_line 1 (yellow)
-  26: factory 2 -> pattern_line 2 (yellow)
-  27: factory 2 -> pattern_line 3 (yellow)
-  28: factory 2 -> pattern_line 4 (yellow)
-  29: factory 2 -> floor None (yellow)
-  30: center None -> pattern_line 1 (green)
-  31: center None -> pattern_line 2 (green)
-  32: center None -> pattern_line 3 (green)
-  33: center None -> pattern_line 4 (green)
-  34: center None -> floor None (green)
-  35: center None -> pattern_line 1 (red)
-  36: center None -> pattern_line 2 (red)
-  37: center None -> pattern_line 3 (red)
-  38: center None -> pattern_line 4 (red)
-  39: center None -> floor None (red)
-Chosen Move: ('factory', 1, <Color.BLACK: 'black'>, 'pattern_line', 1)
+  5: factory 0 -> pattern_line 0 (yellow)
+  6: factory 0 -> pattern_line 1 (yellow)
+  7: factory 0 -> pattern_line 2 (yellow)
+  8: factory 0 -> pattern_line 3 (yellow)
+  9: factory 0 -> floor None (yellow)
+  10: factory 0 -> pattern_line 0 (blue)
+  11: factory 0 -> pattern_line 1 (blue)
+  12: factory 0 -> pattern_line 2 (blue)
+  13: factory 0 -> pattern_line 3 (blue)
+  14: factory 0 -> pattern_line 4 (blue)
+  15: factory 0 -> floor None (blue)
+  16: factory 1 -> pattern_line 0 (black)
+  17: factory 1 -> pattern_line 1 (black)
+  18: factory 1 -> pattern_line 2 (black)
+  19: factory 1 -> pattern_line 3 (black)
+  20: factory 1 -> floor None (black)
+  21: factory 1 -> pattern_line 0 (red)
+  22: factory 1 -> pattern_line 1 (red)
+  23: factory 1 -> pattern_line 2 (red)
+  24: factory 1 -> pattern_line 3 (red)
+  25: factory 1 -> floor None (red)
+  26: factory 1 -> pattern_line 0 (yellow)
+  27: factory 1 -> pattern_line 1 (yellow)
+  28: factory 1 -> pattern_line 2 (yellow)
+  29: factory 1 -> pattern_line 3 (yellow)
+  30: factory 1 -> floor None (yellow)
+  31: factory 2 -> pattern_line 0 (black)
+  32: factory 2 -> pattern_line 1 (black)
+  33: factory 2 -> pattern_line 2 (black)
+  34: factory 2 -> pattern_line 3 (black)
+  35: factory 2 -> floor None (black)
+  36: factory 2 -> pattern_line 0 (green)
+  37: factory 2 -> pattern_line 1 (green)
+  38: factory 2 -> pattern_line 2 (green)
+  39: factory 2 -> pattern_line 3 (green)
+  40: factory 2 -> floor None (green)
+  41: factory 2 -> pattern_line 0 (blue)
+  42: factory 2 -> pattern_line 1 (blue)
+  43: factory 2 -> pattern_line 2 (blue)
+  44: factory 2 -> pattern_line 3 (blue)
+  45: factory 2 -> pattern_line 4 (blue)
+  46: factory 2 -> floor None (blue)
+  47: center None -> pattern_line 0 (black)
+  48: center None -> pattern_line 1 (black)
+  49: center None -> pattern_line 2 (black)
+  50: center None -> pattern_line 3 (black)
+  51: center None -> floor None (black)
+  52: center None -> pattern_line 0 (blue)
+  53: center None -> pattern_line 1 (blue)
+  54: center None -> pattern_line 2 (blue)
+  55: center None -> pattern_line 3 (blue)
+  56: center None -> pattern_line 4 (blue)
+  57: center None -> floor None (blue)
+Chosen Move: ('factory', 1, <Color.BLACK: 'black'>, 'pattern_line', 3)
 Move applied.
 
 Current Player: 1
 First Player Marker Holder: 0
 Factories:
-  Factory 0: ['black', 'black', 'red', 'black']
+  Factory 0: ['blue', 'yellow', 'yellow', 'black']
   Factory 1: []
-  Factory 2: ['yellow', 'blue', 'yellow', 'yellow']
+  Factory 2: ['blue', 'green', 'black', 'green']
   Factory 3: []
   Factory 4: []
-Center: ['red', 'green', 'blue'] (Marker: False)
+Center: ['blue', 'black', 'black', 'yellow', 'red'] (Marker: False)
 Players:
   Player 0 Score: 0
     Pattern Lines:
-      Line 0: []
+      Line 0: ['green']
       Line 1: []
-      Line 2: []
-      Line 3: ['black', 'black']
-      Line 4: ['green', 'green']
-    Floor: ['FirstPlayerMarker', None, None, None, None, None, None]
+      Line 2: ['yellow']
+      Line 3: []
+      Line 4: []
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', None, None, None, None]
     Board Occupancy:
 [[0 0 0 0 0]
  [0 0 0 0 0]
@@ -434,12 +490,12 @@ Players:
  [0 0 0 0 0]]
   Player 1 Score: 0
     Pattern Lines:
-      Line 0: ['blue']
-      Line 1: ['black', 'black']
+      Line 0: []
+      Line 1: []
       Line 2: []
-      Line 3: []
-      Line 4: []
-    Floor: ['Tile', 'Tile', None, None, None, None, None]
+      Line 3: ['black', 'black']
+      Line 4: ['blue']
+    Floor: [None, None, None, None, None, None, None]
     Board Occupancy:
 [[0 0 0 0 0]
  [0 0 0 0 0]
@@ -451,37 +507,210 @@ Discard: 0 tiles
 
 --- Player 0's Turn ---
 Legal Moves:
+  0: factory 0 -> pattern_line 1 (black)
+  1: factory 0 -> pattern_line 3 (black)
+  2: factory 0 -> pattern_line 4 (black)
+  3: factory 0 -> floor None (black)
+  4: factory 0 -> pattern_line 1 (yellow)
+  5: factory 0 -> pattern_line 2 (yellow)
+  6: factory 0 -> pattern_line 3 (yellow)
+  7: factory 0 -> pattern_line 4 (yellow)
+  8: factory 0 -> floor None (yellow)
+  9: factory 0 -> pattern_line 1 (blue)
+  10: factory 0 -> pattern_line 3 (blue)
+  11: factory 0 -> pattern_line 4 (blue)
+  12: factory 0 -> floor None (blue)
+  13: factory 2 -> pattern_line 1 (black)
+  14: factory 2 -> pattern_line 3 (black)
+  15: factory 2 -> pattern_line 4 (black)
+  16: factory 2 -> floor None (black)
+  17: factory 2 -> pattern_line 1 (green)
+  18: factory 2 -> pattern_line 3 (green)
+  19: factory 2 -> pattern_line 4 (green)
+  20: factory 2 -> floor None (green)
+  21: factory 2 -> pattern_line 1 (blue)
+  22: factory 2 -> pattern_line 3 (blue)
+  23: factory 2 -> pattern_line 4 (blue)
+  24: factory 2 -> floor None (blue)
+  25: center None -> pattern_line 1 (black)
+  26: center None -> pattern_line 3 (black)
+  27: center None -> pattern_line 4 (black)
+  28: center None -> floor None (black)
+  29: center None -> pattern_line 1 (yellow)
+  30: center None -> pattern_line 2 (yellow)
+  31: center None -> pattern_line 3 (yellow)
+  32: center None -> pattern_line 4 (yellow)
+  33: center None -> floor None (yellow)
+  34: center None -> pattern_line 1 (red)
+  35: center None -> pattern_line 3 (red)
+  36: center None -> pattern_line 4 (red)
+  37: center None -> floor None (red)
+  38: center None -> pattern_line 1 (blue)
+  39: center None -> pattern_line 3 (blue)
+  40: center None -> pattern_line 4 (blue)
+  41: center None -> floor None (blue)
+Chosen Move: ('center', None, <Color.BLACK: 'black'>, 'pattern_line', 3)
+Move applied.
+
+Current Player: 0
+First Player Marker Holder: 0
+Factories:
+  Factory 0: ['blue', 'yellow', 'yellow', 'black']
+  Factory 1: []
+  Factory 2: ['blue', 'green', 'black', 'green']
+  Factory 3: []
+  Factory 4: []
+Center: ['blue', 'yellow', 'red'] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: ['green']
+      Line 1: []
+      Line 2: ['yellow']
+      Line 3: ['black', 'black']
+      Line 4: []
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', None, None, None, None]
+    Board Occupancy:
+[[0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: []
+      Line 3: ['black', 'black']
+      Line 4: ['blue']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+Bag: 80 tiles
+Discard: 0 tiles
+
+--- Player 1's Turn ---
+Legal Moves:
   0: factory 0 -> pattern_line 0 (black)
   1: factory 0 -> pattern_line 1 (black)
   2: factory 0 -> pattern_line 2 (black)
   3: factory 0 -> pattern_line 3 (black)
   4: factory 0 -> floor None (black)
-  5: factory 0 -> pattern_line 0 (red)
-  6: factory 0 -> pattern_line 1 (red)
-  7: factory 0 -> pattern_line 2 (red)
-  8: factory 0 -> floor None (red)
-  9: factory 2 -> pattern_line 0 (blue)
-  10: factory 2 -> pattern_line 1 (blue)
-  11: factory 2 -> pattern_line 2 (blue)
-  12: factory 2 -> floor None (blue)
-  13: factory 2 -> pattern_line 0 (yellow)
-  14: factory 2 -> pattern_line 1 (yellow)
-  15: factory 2 -> pattern_line 2 (yellow)
-  16: factory 2 -> floor None (yellow)
-  17: center None -> pattern_line 0 (green)
-  18: center None -> pattern_line 1 (green)
-  19: center None -> pattern_line 2 (green)
-  20: center None -> pattern_line 4 (green)
-  21: center None -> floor None (green)
-  22: center None -> pattern_line 0 (blue)
-  23: center None -> pattern_line 1 (blue)
-  24: center None -> pattern_line 2 (blue)
-  25: center None -> floor None (blue)
-  26: center None -> pattern_line 0 (red)
-  27: center None -> pattern_line 1 (red)
-  28: center None -> pattern_line 2 (red)
-  29: center None -> floor None (red)
-Chosen Move: ('factory', 0, <Color.BLACK: 'black'>, 'pattern_line', 2)
+  5: factory 0 -> pattern_line 0 (yellow)
+  6: factory 0 -> pattern_line 1 (yellow)
+  7: factory 0 -> pattern_line 2 (yellow)
+  8: factory 0 -> floor None (yellow)
+  9: factory 0 -> pattern_line 0 (blue)
+  10: factory 0 -> pattern_line 1 (blue)
+  11: factory 0 -> pattern_line 2 (blue)
+  12: factory 0 -> pattern_line 4 (blue)
+  13: factory 0 -> floor None (blue)
+  14: factory 2 -> pattern_line 0 (black)
+  15: factory 2 -> pattern_line 1 (black)
+  16: factory 2 -> pattern_line 2 (black)
+  17: factory 2 -> pattern_line 3 (black)
+  18: factory 2 -> floor None (black)
+  19: factory 2 -> pattern_line 0 (green)
+  20: factory 2 -> pattern_line 1 (green)
+  21: factory 2 -> pattern_line 2 (green)
+  22: factory 2 -> floor None (green)
+  23: factory 2 -> pattern_line 0 (blue)
+  24: factory 2 -> pattern_line 1 (blue)
+  25: factory 2 -> pattern_line 2 (blue)
+  26: factory 2 -> pattern_line 4 (blue)
+  27: factory 2 -> floor None (blue)
+  28: center None -> pattern_line 0 (red)
+  29: center None -> pattern_line 1 (red)
+  30: center None -> pattern_line 2 (red)
+  31: center None -> floor None (red)
+  32: center None -> pattern_line 0 (yellow)
+  33: center None -> pattern_line 1 (yellow)
+  34: center None -> pattern_line 2 (yellow)
+  35: center None -> floor None (yellow)
+  36: center None -> pattern_line 0 (blue)
+  37: center None -> pattern_line 1 (blue)
+  38: center None -> pattern_line 2 (blue)
+  39: center None -> pattern_line 4 (blue)
+  40: center None -> floor None (blue)
+Chosen Move: ('factory', 2, <Color.BLUE: 'blue'>, 'pattern_line', 0)
+Move applied.
+
+Current Player: 1
+First Player Marker Holder: 0
+Factories:
+  Factory 0: ['blue', 'yellow', 'yellow', 'black']
+  Factory 1: []
+  Factory 2: []
+  Factory 3: []
+  Factory 4: []
+Center: ['blue', 'yellow', 'red', 'green', 'black', 'green'] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: ['green']
+      Line 1: []
+      Line 2: ['yellow']
+      Line 3: ['black', 'black']
+      Line 4: []
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', None, None, None, None]
+    Board Occupancy:
+[[0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: ['blue']
+      Line 1: []
+      Line 2: []
+      Line 3: ['black', 'black']
+      Line 4: ['blue']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+Bag: 80 tiles
+Discard: 0 tiles
+
+--- Player 0's Turn ---
+Legal Moves:
+  0: factory 0 -> pattern_line 1 (black)
+  1: factory 0 -> pattern_line 3 (black)
+  2: factory 0 -> pattern_line 4 (black)
+  3: factory 0 -> floor None (black)
+  4: factory 0 -> pattern_line 1 (yellow)
+  5: factory 0 -> pattern_line 2 (yellow)
+  6: factory 0 -> pattern_line 4 (yellow)
+  7: factory 0 -> floor None (yellow)
+  8: factory 0 -> pattern_line 1 (blue)
+  9: factory 0 -> pattern_line 4 (blue)
+  10: factory 0 -> floor None (blue)
+  11: center None -> pattern_line 1 (blue)
+  12: center None -> pattern_line 4 (blue)
+  13: center None -> floor None (blue)
+  14: center None -> pattern_line 1 (red)
+  15: center None -> pattern_line 4 (red)
+  16: center None -> floor None (red)
+  17: center None -> pattern_line 1 (yellow)
+  18: center None -> pattern_line 2 (yellow)
+  19: center None -> pattern_line 4 (yellow)
+  20: center None -> floor None (yellow)
+  21: center None -> pattern_line 1 (black)
+  22: center None -> pattern_line 3 (black)
+  23: center None -> pattern_line 4 (black)
+  24: center None -> floor None (black)
+  25: center None -> pattern_line 1 (green)
+  26: center None -> pattern_line 4 (green)
+  27: center None -> floor None (green)
+Chosen Move: ('factory', 0, <Color.YELLOW: 'yellow'>, 'pattern_line', 4)
 Move applied.
 
 Current Player: 0
@@ -489,19 +718,19 @@ First Player Marker Holder: 0
 Factories:
   Factory 0: []
   Factory 1: []
-  Factory 2: ['yellow', 'blue', 'yellow', 'yellow']
+  Factory 2: []
   Factory 3: []
   Factory 4: []
-Center: ['red', 'green', 'blue', 'red'] (Marker: False)
+Center: ['blue', 'yellow', 'red', 'green', 'black', 'green', 'blue', 'black'] (Marker: False)
 Players:
   Player 0 Score: 0
     Pattern Lines:
-      Line 0: []
+      Line 0: ['green']
       Line 1: []
-      Line 2: ['black', 'black', 'black']
+      Line 2: ['yellow']
       Line 3: ['black', 'black']
-      Line 4: ['green', 'green']
-    Floor: ['FirstPlayerMarker', None, None, None, None, None, None]
+      Line 4: ['yellow', 'yellow']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', None, None, None, None]
     Board Occupancy:
 [[0 0 0 0 0]
  [0 0 0 0 0]
@@ -511,11 +740,11 @@ Players:
   Player 1 Score: 0
     Pattern Lines:
       Line 0: ['blue']
-      Line 1: ['black', 'black']
+      Line 1: []
       Line 2: []
-      Line 3: []
-      Line 4: []
-    Floor: ['Tile', 'Tile', None, None, None, None, None]
+      Line 3: ['black', 'black']
+      Line 4: ['blue']
+    Floor: [None, None, None, None, None, None, None]
     Board Occupancy:
 [[0 0 0 0 0]
  [0 0 0 0 0]
@@ -527,26 +756,2111 @@ Discard: 0 tiles
 
 --- Player 1's Turn ---
 Legal Moves:
-  0: factory 2 -> pattern_line 2 (blue)
-  1: factory 2 -> pattern_line 3 (blue)
-  2: factory 2 -> pattern_line 4 (blue)
-  3: factory 2 -> floor None (blue)
-  4: factory 2 -> pattern_line 2 (yellow)
-  5: factory 2 -> pattern_line 3 (yellow)
-  6: factory 2 -> pattern_line 4 (yellow)
-  7: factory 2 -> floor None (yellow)
-  8: center None -> pattern_line 2 (green)
-  9: center None -> pattern_line 3 (green)
-  10: center None -> pattern_line 4 (green)
-  11: center None -> floor None (green)
-  12: center None -> pattern_line 2 (blue)
-  13: center None -> pattern_line 3 (blue)
-  14: center None -> pattern_line 4 (blue)
-  15: center None -> floor None (blue)
-  16: center None -> pattern_line 2 (red)
-  17: center None -> pattern_line 3 (red)
-  18: center None -> pattern_line 4 (red)
+  0: center None -> pattern_line 1 (blue)
+  1: center None -> pattern_line 2 (blue)
+  2: center None -> pattern_line 4 (blue)
+  3: center None -> floor None (blue)
+  4: center None -> pattern_line 1 (red)
+  5: center None -> pattern_line 2 (red)
+  6: center None -> floor None (red)
+  7: center None -> pattern_line 1 (yellow)
+  8: center None -> pattern_line 2 (yellow)
+  9: center None -> floor None (yellow)
+  10: center None -> pattern_line 1 (black)
+  11: center None -> pattern_line 2 (black)
+  12: center None -> pattern_line 3 (black)
+  13: center None -> floor None (black)
+  14: center None -> pattern_line 1 (green)
+  15: center None -> pattern_line 2 (green)
+  16: center None -> floor None (green)
+Chosen Move: ('center', None, <Color.BLUE: 'blue'>, 'pattern_line', 4)
+Move applied.
+
+Current Player: 1
+First Player Marker Holder: 0
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: []
+  Factory 4: []
+Center: ['yellow', 'red', 'green', 'black', 'green', 'black'] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: ['green']
+      Line 1: []
+      Line 2: ['yellow']
+      Line 3: ['black', 'black']
+      Line 4: ['yellow', 'yellow']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', None, None, None, None]
+    Board Occupancy:
+[[0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: ['blue']
+      Line 1: []
+      Line 2: []
+      Line 3: ['black', 'black']
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+Bag: 80 tiles
+Discard: 0 tiles
+
+--- Player 0's Turn ---
+Legal Moves:
+  0: center None -> pattern_line 1 (black)
+  1: center None -> pattern_line 3 (black)
+  2: center None -> floor None (black)
+  3: center None -> pattern_line 1 (red)
+  4: center None -> floor None (red)
+  5: center None -> pattern_line 1 (yellow)
+  6: center None -> pattern_line 2 (yellow)
+  7: center None -> pattern_line 4 (yellow)
+  8: center None -> floor None (yellow)
+  9: center None -> pattern_line 1 (green)
+  10: center None -> floor None (green)
+Chosen Move: ('center', None, <Color.GREEN: 'green'>, 'pattern_line', 1)
+Move applied.
+
+Current Player: 0
+First Player Marker Holder: 0
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: []
+  Factory 4: []
+Center: ['yellow', 'red', 'black', 'black'] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: ['green']
+      Line 1: ['green', 'green']
+      Line 2: ['yellow']
+      Line 3: ['black', 'black']
+      Line 4: ['yellow', 'yellow']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', None, None, None, None]
+    Board Occupancy:
+[[0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: ['blue']
+      Line 1: []
+      Line 2: []
+      Line 3: ['black', 'black']
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+Bag: 80 tiles
+Discard: 0 tiles
+
+--- Player 1's Turn ---
+Legal Moves:
+  0: center None -> pattern_line 1 (black)
+  1: center None -> pattern_line 2 (black)
+  2: center None -> pattern_line 3 (black)
+  3: center None -> floor None (black)
+  4: center None -> pattern_line 1 (red)
+  5: center None -> pattern_line 2 (red)
+  6: center None -> floor None (red)
+  7: center None -> pattern_line 1 (yellow)
+  8: center None -> pattern_line 2 (yellow)
+  9: center None -> floor None (yellow)
+Chosen Move: ('center', None, <Color.RED: 'red'>, 'pattern_line', 2)
+Move applied.
+
+Current Player: 1
+First Player Marker Holder: 0
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: []
+  Factory 4: []
+Center: ['yellow', 'black', 'black'] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: ['green']
+      Line 1: ['green', 'green']
+      Line 2: ['yellow']
+      Line 3: ['black', 'black']
+      Line 4: ['yellow', 'yellow']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', None, None, None, None]
+    Board Occupancy:
+[[0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: ['blue']
+      Line 1: []
+      Line 2: ['red']
+      Line 3: ['black', 'black']
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+Bag: 80 tiles
+Discard: 0 tiles
+
+--- Player 0's Turn ---
+Legal Moves:
+  0: center None -> pattern_line 3 (black)
+  1: center None -> floor None (black)
+  2: center None -> pattern_line 2 (yellow)
+  3: center None -> pattern_line 4 (yellow)
+  4: center None -> floor None (yellow)
+Chosen Move: ('center', None, <Color.BLACK: 'black'>, 'floor', None)
+Move applied.
+
+Current Player: 0
+First Player Marker Holder: 0
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: []
+  Factory 4: []
+Center: ['yellow'] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: ['green']
+      Line 1: ['green', 'green']
+      Line 2: ['yellow']
+      Line 3: ['black', 'black']
+      Line 4: ['yellow', 'yellow']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', 'Tile', 'Tile', None, None]
+    Board Occupancy:
+[[0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: ['blue']
+      Line 1: []
+      Line 2: ['red']
+      Line 3: ['black', 'black']
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+Bag: 80 tiles
+Discard: 0 tiles
+
+--- Player 1's Turn ---
+Legal Moves:
+  0: center None -> pattern_line 1 (yellow)
+  1: center None -> floor None (yellow)
+Chosen Move: ('center', None, <Color.YELLOW: 'yellow'>, 'floor', None)
+Move applied.
+
+Current Player: 1
+First Player Marker Holder: 0
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: []
+  Factory 4: []
+Center: [] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: ['green']
+      Line 1: ['green', 'green']
+      Line 2: ['yellow']
+      Line 3: ['black', 'black']
+      Line 4: ['yellow', 'yellow']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', 'Tile', 'Tile', None, None]
+    Board Occupancy:
+[[0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: ['blue']
+      Line 1: []
+      Line 2: ['red']
+      Line 3: ['black', 'black']
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: ['Tile', None, None, None, None, None, None]
+    Board Occupancy:
+[[0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+Bag: 80 tiles
+Discard: 0 tiles
+All sources empty. Ending round.
+Round ended.
+
+Current Player: 0
+First Player Marker Holder: 0
+Factories:
+  Factory 0: ['green', 'black', 'blue', 'blue']
+  Factory 1: ['red', 'red', 'red', 'black']
+  Factory 2: ['green', 'blue', 'red', 'yellow']
+  Factory 3: ['yellow', 'red', 'yellow', 'red']
+  Factory 4: ['black', 'red', 'green', 'red']
+Center: [] (Marker: True)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: ['yellow']
+      Line 3: ['black', 'black']
+      Line 4: ['yellow', 'yellow']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[0 0 1 0 0]
+ [0 0 0 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: ['red']
+      Line 3: ['black', 'black']
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[0 1 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+Bag: 60 tiles
+Discard: 6 tiles
+
+--- Player 1's Turn ---
+Legal Moves:
+  0: factory 0 -> pattern_line 0 (black)
+  1: factory 0 -> pattern_line 1 (black)
+  2: factory 0 -> pattern_line 3 (black)
+  3: factory 0 -> floor None (black)
+  4: factory 0 -> pattern_line 0 (green)
+  5: factory 0 -> pattern_line 1 (green)
+  6: factory 0 -> floor None (green)
+  7: factory 0 -> pattern_line 1 (blue)
+  8: factory 0 -> pattern_line 4 (blue)
+  9: factory 0 -> floor None (blue)
+  10: factory 1 -> pattern_line 0 (black)
+  11: factory 1 -> pattern_line 1 (black)
+  12: factory 1 -> pattern_line 3 (black)
+  13: factory 1 -> floor None (black)
+  14: factory 1 -> pattern_line 0 (red)
+  15: factory 1 -> pattern_line 1 (red)
+  16: factory 1 -> pattern_line 2 (red)
+  17: factory 1 -> floor None (red)
+  18: factory 2 -> pattern_line 0 (red)
+  19: factory 2 -> pattern_line 1 (red)
+  20: factory 2 -> pattern_line 2 (red)
+  21: factory 2 -> floor None (red)
+  22: factory 2 -> pattern_line 0 (yellow)
+  23: factory 2 -> pattern_line 1 (yellow)
+  24: factory 2 -> floor None (yellow)
+  25: factory 2 -> pattern_line 0 (green)
+  26: factory 2 -> pattern_line 1 (green)
+  27: factory 2 -> floor None (green)
+  28: factory 2 -> pattern_line 1 (blue)
+  29: factory 2 -> pattern_line 4 (blue)
+  30: factory 2 -> floor None (blue)
+  31: factory 3 -> pattern_line 0 (red)
+  32: factory 3 -> pattern_line 1 (red)
+  33: factory 3 -> pattern_line 2 (red)
+  34: factory 3 -> floor None (red)
+  35: factory 3 -> pattern_line 0 (yellow)
+  36: factory 3 -> pattern_line 1 (yellow)
+  37: factory 3 -> floor None (yellow)
+  38: factory 4 -> pattern_line 0 (black)
+  39: factory 4 -> pattern_line 1 (black)
+  40: factory 4 -> pattern_line 3 (black)
+  41: factory 4 -> floor None (black)
+  42: factory 4 -> pattern_line 0 (red)
+  43: factory 4 -> pattern_line 1 (red)
+  44: factory 4 -> pattern_line 2 (red)
+  45: factory 4 -> floor None (red)
+  46: factory 4 -> pattern_line 0 (green)
+  47: factory 4 -> pattern_line 1 (green)
+  48: factory 4 -> floor None (green)
+Chosen Move: ('factory', 0, <Color.GREEN: 'green'>, 'floor', None)
+Move applied.
+
+Current Player: 1
+First Player Marker Holder: 0
+Factories:
+  Factory 0: []
+  Factory 1: ['red', 'red', 'red', 'black']
+  Factory 2: ['green', 'blue', 'red', 'yellow']
+  Factory 3: ['yellow', 'red', 'yellow', 'red']
+  Factory 4: ['black', 'red', 'green', 'red']
+Center: ['black', 'blue', 'blue'] (Marker: True)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: ['yellow']
+      Line 3: ['black', 'black']
+      Line 4: ['yellow', 'yellow']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[0 0 1 0 0]
+ [0 0 0 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: ['red']
+      Line 3: ['black', 'black']
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: ['Tile', None, None, None, None, None, None]
+    Board Occupancy:
+[[0 1 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+Bag: 60 tiles
+Discard: 6 tiles
+
+--- Player 0's Turn ---
+Legal Moves:
+  0: factory 1 -> pattern_line 0 (black)
+  1: factory 1 -> pattern_line 1 (black)
+  2: factory 1 -> pattern_line 3 (black)
+  3: factory 1 -> floor None (black)
+  4: factory 1 -> pattern_line 0 (red)
+  5: factory 1 -> pattern_line 1 (red)
+  6: factory 1 -> floor None (red)
+  7: factory 2 -> pattern_line 0 (red)
+  8: factory 2 -> pattern_line 1 (red)
+  9: factory 2 -> floor None (red)
+  10: factory 2 -> pattern_line 0 (yellow)
+  11: factory 2 -> pattern_line 1 (yellow)
+  12: factory 2 -> pattern_line 2 (yellow)
+  13: factory 2 -> pattern_line 4 (yellow)
+  14: factory 2 -> floor None (yellow)
+  15: factory 2 -> floor None (green)
+  16: factory 2 -> pattern_line 0 (blue)
+  17: factory 2 -> pattern_line 1 (blue)
+  18: factory 2 -> floor None (blue)
+  19: factory 3 -> pattern_line 0 (red)
+  20: factory 3 -> pattern_line 1 (red)
+  21: factory 3 -> floor None (red)
+  22: factory 3 -> pattern_line 0 (yellow)
+  23: factory 3 -> pattern_line 1 (yellow)
+  24: factory 3 -> pattern_line 2 (yellow)
+  25: factory 3 -> pattern_line 4 (yellow)
+  26: factory 3 -> floor None (yellow)
+  27: factory 4 -> pattern_line 0 (black)
+  28: factory 4 -> pattern_line 1 (black)
+  29: factory 4 -> pattern_line 3 (black)
+  30: factory 4 -> floor None (black)
+  31: factory 4 -> pattern_line 0 (red)
+  32: factory 4 -> pattern_line 1 (red)
+  33: factory 4 -> floor None (red)
+  34: factory 4 -> floor None (green)
+  35: center None -> pattern_line 0 (black)
+  36: center None -> pattern_line 1 (black)
+  37: center None -> pattern_line 3 (black)
+  38: center None -> floor None (black)
+  39: center None -> pattern_line 0 (blue)
+  40: center None -> pattern_line 1 (blue)
+  41: center None -> floor None (blue)
+Chosen Move: ('factory', 4, <Color.GREEN: 'green'>, 'floor', None)
+Move applied.
+
+Current Player: 0
+First Player Marker Holder: 0
+Factories:
+  Factory 0: []
+  Factory 1: ['red', 'red', 'red', 'black']
+  Factory 2: ['green', 'blue', 'red', 'yellow']
+  Factory 3: ['yellow', 'red', 'yellow', 'red']
+  Factory 4: []
+Center: ['black', 'blue', 'blue', 'black', 'red', 'red'] (Marker: True)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: ['yellow']
+      Line 3: ['black', 'black']
+      Line 4: ['yellow', 'yellow']
+    Floor: ['Tile', None, None, None, None, None, None]
+    Board Occupancy:
+[[0 0 1 0 0]
+ [0 0 0 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: ['red']
+      Line 3: ['black', 'black']
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: ['Tile', None, None, None, None, None, None]
+    Board Occupancy:
+[[0 1 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+Bag: 60 tiles
+Discard: 6 tiles
+
+--- Player 1's Turn ---
+Legal Moves:
+  0: factory 1 -> pattern_line 0 (black)
+  1: factory 1 -> pattern_line 1 (black)
+  2: factory 1 -> pattern_line 3 (black)
+  3: factory 1 -> floor None (black)
+  4: factory 1 -> pattern_line 0 (red)
+  5: factory 1 -> pattern_line 1 (red)
+  6: factory 1 -> pattern_line 2 (red)
+  7: factory 1 -> floor None (red)
+  8: factory 2 -> pattern_line 0 (red)
+  9: factory 2 -> pattern_line 1 (red)
+  10: factory 2 -> pattern_line 2 (red)
+  11: factory 2 -> floor None (red)
+  12: factory 2 -> pattern_line 0 (yellow)
+  13: factory 2 -> pattern_line 1 (yellow)
+  14: factory 2 -> floor None (yellow)
+  15: factory 2 -> pattern_line 0 (green)
+  16: factory 2 -> pattern_line 1 (green)
+  17: factory 2 -> floor None (green)
+  18: factory 2 -> pattern_line 1 (blue)
+  19: factory 2 -> pattern_line 4 (blue)
+  20: factory 2 -> floor None (blue)
+  21: factory 3 -> pattern_line 0 (red)
+  22: factory 3 -> pattern_line 1 (red)
+  23: factory 3 -> pattern_line 2 (red)
+  24: factory 3 -> floor None (red)
+  25: factory 3 -> pattern_line 0 (yellow)
+  26: factory 3 -> pattern_line 1 (yellow)
+  27: factory 3 -> floor None (yellow)
+  28: center None -> pattern_line 0 (black)
+  29: center None -> pattern_line 1 (black)
+  30: center None -> pattern_line 3 (black)
+  31: center None -> floor None (black)
+  32: center None -> pattern_line 0 (red)
+  33: center None -> pattern_line 1 (red)
+  34: center None -> pattern_line 2 (red)
+  35: center None -> floor None (red)
+  36: center None -> pattern_line 1 (blue)
+  37: center None -> pattern_line 4 (blue)
+  38: center None -> floor None (blue)
+Chosen Move: ('factory', 2, <Color.GREEN: 'green'>, 'pattern_line', 1)
+Move applied.
+
+Current Player: 1
+First Player Marker Holder: 0
+Factories:
+  Factory 0: []
+  Factory 1: ['red', 'red', 'red', 'black']
+  Factory 2: []
+  Factory 3: ['yellow', 'red', 'yellow', 'red']
+  Factory 4: []
+Center: ['black', 'blue', 'blue', 'black', 'red', 'red', 'blue', 'red', 'yellow'] (Marker: True)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: ['yellow']
+      Line 3: ['black', 'black']
+      Line 4: ['yellow', 'yellow']
+    Floor: ['Tile', None, None, None, None, None, None]
+    Board Occupancy:
+[[0 0 1 0 0]
+ [0 0 0 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['green']
+      Line 2: ['red']
+      Line 3: ['black', 'black']
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: ['Tile', None, None, None, None, None, None]
+    Board Occupancy:
+[[0 1 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+Bag: 60 tiles
+Discard: 6 tiles
+
+--- Player 0's Turn ---
+Legal Moves:
+  0: factory 1 -> pattern_line 0 (black)
+  1: factory 1 -> pattern_line 1 (black)
+  2: factory 1 -> pattern_line 3 (black)
+  3: factory 1 -> floor None (black)
+  4: factory 1 -> pattern_line 0 (red)
+  5: factory 1 -> pattern_line 1 (red)
+  6: factory 1 -> floor None (red)
+  7: factory 3 -> pattern_line 0 (red)
+  8: factory 3 -> pattern_line 1 (red)
+  9: factory 3 -> floor None (red)
+  10: factory 3 -> pattern_line 0 (yellow)
+  11: factory 3 -> pattern_line 1 (yellow)
+  12: factory 3 -> pattern_line 2 (yellow)
+  13: factory 3 -> pattern_line 4 (yellow)
+  14: factory 3 -> floor None (yellow)
+  15: center None -> pattern_line 0 (black)
+  16: center None -> pattern_line 1 (black)
+  17: center None -> pattern_line 3 (black)
+  18: center None -> floor None (black)
+  19: center None -> pattern_line 0 (red)
+  20: center None -> pattern_line 1 (red)
+  21: center None -> floor None (red)
+  22: center None -> pattern_line 0 (yellow)
+  23: center None -> pattern_line 1 (yellow)
+  24: center None -> pattern_line 2 (yellow)
+  25: center None -> pattern_line 4 (yellow)
+  26: center None -> floor None (yellow)
+  27: center None -> pattern_line 0 (blue)
+  28: center None -> pattern_line 1 (blue)
+  29: center None -> floor None (blue)
+Chosen Move: ('factory', 1, <Color.BLACK: 'black'>, 'pattern_line', 0)
+Move applied.
+
+Current Player: 0
+First Player Marker Holder: 0
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: ['yellow', 'red', 'yellow', 'red']
+  Factory 4: []
+Center: ['black', 'blue', 'blue', 'black', 'red', 'red', 'blue', 'red', 'yellow', 'red', 'red', 'red'] (Marker: True)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: ['black']
+      Line 1: []
+      Line 2: ['yellow']
+      Line 3: ['black', 'black']
+      Line 4: ['yellow', 'yellow']
+    Floor: ['Tile', None, None, None, None, None, None]
+    Board Occupancy:
+[[0 0 1 0 0]
+ [0 0 0 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['green']
+      Line 2: ['red']
+      Line 3: ['black', 'black']
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: ['Tile', None, None, None, None, None, None]
+    Board Occupancy:
+[[0 1 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+Bag: 60 tiles
+Discard: 6 tiles
+
+--- Player 1's Turn ---
+Legal Moves:
+  0: factory 3 -> pattern_line 0 (red)
+  1: factory 3 -> pattern_line 2 (red)
+  2: factory 3 -> floor None (red)
+  3: factory 3 -> pattern_line 0 (yellow)
+  4: factory 3 -> floor None (yellow)
+  5: center None -> pattern_line 0 (black)
+  6: center None -> pattern_line 3 (black)
+  7: center None -> floor None (black)
+  8: center None -> pattern_line 0 (red)
+  9: center None -> pattern_line 2 (red)
+  10: center None -> floor None (red)
+  11: center None -> pattern_line 0 (yellow)
+  12: center None -> floor None (yellow)
+  13: center None -> pattern_line 4 (blue)
+  14: center None -> floor None (blue)
+Chosen Move: ('center', None, <Color.BLUE: 'blue'>, 'floor', None)
+Move applied.
+
+Current Player: 1
+First Player Marker Holder: 1
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: ['yellow', 'red', 'yellow', 'red']
+  Factory 4: []
+Center: ['black', 'black', 'red', 'red', 'red', 'yellow', 'red', 'red', 'red'] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: ['black']
+      Line 1: []
+      Line 2: ['yellow']
+      Line 3: ['black', 'black']
+      Line 4: ['yellow', 'yellow']
+    Floor: ['Tile', None, None, None, None, None, None]
+    Board Occupancy:
+[[0 0 1 0 0]
+ [0 0 0 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['green']
+      Line 2: ['red']
+      Line 3: ['black', 'black']
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', 'Tile', 'Tile', None, None]
+    Board Occupancy:
+[[0 1 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+Bag: 60 tiles
+Discard: 6 tiles
+
+--- Player 0's Turn ---
+Legal Moves:
+  0: factory 3 -> pattern_line 1 (red)
+  1: factory 3 -> floor None (red)
+  2: factory 3 -> pattern_line 1 (yellow)
+  3: factory 3 -> pattern_line 2 (yellow)
+  4: factory 3 -> pattern_line 4 (yellow)
+  5: factory 3 -> floor None (yellow)
+  6: center None -> pattern_line 1 (black)
+  7: center None -> pattern_line 3 (black)
+  8: center None -> floor None (black)
+  9: center None -> pattern_line 1 (red)
+  10: center None -> floor None (red)
+  11: center None -> pattern_line 1 (yellow)
+  12: center None -> pattern_line 2 (yellow)
+  13: center None -> pattern_line 4 (yellow)
+  14: center None -> floor None (yellow)
+Chosen Move: ('center', None, <Color.RED: 'red'>, 'floor', None)
+Move applied.
+
+Current Player: 0
+First Player Marker Holder: 1
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: ['yellow', 'red', 'yellow', 'red']
+  Factory 4: []
+Center: ['black', 'black', 'yellow'] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: ['black']
+      Line 1: []
+      Line 2: ['yellow']
+      Line 3: ['black', 'black']
+      Line 4: ['yellow', 'yellow']
+    Floor: ['Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile']
+    Board Occupancy:
+[[0 0 1 0 0]
+ [0 0 0 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['green']
+      Line 2: ['red']
+      Line 3: ['black', 'black']
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', 'Tile', 'Tile', None, None]
+    Board Occupancy:
+[[0 1 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+Bag: 60 tiles
+Discard: 6 tiles
+
+--- Player 1's Turn ---
+Legal Moves:
+  0: factory 3 -> pattern_line 0 (red)
+  1: factory 3 -> pattern_line 2 (red)
+  2: factory 3 -> floor None (red)
+  3: factory 3 -> pattern_line 0 (yellow)
+  4: factory 3 -> floor None (yellow)
+  5: center None -> pattern_line 0 (black)
+  6: center None -> pattern_line 3 (black)
+  7: center None -> floor None (black)
+  8: center None -> pattern_line 0 (yellow)
+  9: center None -> floor None (yellow)
+Chosen Move: ('center', None, <Color.BLACK: 'black'>, 'floor', None)
+Move applied.
+
+Current Player: 1
+First Player Marker Holder: 1
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: ['yellow', 'red', 'yellow', 'red']
+  Factory 4: []
+Center: ['yellow'] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: ['black']
+      Line 1: []
+      Line 2: ['yellow']
+      Line 3: ['black', 'black']
+      Line 4: ['yellow', 'yellow']
+    Floor: ['Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile']
+    Board Occupancy:
+[[0 0 1 0 0]
+ [0 0 0 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['green']
+      Line 2: ['red']
+      Line 3: ['black', 'black']
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile']
+    Board Occupancy:
+[[0 1 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+Bag: 60 tiles
+Discard: 6 tiles
+
+--- Player 0's Turn ---
+Legal Moves:
+  0: factory 3 -> pattern_line 1 (red)
+  1: factory 3 -> floor None (red)
+  2: factory 3 -> pattern_line 1 (yellow)
+  3: factory 3 -> pattern_line 2 (yellow)
+  4: factory 3 -> pattern_line 4 (yellow)
+  5: factory 3 -> floor None (yellow)
+  6: center None -> pattern_line 1 (yellow)
+  7: center None -> pattern_line 2 (yellow)
+  8: center None -> pattern_line 4 (yellow)
+  9: center None -> floor None (yellow)
+Chosen Move: ('factory', 3, <Color.YELLOW: 'yellow'>, 'pattern_line', 2)
+Move applied.
+
+Current Player: 0
+First Player Marker Holder: 1
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: []
+  Factory 4: []
+Center: ['yellow', 'red', 'red'] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: ['black']
+      Line 1: []
+      Line 2: ['yellow', 'yellow', 'yellow']
+      Line 3: ['black', 'black']
+      Line 4: ['yellow', 'yellow']
+    Floor: ['Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile']
+    Board Occupancy:
+[[0 0 1 0 0]
+ [0 0 0 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['green']
+      Line 2: ['red']
+      Line 3: ['black', 'black']
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile']
+    Board Occupancy:
+[[0 1 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+Bag: 60 tiles
+Discard: 6 tiles
+
+--- Player 1's Turn ---
+Legal Moves:
+  0: center None -> pattern_line 0 (red)
+  1: center None -> pattern_line 2 (red)
+  2: center None -> floor None (red)
+  3: center None -> pattern_line 0 (yellow)
+  4: center None -> floor None (yellow)
+Chosen Move: ('center', None, <Color.YELLOW: 'yellow'>, 'floor', None)
+Move applied.
+
+Current Player: 1
+First Player Marker Holder: 1
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: []
+  Factory 4: []
+Center: ['red', 'red'] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: ['black']
+      Line 1: []
+      Line 2: ['yellow', 'yellow', 'yellow']
+      Line 3: ['black', 'black']
+      Line 4: ['yellow', 'yellow']
+    Floor: ['Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile']
+    Board Occupancy:
+[[0 0 1 0 0]
+ [0 0 0 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['green']
+      Line 2: ['red']
+      Line 3: ['black', 'black']
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile']
+    Board Occupancy:
+[[0 1 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+Bag: 60 tiles
+Discard: 7 tiles
+
+--- Player 0's Turn ---
+Legal Moves:
+  0: center None -> pattern_line 1 (red)
+  1: center None -> floor None (red)
+Chosen Move: ('center', None, <Color.RED: 'red'>, 'pattern_line', 1)
+Move applied.
+
+Current Player: 0
+First Player Marker Holder: 1
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: []
+  Factory 4: []
+Center: [] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: ['black']
+      Line 1: ['red', 'red']
+      Line 2: ['yellow', 'yellow', 'yellow']
+      Line 3: ['black', 'black']
+      Line 4: ['yellow', 'yellow']
+    Floor: ['Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile']
+    Board Occupancy:
+[[0 0 1 0 0]
+ [0 0 0 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['green']
+      Line 2: ['red']
+      Line 3: ['black', 'black']
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile']
+    Board Occupancy:
+[[0 1 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+Bag: 60 tiles
+Discard: 7 tiles
+All sources empty. Ending round.
+Round ended.
+
+Current Player: 1
+First Player Marker Holder: 1
+Factories:
+  Factory 0: ['black', 'blue', 'green', 'green']
+  Factory 1: ['blue', 'blue', 'yellow', 'black']
+  Factory 2: ['blue', 'black', 'red', 'green']
+  Factory 3: ['yellow', 'yellow', 'red', 'blue']
+  Factory 4: ['red', 'black', 'blue', 'black']
+Center: [] (Marker: True)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: []
+      Line 3: ['black', 'black']
+      Line 4: ['yellow', 'yellow']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[0 0 1 0 1]
+ [0 0 0 1 1]
+ [0 0 1 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['green']
+      Line 2: ['red']
+      Line 3: ['black', 'black']
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[0 1 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+Bag: 40 tiles
+Discard: 23 tiles
+
+--- Player 0's Turn ---
+Legal Moves:
+  0: factory 0 -> pattern_line 1 (black)
+  1: factory 0 -> pattern_line 2 (black)
+  2: factory 0 -> pattern_line 3 (black)
+  3: factory 0 -> floor None (black)
+  4: factory 0 -> pattern_line 2 (green)
+  5: factory 0 -> floor None (green)
+  6: factory 0 -> pattern_line 0 (blue)
+  7: factory 0 -> pattern_line 1 (blue)
+  8: factory 0 -> pattern_line 2 (blue)
+  9: factory 0 -> floor None (blue)
+  10: factory 1 -> pattern_line 1 (black)
+  11: factory 1 -> pattern_line 2 (black)
+  12: factory 1 -> pattern_line 3 (black)
+  13: factory 1 -> floor None (black)
+  14: factory 1 -> pattern_line 0 (yellow)
+  15: factory 1 -> pattern_line 1 (yellow)
+  16: factory 1 -> pattern_line 4 (yellow)
+  17: factory 1 -> floor None (yellow)
+  18: factory 1 -> pattern_line 0 (blue)
+  19: factory 1 -> pattern_line 1 (blue)
+  20: factory 1 -> pattern_line 2 (blue)
+  21: factory 1 -> floor None (blue)
+  22: factory 2 -> pattern_line 1 (black)
+  23: factory 2 -> pattern_line 2 (black)
+  24: factory 2 -> pattern_line 3 (black)
+  25: factory 2 -> floor None (black)
+  26: factory 2 -> pattern_line 0 (red)
+  27: factory 2 -> pattern_line 2 (red)
+  28: factory 2 -> floor None (red)
+  29: factory 2 -> pattern_line 2 (green)
+  30: factory 2 -> floor None (green)
+  31: factory 2 -> pattern_line 0 (blue)
+  32: factory 2 -> pattern_line 1 (blue)
+  33: factory 2 -> pattern_line 2 (blue)
+  34: factory 2 -> floor None (blue)
+  35: factory 3 -> pattern_line 0 (red)
+  36: factory 3 -> pattern_line 2 (red)
+  37: factory 3 -> floor None (red)
+  38: factory 3 -> pattern_line 0 (yellow)
+  39: factory 3 -> pattern_line 1 (yellow)
+  40: factory 3 -> pattern_line 4 (yellow)
+  41: factory 3 -> floor None (yellow)
+  42: factory 3 -> pattern_line 0 (blue)
+  43: factory 3 -> pattern_line 1 (blue)
+  44: factory 3 -> pattern_line 2 (blue)
+  45: factory 3 -> floor None (blue)
+  46: factory 4 -> pattern_line 1 (black)
+  47: factory 4 -> pattern_line 2 (black)
+  48: factory 4 -> pattern_line 3 (black)
+  49: factory 4 -> floor None (black)
+  50: factory 4 -> pattern_line 0 (red)
+  51: factory 4 -> pattern_line 2 (red)
+  52: factory 4 -> floor None (red)
+  53: factory 4 -> pattern_line 0 (blue)
+  54: factory 4 -> pattern_line 1 (blue)
+  55: factory 4 -> pattern_line 2 (blue)
+  56: factory 4 -> floor None (blue)
+Chosen Move: ('factory', 4, <Color.BLUE: 'blue'>, 'pattern_line', 0)
+Move applied.
+
+Current Player: 0
+First Player Marker Holder: 1
+Factories:
+  Factory 0: ['black', 'blue', 'green', 'green']
+  Factory 1: ['blue', 'blue', 'yellow', 'black']
+  Factory 2: ['blue', 'black', 'red', 'green']
+  Factory 3: ['yellow', 'yellow', 'red', 'blue']
+  Factory 4: []
+Center: ['red', 'black', 'black'] (Marker: True)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: ['blue']
+      Line 1: []
+      Line 2: []
+      Line 3: ['black', 'black']
+      Line 4: ['yellow', 'yellow']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[0 0 1 0 1]
+ [0 0 0 1 1]
+ [0 0 1 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['green']
+      Line 2: ['red']
+      Line 3: ['black', 'black']
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[0 1 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+Bag: 40 tiles
+Discard: 23 tiles
+
+--- Player 1's Turn ---
+Legal Moves:
+  0: factory 0 -> pattern_line 0 (black)
+  1: factory 0 -> pattern_line 3 (black)
+  2: factory 0 -> floor None (black)
+  3: factory 0 -> pattern_line 0 (green)
+  4: factory 0 -> pattern_line 1 (green)
+  5: factory 0 -> floor None (green)
+  6: factory 0 -> pattern_line 4 (blue)
+  7: factory 0 -> floor None (blue)
+  8: factory 1 -> pattern_line 0 (black)
+  9: factory 1 -> pattern_line 3 (black)
+  10: factory 1 -> floor None (black)
+  11: factory 1 -> pattern_line 0 (yellow)
+  12: factory 1 -> floor None (yellow)
+  13: factory 1 -> pattern_line 4 (blue)
+  14: factory 1 -> floor None (blue)
+  15: factory 2 -> pattern_line 0 (black)
+  16: factory 2 -> pattern_line 3 (black)
+  17: factory 2 -> floor None (black)
+  18: factory 2 -> pattern_line 0 (red)
+  19: factory 2 -> pattern_line 2 (red)
+  20: factory 2 -> floor None (red)
+  21: factory 2 -> pattern_line 0 (green)
+  22: factory 2 -> pattern_line 1 (green)
+  23: factory 2 -> floor None (green)
+  24: factory 2 -> pattern_line 4 (blue)
+  25: factory 2 -> floor None (blue)
+  26: factory 3 -> pattern_line 0 (red)
+  27: factory 3 -> pattern_line 2 (red)
+  28: factory 3 -> floor None (red)
+  29: factory 3 -> pattern_line 0 (yellow)
+  30: factory 3 -> floor None (yellow)
+  31: factory 3 -> pattern_line 4 (blue)
+  32: factory 3 -> floor None (blue)
+  33: center None -> pattern_line 0 (black)
+  34: center None -> pattern_line 3 (black)
+  35: center None -> floor None (black)
+  36: center None -> pattern_line 0 (red)
+  37: center None -> pattern_line 2 (red)
+  38: center None -> floor None (red)
+Chosen Move: ('factory', 0, <Color.BLACK: 'black'>, 'floor', None)
+Move applied.
+
+Current Player: 1
+First Player Marker Holder: 1
+Factories:
+  Factory 0: []
+  Factory 1: ['blue', 'blue', 'yellow', 'black']
+  Factory 2: ['blue', 'black', 'red', 'green']
+  Factory 3: ['yellow', 'yellow', 'red', 'blue']
+  Factory 4: []
+Center: ['red', 'black', 'black', 'blue', 'green', 'green'] (Marker: True)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: ['blue']
+      Line 1: []
+      Line 2: []
+      Line 3: ['black', 'black']
+      Line 4: ['yellow', 'yellow']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[0 0 1 0 1]
+ [0 0 0 1 1]
+ [0 0 1 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['green']
+      Line 2: ['red']
+      Line 3: ['black', 'black']
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: ['Tile', None, None, None, None, None, None]
+    Board Occupancy:
+[[0 1 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+Bag: 40 tiles
+Discard: 23 tiles
+
+--- Player 0's Turn ---
+Legal Moves:
+  0: factory 1 -> pattern_line 1 (black)
+  1: factory 1 -> pattern_line 2 (black)
+  2: factory 1 -> pattern_line 3 (black)
+  3: factory 1 -> floor None (black)
+  4: factory 1 -> pattern_line 1 (yellow)
+  5: factory 1 -> pattern_line 4 (yellow)
+  6: factory 1 -> floor None (yellow)
+  7: factory 1 -> pattern_line 1 (blue)
+  8: factory 1 -> pattern_line 2 (blue)
+  9: factory 1 -> floor None (blue)
+  10: factory 2 -> pattern_line 1 (black)
+  11: factory 2 -> pattern_line 2 (black)
+  12: factory 2 -> pattern_line 3 (black)
+  13: factory 2 -> floor None (black)
+  14: factory 2 -> pattern_line 2 (red)
+  15: factory 2 -> floor None (red)
+  16: factory 2 -> pattern_line 2 (green)
+  17: factory 2 -> floor None (green)
+  18: factory 2 -> pattern_line 1 (blue)
+  19: factory 2 -> pattern_line 2 (blue)
+  20: factory 2 -> floor None (blue)
+  21: factory 3 -> pattern_line 2 (red)
+  22: factory 3 -> floor None (red)
+  23: factory 3 -> pattern_line 1 (yellow)
+  24: factory 3 -> pattern_line 4 (yellow)
+  25: factory 3 -> floor None (yellow)
+  26: factory 3 -> pattern_line 1 (blue)
+  27: factory 3 -> pattern_line 2 (blue)
+  28: factory 3 -> floor None (blue)
+  29: center None -> pattern_line 1 (black)
+  30: center None -> pattern_line 2 (black)
+  31: center None -> pattern_line 3 (black)
+  32: center None -> floor None (black)
+  33: center None -> pattern_line 2 (red)
+  34: center None -> floor None (red)
+  35: center None -> pattern_line 2 (green)
+  36: center None -> floor None (green)
+  37: center None -> pattern_line 1 (blue)
+  38: center None -> pattern_line 2 (blue)
+  39: center None -> floor None (blue)
+Chosen Move: ('factory', 2, <Color.BLUE: 'blue'>, 'pattern_line', 2)
+Move applied.
+
+Current Player: 0
+First Player Marker Holder: 1
+Factories:
+  Factory 0: []
+  Factory 1: ['blue', 'blue', 'yellow', 'black']
+  Factory 2: []
+  Factory 3: ['yellow', 'yellow', 'red', 'blue']
+  Factory 4: []
+Center: ['red', 'black', 'black', 'blue', 'green', 'green', 'black', 'red', 'green'] (Marker: True)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: ['blue']
+      Line 1: []
+      Line 2: ['blue']
+      Line 3: ['black', 'black']
+      Line 4: ['yellow', 'yellow']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[0 0 1 0 1]
+ [0 0 0 1 1]
+ [0 0 1 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['green']
+      Line 2: ['red']
+      Line 3: ['black', 'black']
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: ['Tile', None, None, None, None, None, None]
+    Board Occupancy:
+[[0 1 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+Bag: 40 tiles
+Discard: 23 tiles
+
+--- Player 1's Turn ---
+Legal Moves:
+  0: factory 1 -> pattern_line 0 (black)
+  1: factory 1 -> pattern_line 3 (black)
+  2: factory 1 -> floor None (black)
+  3: factory 1 -> pattern_line 0 (yellow)
+  4: factory 1 -> floor None (yellow)
+  5: factory 1 -> pattern_line 4 (blue)
+  6: factory 1 -> floor None (blue)
+  7: factory 3 -> pattern_line 0 (red)
+  8: factory 3 -> pattern_line 2 (red)
+  9: factory 3 -> floor None (red)
+  10: factory 3 -> pattern_line 0 (yellow)
+  11: factory 3 -> floor None (yellow)
+  12: factory 3 -> pattern_line 4 (blue)
+  13: factory 3 -> floor None (blue)
+  14: center None -> pattern_line 0 (black)
+  15: center None -> pattern_line 3 (black)
+  16: center None -> floor None (black)
+  17: center None -> pattern_line 0 (red)
+  18: center None -> pattern_line 2 (red)
   19: center None -> floor None (red)
+  20: center None -> pattern_line 0 (green)
+  21: center None -> pattern_line 1 (green)
+  22: center None -> floor None (green)
+  23: center None -> pattern_line 4 (blue)
+  24: center None -> floor None (blue)
+Chosen Move: ('factory', 1, <Color.YELLOW: 'yellow'>, 'floor', None)
+Move applied.
+
+Current Player: 1
+First Player Marker Holder: 1
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: ['yellow', 'yellow', 'red', 'blue']
+  Factory 4: []
+Center: ['red', 'black', 'black', 'blue', 'green', 'green', 'black', 'red', 'green', 'blue', 'blue', 'black'] (Marker: True)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: ['blue']
+      Line 1: []
+      Line 2: ['blue']
+      Line 3: ['black', 'black']
+      Line 4: ['yellow', 'yellow']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[0 0 1 0 1]
+ [0 0 0 1 1]
+ [0 0 1 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['green']
+      Line 2: ['red']
+      Line 3: ['black', 'black']
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: ['Tile', 'Tile', None, None, None, None, None]
+    Board Occupancy:
+[[0 1 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+Bag: 40 tiles
+Discard: 23 tiles
+
+--- Player 0's Turn ---
+Legal Moves:
+  0: factory 3 -> floor None (red)
+  1: factory 3 -> pattern_line 1 (yellow)
+  2: factory 3 -> pattern_line 4 (yellow)
+  3: factory 3 -> floor None (yellow)
+  4: factory 3 -> pattern_line 1 (blue)
+  5: factory 3 -> pattern_line 2 (blue)
+  6: factory 3 -> floor None (blue)
+  7: center None -> pattern_line 1 (black)
+  8: center None -> pattern_line 3 (black)
+  9: center None -> floor None (black)
+  10: center None -> floor None (red)
+  11: center None -> floor None (green)
+  12: center None -> pattern_line 1 (blue)
+  13: center None -> pattern_line 2 (blue)
+  14: center None -> floor None (blue)
+Chosen Move: ('factory', 3, <Color.YELLOW: 'yellow'>, 'pattern_line', 1)
+Move applied.
+
+Current Player: 0
+First Player Marker Holder: 1
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: []
+  Factory 4: []
+Center: ['red', 'black', 'black', 'blue', 'green', 'green', 'black', 'red', 'green', 'blue', 'blue', 'black', 'red', 'blue'] (Marker: True)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: ['blue']
+      Line 1: ['yellow', 'yellow']
+      Line 2: ['blue']
+      Line 3: ['black', 'black']
+      Line 4: ['yellow', 'yellow']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[0 0 1 0 1]
+ [0 0 0 1 1]
+ [0 0 1 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['green']
+      Line 2: ['red']
+      Line 3: ['black', 'black']
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: ['Tile', 'Tile', None, None, None, None, None]
+    Board Occupancy:
+[[0 1 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+Bag: 40 tiles
+Discard: 23 tiles
+
+--- Player 1's Turn ---
+Legal Moves:
+  0: center None -> pattern_line 0 (black)
+  1: center None -> pattern_line 3 (black)
+  2: center None -> floor None (black)
+  3: center None -> pattern_line 0 (red)
+  4: center None -> pattern_line 2 (red)
+  5: center None -> floor None (red)
+  6: center None -> pattern_line 0 (green)
+  7: center None -> pattern_line 1 (green)
+  8: center None -> floor None (green)
+  9: center None -> pattern_line 4 (blue)
+  10: center None -> floor None (blue)
+Chosen Move: ('center', None, <Color.GREEN: 'green'>, 'pattern_line', 0)
+Move applied.
+
+Current Player: 1
+First Player Marker Holder: 1
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: []
+  Factory 4: []
+Center: ['red', 'black', 'black', 'blue', 'black', 'red', 'blue', 'blue', 'black', 'red', 'blue'] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: ['blue']
+      Line 1: ['yellow', 'yellow']
+      Line 2: ['blue']
+      Line 3: ['black', 'black']
+      Line 4: ['yellow', 'yellow']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[0 0 1 0 1]
+ [0 0 0 1 1]
+ [0 0 1 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: ['green']
+      Line 1: ['green']
+      Line 2: ['red']
+      Line 3: ['black', 'black']
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', 'Tile', 'Tile', None, None]
+    Board Occupancy:
+[[0 1 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+Bag: 40 tiles
+Discard: 23 tiles
+
+--- Player 0's Turn ---
+Legal Moves:
+  0: center None -> pattern_line 3 (black)
+  1: center None -> floor None (black)
+  2: center None -> floor None (red)
+  3: center None -> pattern_line 2 (blue)
+  4: center None -> floor None (blue)
+Chosen Move: ('center', None, <Color.BLACK: 'black'>, 'floor', None)
+Move applied.
+
+Current Player: 0
+First Player Marker Holder: 1
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: []
+  Factory 4: []
+Center: ['red', 'blue', 'red', 'blue', 'blue', 'red', 'blue'] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: ['blue']
+      Line 1: ['yellow', 'yellow']
+      Line 2: ['blue']
+      Line 3: ['black', 'black']
+      Line 4: ['yellow', 'yellow']
+    Floor: ['Tile', 'Tile', 'Tile', 'Tile', None, None, None]
+    Board Occupancy:
+[[0 0 1 0 1]
+ [0 0 0 1 1]
+ [0 0 1 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: ['green']
+      Line 1: ['green']
+      Line 2: ['red']
+      Line 3: ['black', 'black']
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', 'Tile', 'Tile', None, None]
+    Board Occupancy:
+[[0 1 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+Bag: 40 tiles
+Discard: 23 tiles
+
+--- Player 1's Turn ---
+Legal Moves:
+  0: center None -> pattern_line 2 (red)
+  1: center None -> floor None (red)
+  2: center None -> pattern_line 4 (blue)
+  3: center None -> floor None (blue)
+Chosen Move: ('center', None, <Color.RED: 'red'>, 'floor', None)
+Move applied.
+
+Current Player: 1
+First Player Marker Holder: 1
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: []
+  Factory 4: []
+Center: ['blue', 'blue', 'blue', 'blue'] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: ['blue']
+      Line 1: ['yellow', 'yellow']
+      Line 2: ['blue']
+      Line 3: ['black', 'black']
+      Line 4: ['yellow', 'yellow']
+    Floor: ['Tile', 'Tile', 'Tile', 'Tile', None, None, None]
+    Board Occupancy:
+[[0 0 1 0 1]
+ [0 0 0 1 1]
+ [0 0 1 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: ['green']
+      Line 1: ['green']
+      Line 2: ['red']
+      Line 3: ['black', 'black']
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile']
+    Board Occupancy:
+[[0 1 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+Bag: 40 tiles
+Discard: 24 tiles
+
+--- Player 0's Turn ---
+Legal Moves:
+  0: center None -> pattern_line 2 (blue)
+  1: center None -> floor None (blue)
+Chosen Move: ('center', None, <Color.BLUE: 'blue'>, 'pattern_line', 2)
+Move applied.
+
+Current Player: 0
+First Player Marker Holder: 1
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: []
+  Factory 4: []
+Center: [] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: ['blue']
+      Line 1: ['yellow', 'yellow']
+      Line 2: ['blue', 'blue', 'blue']
+      Line 3: ['black', 'black']
+      Line 4: ['yellow', 'yellow']
+    Floor: ['Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile', None]
+    Board Occupancy:
+[[0 0 1 0 1]
+ [0 0 0 1 1]
+ [0 0 1 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: ['green']
+      Line 1: ['green']
+      Line 2: ['red']
+      Line 3: ['black', 'black']
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile']
+    Board Occupancy:
+[[0 1 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+Bag: 40 tiles
+Discard: 24 tiles
+All sources empty. Ending round.
+Round ended.
+
+Current Player: 1
+First Player Marker Holder: 1
+Factories:
+  Factory 0: ['yellow', 'black', 'green', 'red']
+  Factory 1: ['green', 'yellow', 'red', 'yellow']
+  Factory 2: ['yellow', 'blue', 'red', 'yellow']
+  Factory 3: ['blue', 'green', 'black', 'black']
+  Factory 4: ['yellow', 'red', 'green', 'blue']
+Center: [] (Marker: True)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: []
+      Line 3: ['black', 'black']
+      Line 4: ['yellow', 'yellow']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[0 1 1 0 1]
+ [0 1 0 1 1]
+ [0 0 1 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['green']
+      Line 2: ['red']
+      Line 3: ['black', 'black']
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[0 1 1 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+Bag: 20 tiles
+Discard: 39 tiles
+
+--- Player 0's Turn ---
+Legal Moves:
+  0: factory 0 -> pattern_line 1 (black)
+  1: factory 0 -> pattern_line 2 (black)
+  2: factory 0 -> pattern_line 3 (black)
+  3: factory 0 -> floor None (black)
+  4: factory 0 -> pattern_line 0 (yellow)
+  5: factory 0 -> pattern_line 4 (yellow)
+  6: factory 0 -> floor None (yellow)
+  7: factory 0 -> pattern_line 2 (green)
+  8: factory 0 -> floor None (green)
+  9: factory 0 -> pattern_line 0 (red)
+  10: factory 0 -> pattern_line 2 (red)
+  11: factory 0 -> floor None (red)
+  12: factory 1 -> pattern_line 0 (red)
+  13: factory 1 -> pattern_line 2 (red)
+  14: factory 1 -> floor None (red)
+  15: factory 1 -> pattern_line 0 (yellow)
+  16: factory 1 -> pattern_line 4 (yellow)
+  17: factory 1 -> floor None (yellow)
+  18: factory 1 -> pattern_line 2 (green)
+  19: factory 1 -> floor None (green)
+  20: factory 2 -> pattern_line 0 (red)
+  21: factory 2 -> pattern_line 2 (red)
+  22: factory 2 -> floor None (red)
+  23: factory 2 -> pattern_line 0 (yellow)
+  24: factory 2 -> pattern_line 4 (yellow)
+  25: factory 2 -> floor None (yellow)
+  26: factory 2 -> pattern_line 1 (blue)
+  27: factory 2 -> floor None (blue)
+  28: factory 3 -> pattern_line 1 (black)
+  29: factory 3 -> pattern_line 2 (black)
+  30: factory 3 -> pattern_line 3 (black)
+  31: factory 3 -> floor None (black)
+  32: factory 3 -> pattern_line 2 (green)
+  33: factory 3 -> floor None (green)
+  34: factory 3 -> pattern_line 1 (blue)
+  35: factory 3 -> floor None (blue)
+  36: factory 4 -> pattern_line 0 (red)
+  37: factory 4 -> pattern_line 2 (red)
+  38: factory 4 -> floor None (red)
+  39: factory 4 -> pattern_line 0 (yellow)
+  40: factory 4 -> pattern_line 4 (yellow)
+  41: factory 4 -> floor None (yellow)
+  42: factory 4 -> pattern_line 2 (green)
+  43: factory 4 -> floor None (green)
+  44: factory 4 -> pattern_line 1 (blue)
+  45: factory 4 -> floor None (blue)
+Chosen Move: ('factory', 1, <Color.GREEN: 'green'>, 'pattern_line', 2)
+Move applied.
+
+Current Player: 0
+First Player Marker Holder: 1
+Factories:
+  Factory 0: ['yellow', 'black', 'green', 'red']
+  Factory 1: []
+  Factory 2: ['yellow', 'blue', 'red', 'yellow']
+  Factory 3: ['blue', 'green', 'black', 'black']
+  Factory 4: ['yellow', 'red', 'green', 'blue']
+Center: ['yellow', 'red', 'yellow'] (Marker: True)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: ['green']
+      Line 3: ['black', 'black']
+      Line 4: ['yellow', 'yellow']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[0 1 1 0 1]
+ [0 1 0 1 1]
+ [0 0 1 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['green']
+      Line 2: ['red']
+      Line 3: ['black', 'black']
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[0 1 1 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+Bag: 20 tiles
+Discard: 39 tiles
+
+--- Player 1's Turn ---
+Legal Moves:
+  0: factory 0 -> pattern_line 0 (black)
+  1: factory 0 -> pattern_line 3 (black)
+  2: factory 0 -> floor None (black)
+  3: factory 0 -> pattern_line 0 (yellow)
+  4: factory 0 -> floor None (yellow)
+  5: factory 0 -> pattern_line 1 (green)
+  6: factory 0 -> floor None (green)
+  7: factory 0 -> pattern_line 0 (red)
+  8: factory 0 -> pattern_line 2 (red)
+  9: factory 0 -> floor None (red)
+  10: factory 2 -> pattern_line 0 (red)
+  11: factory 2 -> pattern_line 2 (red)
+  12: factory 2 -> floor None (red)
+  13: factory 2 -> pattern_line 0 (yellow)
+  14: factory 2 -> floor None (yellow)
+  15: factory 2 -> pattern_line 4 (blue)
+  16: factory 2 -> floor None (blue)
+  17: factory 3 -> pattern_line 0 (black)
+  18: factory 3 -> pattern_line 3 (black)
+  19: factory 3 -> floor None (black)
+  20: factory 3 -> pattern_line 1 (green)
+  21: factory 3 -> floor None (green)
+  22: factory 3 -> pattern_line 4 (blue)
+  23: factory 3 -> floor None (blue)
+  24: factory 4 -> pattern_line 0 (red)
+  25: factory 4 -> pattern_line 2 (red)
+  26: factory 4 -> floor None (red)
+  27: factory 4 -> pattern_line 0 (yellow)
+  28: factory 4 -> floor None (yellow)
+  29: factory 4 -> pattern_line 1 (green)
+  30: factory 4 -> floor None (green)
+  31: factory 4 -> pattern_line 4 (blue)
+  32: factory 4 -> floor None (blue)
+  33: center None -> pattern_line 0 (red)
+  34: center None -> pattern_line 2 (red)
+  35: center None -> floor None (red)
+  36: center None -> pattern_line 0 (yellow)
+  37: center None -> floor None (yellow)
+Chosen Move: ('factory', 0, <Color.RED: 'red'>, 'pattern_line', 2)
+Move applied.
+
+Current Player: 1
+First Player Marker Holder: 1
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: ['yellow', 'blue', 'red', 'yellow']
+  Factory 3: ['blue', 'green', 'black', 'black']
+  Factory 4: ['yellow', 'red', 'green', 'blue']
+Center: ['yellow', 'red', 'yellow', 'yellow', 'black', 'green'] (Marker: True)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: ['green']
+      Line 3: ['black', 'black']
+      Line 4: ['yellow', 'yellow']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[0 1 1 0 1]
+ [0 1 0 1 1]
+ [0 0 1 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['green']
+      Line 2: ['red', 'red']
+      Line 3: ['black', 'black']
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[0 1 1 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+Bag: 20 tiles
+Discard: 39 tiles
+
+--- Player 0's Turn ---
+Legal Moves:
+  0: factory 2 -> pattern_line 0 (red)
+  1: factory 2 -> floor None (red)
+  2: factory 2 -> pattern_line 0 (yellow)
+  3: factory 2 -> pattern_line 4 (yellow)
+  4: factory 2 -> floor None (yellow)
+  5: factory 2 -> pattern_line 1 (blue)
+  6: factory 2 -> floor None (blue)
+  7: factory 3 -> pattern_line 1 (black)
+  8: factory 3 -> pattern_line 3 (black)
+  9: factory 3 -> floor None (black)
+  10: factory 3 -> pattern_line 2 (green)
+  11: factory 3 -> floor None (green)
+  12: factory 3 -> pattern_line 1 (blue)
+  13: factory 3 -> floor None (blue)
+  14: factory 4 -> pattern_line 0 (red)
+  15: factory 4 -> floor None (red)
+  16: factory 4 -> pattern_line 0 (yellow)
+  17: factory 4 -> pattern_line 4 (yellow)
+  18: factory 4 -> floor None (yellow)
+  19: factory 4 -> pattern_line 2 (green)
+  20: factory 4 -> floor None (green)
+  21: factory 4 -> pattern_line 1 (blue)
+  22: factory 4 -> floor None (blue)
+  23: center None -> pattern_line 1 (black)
+  24: center None -> pattern_line 3 (black)
+  25: center None -> floor None (black)
+  26: center None -> pattern_line 0 (red)
+  27: center None -> floor None (red)
+  28: center None -> pattern_line 0 (yellow)
+  29: center None -> pattern_line 4 (yellow)
+  30: center None -> floor None (yellow)
+  31: center None -> pattern_line 2 (green)
+  32: center None -> floor None (green)
+Chosen Move: ('factory', 2, <Color.BLUE: 'blue'>, 'floor', None)
+Move applied.
+
+Current Player: 0
+First Player Marker Holder: 1
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: ['blue', 'green', 'black', 'black']
+  Factory 4: ['yellow', 'red', 'green', 'blue']
+Center: ['yellow', 'red', 'yellow', 'yellow', 'black', 'green', 'yellow', 'red', 'yellow'] (Marker: True)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: ['green']
+      Line 3: ['black', 'black']
+      Line 4: ['yellow', 'yellow']
+    Floor: ['Tile', None, None, None, None, None, None]
+    Board Occupancy:
+[[0 1 1 0 1]
+ [0 1 0 1 1]
+ [0 0 1 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['green']
+      Line 2: ['red', 'red']
+      Line 3: ['black', 'black']
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[0 1 1 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+Bag: 20 tiles
+Discard: 39 tiles
+
+--- Player 1's Turn ---
+Legal Moves:
+  0: factory 3 -> pattern_line 0 (black)
+  1: factory 3 -> pattern_line 3 (black)
+  2: factory 3 -> floor None (black)
+  3: factory 3 -> pattern_line 1 (green)
+  4: factory 3 -> floor None (green)
+  5: factory 3 -> pattern_line 4 (blue)
+  6: factory 3 -> floor None (blue)
+  7: factory 4 -> pattern_line 0 (red)
+  8: factory 4 -> pattern_line 2 (red)
+  9: factory 4 -> floor None (red)
+  10: factory 4 -> pattern_line 0 (yellow)
+  11: factory 4 -> floor None (yellow)
+  12: factory 4 -> pattern_line 1 (green)
+  13: factory 4 -> floor None (green)
+  14: factory 4 -> pattern_line 4 (blue)
+  15: factory 4 -> floor None (blue)
+  16: center None -> pattern_line 0 (black)
+  17: center None -> pattern_line 3 (black)
+  18: center None -> floor None (black)
+  19: center None -> pattern_line 0 (red)
+  20: center None -> pattern_line 2 (red)
+  21: center None -> floor None (red)
+  22: center None -> pattern_line 0 (yellow)
+  23: center None -> floor None (yellow)
+  24: center None -> pattern_line 1 (green)
+  25: center None -> floor None (green)
+Chosen Move: ('factory', 3, <Color.BLACK: 'black'>, 'pattern_line', 3)
+Move applied.
+
+Current Player: 1
+First Player Marker Holder: 1
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: []
+  Factory 4: ['yellow', 'red', 'green', 'blue']
+Center: ['yellow', 'red', 'yellow', 'yellow', 'black', 'green', 'yellow', 'red', 'yellow', 'blue', 'green'] (Marker: True)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: ['green']
+      Line 3: ['black', 'black']
+      Line 4: ['yellow', 'yellow']
+    Floor: ['Tile', None, None, None, None, None, None]
+    Board Occupancy:
+[[0 1 1 0 1]
+ [0 1 0 1 1]
+ [0 0 1 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['green']
+      Line 2: ['red', 'red']
+      Line 3: ['black', 'black', 'black', 'black']
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[0 1 1 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+Bag: 20 tiles
+Discard: 39 tiles
+
+--- Player 0's Turn ---
+Legal Moves:
+  0: factory 4 -> pattern_line 0 (red)
+  1: factory 4 -> floor None (red)
+  2: factory 4 -> pattern_line 0 (yellow)
+  3: factory 4 -> pattern_line 4 (yellow)
+  4: factory 4 -> floor None (yellow)
+  5: factory 4 -> pattern_line 2 (green)
+  6: factory 4 -> floor None (green)
+  7: factory 4 -> pattern_line 1 (blue)
+  8: factory 4 -> floor None (blue)
+  9: center None -> pattern_line 1 (blue)
+  10: center None -> floor None (blue)
+  11: center None -> pattern_line 0 (red)
+  12: center None -> floor None (red)
+  13: center None -> pattern_line 0 (yellow)
+  14: center None -> pattern_line 4 (yellow)
+  15: center None -> floor None (yellow)
+  16: center None -> pattern_line 1 (black)
+  17: center None -> pattern_line 3 (black)
+  18: center None -> floor None (black)
+  19: center None -> pattern_line 2 (green)
+  20: center None -> floor None (green)
+Chosen Move: ('center', None, <Color.YELLOW: 'yellow'>, 'pattern_line', 4)
+Move applied.
+
+Current Player: 0
+First Player Marker Holder: 0
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: []
+  Factory 4: ['yellow', 'red', 'green', 'blue']
+Center: ['red', 'black', 'green', 'red', 'blue', 'green'] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: ['green']
+      Line 3: ['black', 'black']
+      Line 4: ['yellow', 'yellow', 'yellow', 'yellow', 'yellow']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', 'Tile', None, None, None]
+    Board Occupancy:
+[[0 1 1 0 1]
+ [0 1 0 1 1]
+ [0 0 1 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['green']
+      Line 2: ['red', 'red']
+      Line 3: ['black', 'black', 'black', 'black']
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[0 1 1 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+Bag: 20 tiles
+Discard: 39 tiles
+
+--- Player 1's Turn ---
+Legal Moves:
+  0: factory 4 -> pattern_line 0 (red)
+  1: factory 4 -> pattern_line 2 (red)
+  2: factory 4 -> floor None (red)
+  3: factory 4 -> pattern_line 0 (yellow)
+  4: factory 4 -> floor None (yellow)
+  5: factory 4 -> pattern_line 1 (green)
+  6: factory 4 -> floor None (green)
+  7: factory 4 -> pattern_line 4 (blue)
+  8: factory 4 -> floor None (blue)
+  9: center None -> pattern_line 0 (black)
+  10: center None -> floor None (black)
+  11: center None -> pattern_line 0 (red)
+  12: center None -> pattern_line 2 (red)
+  13: center None -> floor None (red)
+  14: center None -> pattern_line 1 (green)
+  15: center None -> floor None (green)
+  16: center None -> pattern_line 4 (blue)
+  17: center None -> floor None (blue)
 Chosen Move: ('center', None, <Color.RED: 'red'>, 'floor', None)
 Move applied.
 
@@ -555,58 +2869,60 @@ First Player Marker Holder: 0
 Factories:
   Factory 0: []
   Factory 1: []
-  Factory 2: ['yellow', 'blue', 'yellow', 'yellow']
+  Factory 2: []
   Factory 3: []
-  Factory 4: []
-Center: ['green', 'blue'] (Marker: False)
+  Factory 4: ['yellow', 'red', 'green', 'blue']
+Center: ['black', 'green', 'blue', 'green'] (Marker: False)
 Players:
   Player 0 Score: 0
     Pattern Lines:
       Line 0: []
       Line 1: []
-      Line 2: ['black', 'black', 'black']
+      Line 2: ['green']
       Line 3: ['black', 'black']
-      Line 4: ['green', 'green']
-    Floor: ['FirstPlayerMarker', None, None, None, None, None, None]
+      Line 4: ['yellow', 'yellow', 'yellow', 'yellow', 'yellow']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', 'Tile', None, None, None]
     Board Occupancy:
-[[0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
+[[0 1 1 0 1]
+ [0 1 0 1 1]
+ [0 0 1 1 0]
  [0 0 0 0 0]
  [0 0 0 0 0]]
   Player 1 Score: 0
     Pattern Lines:
-      Line 0: ['blue']
-      Line 1: ['black', 'black']
-      Line 2: []
-      Line 3: []
-      Line 4: []
-    Floor: ['Tile', 'Tile', 'Tile', 'Tile', None, None, None]
+      Line 0: []
+      Line 1: ['green']
+      Line 2: ['red', 'red']
+      Line 3: ['black', 'black', 'black', 'black']
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: ['Tile', 'Tile', None, None, None, None, None]
     Board Occupancy:
-[[0 0 0 0 0]
+[[0 1 1 0 0]
  [0 0 0 0 0]
  [0 0 0 0 0]
  [0 0 0 0 0]
  [0 0 0 0 0]]
-Bag: 80 tiles
-Discard: 0 tiles
+Bag: 20 tiles
+Discard: 39 tiles
 
 --- Player 0's Turn ---
 Legal Moves:
-  0: factory 2 -> pattern_line 0 (blue)
-  1: factory 2 -> pattern_line 1 (blue)
-  2: factory 2 -> floor None (blue)
-  3: factory 2 -> pattern_line 0 (yellow)
-  4: factory 2 -> pattern_line 1 (yellow)
-  5: factory 2 -> floor None (yellow)
-  6: center None -> pattern_line 0 (blue)
-  7: center None -> pattern_line 1 (blue)
-  8: center None -> floor None (blue)
-  9: center None -> pattern_line 0 (green)
-  10: center None -> pattern_line 1 (green)
-  11: center None -> pattern_line 4 (green)
+  0: factory 4 -> pattern_line 0 (red)
+  1: factory 4 -> floor None (red)
+  2: factory 4 -> pattern_line 0 (yellow)
+  3: factory 4 -> floor None (yellow)
+  4: factory 4 -> pattern_line 2 (green)
+  5: factory 4 -> floor None (green)
+  6: factory 4 -> pattern_line 1 (blue)
+  7: factory 4 -> floor None (blue)
+  8: center None -> pattern_line 1 (black)
+  9: center None -> pattern_line 3 (black)
+  10: center None -> floor None (black)
+  11: center None -> pattern_line 2 (green)
   12: center None -> floor None (green)
-Chosen Move: ('factory', 2, <Color.YELLOW: 'yellow'>, 'pattern_line', 1)
+  13: center None -> pattern_line 1 (blue)
+  14: center None -> floor None (blue)
+Chosen Move: ('factory', 4, <Color.YELLOW: 'yellow'>, 'floor', None)
 Move applied.
 
 Current Player: 0
@@ -617,50 +2933,51 @@ Factories:
   Factory 2: []
   Factory 3: []
   Factory 4: []
-Center: ['green', 'blue', 'blue'] (Marker: False)
+Center: ['black', 'green', 'blue', 'green', 'red', 'green', 'blue'] (Marker: False)
 Players:
   Player 0 Score: 0
     Pattern Lines:
       Line 0: []
-      Line 1: ['yellow', 'yellow']
-      Line 2: ['black', 'black', 'black']
+      Line 1: []
+      Line 2: ['green']
       Line 3: ['black', 'black']
-      Line 4: ['green', 'green']
-    Floor: ['FirstPlayerMarker', 'Tile', None, None, None, None, None]
+      Line 4: ['yellow', 'yellow', 'yellow', 'yellow', 'yellow']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', 'Tile', 'Tile', None, None]
     Board Occupancy:
-[[0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
+[[0 1 1 0 1]
+ [0 1 0 1 1]
+ [0 0 1 1 0]
  [0 0 0 0 0]
  [0 0 0 0 0]]
   Player 1 Score: 0
     Pattern Lines:
-      Line 0: ['blue']
-      Line 1: ['black', 'black']
-      Line 2: []
-      Line 3: []
-      Line 4: []
-    Floor: ['Tile', 'Tile', 'Tile', 'Tile', None, None, None]
+      Line 0: []
+      Line 1: ['green']
+      Line 2: ['red', 'red']
+      Line 3: ['black', 'black', 'black', 'black']
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: ['Tile', 'Tile', None, None, None, None, None]
     Board Occupancy:
-[[0 0 0 0 0]
+[[0 1 1 0 0]
  [0 0 0 0 0]
  [0 0 0 0 0]
  [0 0 0 0 0]
  [0 0 0 0 0]]
-Bag: 80 tiles
-Discard: 0 tiles
+Bag: 20 tiles
+Discard: 39 tiles
 
 --- Player 1's Turn ---
 Legal Moves:
-  0: center None -> pattern_line 2 (blue)
-  1: center None -> pattern_line 3 (blue)
-  2: center None -> pattern_line 4 (blue)
-  3: center None -> floor None (blue)
-  4: center None -> pattern_line 2 (green)
-  5: center None -> pattern_line 3 (green)
-  6: center None -> pattern_line 4 (green)
-  7: center None -> floor None (green)
-Chosen Move: ('center', None, <Color.BLUE: 'blue'>, 'pattern_line', 2)
+  0: center None -> pattern_line 0 (black)
+  1: center None -> floor None (black)
+  2: center None -> pattern_line 0 (red)
+  3: center None -> pattern_line 2 (red)
+  4: center None -> floor None (red)
+  5: center None -> pattern_line 1 (green)
+  6: center None -> floor None (green)
+  7: center None -> pattern_line 4 (blue)
+  8: center None -> floor None (blue)
+Chosen Move: ('center', None, <Color.RED: 'red'>, 'floor', None)
 Move applied.
 
 Current Player: 1
@@ -671,45 +2988,147 @@ Factories:
   Factory 2: []
   Factory 3: []
   Factory 4: []
-Center: ['green'] (Marker: False)
+Center: ['black', 'green', 'blue', 'green', 'green', 'blue'] (Marker: False)
 Players:
   Player 0 Score: 0
     Pattern Lines:
       Line 0: []
-      Line 1: ['yellow', 'yellow']
-      Line 2: ['black', 'black', 'black']
+      Line 1: []
+      Line 2: ['green']
       Line 3: ['black', 'black']
-      Line 4: ['green', 'green']
-    Floor: ['FirstPlayerMarker', 'Tile', None, None, None, None, None]
+      Line 4: ['yellow', 'yellow', 'yellow', 'yellow', 'yellow']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', 'Tile', 'Tile', None, None]
     Board Occupancy:
-[[0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
+[[0 1 1 0 1]
+ [0 1 0 1 1]
+ [0 0 1 1 0]
  [0 0 0 0 0]
  [0 0 0 0 0]]
   Player 1 Score: 0
     Pattern Lines:
-      Line 0: ['blue']
-      Line 1: ['black', 'black']
-      Line 2: ['blue', 'blue']
-      Line 3: []
-      Line 4: []
-    Floor: ['Tile', 'Tile', 'Tile', 'Tile', None, None, None]
+      Line 0: []
+      Line 1: ['green']
+      Line 2: ['red', 'red']
+      Line 3: ['black', 'black', 'black', 'black']
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: ['Tile', 'Tile', 'Tile', None, None, None, None]
     Board Occupancy:
-[[0 0 0 0 0]
+[[0 1 1 0 0]
  [0 0 0 0 0]
  [0 0 0 0 0]
  [0 0 0 0 0]
  [0 0 0 0 0]]
-Bag: 80 tiles
-Discard: 0 tiles
+Bag: 20 tiles
+Discard: 39 tiles
 
 --- Player 0's Turn ---
 Legal Moves:
-  0: center None -> pattern_line 0 (green)
-  1: center None -> pattern_line 4 (green)
-  2: center None -> floor None (green)
-Chosen Move: ('center', None, <Color.GREEN: 'green'>, 'floor', None)
+  0: center None -> pattern_line 1 (black)
+  1: center None -> pattern_line 3 (black)
+  2: center None -> floor None (black)
+  3: center None -> pattern_line 2 (green)
+  4: center None -> floor None (green)
+  5: center None -> pattern_line 1 (blue)
+  6: center None -> floor None (blue)
+Chosen Move: ('center', None, <Color.BLUE: 'blue'>, 'pattern_line', 1)
+Move applied.
+
+Current Player: 0
+First Player Marker Holder: 0
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: []
+  Factory 4: []
+Center: ['black', 'green', 'green', 'green'] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['blue', 'blue']
+      Line 2: ['green']
+      Line 3: ['black', 'black']
+      Line 4: ['yellow', 'yellow', 'yellow', 'yellow', 'yellow']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', 'Tile', 'Tile', None, None]
+    Board Occupancy:
+[[0 1 1 0 1]
+ [0 1 0 1 1]
+ [0 0 1 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['green']
+      Line 2: ['red', 'red']
+      Line 3: ['black', 'black', 'black', 'black']
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: ['Tile', 'Tile', 'Tile', None, None, None, None]
+    Board Occupancy:
+[[0 1 1 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+Bag: 20 tiles
+Discard: 39 tiles
+
+--- Player 1's Turn ---
+Legal Moves:
+  0: center None -> pattern_line 0 (black)
+  1: center None -> floor None (black)
+  2: center None -> pattern_line 1 (green)
+  3: center None -> floor None (green)
+Chosen Move: ('center', None, <Color.GREEN: 'green'>, 'pattern_line', 1)
+Move applied.
+
+Current Player: 1
+First Player Marker Holder: 0
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: []
+  Factory 4: []
+Center: ['black'] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['blue', 'blue']
+      Line 2: ['green']
+      Line 3: ['black', 'black']
+      Line 4: ['yellow', 'yellow', 'yellow', 'yellow', 'yellow']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', 'Tile', 'Tile', None, None]
+    Board Occupancy:
+[[0 1 1 0 1]
+ [0 1 0 1 1]
+ [0 0 1 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['green', 'green']
+      Line 2: ['red', 'red']
+      Line 3: ['black', 'black', 'black', 'black']
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: ['Tile', 'Tile', 'Tile', 'Tile', 'Tile', None, None]
+    Board Occupancy:
+[[0 1 1 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+Bag: 20 tiles
+Discard: 39 tiles
+
+--- Player 0's Turn ---
+Legal Moves:
+  0: center None -> pattern_line 3 (black)
+  1: center None -> floor None (black)
+Chosen Move: ('center', None, <Color.BLACK: 'black'>, 'floor', None)
 Move applied.
 
 Current Player: 0
@@ -725,77 +3144,2531 @@ Players:
   Player 0 Score: 0
     Pattern Lines:
       Line 0: []
-      Line 1: ['yellow', 'yellow']
-      Line 2: ['black', 'black', 'black']
+      Line 1: ['blue', 'blue']
+      Line 2: ['green']
       Line 3: ['black', 'black']
-      Line 4: ['green', 'green']
-    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', None, None, None, None]
+      Line 4: ['yellow', 'yellow', 'yellow', 'yellow', 'yellow']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile', None]
     Board Occupancy:
-[[0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
+[[0 1 1 0 1]
+ [0 1 0 1 1]
+ [0 0 1 1 0]
  [0 0 0 0 0]
  [0 0 0 0 0]]
   Player 1 Score: 0
     Pattern Lines:
-      Line 0: ['blue']
-      Line 1: ['black', 'black']
-      Line 2: ['blue', 'blue']
-      Line 3: []
-      Line 4: []
-    Floor: ['Tile', 'Tile', 'Tile', 'Tile', None, None, None]
+      Line 0: []
+      Line 1: ['green', 'green']
+      Line 2: ['red', 'red']
+      Line 3: ['black', 'black', 'black', 'black']
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: ['Tile', 'Tile', 'Tile', 'Tile', 'Tile', None, None]
     Board Occupancy:
-[[0 0 0 0 0]
+[[0 1 1 0 0]
  [0 0 0 0 0]
  [0 0 0 0 0]
  [0 0 0 0 0]
  [0 0 0 0 0]]
-Bag: 80 tiles
-Discard: 0 tiles
-
---- Player 1's Turn ---
-No legal moves available. Ending round.
+Bag: 20 tiles
+Discard: 39 tiles
+All sources empty. Ending round.
 Round ended.
 
 Current Player: 0
 First Player Marker Holder: 0
 Factories:
-  Factory 0: ['green', 'green', 'red', 'red']
-  Factory 1: ['blue', 'blue', 'yellow', 'red']
-  Factory 2: ['black', 'blue', 'red', 'red']
-  Factory 3: ['green', 'red', 'red', 'red']
-  Factory 4: ['yellow', 'red', 'yellow', 'red']
+  Factory 0: ['red', 'black', 'green', 'black']
+  Factory 1: ['green', 'red', 'green', 'yellow']
+  Factory 2: ['blue', 'green', 'red', 'blue']
+  Factory 3: ['red', 'blue', 'yellow', 'yellow']
+  Factory 4: ['yellow', 'green', 'blue', 'black']
 Center: [] (Marker: True)
 Players:
-  Player 0 Score: -1
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: ['green']
+      Line 3: ['black', 'black']
+      Line 4: []
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[0 1 1 0 1]
+ [0 1 1 1 1]
+ [0 0 1 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 1]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: ['red', 'red']
+      Line 3: []
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[0 1 1 0 0]
+ [0 0 0 1 0]
+ [0 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 0 tiles
+Discard: 58 tiles
+
+--- Player 1's Turn ---
+Legal Moves:
+  0: factory 0 -> pattern_line 0 (black)
+  1: factory 0 -> pattern_line 1 (black)
+  2: factory 0 -> floor None (black)
+  3: factory 0 -> pattern_line 0 (red)
+  4: factory 0 -> pattern_line 1 (red)
+  5: factory 0 -> pattern_line 2 (red)
+  6: factory 0 -> pattern_line 3 (red)
+  7: factory 0 -> floor None (red)
+  8: factory 0 -> pattern_line 3 (green)
+  9: factory 0 -> floor None (green)
+  10: factory 1 -> pattern_line 0 (red)
+  11: factory 1 -> pattern_line 1 (red)
+  12: factory 1 -> pattern_line 2 (red)
+  13: factory 1 -> pattern_line 3 (red)
+  14: factory 1 -> floor None (red)
+  15: factory 1 -> pattern_line 0 (yellow)
+  16: factory 1 -> pattern_line 1 (yellow)
+  17: factory 1 -> pattern_line 3 (yellow)
+  18: factory 1 -> floor None (yellow)
+  19: factory 1 -> pattern_line 3 (green)
+  20: factory 1 -> floor None (green)
+  21: factory 2 -> pattern_line 0 (red)
+  22: factory 2 -> pattern_line 1 (red)
+  23: factory 2 -> pattern_line 2 (red)
+  24: factory 2 -> pattern_line 3 (red)
+  25: factory 2 -> floor None (red)
+  26: factory 2 -> pattern_line 3 (green)
+  27: factory 2 -> floor None (green)
+  28: factory 2 -> pattern_line 1 (blue)
+  29: factory 2 -> pattern_line 3 (blue)
+  30: factory 2 -> pattern_line 4 (blue)
+  31: factory 2 -> floor None (blue)
+  32: factory 3 -> pattern_line 0 (red)
+  33: factory 3 -> pattern_line 1 (red)
+  34: factory 3 -> pattern_line 2 (red)
+  35: factory 3 -> pattern_line 3 (red)
+  36: factory 3 -> floor None (red)
+  37: factory 3 -> pattern_line 0 (yellow)
+  38: factory 3 -> pattern_line 1 (yellow)
+  39: factory 3 -> pattern_line 3 (yellow)
+  40: factory 3 -> floor None (yellow)
+  41: factory 3 -> pattern_line 1 (blue)
+  42: factory 3 -> pattern_line 3 (blue)
+  43: factory 3 -> pattern_line 4 (blue)
+  44: factory 3 -> floor None (blue)
+  45: factory 4 -> pattern_line 0 (black)
+  46: factory 4 -> pattern_line 1 (black)
+  47: factory 4 -> floor None (black)
+  48: factory 4 -> pattern_line 0 (yellow)
+  49: factory 4 -> pattern_line 1 (yellow)
+  50: factory 4 -> pattern_line 3 (yellow)
+  51: factory 4 -> floor None (yellow)
+  52: factory 4 -> pattern_line 3 (green)
+  53: factory 4 -> floor None (green)
+  54: factory 4 -> pattern_line 1 (blue)
+  55: factory 4 -> pattern_line 3 (blue)
+  56: factory 4 -> pattern_line 4 (blue)
+  57: factory 4 -> floor None (blue)
+Chosen Move: ('factory', 0, <Color.BLACK: 'black'>, 'floor', None)
+Move applied.
+
+Current Player: 1
+First Player Marker Holder: 0
+Factories:
+  Factory 0: []
+  Factory 1: ['green', 'red', 'green', 'yellow']
+  Factory 2: ['blue', 'green', 'red', 'blue']
+  Factory 3: ['red', 'blue', 'yellow', 'yellow']
+  Factory 4: ['yellow', 'green', 'blue', 'black']
+Center: ['red', 'green'] (Marker: True)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: ['green']
+      Line 3: ['black', 'black']
+      Line 4: []
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[0 1 1 0 1]
+ [0 1 1 1 1]
+ [0 0 1 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 1]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: ['red', 'red']
+      Line 3: []
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: ['Tile', 'Tile', None, None, None, None, None]
+    Board Occupancy:
+[[0 1 1 0 0]
+ [0 0 0 1 0]
+ [0 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 0 tiles
+Discard: 58 tiles
+
+--- Player 0's Turn ---
+Legal Moves:
+  0: factory 1 -> pattern_line 0 (red)
+  1: factory 1 -> pattern_line 4 (red)
+  2: factory 1 -> floor None (red)
+  3: factory 1 -> pattern_line 0 (yellow)
+  4: factory 1 -> floor None (yellow)
+  5: factory 1 -> pattern_line 2 (green)
+  6: factory 1 -> pattern_line 4 (green)
+  7: factory 1 -> floor None (green)
+  8: factory 2 -> pattern_line 0 (red)
+  9: factory 2 -> pattern_line 4 (red)
+  10: factory 2 -> floor None (red)
+  11: factory 2 -> pattern_line 2 (green)
+  12: factory 2 -> pattern_line 4 (green)
+  13: factory 2 -> floor None (green)
+  14: factory 2 -> pattern_line 4 (blue)
+  15: factory 2 -> floor None (blue)
+  16: factory 3 -> pattern_line 0 (red)
+  17: factory 3 -> pattern_line 4 (red)
+  18: factory 3 -> floor None (red)
+  19: factory 3 -> pattern_line 0 (yellow)
+  20: factory 3 -> floor None (yellow)
+  21: factory 3 -> pattern_line 4 (blue)
+  22: factory 3 -> floor None (blue)
+  23: factory 4 -> pattern_line 1 (black)
+  24: factory 4 -> pattern_line 3 (black)
+  25: factory 4 -> pattern_line 4 (black)
+  26: factory 4 -> floor None (black)
+  27: factory 4 -> pattern_line 0 (yellow)
+  28: factory 4 -> floor None (yellow)
+  29: factory 4 -> pattern_line 2 (green)
+  30: factory 4 -> pattern_line 4 (green)
+  31: factory 4 -> floor None (green)
+  32: factory 4 -> pattern_line 4 (blue)
+  33: factory 4 -> floor None (blue)
+  34: center None -> pattern_line 0 (red)
+  35: center None -> pattern_line 4 (red)
+  36: center None -> floor None (red)
+  37: center None -> pattern_line 2 (green)
+  38: center None -> pattern_line 4 (green)
+  39: center None -> floor None (green)
+Chosen Move: ('factory', 4, <Color.GREEN: 'green'>, 'pattern_line', 2)
+Move applied.
+
+Current Player: 0
+First Player Marker Holder: 0
+Factories:
+  Factory 0: []
+  Factory 1: ['green', 'red', 'green', 'yellow']
+  Factory 2: ['blue', 'green', 'red', 'blue']
+  Factory 3: ['red', 'blue', 'yellow', 'yellow']
+  Factory 4: []
+Center: ['red', 'green', 'yellow', 'blue', 'black'] (Marker: True)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: ['green', 'green']
+      Line 3: ['black', 'black']
+      Line 4: []
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[0 1 1 0 1]
+ [0 1 1 1 1]
+ [0 0 1 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 1]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: ['red', 'red']
+      Line 3: []
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: ['Tile', 'Tile', None, None, None, None, None]
+    Board Occupancy:
+[[0 1 1 0 0]
+ [0 0 0 1 0]
+ [0 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 0 tiles
+Discard: 58 tiles
+
+--- Player 1's Turn ---
+Legal Moves:
+  0: factory 1 -> pattern_line 0 (red)
+  1: factory 1 -> pattern_line 1 (red)
+  2: factory 1 -> pattern_line 2 (red)
+  3: factory 1 -> pattern_line 3 (red)
+  4: factory 1 -> floor None (red)
+  5: factory 1 -> pattern_line 0 (yellow)
+  6: factory 1 -> pattern_line 1 (yellow)
+  7: factory 1 -> pattern_line 3 (yellow)
+  8: factory 1 -> floor None (yellow)
+  9: factory 1 -> pattern_line 3 (green)
+  10: factory 1 -> floor None (green)
+  11: factory 2 -> pattern_line 0 (red)
+  12: factory 2 -> pattern_line 1 (red)
+  13: factory 2 -> pattern_line 2 (red)
+  14: factory 2 -> pattern_line 3 (red)
+  15: factory 2 -> floor None (red)
+  16: factory 2 -> pattern_line 3 (green)
+  17: factory 2 -> floor None (green)
+  18: factory 2 -> pattern_line 1 (blue)
+  19: factory 2 -> pattern_line 3 (blue)
+  20: factory 2 -> pattern_line 4 (blue)
+  21: factory 2 -> floor None (blue)
+  22: factory 3 -> pattern_line 0 (red)
+  23: factory 3 -> pattern_line 1 (red)
+  24: factory 3 -> pattern_line 2 (red)
+  25: factory 3 -> pattern_line 3 (red)
+  26: factory 3 -> floor None (red)
+  27: factory 3 -> pattern_line 0 (yellow)
+  28: factory 3 -> pattern_line 1 (yellow)
+  29: factory 3 -> pattern_line 3 (yellow)
+  30: factory 3 -> floor None (yellow)
+  31: factory 3 -> pattern_line 1 (blue)
+  32: factory 3 -> pattern_line 3 (blue)
+  33: factory 3 -> pattern_line 4 (blue)
+  34: factory 3 -> floor None (blue)
+  35: center None -> pattern_line 1 (blue)
+  36: center None -> pattern_line 3 (blue)
+  37: center None -> pattern_line 4 (blue)
+  38: center None -> floor None (blue)
+  39: center None -> pattern_line 0 (red)
+  40: center None -> pattern_line 1 (red)
+  41: center None -> pattern_line 2 (red)
+  42: center None -> pattern_line 3 (red)
+  43: center None -> floor None (red)
+  44: center None -> pattern_line 0 (yellow)
+  45: center None -> pattern_line 1 (yellow)
+  46: center None -> pattern_line 3 (yellow)
+  47: center None -> floor None (yellow)
+  48: center None -> pattern_line 0 (black)
+  49: center None -> pattern_line 1 (black)
+  50: center None -> floor None (black)
+  51: center None -> pattern_line 3 (green)
+  52: center None -> floor None (green)
+Chosen Move: ('factory', 3, <Color.RED: 'red'>, 'pattern_line', 1)
+Move applied.
+
+Current Player: 1
+First Player Marker Holder: 0
+Factories:
+  Factory 0: []
+  Factory 1: ['green', 'red', 'green', 'yellow']
+  Factory 2: ['blue', 'green', 'red', 'blue']
+  Factory 3: []
+  Factory 4: []
+Center: ['red', 'green', 'yellow', 'blue', 'black', 'blue', 'yellow', 'yellow'] (Marker: True)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: ['green', 'green']
+      Line 3: ['black', 'black']
+      Line 4: []
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[0 1 1 0 1]
+ [0 1 1 1 1]
+ [0 0 1 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 1]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['red']
+      Line 2: ['red', 'red']
+      Line 3: []
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: ['Tile', 'Tile', None, None, None, None, None]
+    Board Occupancy:
+[[0 1 1 0 0]
+ [0 0 0 1 0]
+ [0 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 0 tiles
+Discard: 58 tiles
+
+--- Player 0's Turn ---
+Legal Moves:
+  0: factory 1 -> pattern_line 0 (red)
+  1: factory 1 -> pattern_line 4 (red)
+  2: factory 1 -> floor None (red)
+  3: factory 1 -> pattern_line 0 (yellow)
+  4: factory 1 -> floor None (yellow)
+  5: factory 1 -> pattern_line 2 (green)
+  6: factory 1 -> pattern_line 4 (green)
+  7: factory 1 -> floor None (green)
+  8: factory 2 -> pattern_line 0 (red)
+  9: factory 2 -> pattern_line 4 (red)
+  10: factory 2 -> floor None (red)
+  11: factory 2 -> pattern_line 2 (green)
+  12: factory 2 -> pattern_line 4 (green)
+  13: factory 2 -> floor None (green)
+  14: factory 2 -> pattern_line 4 (blue)
+  15: factory 2 -> floor None (blue)
+  16: center None -> pattern_line 4 (blue)
+  17: center None -> floor None (blue)
+  18: center None -> pattern_line 0 (red)
+  19: center None -> pattern_line 4 (red)
+  20: center None -> floor None (red)
+  21: center None -> pattern_line 0 (yellow)
+  22: center None -> floor None (yellow)
+  23: center None -> pattern_line 1 (black)
+  24: center None -> pattern_line 3 (black)
+  25: center None -> pattern_line 4 (black)
+  26: center None -> floor None (black)
+  27: center None -> pattern_line 2 (green)
+  28: center None -> pattern_line 4 (green)
+  29: center None -> floor None (green)
+Chosen Move: ('factory', 1, <Color.YELLOW: 'yellow'>, 'floor', None)
+Move applied.
+
+Current Player: 0
+First Player Marker Holder: 0
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: ['blue', 'green', 'red', 'blue']
+  Factory 3: []
+  Factory 4: []
+Center: ['red', 'green', 'yellow', 'blue', 'black', 'blue', 'yellow', 'yellow', 'green', 'red', 'green'] (Marker: True)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: ['green', 'green']
+      Line 3: ['black', 'black']
+      Line 4: []
+    Floor: ['Tile', None, None, None, None, None, None]
+    Board Occupancy:
+[[0 1 1 0 1]
+ [0 1 1 1 1]
+ [0 0 1 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 1]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['red']
+      Line 2: ['red', 'red']
+      Line 3: []
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: ['Tile', 'Tile', None, None, None, None, None]
+    Board Occupancy:
+[[0 1 1 0 0]
+ [0 0 0 1 0]
+ [0 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 0 tiles
+Discard: 58 tiles
+
+--- Player 1's Turn ---
+Legal Moves:
+  0: factory 2 -> pattern_line 0 (red)
+  1: factory 2 -> pattern_line 1 (red)
+  2: factory 2 -> pattern_line 2 (red)
+  3: factory 2 -> pattern_line 3 (red)
+  4: factory 2 -> floor None (red)
+  5: factory 2 -> pattern_line 3 (green)
+  6: factory 2 -> floor None (green)
+  7: factory 2 -> pattern_line 3 (blue)
+  8: factory 2 -> pattern_line 4 (blue)
+  9: factory 2 -> floor None (blue)
+  10: center None -> pattern_line 3 (blue)
+  11: center None -> pattern_line 4 (blue)
+  12: center None -> floor None (blue)
+  13: center None -> pattern_line 0 (red)
+  14: center None -> pattern_line 1 (red)
+  15: center None -> pattern_line 2 (red)
+  16: center None -> pattern_line 3 (red)
+  17: center None -> floor None (red)
+  18: center None -> pattern_line 0 (yellow)
+  19: center None -> pattern_line 3 (yellow)
+  20: center None -> floor None (yellow)
+  21: center None -> pattern_line 0 (black)
+  22: center None -> floor None (black)
+  23: center None -> pattern_line 3 (green)
+  24: center None -> floor None (green)
+Chosen Move: ('center', None, <Color.BLACK: 'black'>, 'floor', None)
+Move applied.
+
+Current Player: 1
+First Player Marker Holder: 1
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: ['blue', 'green', 'red', 'blue']
+  Factory 3: []
+  Factory 4: []
+Center: ['red', 'green', 'yellow', 'blue', 'blue', 'yellow', 'yellow', 'green', 'red', 'green'] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: ['green', 'green']
+      Line 3: ['black', 'black']
+      Line 4: []
+    Floor: ['Tile', None, None, None, None, None, None]
+    Board Occupancy:
+[[0 1 1 0 1]
+ [0 1 1 1 1]
+ [0 0 1 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 1]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['red']
+      Line 2: ['red', 'red']
+      Line 3: []
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', 'Tile', None, None, None]
+    Board Occupancy:
+[[0 1 1 0 0]
+ [0 0 0 1 0]
+ [0 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 0 tiles
+Discard: 58 tiles
+
+--- Player 0's Turn ---
+Legal Moves:
+  0: factory 2 -> pattern_line 0 (red)
+  1: factory 2 -> pattern_line 4 (red)
+  2: factory 2 -> floor None (red)
+  3: factory 2 -> pattern_line 2 (green)
+  4: factory 2 -> pattern_line 4 (green)
+  5: factory 2 -> floor None (green)
+  6: factory 2 -> pattern_line 4 (blue)
+  7: factory 2 -> floor None (blue)
+  8: center None -> pattern_line 0 (red)
+  9: center None -> pattern_line 4 (red)
+  10: center None -> floor None (red)
+  11: center None -> pattern_line 0 (yellow)
+  12: center None -> floor None (yellow)
+  13: center None -> pattern_line 2 (green)
+  14: center None -> pattern_line 4 (green)
+  15: center None -> floor None (green)
+  16: center None -> pattern_line 4 (blue)
+  17: center None -> floor None (blue)
+Chosen Move: ('center', None, <Color.GREEN: 'green'>, 'floor', None)
+Move applied.
+
+Current Player: 0
+First Player Marker Holder: 1
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: ['blue', 'green', 'red', 'blue']
+  Factory 3: []
+  Factory 4: []
+Center: ['red', 'yellow', 'blue', 'blue', 'yellow', 'yellow', 'red'] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: ['green', 'green']
+      Line 3: ['black', 'black']
+      Line 4: []
+    Floor: ['Tile', 'Tile', 'Tile', 'Tile', None, None, None]
+    Board Occupancy:
+[[0 1 1 0 1]
+ [0 1 1 1 1]
+ [0 0 1 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 1]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['red']
+      Line 2: ['red', 'red']
+      Line 3: []
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', 'Tile', None, None, None]
+    Board Occupancy:
+[[0 1 1 0 0]
+ [0 0 0 1 0]
+ [0 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 0 tiles
+Discard: 58 tiles
+
+--- Player 1's Turn ---
+Legal Moves:
+  0: factory 2 -> pattern_line 0 (red)
+  1: factory 2 -> pattern_line 1 (red)
+  2: factory 2 -> pattern_line 2 (red)
+  3: factory 2 -> pattern_line 3 (red)
+  4: factory 2 -> floor None (red)
+  5: factory 2 -> pattern_line 3 (green)
+  6: factory 2 -> floor None (green)
+  7: factory 2 -> pattern_line 3 (blue)
+  8: factory 2 -> pattern_line 4 (blue)
+  9: factory 2 -> floor None (blue)
+  10: center None -> pattern_line 0 (red)
+  11: center None -> pattern_line 1 (red)
+  12: center None -> pattern_line 2 (red)
+  13: center None -> pattern_line 3 (red)
+  14: center None -> floor None (red)
+  15: center None -> pattern_line 0 (yellow)
+  16: center None -> pattern_line 3 (yellow)
+  17: center None -> floor None (yellow)
+  18: center None -> pattern_line 3 (blue)
+  19: center None -> pattern_line 4 (blue)
+  20: center None -> floor None (blue)
+Chosen Move: ('factory', 2, <Color.RED: 'red'>, 'pattern_line', 1)
+Move applied.
+
+Current Player: 1
+First Player Marker Holder: 1
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: []
+  Factory 4: []
+Center: ['red', 'yellow', 'blue', 'blue', 'yellow', 'yellow', 'red', 'blue', 'green', 'blue'] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: ['green', 'green']
+      Line 3: ['black', 'black']
+      Line 4: []
+    Floor: ['Tile', 'Tile', 'Tile', 'Tile', None, None, None]
+    Board Occupancy:
+[[0 1 1 0 1]
+ [0 1 1 1 1]
+ [0 0 1 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 1]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['red', 'red']
+      Line 2: ['red', 'red']
+      Line 3: []
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', 'Tile', None, None, None]
+    Board Occupancy:
+[[0 1 1 0 0]
+ [0 0 0 1 0]
+ [0 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 0 tiles
+Discard: 58 tiles
+
+--- Player 0's Turn ---
+Legal Moves:
+  0: center None -> pattern_line 0 (red)
+  1: center None -> pattern_line 4 (red)
+  2: center None -> floor None (red)
+  3: center None -> pattern_line 0 (yellow)
+  4: center None -> floor None (yellow)
+  5: center None -> pattern_line 2 (green)
+  6: center None -> pattern_line 4 (green)
+  7: center None -> floor None (green)
+  8: center None -> pattern_line 4 (blue)
+  9: center None -> floor None (blue)
+Chosen Move: ('center', None, <Color.BLUE: 'blue'>, 'floor', None)
+Move applied.
+
+Current Player: 0
+First Player Marker Holder: 1
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: []
+  Factory 4: []
+Center: ['red', 'yellow', 'yellow', 'yellow', 'red', 'green'] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: ['green', 'green']
+      Line 3: ['black', 'black']
+      Line 4: []
+    Floor: ['Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile']
+    Board Occupancy:
+[[0 1 1 0 1]
+ [0 1 1 1 1]
+ [0 0 1 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 1]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['red', 'red']
+      Line 2: ['red', 'red']
+      Line 3: []
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', 'Tile', None, None, None]
+    Board Occupancy:
+[[0 1 1 0 0]
+ [0 0 0 1 0]
+ [0 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 0 tiles
+Discard: 59 tiles
+
+--- Player 1's Turn ---
+Legal Moves:
+  0: center None -> pattern_line 0 (red)
+  1: center None -> pattern_line 2 (red)
+  2: center None -> pattern_line 3 (red)
+  3: center None -> floor None (red)
+  4: center None -> pattern_line 0 (yellow)
+  5: center None -> pattern_line 3 (yellow)
+  6: center None -> floor None (yellow)
+  7: center None -> pattern_line 3 (green)
+  8: center None -> floor None (green)
+Chosen Move: ('center', None, <Color.RED: 'red'>, 'pattern_line', 2)
+Move applied.
+
+Current Player: 1
+First Player Marker Holder: 1
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: []
+  Factory 4: []
+Center: ['yellow', 'yellow', 'yellow', 'green'] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: ['green', 'green']
+      Line 3: ['black', 'black']
+      Line 4: []
+    Floor: ['Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile']
+    Board Occupancy:
+[[0 1 1 0 1]
+ [0 1 1 1 1]
+ [0 0 1 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 1]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['red', 'red']
+      Line 2: ['red', 'red', 'red']
+      Line 3: []
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', 'Tile', 'Tile', None, None]
+    Board Occupancy:
+[[0 1 1 0 0]
+ [0 0 0 1 0]
+ [0 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 0 tiles
+Discard: 59 tiles
+
+--- Player 0's Turn ---
+Legal Moves:
+  0: center None -> pattern_line 0 (yellow)
+  1: center None -> floor None (yellow)
+  2: center None -> pattern_line 2 (green)
+  3: center None -> pattern_line 4 (green)
+  4: center None -> floor None (green)
+Chosen Move: ('center', None, <Color.YELLOW: 'yellow'>, 'floor', None)
+Move applied.
+
+Current Player: 0
+First Player Marker Holder: 1
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: []
+  Factory 4: []
+Center: ['green'] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: ['green', 'green']
+      Line 3: ['black', 'black']
+      Line 4: []
+    Floor: ['Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile']
+    Board Occupancy:
+[[0 1 1 0 1]
+ [0 1 1 1 1]
+ [0 0 1 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 1]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['red', 'red']
+      Line 2: ['red', 'red', 'red']
+      Line 3: []
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', 'Tile', 'Tile', None, None]
+    Board Occupancy:
+[[0 1 1 0 0]
+ [0 0 0 1 0]
+ [0 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 0 tiles
+Discard: 62 tiles
+
+--- Player 1's Turn ---
+Legal Moves:
+  0: center None -> pattern_line 3 (green)
+  1: center None -> floor None (green)
+Chosen Move: ('center', None, <Color.GREEN: 'green'>, 'pattern_line', 3)
+Move applied.
+
+Current Player: 1
+First Player Marker Holder: 1
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: []
+  Factory 4: []
+Center: [] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: ['green', 'green']
+      Line 3: ['black', 'black']
+      Line 4: []
+    Floor: ['Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile']
+    Board Occupancy:
+[[0 1 1 0 1]
+ [0 1 1 1 1]
+ [0 0 1 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 1]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: ['red', 'red']
+      Line 2: ['red', 'red', 'red']
+      Line 3: ['green']
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', 'Tile', 'Tile', None, None]
+    Board Occupancy:
+[[0 1 1 0 0]
+ [0 0 0 1 0]
+ [0 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 0 tiles
+Discard: 62 tiles
+All sources empty. Ending round.
+Round ended.
+
+Current Player: 1
+First Player Marker Holder: 1
+Factories:
+  Factory 0: ['green', 'blue', 'red', 'red']
+  Factory 1: ['black', 'red', 'green', 'blue']
+  Factory 2: ['blue', 'blue', 'black', 'black']
+  Factory 3: ['red', 'green', 'yellow', 'green']
+  Factory 4: ['black', 'blue', 'black', 'yellow']
+Center: [] (Marker: True)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: ['green', 'green']
+      Line 3: ['black', 'black']
+      Line 4: []
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[0 1 1 0 1]
+ [0 1 1 1 1]
+ [0 0 1 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 1]]
+  Player 1 Score: 0
     Pattern Lines:
       Line 0: []
       Line 1: []
       Line 2: []
-      Line 3: ['black', 'black']
-      Line 4: ['green', 'green']
+      Line 3: ['green']
+      Line 4: ['blue', 'blue', 'blue']
     Floor: [None, None, None, None, None, None, None]
     Board Occupancy:
-[[0 0 0 0 0]
- [0 1 0 0 0]
- [0 1 0 0 0]
- [0 0 0 0 0]
+[[0 1 1 0 0]
+ [0 0 0 1 1]
+ [1 0 0 0 0]
+ [0 0 1 0 0]
  [0 0 0 0 0]]
-  Player 1 Score: -4
+Bag: 56 tiles
+Discard: 0 tiles
+
+--- Player 0's Turn ---
+Legal Moves:
+  0: factory 0 -> pattern_line 0 (red)
+  1: factory 0 -> pattern_line 4 (red)
+  2: factory 0 -> floor None (red)
+  3: factory 0 -> pattern_line 2 (green)
+  4: factory 0 -> pattern_line 4 (green)
+  5: factory 0 -> floor None (green)
+  6: factory 0 -> pattern_line 4 (blue)
+  7: factory 0 -> floor None (blue)
+  8: factory 1 -> pattern_line 1 (black)
+  9: factory 1 -> pattern_line 3 (black)
+  10: factory 1 -> pattern_line 4 (black)
+  11: factory 1 -> floor None (black)
+  12: factory 1 -> pattern_line 0 (red)
+  13: factory 1 -> pattern_line 4 (red)
+  14: factory 1 -> floor None (red)
+  15: factory 1 -> pattern_line 2 (green)
+  16: factory 1 -> pattern_line 4 (green)
+  17: factory 1 -> floor None (green)
+  18: factory 1 -> pattern_line 4 (blue)
+  19: factory 1 -> floor None (blue)
+  20: factory 2 -> pattern_line 1 (black)
+  21: factory 2 -> pattern_line 3 (black)
+  22: factory 2 -> pattern_line 4 (black)
+  23: factory 2 -> floor None (black)
+  24: factory 2 -> pattern_line 4 (blue)
+  25: factory 2 -> floor None (blue)
+  26: factory 3 -> pattern_line 0 (red)
+  27: factory 3 -> pattern_line 4 (red)
+  28: factory 3 -> floor None (red)
+  29: factory 3 -> pattern_line 0 (yellow)
+  30: factory 3 -> floor None (yellow)
+  31: factory 3 -> pattern_line 2 (green)
+  32: factory 3 -> pattern_line 4 (green)
+  33: factory 3 -> floor None (green)
+  34: factory 4 -> pattern_line 1 (black)
+  35: factory 4 -> pattern_line 3 (black)
+  36: factory 4 -> pattern_line 4 (black)
+  37: factory 4 -> floor None (black)
+  38: factory 4 -> pattern_line 0 (yellow)
+  39: factory 4 -> floor None (yellow)
+  40: factory 4 -> pattern_line 4 (blue)
+  41: factory 4 -> floor None (blue)
+Chosen Move: ('factory', 0, <Color.RED: 'red'>, 'floor', None)
+Move applied.
+
+Current Player: 0
+First Player Marker Holder: 1
+Factories:
+  Factory 0: []
+  Factory 1: ['black', 'red', 'green', 'blue']
+  Factory 2: ['blue', 'blue', 'black', 'black']
+  Factory 3: ['red', 'green', 'yellow', 'green']
+  Factory 4: ['black', 'blue', 'black', 'yellow']
+Center: ['green', 'blue'] (Marker: True)
+Players:
+  Player 0 Score: 0
     Pattern Lines:
       Line 0: []
       Line 1: []
+      Line 2: ['green', 'green']
+      Line 3: ['black', 'black']
+      Line 4: []
+    Floor: ['Tile', 'Tile', None, None, None, None, None]
+    Board Occupancy:
+[[0 1 1 0 1]
+ [0 1 1 1 1]
+ [0 0 1 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 1]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: []
+      Line 3: ['green']
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[0 1 1 0 0]
+ [0 0 0 1 1]
+ [1 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 56 tiles
+Discard: 0 tiles
+
+--- Player 1's Turn ---
+Legal Moves:
+  0: factory 1 -> pattern_line 0 (black)
+  1: factory 1 -> pattern_line 1 (black)
+  2: factory 1 -> pattern_line 2 (black)
+  3: factory 1 -> floor None (black)
+  4: factory 1 -> pattern_line 0 (red)
+  5: factory 1 -> floor None (red)
+  6: factory 1 -> pattern_line 2 (green)
+  7: factory 1 -> pattern_line 3 (green)
+  8: factory 1 -> floor None (green)
+  9: factory 1 -> pattern_line 1 (blue)
+  10: factory 1 -> pattern_line 2 (blue)
+  11: factory 1 -> pattern_line 4 (blue)
+  12: factory 1 -> floor None (blue)
+  13: factory 2 -> pattern_line 0 (black)
+  14: factory 2 -> pattern_line 1 (black)
+  15: factory 2 -> pattern_line 2 (black)
+  16: factory 2 -> floor None (black)
+  17: factory 2 -> pattern_line 1 (blue)
+  18: factory 2 -> pattern_line 2 (blue)
+  19: factory 2 -> pattern_line 4 (blue)
+  20: factory 2 -> floor None (blue)
+  21: factory 3 -> pattern_line 0 (red)
+  22: factory 3 -> floor None (red)
+  23: factory 3 -> pattern_line 0 (yellow)
+  24: factory 3 -> pattern_line 1 (yellow)
+  25: factory 3 -> pattern_line 2 (yellow)
+  26: factory 3 -> floor None (yellow)
+  27: factory 3 -> pattern_line 2 (green)
+  28: factory 3 -> pattern_line 3 (green)
+  29: factory 3 -> floor None (green)
+  30: factory 4 -> pattern_line 0 (black)
+  31: factory 4 -> pattern_line 1 (black)
+  32: factory 4 -> pattern_line 2 (black)
+  33: factory 4 -> floor None (black)
+  34: factory 4 -> pattern_line 0 (yellow)
+  35: factory 4 -> pattern_line 1 (yellow)
+  36: factory 4 -> pattern_line 2 (yellow)
+  37: factory 4 -> floor None (yellow)
+  38: factory 4 -> pattern_line 1 (blue)
+  39: factory 4 -> pattern_line 2 (blue)
+  40: factory 4 -> pattern_line 4 (blue)
+  41: factory 4 -> floor None (blue)
+  42: center None -> pattern_line 2 (green)
+  43: center None -> pattern_line 3 (green)
+  44: center None -> floor None (green)
+  45: center None -> pattern_line 1 (blue)
+  46: center None -> pattern_line 2 (blue)
+  47: center None -> pattern_line 4 (blue)
+  48: center None -> floor None (blue)
+Chosen Move: ('factory', 3, <Color.RED: 'red'>, 'pattern_line', 0)
+Move applied.
+
+Current Player: 1
+First Player Marker Holder: 1
+Factories:
+  Factory 0: []
+  Factory 1: ['black', 'red', 'green', 'blue']
+  Factory 2: ['blue', 'blue', 'black', 'black']
+  Factory 3: []
+  Factory 4: ['black', 'blue', 'black', 'yellow']
+Center: ['green', 'blue', 'green', 'yellow', 'green'] (Marker: True)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: ['green', 'green']
+      Line 3: ['black', 'black']
+      Line 4: []
+    Floor: ['Tile', 'Tile', None, None, None, None, None]
+    Board Occupancy:
+[[0 1 1 0 1]
+ [0 1 1 1 1]
+ [0 0 1 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 1]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: ['red']
+      Line 1: []
+      Line 2: []
+      Line 3: ['green']
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[0 1 1 0 0]
+ [0 0 0 1 1]
+ [1 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 56 tiles
+Discard: 0 tiles
+
+--- Player 0's Turn ---
+Legal Moves:
+  0: factory 1 -> pattern_line 1 (black)
+  1: factory 1 -> pattern_line 3 (black)
+  2: factory 1 -> pattern_line 4 (black)
+  3: factory 1 -> floor None (black)
+  4: factory 1 -> pattern_line 0 (red)
+  5: factory 1 -> pattern_line 4 (red)
+  6: factory 1 -> floor None (red)
+  7: factory 1 -> pattern_line 2 (green)
+  8: factory 1 -> pattern_line 4 (green)
+  9: factory 1 -> floor None (green)
+  10: factory 1 -> pattern_line 4 (blue)
+  11: factory 1 -> floor None (blue)
+  12: factory 2 -> pattern_line 1 (black)
+  13: factory 2 -> pattern_line 3 (black)
+  14: factory 2 -> pattern_line 4 (black)
+  15: factory 2 -> floor None (black)
+  16: factory 2 -> pattern_line 4 (blue)
+  17: factory 2 -> floor None (blue)
+  18: factory 4 -> pattern_line 1 (black)
+  19: factory 4 -> pattern_line 3 (black)
+  20: factory 4 -> pattern_line 4 (black)
+  21: factory 4 -> floor None (black)
+  22: factory 4 -> pattern_line 0 (yellow)
+  23: factory 4 -> floor None (yellow)
+  24: factory 4 -> pattern_line 4 (blue)
+  25: factory 4 -> floor None (blue)
+  26: center None -> pattern_line 0 (yellow)
+  27: center None -> floor None (yellow)
+  28: center None -> pattern_line 2 (green)
+  29: center None -> pattern_line 4 (green)
+  30: center None -> floor None (green)
+  31: center None -> pattern_line 4 (blue)
+  32: center None -> floor None (blue)
+Chosen Move: ('factory', 1, <Color.GREEN: 'green'>, 'pattern_line', 4)
+Move applied.
+
+Current Player: 0
+First Player Marker Holder: 1
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: ['blue', 'blue', 'black', 'black']
+  Factory 3: []
+  Factory 4: ['black', 'blue', 'black', 'yellow']
+Center: ['green', 'blue', 'green', 'yellow', 'green', 'black', 'red', 'blue'] (Marker: True)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: ['green', 'green']
+      Line 3: ['black', 'black']
+      Line 4: ['green']
+    Floor: ['Tile', 'Tile', None, None, None, None, None]
+    Board Occupancy:
+[[0 1 1 0 1]
+ [0 1 1 1 1]
+ [0 0 1 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 1]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: ['red']
+      Line 1: []
+      Line 2: []
+      Line 3: ['green']
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[0 1 1 0 0]
+ [0 0 0 1 1]
+ [1 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 56 tiles
+Discard: 0 tiles
+
+--- Player 1's Turn ---
+Legal Moves:
+  0: factory 2 -> pattern_line 1 (black)
+  1: factory 2 -> pattern_line 2 (black)
+  2: factory 2 -> floor None (black)
+  3: factory 2 -> pattern_line 1 (blue)
+  4: factory 2 -> pattern_line 2 (blue)
+  5: factory 2 -> pattern_line 4 (blue)
+  6: factory 2 -> floor None (blue)
+  7: factory 4 -> pattern_line 1 (black)
+  8: factory 4 -> pattern_line 2 (black)
+  9: factory 4 -> floor None (black)
+  10: factory 4 -> pattern_line 1 (yellow)
+  11: factory 4 -> pattern_line 2 (yellow)
+  12: factory 4 -> floor None (yellow)
+  13: factory 4 -> pattern_line 1 (blue)
+  14: factory 4 -> pattern_line 2 (blue)
+  15: factory 4 -> pattern_line 4 (blue)
+  16: factory 4 -> floor None (blue)
+  17: center None -> pattern_line 1 (blue)
+  18: center None -> pattern_line 2 (blue)
+  19: center None -> pattern_line 4 (blue)
+  20: center None -> floor None (blue)
+  21: center None -> floor None (red)
+  22: center None -> pattern_line 1 (yellow)
+  23: center None -> pattern_line 2 (yellow)
+  24: center None -> floor None (yellow)
+  25: center None -> pattern_line 1 (black)
+  26: center None -> pattern_line 2 (black)
+  27: center None -> floor None (black)
+  28: center None -> pattern_line 2 (green)
+  29: center None -> pattern_line 3 (green)
+  30: center None -> floor None (green)
+Chosen Move: ('center', None, <Color.BLUE: 'blue'>, 'pattern_line', 2)
+Move applied.
+
+Current Player: 1
+First Player Marker Holder: 1
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: ['blue', 'blue', 'black', 'black']
+  Factory 3: []
+  Factory 4: ['black', 'blue', 'black', 'yellow']
+Center: ['green', 'green', 'yellow', 'green', 'black', 'red'] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: ['green', 'green']
+      Line 3: ['black', 'black']
+      Line 4: ['green']
+    Floor: ['Tile', 'Tile', None, None, None, None, None]
+    Board Occupancy:
+[[0 1 1 0 1]
+ [0 1 1 1 1]
+ [0 0 1 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 1]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: ['red']
+      Line 1: []
       Line 2: ['blue', 'blue']
-      Line 3: []
+      Line 3: ['green']
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: ['FirstPlayerMarker', None, None, None, None, None, None]
+    Board Occupancy:
+[[0 1 1 0 0]
+ [0 0 0 1 1]
+ [1 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 56 tiles
+Discard: 0 tiles
+
+--- Player 0's Turn ---
+Legal Moves:
+  0: factory 2 -> pattern_line 1 (black)
+  1: factory 2 -> pattern_line 3 (black)
+  2: factory 2 -> floor None (black)
+  3: factory 2 -> floor None (blue)
+  4: factory 4 -> pattern_line 1 (black)
+  5: factory 4 -> pattern_line 3 (black)
+  6: factory 4 -> floor None (black)
+  7: factory 4 -> pattern_line 0 (yellow)
+  8: factory 4 -> floor None (yellow)
+  9: factory 4 -> floor None (blue)
+  10: center None -> pattern_line 1 (black)
+  11: center None -> pattern_line 3 (black)
+  12: center None -> floor None (black)
+  13: center None -> pattern_line 0 (yellow)
+  14: center None -> floor None (yellow)
+  15: center None -> pattern_line 2 (green)
+  16: center None -> pattern_line 4 (green)
+  17: center None -> floor None (green)
+  18: center None -> pattern_line 0 (red)
+  19: center None -> floor None (red)
+Chosen Move: ('center', None, <Color.YELLOW: 'yellow'>, 'pattern_line', 0)
+Move applied.
+
+Current Player: 0
+First Player Marker Holder: 1
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: ['blue', 'blue', 'black', 'black']
+  Factory 3: []
+  Factory 4: ['black', 'blue', 'black', 'yellow']
+Center: ['green', 'green', 'green', 'black', 'red'] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: ['yellow']
+      Line 1: []
+      Line 2: ['green', 'green']
+      Line 3: ['black', 'black']
+      Line 4: ['green']
+    Floor: ['Tile', 'Tile', None, None, None, None, None]
+    Board Occupancy:
+[[0 1 1 0 1]
+ [0 1 1 1 1]
+ [0 0 1 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 1]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: ['red']
+      Line 1: []
+      Line 2: ['blue', 'blue']
+      Line 3: ['green']
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: ['FirstPlayerMarker', None, None, None, None, None, None]
+    Board Occupancy:
+[[0 1 1 0 0]
+ [0 0 0 1 1]
+ [1 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 56 tiles
+Discard: 0 tiles
+
+--- Player 1's Turn ---
+Legal Moves:
+  0: factory 2 -> pattern_line 1 (black)
+  1: factory 2 -> floor None (black)
+  2: factory 2 -> pattern_line 1 (blue)
+  3: factory 2 -> pattern_line 2 (blue)
+  4: factory 2 -> pattern_line 4 (blue)
+  5: factory 2 -> floor None (blue)
+  6: factory 4 -> pattern_line 1 (black)
+  7: factory 4 -> floor None (black)
+  8: factory 4 -> pattern_line 1 (yellow)
+  9: factory 4 -> floor None (yellow)
+  10: factory 4 -> pattern_line 1 (blue)
+  11: factory 4 -> pattern_line 2 (blue)
+  12: factory 4 -> pattern_line 4 (blue)
+  13: factory 4 -> floor None (blue)
+  14: center None -> pattern_line 1 (black)
+  15: center None -> floor None (black)
+  16: center None -> floor None (red)
+  17: center None -> pattern_line 3 (green)
+  18: center None -> floor None (green)
+Chosen Move: ('factory', 4, <Color.BLACK: 'black'>, 'floor', None)
+Move applied.
+
+Current Player: 1
+First Player Marker Holder: 1
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: ['blue', 'blue', 'black', 'black']
+  Factory 3: []
+  Factory 4: []
+Center: ['green', 'green', 'green', 'black', 'red', 'blue', 'yellow'] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: ['yellow']
+      Line 1: []
+      Line 2: ['green', 'green']
+      Line 3: ['black', 'black']
+      Line 4: ['green']
+    Floor: ['Tile', 'Tile', None, None, None, None, None]
+    Board Occupancy:
+[[0 1 1 0 1]
+ [0 1 1 1 1]
+ [0 0 1 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 1]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: ['red']
+      Line 1: []
+      Line 2: ['blue', 'blue']
+      Line 3: ['green']
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', None, None, None, None]
+    Board Occupancy:
+[[0 1 1 0 0]
+ [0 0 0 1 1]
+ [1 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 56 tiles
+Discard: 0 tiles
+
+--- Player 0's Turn ---
+Legal Moves:
+  0: factory 2 -> pattern_line 1 (black)
+  1: factory 2 -> pattern_line 3 (black)
+  2: factory 2 -> floor None (black)
+  3: factory 2 -> floor None (blue)
+  4: center None -> floor None (blue)
+  5: center None -> floor None (red)
+  6: center None -> floor None (yellow)
+  7: center None -> pattern_line 1 (black)
+  8: center None -> pattern_line 3 (black)
+  9: center None -> floor None (black)
+  10: center None -> pattern_line 2 (green)
+  11: center None -> pattern_line 4 (green)
+  12: center None -> floor None (green)
+Chosen Move: ('center', None, <Color.BLACK: 'black'>, 'pattern_line', 3)
+Move applied.
+
+Current Player: 0
+First Player Marker Holder: 1
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: ['blue', 'blue', 'black', 'black']
+  Factory 3: []
+  Factory 4: []
+Center: ['green', 'green', 'green', 'red', 'blue', 'yellow'] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: ['yellow']
+      Line 1: []
+      Line 2: ['green', 'green']
+      Line 3: ['black', 'black', 'black']
+      Line 4: ['green']
+    Floor: ['Tile', 'Tile', None, None, None, None, None]
+    Board Occupancy:
+[[0 1 1 0 1]
+ [0 1 1 1 1]
+ [0 0 1 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 1]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: ['red']
+      Line 1: []
+      Line 2: ['blue', 'blue']
+      Line 3: ['green']
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', None, None, None, None]
+    Board Occupancy:
+[[0 1 1 0 0]
+ [0 0 0 1 1]
+ [1 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 56 tiles
+Discard: 0 tiles
+
+--- Player 1's Turn ---
+Legal Moves:
+  0: factory 2 -> pattern_line 1 (black)
+  1: factory 2 -> floor None (black)
+  2: factory 2 -> pattern_line 1 (blue)
+  3: factory 2 -> pattern_line 2 (blue)
+  4: factory 2 -> pattern_line 4 (blue)
+  5: factory 2 -> floor None (blue)
+  6: center None -> floor None (red)
+  7: center None -> pattern_line 1 (yellow)
+  8: center None -> floor None (yellow)
+  9: center None -> pattern_line 3 (green)
+  10: center None -> floor None (green)
+  11: center None -> pattern_line 1 (blue)
+  12: center None -> pattern_line 2 (blue)
+  13: center None -> pattern_line 4 (blue)
+  14: center None -> floor None (blue)
+Chosen Move: ('factory', 2, <Color.BLUE: 'blue'>, 'pattern_line', 1)
+Move applied.
+
+Current Player: 1
+First Player Marker Holder: 1
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: []
+  Factory 4: []
+Center: ['green', 'green', 'green', 'red', 'blue', 'yellow', 'black', 'black'] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: ['yellow']
+      Line 1: []
+      Line 2: ['green', 'green']
+      Line 3: ['black', 'black', 'black']
+      Line 4: ['green']
+    Floor: ['Tile', 'Tile', None, None, None, None, None]
+    Board Occupancy:
+[[0 1 1 0 1]
+ [0 1 1 1 1]
+ [0 0 1 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 1]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: ['red']
+      Line 1: ['blue', 'blue']
+      Line 2: ['blue', 'blue']
+      Line 3: ['green']
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', None, None, None, None]
+    Board Occupancy:
+[[0 1 1 0 0]
+ [0 0 0 1 1]
+ [1 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 56 tiles
+Discard: 0 tiles
+
+--- Player 0's Turn ---
+Legal Moves:
+  0: center None -> floor None (blue)
+  1: center None -> floor None (red)
+  2: center None -> floor None (yellow)
+  3: center None -> pattern_line 1 (black)
+  4: center None -> pattern_line 3 (black)
+  5: center None -> floor None (black)
+  6: center None -> pattern_line 2 (green)
+  7: center None -> pattern_line 4 (green)
+  8: center None -> floor None (green)
+Chosen Move: ('center', None, <Color.GREEN: 'green'>, 'floor', None)
+Move applied.
+
+Current Player: 0
+First Player Marker Holder: 1
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: []
+  Factory 4: []
+Center: ['red', 'blue', 'yellow', 'black', 'black'] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: ['yellow']
+      Line 1: []
+      Line 2: ['green', 'green']
+      Line 3: ['black', 'black', 'black']
+      Line 4: ['green']
+    Floor: ['Tile', 'Tile', 'Tile', 'Tile', 'Tile', None, None]
+    Board Occupancy:
+[[0 1 1 0 1]
+ [0 1 1 1 1]
+ [0 0 1 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 1]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: ['red']
+      Line 1: ['blue', 'blue']
+      Line 2: ['blue', 'blue']
+      Line 3: ['green']
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', None, None, None, None]
+    Board Occupancy:
+[[0 1 1 0 0]
+ [0 0 0 1 1]
+ [1 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 56 tiles
+Discard: 0 tiles
+
+--- Player 1's Turn ---
+Legal Moves:
+  0: center None -> floor None (black)
+  1: center None -> floor None (red)
+  2: center None -> floor None (yellow)
+  3: center None -> pattern_line 2 (blue)
+  4: center None -> pattern_line 4 (blue)
+  5: center None -> floor None (blue)
+Chosen Move: ('center', None, <Color.BLUE: 'blue'>, 'pattern_line', 2)
+Move applied.
+
+Current Player: 1
+First Player Marker Holder: 1
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: []
+  Factory 4: []
+Center: ['red', 'yellow', 'black', 'black'] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: ['yellow']
+      Line 1: []
+      Line 2: ['green', 'green']
+      Line 3: ['black', 'black', 'black']
+      Line 4: ['green']
+    Floor: ['Tile', 'Tile', 'Tile', 'Tile', 'Tile', None, None]
+    Board Occupancy:
+[[0 1 1 0 1]
+ [0 1 1 1 1]
+ [0 0 1 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 1]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: ['red']
+      Line 1: ['blue', 'blue']
+      Line 2: ['blue', 'blue', 'blue']
+      Line 3: ['green']
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', None, None, None, None]
+    Board Occupancy:
+[[0 1 1 0 0]
+ [0 0 0 1 1]
+ [1 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 56 tiles
+Discard: 0 tiles
+
+--- Player 0's Turn ---
+Legal Moves:
+  0: center None -> pattern_line 1 (black)
+  1: center None -> pattern_line 3 (black)
+  2: center None -> floor None (black)
+  3: center None -> floor None (red)
+  4: center None -> floor None (yellow)
+Chosen Move: ('center', None, <Color.YELLOW: 'yellow'>, 'floor', None)
+Move applied.
+
+Current Player: 0
+First Player Marker Holder: 1
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: []
+  Factory 4: []
+Center: ['red', 'black', 'black'] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: ['yellow']
+      Line 1: []
+      Line 2: ['green', 'green']
+      Line 3: ['black', 'black', 'black']
+      Line 4: ['green']
+    Floor: ['Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile', None]
+    Board Occupancy:
+[[0 1 1 0 1]
+ [0 1 1 1 1]
+ [0 0 1 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 1]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: ['red']
+      Line 1: ['blue', 'blue']
+      Line 2: ['blue', 'blue', 'blue']
+      Line 3: ['green']
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', None, None, None, None]
+    Board Occupancy:
+[[0 1 1 0 0]
+ [0 0 0 1 1]
+ [1 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 56 tiles
+Discard: 0 tiles
+
+--- Player 1's Turn ---
+Legal Moves:
+  0: center None -> floor None (black)
+  1: center None -> floor None (red)
+Chosen Move: ('center', None, <Color.BLACK: 'black'>, 'floor', None)
+Move applied.
+
+Current Player: 1
+First Player Marker Holder: 1
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: []
+  Factory 4: []
+Center: ['red'] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: ['yellow']
+      Line 1: []
+      Line 2: ['green', 'green']
+      Line 3: ['black', 'black', 'black']
+      Line 4: ['green']
+    Floor: ['Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile', None]
+    Board Occupancy:
+[[0 1 1 0 1]
+ [0 1 1 1 1]
+ [0 0 1 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 1]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: ['red']
+      Line 1: ['blue', 'blue']
+      Line 2: ['blue', 'blue', 'blue']
+      Line 3: ['green']
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', 'Tile', 'Tile', None, None]
+    Board Occupancy:
+[[0 1 1 0 0]
+ [0 0 0 1 1]
+ [1 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 56 tiles
+Discard: 0 tiles
+
+--- Player 0's Turn ---
+Legal Moves:
+  0: center None -> floor None (red)
+Chosen Move: ('center', None, <Color.RED: 'red'>, 'floor', None)
+Move applied.
+
+Current Player: 0
+First Player Marker Holder: 1
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: []
+  Factory 4: []
+Center: [] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: ['yellow']
+      Line 1: []
+      Line 2: ['green', 'green']
+      Line 3: ['black', 'black', 'black']
+      Line 4: ['green']
+    Floor: ['Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile']
+    Board Occupancy:
+[[0 1 1 0 1]
+ [0 1 1 1 1]
+ [0 0 1 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 1]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: ['red']
+      Line 1: ['blue', 'blue']
+      Line 2: ['blue', 'blue', 'blue']
+      Line 3: ['green']
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', 'Tile', 'Tile', None, None]
+    Board Occupancy:
+[[0 1 1 0 0]
+ [0 0 0 1 1]
+ [1 0 0 0 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 56 tiles
+Discard: 0 tiles
+All sources empty. Ending round.
+Round ended.
+
+Current Player: 1
+First Player Marker Holder: 1
+Factories:
+  Factory 0: ['yellow', 'green', 'blue', 'red']
+  Factory 1: ['blue', 'yellow', 'yellow', 'black']
+  Factory 2: ['black', 'green', 'blue', 'red']
+  Factory 3: ['blue', 'blue', 'black', 'black']
+  Factory 4: ['red', 'black', 'blue', 'green']
+Center: [] (Marker: True)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: ['green', 'green']
+      Line 3: ['black', 'black', 'black']
+      Line 4: ['green']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[1 1 1 0 1]
+ [0 1 1 1 1]
+ [0 0 1 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 1]]
+  Player 1 Score: 5
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: []
+      Line 3: ['green']
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[0 1 1 1 0]
+ [0 0 1 1 1]
+ [1 0 0 1 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 36 tiles
+Discard: 14 tiles
+
+--- Player 0's Turn ---
+Legal Moves:
+  0: factory 0 -> pattern_line 0 (red)
+  1: factory 0 -> floor None (red)
+  2: factory 0 -> floor None (yellow)
+  3: factory 0 -> pattern_line 2 (green)
+  4: factory 0 -> pattern_line 4 (green)
+  5: factory 0 -> floor None (green)
+  6: factory 0 -> floor None (blue)
+  7: factory 1 -> pattern_line 1 (black)
+  8: factory 1 -> pattern_line 3 (black)
+  9: factory 1 -> floor None (black)
+  10: factory 1 -> floor None (yellow)
+  11: factory 1 -> floor None (blue)
+  12: factory 2 -> pattern_line 1 (black)
+  13: factory 2 -> pattern_line 3 (black)
+  14: factory 2 -> floor None (black)
+  15: factory 2 -> pattern_line 0 (red)
+  16: factory 2 -> floor None (red)
+  17: factory 2 -> pattern_line 2 (green)
+  18: factory 2 -> pattern_line 4 (green)
+  19: factory 2 -> floor None (green)
+  20: factory 2 -> floor None (blue)
+  21: factory 3 -> pattern_line 1 (black)
+  22: factory 3 -> pattern_line 3 (black)
+  23: factory 3 -> floor None (black)
+  24: factory 3 -> floor None (blue)
+  25: factory 4 -> pattern_line 1 (black)
+  26: factory 4 -> pattern_line 3 (black)
+  27: factory 4 -> floor None (black)
+  28: factory 4 -> pattern_line 0 (red)
+  29: factory 4 -> floor None (red)
+  30: factory 4 -> pattern_line 2 (green)
+  31: factory 4 -> pattern_line 4 (green)
+  32: factory 4 -> floor None (green)
+  33: factory 4 -> floor None (blue)
+Chosen Move: ('factory', 0, <Color.YELLOW: 'yellow'>, 'floor', None)
+Move applied.
+
+Current Player: 0
+First Player Marker Holder: 1
+Factories:
+  Factory 0: []
+  Factory 1: ['blue', 'yellow', 'yellow', 'black']
+  Factory 2: ['black', 'green', 'blue', 'red']
+  Factory 3: ['blue', 'blue', 'black', 'black']
+  Factory 4: ['red', 'black', 'blue', 'green']
+Center: ['green', 'blue', 'red'] (Marker: True)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: ['green', 'green']
+      Line 3: ['black', 'black', 'black']
+      Line 4: ['green']
+    Floor: ['Tile', None, None, None, None, None, None]
+    Board Occupancy:
+[[1 1 1 0 1]
+ [0 1 1 1 1]
+ [0 0 1 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 1]]
+  Player 1 Score: 5
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: []
+      Line 3: ['green']
+      Line 4: ['blue', 'blue', 'blue']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[0 1 1 1 0]
+ [0 0 1 1 1]
+ [1 0 0 1 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 36 tiles
+Discard: 14 tiles
+
+--- Player 1's Turn ---
+Legal Moves:
+  0: factory 1 -> pattern_line 0 (black)
+  1: factory 1 -> pattern_line 1 (black)
+  2: factory 1 -> pattern_line 2 (black)
+  3: factory 1 -> floor None (black)
+  4: factory 1 -> pattern_line 0 (yellow)
+  5: factory 1 -> pattern_line 1 (yellow)
+  6: factory 1 -> pattern_line 2 (yellow)
+  7: factory 1 -> floor None (yellow)
+  8: factory 1 -> pattern_line 4 (blue)
+  9: factory 1 -> floor None (blue)
+  10: factory 2 -> pattern_line 0 (black)
+  11: factory 2 -> pattern_line 1 (black)
+  12: factory 2 -> pattern_line 2 (black)
+  13: factory 2 -> floor None (black)
+  14: factory 2 -> floor None (red)
+  15: factory 2 -> pattern_line 2 (green)
+  16: factory 2 -> pattern_line 3 (green)
+  17: factory 2 -> floor None (green)
+  18: factory 2 -> pattern_line 4 (blue)
+  19: factory 2 -> floor None (blue)
+  20: factory 3 -> pattern_line 0 (black)
+  21: factory 3 -> pattern_line 1 (black)
+  22: factory 3 -> pattern_line 2 (black)
+  23: factory 3 -> floor None (black)
+  24: factory 3 -> pattern_line 4 (blue)
+  25: factory 3 -> floor None (blue)
+  26: factory 4 -> pattern_line 0 (black)
+  27: factory 4 -> pattern_line 1 (black)
+  28: factory 4 -> pattern_line 2 (black)
+  29: factory 4 -> floor None (black)
+  30: factory 4 -> floor None (red)
+  31: factory 4 -> pattern_line 2 (green)
+  32: factory 4 -> pattern_line 3 (green)
+  33: factory 4 -> floor None (green)
+  34: factory 4 -> pattern_line 4 (blue)
+  35: factory 4 -> floor None (blue)
+  36: center None -> floor None (red)
+  37: center None -> pattern_line 2 (green)
+  38: center None -> pattern_line 3 (green)
+  39: center None -> floor None (green)
+  40: center None -> pattern_line 4 (blue)
+  41: center None -> floor None (blue)
+Chosen Move: ('factory', 2, <Color.BLUE: 'blue'>, 'pattern_line', 4)
+Move applied.
+
+Current Player: 1
+First Player Marker Holder: 1
+Factories:
+  Factory 0: []
+  Factory 1: ['blue', 'yellow', 'yellow', 'black']
+  Factory 2: []
+  Factory 3: ['blue', 'blue', 'black', 'black']
+  Factory 4: ['red', 'black', 'blue', 'green']
+Center: ['green', 'blue', 'red', 'black', 'green', 'red'] (Marker: True)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: ['green', 'green']
+      Line 3: ['black', 'black', 'black']
+      Line 4: ['green']
+    Floor: ['Tile', None, None, None, None, None, None]
+    Board Occupancy:
+[[1 1 1 0 1]
+ [0 1 1 1 1]
+ [0 0 1 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 1]]
+  Player 1 Score: 5
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: []
+      Line 3: ['green']
+      Line 4: ['blue', 'blue', 'blue', 'blue']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[0 1 1 1 0]
+ [0 0 1 1 1]
+ [1 0 0 1 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 36 tiles
+Discard: 14 tiles
+
+--- Player 0's Turn ---
+Legal Moves:
+  0: factory 1 -> pattern_line 1 (black)
+  1: factory 1 -> pattern_line 3 (black)
+  2: factory 1 -> floor None (black)
+  3: factory 1 -> floor None (yellow)
+  4: factory 1 -> floor None (blue)
+  5: factory 3 -> pattern_line 1 (black)
+  6: factory 3 -> pattern_line 3 (black)
+  7: factory 3 -> floor None (black)
+  8: factory 3 -> floor None (blue)
+  9: factory 4 -> pattern_line 1 (black)
+  10: factory 4 -> pattern_line 3 (black)
+  11: factory 4 -> floor None (black)
+  12: factory 4 -> pattern_line 0 (red)
+  13: factory 4 -> floor None (red)
+  14: factory 4 -> pattern_line 2 (green)
+  15: factory 4 -> pattern_line 4 (green)
+  16: factory 4 -> floor None (green)
+  17: factory 4 -> floor None (blue)
+  18: center None -> pattern_line 1 (black)
+  19: center None -> pattern_line 3 (black)
+  20: center None -> floor None (black)
+  21: center None -> pattern_line 0 (red)
+  22: center None -> floor None (red)
+  23: center None -> pattern_line 2 (green)
+  24: center None -> pattern_line 4 (green)
+  25: center None -> floor None (green)
+  26: center None -> floor None (blue)
+Chosen Move: ('center', None, <Color.RED: 'red'>, 'pattern_line', 0)
+Move applied.
+
+Current Player: 0
+First Player Marker Holder: 0
+Factories:
+  Factory 0: []
+  Factory 1: ['blue', 'yellow', 'yellow', 'black']
+  Factory 2: []
+  Factory 3: ['blue', 'blue', 'black', 'black']
+  Factory 4: ['red', 'black', 'blue', 'green']
+Center: ['green', 'blue', 'black', 'green'] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: ['red']
+      Line 1: []
+      Line 2: ['green', 'green']
+      Line 3: ['black', 'black', 'black']
+      Line 4: ['green']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', None, None, None, None]
+    Board Occupancy:
+[[1 1 1 0 1]
+ [0 1 1 1 1]
+ [0 0 1 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 1]]
+  Player 1 Score: 5
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: []
+      Line 3: ['green']
+      Line 4: ['blue', 'blue', 'blue', 'blue']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[0 1 1 1 0]
+ [0 0 1 1 1]
+ [1 0 0 1 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 36 tiles
+Discard: 14 tiles
+
+--- Player 1's Turn ---
+Legal Moves:
+  0: factory 1 -> pattern_line 0 (black)
+  1: factory 1 -> pattern_line 1 (black)
+  2: factory 1 -> pattern_line 2 (black)
+  3: factory 1 -> floor None (black)
+  4: factory 1 -> pattern_line 0 (yellow)
+  5: factory 1 -> pattern_line 1 (yellow)
+  6: factory 1 -> pattern_line 2 (yellow)
+  7: factory 1 -> floor None (yellow)
+  8: factory 1 -> pattern_line 4 (blue)
+  9: factory 1 -> floor None (blue)
+  10: factory 3 -> pattern_line 0 (black)
+  11: factory 3 -> pattern_line 1 (black)
+  12: factory 3 -> pattern_line 2 (black)
+  13: factory 3 -> floor None (black)
+  14: factory 3 -> pattern_line 4 (blue)
+  15: factory 3 -> floor None (blue)
+  16: factory 4 -> pattern_line 0 (black)
+  17: factory 4 -> pattern_line 1 (black)
+  18: factory 4 -> pattern_line 2 (black)
+  19: factory 4 -> floor None (black)
+  20: factory 4 -> floor None (red)
+  21: factory 4 -> pattern_line 2 (green)
+  22: factory 4 -> pattern_line 3 (green)
+  23: factory 4 -> floor None (green)
+  24: factory 4 -> pattern_line 4 (blue)
+  25: factory 4 -> floor None (blue)
+  26: center None -> pattern_line 0 (black)
+  27: center None -> pattern_line 1 (black)
+  28: center None -> pattern_line 2 (black)
+  29: center None -> floor None (black)
+  30: center None -> pattern_line 2 (green)
+  31: center None -> pattern_line 3 (green)
+  32: center None -> floor None (green)
+  33: center None -> pattern_line 4 (blue)
+  34: center None -> floor None (blue)
+Chosen Move: ('factory', 4, <Color.BLUE: 'blue'>, 'pattern_line', 4)
+Move applied.
+
+Current Player: 1
+First Player Marker Holder: 0
+Factories:
+  Factory 0: []
+  Factory 1: ['blue', 'yellow', 'yellow', 'black']
+  Factory 2: []
+  Factory 3: ['blue', 'blue', 'black', 'black']
+  Factory 4: []
+Center: ['green', 'blue', 'black', 'green', 'red', 'black', 'green'] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: ['red']
+      Line 1: []
+      Line 2: ['green', 'green']
+      Line 3: ['black', 'black', 'black']
+      Line 4: ['green']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', None, None, None, None]
+    Board Occupancy:
+[[1 1 1 0 1]
+ [0 1 1 1 1]
+ [0 0 1 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 1]]
+  Player 1 Score: 5
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: []
+      Line 3: ['green']
+      Line 4: ['blue', 'blue', 'blue', 'blue', 'blue']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[0 1 1 1 0]
+ [0 0 1 1 1]
+ [1 0 0 1 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 36 tiles
+Discard: 14 tiles
+
+--- Player 0's Turn ---
+Legal Moves:
+  0: factory 1 -> pattern_line 1 (black)
+  1: factory 1 -> pattern_line 3 (black)
+  2: factory 1 -> floor None (black)
+  3: factory 1 -> floor None (yellow)
+  4: factory 1 -> floor None (blue)
+  5: factory 3 -> pattern_line 1 (black)
+  6: factory 3 -> pattern_line 3 (black)
+  7: factory 3 -> floor None (black)
+  8: factory 3 -> floor None (blue)
+  9: center None -> pattern_line 1 (black)
+  10: center None -> pattern_line 3 (black)
+  11: center None -> floor None (black)
+  12: center None -> floor None (red)
+  13: center None -> pattern_line 2 (green)
+  14: center None -> pattern_line 4 (green)
+  15: center None -> floor None (green)
+  16: center None -> floor None (blue)
+Chosen Move: ('factory', 1, <Color.BLACK: 'black'>, 'floor', None)
+Move applied.
+
+Current Player: 0
+First Player Marker Holder: 0
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: ['blue', 'blue', 'black', 'black']
+  Factory 4: []
+Center: ['green', 'blue', 'black', 'green', 'red', 'black', 'green', 'blue', 'yellow', 'yellow'] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: ['red']
+      Line 1: []
+      Line 2: ['green', 'green']
+      Line 3: ['black', 'black', 'black']
+      Line 4: ['green']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', 'Tile', None, None, None]
+    Board Occupancy:
+[[1 1 1 0 1]
+ [0 1 1 1 1]
+ [0 0 1 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 1]]
+  Player 1 Score: 5
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: []
+      Line 3: ['green']
+      Line 4: ['blue', 'blue', 'blue', 'blue', 'blue']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[0 1 1 1 0]
+ [0 0 1 1 1]
+ [1 0 0 1 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 36 tiles
+Discard: 14 tiles
+
+--- Player 1's Turn ---
+Legal Moves:
+  0: factory 3 -> pattern_line 0 (black)
+  1: factory 3 -> pattern_line 1 (black)
+  2: factory 3 -> pattern_line 2 (black)
+  3: factory 3 -> floor None (black)
+  4: factory 3 -> floor None (blue)
+  5: center None -> floor None (blue)
+  6: center None -> floor None (red)
+  7: center None -> pattern_line 0 (yellow)
+  8: center None -> pattern_line 1 (yellow)
+  9: center None -> pattern_line 2 (yellow)
+  10: center None -> floor None (yellow)
+  11: center None -> pattern_line 0 (black)
+  12: center None -> pattern_line 1 (black)
+  13: center None -> pattern_line 2 (black)
+  14: center None -> floor None (black)
+  15: center None -> pattern_line 2 (green)
+  16: center None -> pattern_line 3 (green)
+  17: center None -> floor None (green)
+Chosen Move: ('factory', 3, <Color.BLACK: 'black'>, 'floor', None)
+Move applied.
+
+Current Player: 1
+First Player Marker Holder: 0
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: []
+  Factory 4: []
+Center: ['green', 'blue', 'black', 'green', 'red', 'black', 'green', 'blue', 'yellow', 'yellow', 'blue', 'blue'] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: ['red']
+      Line 1: []
+      Line 2: ['green', 'green']
+      Line 3: ['black', 'black', 'black']
+      Line 4: ['green']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', 'Tile', None, None, None]
+    Board Occupancy:
+[[1 1 1 0 1]
+ [0 1 1 1 1]
+ [0 0 1 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 1]]
+  Player 1 Score: 5
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: []
+      Line 3: ['green']
+      Line 4: ['blue', 'blue', 'blue', 'blue', 'blue']
+    Floor: ['Tile', 'Tile', None, None, None, None, None]
+    Board Occupancy:
+[[0 1 1 1 0]
+ [0 0 1 1 1]
+ [1 0 0 1 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 36 tiles
+Discard: 14 tiles
+
+--- Player 0's Turn ---
+Legal Moves:
+  0: center None -> floor None (blue)
+  1: center None -> floor None (red)
+  2: center None -> floor None (yellow)
+  3: center None -> pattern_line 1 (black)
+  4: center None -> pattern_line 3 (black)
+  5: center None -> floor None (black)
+  6: center None -> pattern_line 2 (green)
+  7: center None -> pattern_line 4 (green)
+  8: center None -> floor None (green)
+Chosen Move: ('center', None, <Color.BLACK: 'black'>, 'floor', None)
+Move applied.
+
+Current Player: 0
+First Player Marker Holder: 0
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: []
+  Factory 4: []
+Center: ['green', 'blue', 'green', 'red', 'green', 'blue', 'yellow', 'yellow', 'blue', 'blue'] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: ['red']
+      Line 1: []
+      Line 2: ['green', 'green']
+      Line 3: ['black', 'black', 'black']
+      Line 4: ['green']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile', None]
+    Board Occupancy:
+[[1 1 1 0 1]
+ [0 1 1 1 1]
+ [0 0 1 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 1]]
+  Player 1 Score: 5
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: []
+      Line 3: ['green']
+      Line 4: ['blue', 'blue', 'blue', 'blue', 'blue']
+    Floor: ['Tile', 'Tile', None, None, None, None, None]
+    Board Occupancy:
+[[0 1 1 1 0]
+ [0 0 1 1 1]
+ [1 0 0 1 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 36 tiles
+Discard: 14 tiles
+
+--- Player 1's Turn ---
+Legal Moves:
+  0: center None -> floor None (red)
+  1: center None -> pattern_line 0 (yellow)
+  2: center None -> pattern_line 1 (yellow)
+  3: center None -> pattern_line 2 (yellow)
+  4: center None -> floor None (yellow)
+  5: center None -> pattern_line 2 (green)
+  6: center None -> pattern_line 3 (green)
+  7: center None -> floor None (green)
+  8: center None -> floor None (blue)
+Chosen Move: ('center', None, <Color.YELLOW: 'yellow'>, 'pattern_line', 0)
+Move applied.
+
+Current Player: 1
+First Player Marker Holder: 0
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: []
+  Factory 4: []
+Center: ['green', 'blue', 'green', 'red', 'green', 'blue', 'blue', 'blue'] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: ['red']
+      Line 1: []
+      Line 2: ['green', 'green']
+      Line 3: ['black', 'black', 'black']
+      Line 4: ['green']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile', None]
+    Board Occupancy:
+[[1 1 1 0 1]
+ [0 1 1 1 1]
+ [0 0 1 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 1]]
+  Player 1 Score: 5
+    Pattern Lines:
+      Line 0: ['yellow']
+      Line 1: []
+      Line 2: []
+      Line 3: ['green']
+      Line 4: ['blue', 'blue', 'blue', 'blue', 'blue']
+    Floor: ['Tile', 'Tile', 'Tile', None, None, None, None]
+    Board Occupancy:
+[[0 1 1 1 0]
+ [0 0 1 1 1]
+ [1 0 0 1 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 36 tiles
+Discard: 14 tiles
+
+--- Player 0's Turn ---
+Legal Moves:
+  0: center None -> floor None (red)
+  1: center None -> pattern_line 2 (green)
+  2: center None -> pattern_line 4 (green)
+  3: center None -> floor None (green)
+  4: center None -> floor None (blue)
+Chosen Move: ('center', None, <Color.GREEN: 'green'>, 'floor', None)
+Move applied.
+
+Current Player: 0
+First Player Marker Holder: 0
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: []
+  Factory 4: []
+Center: ['blue', 'red', 'blue', 'blue', 'blue'] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: ['red']
+      Line 1: []
+      Line 2: ['green', 'green']
+      Line 3: ['black', 'black', 'black']
+      Line 4: ['green']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile']
+    Board Occupancy:
+[[1 1 1 0 1]
+ [0 1 1 1 1]
+ [0 0 1 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 1]]
+  Player 1 Score: 5
+    Pattern Lines:
+      Line 0: ['yellow']
+      Line 1: []
+      Line 2: []
+      Line 3: ['green']
+      Line 4: ['blue', 'blue', 'blue', 'blue', 'blue']
+    Floor: ['Tile', 'Tile', 'Tile', None, None, None, None]
+    Board Occupancy:
+[[0 1 1 1 0]
+ [0 0 1 1 1]
+ [1 0 0 1 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 36 tiles
+Discard: 16 tiles
+
+--- Player 1's Turn ---
+Legal Moves:
+  0: center None -> floor None (red)
+  1: center None -> floor None (blue)
+Chosen Move: ('center', None, <Color.BLUE: 'blue'>, 'floor', None)
+Move applied.
+
+Current Player: 1
+First Player Marker Holder: 0
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: []
+  Factory 4: []
+Center: ['red'] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: ['red']
+      Line 1: []
+      Line 2: ['green', 'green']
+      Line 3: ['black', 'black', 'black']
+      Line 4: ['green']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile']
+    Board Occupancy:
+[[1 1 1 0 1]
+ [0 1 1 1 1]
+ [0 0 1 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 1]]
+  Player 1 Score: 5
+    Pattern Lines:
+      Line 0: ['yellow']
+      Line 1: []
+      Line 2: []
+      Line 3: ['green']
+      Line 4: ['blue', 'blue', 'blue', 'blue', 'blue']
+    Floor: ['Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile']
+    Board Occupancy:
+[[0 1 1 1 0]
+ [0 0 1 1 1]
+ [1 0 0 1 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 36 tiles
+Discard: 16 tiles
+
+--- Player 0's Turn ---
+Legal Moves:
+  0: center None -> floor None (red)
+Chosen Move: ('center', None, <Color.RED: 'red'>, 'floor', None)
+Move applied.
+
+Current Player: 0
+First Player Marker Holder: 0
+Factories:
+  Factory 0: []
+  Factory 1: []
+  Factory 2: []
+  Factory 3: []
+  Factory 4: []
+Center: [] (Marker: False)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: ['red']
+      Line 1: []
+      Line 2: ['green', 'green']
+      Line 3: ['black', 'black', 'black']
+      Line 4: ['green']
+    Floor: ['FirstPlayerMarker', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile']
+    Board Occupancy:
+[[1 1 1 0 1]
+ [0 1 1 1 1]
+ [0 0 1 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 1]]
+  Player 1 Score: 5
+    Pattern Lines:
+      Line 0: ['yellow']
+      Line 1: []
+      Line 2: []
+      Line 3: ['green']
+      Line 4: ['blue', 'blue', 'blue', 'blue', 'blue']
+    Floor: ['Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile', 'Tile']
+    Board Occupancy:
+[[0 1 1 1 0]
+ [0 0 1 1 1]
+ [1 0 0 1 0]
+ [0 0 1 0 0]
+ [0 0 0 0 0]]
+Bag: 36 tiles
+Discard: 17 tiles
+All sources empty. Ending round.
+Round ended.
+
+Current Player: 0
+First Player Marker Holder: 0
+Factories:
+  Factory 0: ['black', 'red', 'blue', 'green']
+  Factory 1: ['black', 'green', 'yellow', 'black']
+  Factory 2: ['black', 'yellow', 'red', 'red']
+  Factory 3: ['red', 'black', 'red', 'green']
+  Factory 4: ['red', 'yellow', 'red', 'red']
+Center: [] (Marker: True)
+Players:
+  Player 0 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: ['green', 'green']
+      Line 3: ['black', 'black', 'black']
+      Line 4: ['green']
+    Floor: [None, None, None, None, None, None, None]
+    Board Occupancy:
+[[1 1 1 1 1]
+ [0 1 1 1 1]
+ [0 0 1 1 0]
+ [0 0 0 0 0]
+ [0 0 0 0 1]]
+  Player 1 Score: 0
+    Pattern Lines:
+      Line 0: []
+      Line 1: []
+      Line 2: []
+      Line 3: ['green']
       Line 4: []
     Floor: [None, None, None, None, None, None, None]
     Board Occupancy:
-[[0 1 0 0 0]
- [1 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]
- [0 0 0 0 0]]
-Bag: 60 tiles
-Discard: 10 tiles
+[[1 1 1 1 0]
+ [0 0 1 1 1]
+ [1 0 0 1 0]
+ [0 0 1 0 0]
+ [1 0 0 0 0]]
+Bag: 16 tiles
+Discard: 34 tiles
+Player 0 bonuses: 1 rows (+2), 0 columns (+0), 0 colors (+0)
+Player 1 bonuses: 0 rows (+0), 0 columns (+0), 0 colors (+0)
 
-Game Over. Winner: Player None
+Game Over. Winner: Player 0

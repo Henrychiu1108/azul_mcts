@@ -34,7 +34,7 @@ def main():
         print_game_state(game)
 
         round_count = 0
-        while not game.is_terminal() and round_count < 1:
+        while not game.is_terminal() and round_count < 20:
             print(f"\n--- Player {game.current_player}'s Turn ---")
             legal_moves = game.get_legal_moves()
             if not legal_moves:
@@ -58,6 +58,14 @@ def main():
                 game.make_move(move)
                 print("Move applied.")
                 print_game_state(game)
+                
+                # Check if round should end: all factories empty and center empty
+                if all(not factory.tiles for factory in game.factories) and not game.center.tiles:
+                    print("All sources empty. Ending round.")
+                    game.end_round()
+                    print("Round ended.")
+                    print_game_state(game)
+                    round_count += 1
             else:
                 print("Invalid choice.")
             
