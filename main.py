@@ -1,5 +1,6 @@
 from azul_game import GameState
 from mcts import MCTS, Node
+from alpha_beta import get_best_move_alpha_beta
 import random
 import sys
 
@@ -22,6 +23,25 @@ def print_game_state(game):
     print(f"Bag: {len(game.bag.tiles)} tiles")
     print(f"Discard: {len(game.discard.tiles)} tiles")
 
+def mcts(game):
+    root = Node(game.copy())
+    mcts = MCTS(root)
+    mcts.search(iterations=100)  # Adjust iterations as needed
+    best_move = mcts.get_best_move()
+    return best_move
+
+def alpha_beta(game_state, depth=10):
+    best_move = get_best_move_alpha_beta(game_state, depth)
+    return best_move
+
+def is_last_round(game) -> bool:
+    # Check if this is the last round (any player has a row with 4 tiles)
+    return any(
+        sum(player.board.occupancy[row]) == 4
+        for player in game.players
+        for row in range(5)
+    )
+
 def main():
     # Redirect output to file
     original_stdout = sys.stdout
@@ -31,55 +51,33 @@ def main():
         game = GameState()
         game.refill_factories()  # Fill factories with tiles to start the game
         print("Game initialized.")
+        round_number = 1
         print_game_state(game)
 
         while not game.is_terminal():
             print(f"\n--- Player {game.current_player}'s Turn ---")
             legal_moves = game.get_legal_moves()
-            
-            # print("Legal Moves:")
-            # for idx, move in enumerate(legal_moves):
-            #     source_type, source_index, color, dest_type, dest_index = move
-            #     print(f"  {idx}: {source_type} {source_index} -> {dest_type} {dest_index} ({color.value})")
-            
-            # For testing, choose a random move from legal moves
-            # Use MCTS to choose the best move
-            root = Node(game.copy())
-            mcts = MCTS(root)
-            mcts.search(iterations=100)  # Adjust iterations as needed
-            best_move = mcts.get_best_move()
-            if best_move:
-                move = best_move
-                print(f"MCTS Chosen Move: {move}")
+            if is_last_round(game):
+                print("Last round detected. Running Alpha-Beta search for both players.")
+                best_move = get_best_move_alpha_beta(game, depth=10)
+                game.make_move(best_move)
+                print(f"Current player move: {best_move}")
             else:
-                if legal_moves:
-                    chosen_idx = random.randint(0, len(legal_moves) - 1)
-                    move = legal_moves[chosen_idx]
-                    print(f"Random Chosen Move: {move}")
-                else:
-                    print("No legal moves, skipping turn.")
-                    continue
-            game.make_move(move)
-            print("Move applied.")
+                best_move = mcts(game)
+            
+            game.make_move(best_move)
             print_game_state(game)
             
             # Check if round should end: all factories empty and center empty
             if all(not factory.tiles for factory in game.factories) and not game.center.tiles:
-                print("All sources empty. Ending round.")
                 game.end_round()
                 print("Round ended.")
                 print_game_state(game)
-            else:
-                # Switch player
-                game.current_player = 1 - game.current_player
+                
+                game.current_player = game.first_player_marker_holder
 
         result = game.get_winner()
-        if isinstance(result, tuple):
-            winner, bonuses = result
-            for idx, (row_b, col_b, color_b) in enumerate(bonuses):
-                print(f"Player {idx} bonuses: {row_b} rows (+{row_b*2}), {col_b} columns (+{col_b*7}), {color_b} colors (+{color_b*10})")
-        else:
-            winner = result
+        winner = result
         print(f"\nGame Over. Winner: Player {winner}")
     # Restore stdout
     sys.stdout = original_stdout

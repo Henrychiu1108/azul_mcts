@@ -222,8 +222,6 @@ class GameState:
 
     def get_winner(self):
         """Return the winner (player index) or None if tie, and bonuses."""
-        if not self.is_terminal():
-            return None
         
         bonuses = []
         # Calculate end-game bonuses
@@ -252,13 +250,16 @@ class GameState:
                     color_bonuses += 1
             
             bonuses.append((row_bonuses, col_bonuses, color_bonuses))
+            # Print bonus details for this player
+            total_bonus = row_bonuses * 2 + col_bonuses * 7 + color_bonuses * 10
+            print(f"Player {player_idx} end-game bonuses: rows={row_bonuses} (+{row_bonuses*2}), cols={col_bonuses} (+{col_bonuses*7}), colors={color_bonuses} (+{color_bonuses*10}) => total +{total_bonus}")
         
         scores = [player.score for player in self.players]
         max_score = max(scores)
         winners = [i for i, score in enumerate(scores) if score == max_score]
         if len(winners) == 1:
-            return winners[0], bonuses
-        return None, bonuses  # Tie
+            return winners[0]
+        return None  # Tie
 
     def refill_factories(self):
         """Refill factories with 4 tiles each from bag, shuffling discard back if needed."""
@@ -379,3 +380,4 @@ class PatternLine:
 
 class FirstPlayerMarker:
     pass
+
