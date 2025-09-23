@@ -120,27 +120,37 @@ class GameState:
         # 以玩家 0 為起始持有人（首回合即為起始玩家）
         self.first_player_marker_holder = 0
 
-    # 共用：計算把 (row,col) 放入後的相鄰得分（含自身 1 點 + 四方向連續）
+    # 共用：計算把 (row,col) 放入後的相鄰得分（符合官方 Azul 規則）
     @staticmethod
     def _adjacency_score(occ: np.ndarray, row: int, col: int) -> int:
-        gained = 1
+        """Official Azul scoring for a newly placed tile:
+        - Compute horizontal group length (including the tile) if any adjacent horizontally.
+        - Compute vertical group length (including the tile) if any adjacent vertically.
+        - If both groups size > 1, score = horizontal_length + vertical_length (tile counted twice).
+        - Else score = max(horizontal_length, vertical_length)."""
+        # Horizontal length
+        h_len = 1
         c = col - 1
         while c >= 0 and occ[row, c] == 1:
-            gained += 1
+            h_len += 1
             c -= 1
         c = col + 1
         while c < 5 and occ[row, c] == 1:
-            gained += 1
+            h_len += 1
             c += 1
+        # Vertical length
+        v_len = 1
         r = row - 1
         while r >= 0 and occ[r, col] == 1:
-            gained += 1
+            v_len += 1
             r -= 1
         r = row + 1
         while r < 5 and occ[r, col] == 1:
-            gained += 1
+            v_len += 1
             r += 1
-        return gained
+        if h_len > 1 and v_len > 1:
+            return h_len + v_len  # tile counted twice
+        return max(h_len, v_len)
 
     @staticmethod
     def _floor_penalty_value(floor) -> int:
@@ -166,10 +176,8 @@ class GameState:
             if len(line) == line_idx + 1:  # 已滿
                 tile = line[0]
                 color = tile.color
-                # 找該列欲放置的位置（按 Azul pattern）
                 for col in range(5):
                     if player.board.pattern[line_idx, col] == color:
-                        # 模擬放置
                         temp_occ[line_idx, col] = 1
                         gained = self._adjacency_score(temp_occ, line_idx, col)
                         placements.append((line_idx, col, gained, color))

@@ -1,100 +1,186 @@
-=== Round 1 Start ===
-Factories tile counts: [4, 4, 4, 4, 4]
-Turn 1 - Player 0
-Turn 2 - Player 1
-Turn 3 - Player 0
-Turn 4 - Player 1
-Turn 5 - Player 0
-Turn 6 - Player 1
-Turn 7 - Player 0
-Turn 8 - Player 1
-Turn 9 - Player 0
-Turn 10 - Player 1
---- Round 1 End ---
-Player 0 Score: 0
-Player 1 Score: 0
-
-=== Round 2 Start ===
-Factories tile counts: [4, 4, 4, 4, 4]
-Turn 1 - Player 1
-Turn 2 - Player 0
-Turn 3 - Player 1
-Turn 4 - Player 0
-Turn 5 - Player 1
-Turn 6 - Player 0
-Turn 7 - Player 1
-Turn 8 - Player 0
-Turn 9 - Player 1
-Turn 10 - Player 0
---- Round 2 End ---
+=== Round 1 Pre-Settlement ===
+Player 0 Pre-Score: 0
+Player 0 Pattern Lines:
+    L0 [Y]
+    L1 [KK]
+    L2 [UUU]
+    L3 [Y...]
+    L4 [K....]
+Player 0 Floor: . . . . . . .
+-
+Player 1 Pre-Score: 0
+Player 1 Pattern Lines:
+    L0 [Y]
+    L1 [KK]
+    L2 [RR.]
+    L3 [UU..]
+    L4 [GGGGG]
+Player 1 Floor: ★ . . . . . .
+-
+=== Round 1 Result ===
+Player 0 Board:
+    Y . . . .
+    K . . . .
+    . . . U .
+    . . . . .
+    . . . . .
 Player 0 Score: 4
-Player 1 Score: 1
-
-=== Round 3 Start ===
-Factories tile counts: [4, 4, 4, 4, 4]
-Turn 1 - Player 0
-Turn 2 - Player 1
-Turn 3 - Player 0
-Turn 4 - Player 1
-Turn 5 - Player 0
-Turn 6 - Player 1
-Turn 7 - Player 0
-Turn 8 - Player 1
-Turn 9 - Player 0
---- Round 3 End ---
-Player 0 Score: 8
-Player 1 Score: 7
-
-=== Round 4 Start ===
-Factories tile counts: [4, 4, 4, 4, 4]
-Turn 1 - Player 1
-Turn 2 - Player 0
-Turn 3 - Player 1
-Turn 4 - Player 0
-Turn 5 - Player 1
-Turn 6 - Player 0
-Turn 7 - Player 1
-Turn 8 - Player 0
-Turn 9 - Player 1
-Turn 10 - Player 0
---- Round 4 End ---
-Player 0 Score: 0
-Player 1 Score: 12
-
-=== Round 5 Start ===
-Factories tile counts: [4, 4, 4, 4, 4]
-Turn 1 - Player 1
-Turn 2 - Player 0
-Turn 3 - Player 1
-Turn 4 - Player 0
-Turn 5 - Player 1
-Turn 6 - Player 0
-Turn 7 - Player 1
-Turn 8 - Player 0
-Turn 9 - Player 1
-Turn 10 - Player 0
---- Round 5 End ---
-Player 0 Score: 13
-Player 1 Score: 18
-
-=== Round 6 Start ===
-Factories tile counts: [4, 4, 4, 4, 4]
-Turn 1 - Player 0
-Turn 2 - Player 1
-Turn 3 - Player 0
-Turn 4 - Player 1
-Turn 5 - Player 0
-Turn 6 - Player 1
-Turn 7 - Player 0
-Turn 8 - Player 1
-Turn 9 - Player 0
---- Round 6 End ---
-Player 0 Score: 11
-Player 1 Score: 17
-
+-
+Player 1 Board:
+    Y . . . .
+    K . . . .
+    . . . . .
+    . . . . .
+    . G . . .
+Player 1 Score: 3
+-
+=== Round 2 Pre-Settlement ===
+Player 0 Pre-Score: 4
+Player 0 Pattern Lines:
+    L0 [.]
+    L1 [YY]
+    L2 [RRR]
+    L3 [YYYY]
+    L4 [KKK..]
+Player 0 Floor: ★ R . . . . .
+-
+Player 1 Pre-Score: 3
+Player 1 Pattern Lines:
+    L0 [U]
+    L1 [GG]
+    L2 [RRR]
+    L3 [UUUU]
+    L4 [U....]
+Player 1 Floor: R G . . . . .
+-
+=== Round 2 Result ===
+Player 0 Board:
+    Y . . . .
+    K Y . . .
+    R . . U .
+    . . . Y .
+    . . . . .
+Player 0 Score: 9
+-
+Player 1 Board:
+    Y U . . .
+    K . . G .
+    R . . . .
+    . . . . U
+    . G . . .
+Player 1 Score: 8
+-
+=== Round 3 Pre-Settlement ===
+Player 0 Pre-Score: 9
+Player 0 Pattern Lines:
+    L0 [U]
+    L1 [GG]
+    L2 [KKK]
+    L3 [RR..]
+    L4 [KKK..]
+Player 0 Floor: R U K K . . .
+-
+Player 1 Pre-Score: 8
+Player 1 Pattern Lines:
+    L0 [G]
+    L1 [YY]
+    L2 [YYY]
+    L3 [RR..]
+    L4 [U....]
+Player 1 Floor: ★ . . . . . .
+-
+=== Round 3 Result ===
+Player 0 Board:
+    Y U . . .
+    K Y . G .
+    R K . U .
+    . . . Y .
+    . . . . .
+Player 0 Score: 15
+-
+Player 1 Board:
+    Y U G . .
+    K Y . G .
+    R . Y . .
+    . . . . U
+    . G . . .
+Player 1 Score: 15
+-
+=== Round 4 Pre-Settlement ===
+Player 0 Pre-Score: 15
+Player 0 Pattern Lines:
+    L0 [G]
+    L1 [UU]
+    L2 [YYY]
+    L3 [RR..]
+    L4 [KKKKK]
+Player 0 Floor: ★ U Y K . . .
+-
+Player 1 Pre-Score: 15
+Player 1 Pattern Lines:
+    L0 [K]
+    L1 [UU]
+    L2 [GGG]
+    L3 [RR..]
+    L4 [U....]
+Player 1 Floor: K U U . . . .
+-
+=== Round 4 Result ===
+Player 0 Board:
+    Y U G . .
+    K Y U G .
+    R K Y U .
+    . . . Y .
+    . . . K .
+Player 0 Score: 29
+-
+Player 1 Board:
+    Y U G . K
+    K Y U G .
+    R . Y . G
+    . . . . U
+    . G . . .
+Player 1 Score: 21
+-
+=== Round 5 Pre-Settlement ===
+Player 0 Pre-Score: 29
+Player 0 Pattern Lines:
+    L0 [R]
+    L1 [..]
+    L2 [GGG]
+    L3 [RR..]
+    L4 [UU...]
+Player 0 Floor: K . . . . . .
+-
+Player 1 Pre-Score: 21
+Player 1 Pattern Lines:
+    L0 [R]
+    L1 [RR]
+    L2 [KK.]
+    L3 [RR..]
+    L4 [U....]
+Player 1 Floor: ★ R R R G G Y
+-
+=== Round 5 Result ===
+Player 0 Board:
+    Y U G R .
+    K Y U G .
+    R K Y U G
+    . . . Y .
+    . . . K .
+Player 0 Score: 42
+-
+Player 1 Board:
+    Y U G R K
+    K Y U G R
+    R . Y . G
+    . . . . U
+    . G . . .
+Player 1 Score: 23
+-
 === Game End ===
-Player 0 Final Score: 3
-Player 1 Final Score: 22
+Player 0 Final Score: 42
+Player 1 Final Score: 23
 Player 0 end-game bonuses: rows=1 (+2), cols=1 (+7), colors=0 (+0) => total +9
-Player 1 end-game bonuses: rows=1 (+2), cols=0 (+0), colors=0 (+0) => total +2
-Winner: Player 1
+Player 1 end-game bonuses: rows=2 (+4), cols=0 (+0), colors=0 (+0) => total +4
+Winner: Player 0
