@@ -1,5 +1,5 @@
 import random
-from typing import List, Dict, Tuple
+from typing import List, Tuple  # 移除未使用 Dict
 from enum import Enum
 import numpy as np
 import copy
@@ -10,6 +10,8 @@ class Color(Enum):
     BLACK = "black"
     GREEN = "green"
     YELLOW = "yellow"
+
+# 移除未使用 COLOR_TO_POS 常數
 
 class Tile:
     def __init__(self, color: Color):
@@ -27,12 +29,14 @@ class Board:
             [Color.RED, Color.BLACK, Color.YELLOW, Color.BLUE, Color.GREEN],
             [Color.GREEN, Color.RED, Color.BLACK, Color.YELLOW, Color.BLUE],
             [Color.BLUE, Color.GREEN, Color.RED, Color.BLACK, Color.YELLOW]
-        ], dtype=object)  # 5x5 pattern for accepted colors
-        self.occupancy = np.zeros((5, 5), dtype=int)  # 5x5 occupancy: 0 empty, 1 occupied
-        self.color_positions = {color: [] for color in Color}
+        ], dtype=object)
+        self.occupancy = np.zeros((5, 5), dtype=int)
+        # 僅保留列內顏色到欄位映射（避免線性搜尋）
+        self.row_color_to_col = [dict() for _ in range(5)]
         for i in range(5):
             for j in range(5):
-                self.color_positions[self.pattern[i, j]].append((i, j))
+                color = self.pattern[i, j]
+                self.row_color_to_col[i][color] = j
 
 class PlayerBoard:
     def __init__(self):
@@ -40,6 +44,15 @@ class PlayerBoard:
         self.pattern_lines = PatternLine(self.board)  # Pattern lines for staging tiles
         self.floor = Floor()  # The player's floor for penalty tiles
         self.score = 0
+        # --- 新增：增量統計結構（避免重複掃描 occupancy）---
+        self.row_counts = [0] * 5          # 每列已有幾塊
+        self.col_counts = [0] * 5          # 每欄已有幾塊
+        self.color_counts = {c: 0 for c in Color}  # 每顏色已放幾塊（0..5）
+
+    def _update_counts_after_placement(self, row: int, col: int, color: Color):
+        self.row_counts[row] += 1
+        self.col_counts[col] += 1
+        self.color_counts[color] += 1
 
 class Bag:
     def __init__(self):
@@ -111,13 +124,12 @@ class PatternLine:
     
 class GameState:
     def __init__(self):
-        self.factories = [Factory([]) for _ in range(5)]  # 5 factories
-        self.center = Center()  # Center instance
+        self.factories = [Factory([]) for _ in range(5)]
+        self.center = Center()
         self.players = [PlayerBoard(), PlayerBoard()]
         self.current_player = 0
-        self.bag = Bag()  # Bag instance
-        self.discard = Discard()  # Discard instance
-        # 以玩家 0 為起始持有人（首回合即為起始玩家）
+        self.bag = Bag()
+        self.discard = Discard()
         self.first_player_marker_holder = 0
 
     # 共用：計算把 (row,col) 放入後的相鄰得分（符合官方 Azul 規則）
@@ -161,37 +173,23 @@ class GameState:
                 total += floor.penalties[i]
         return total
 
-    def evaluate_floor_penalties(self) -> List[int]:
-        """回傳目前每位玩家若立即結算的地板懲罰總和（負值）。"""
-        return [self._floor_penalty_value(player.floor) for player in self.players]
-
     def _compute_full_line_placements(self, player) -> List[Tuple[int, int, int, Color]]:
-        """回傳本回合結算時，該玩家所有『已滿 pattern line』對應的放置資訊列表。
-        每項: (row, col, gained_score, color)
-        使用行索引 0..4 的順序，並模擬逐行放置（影響後續相鄰得分）。不改動真實 occupancy。"""
         placements = []
         temp_occ = player.board.occupancy.copy()
         for line_idx in range(5):
             line = player.pattern_lines.lines[line_idx]
-            if len(line) == line_idx + 1:  # 已滿
+            if len(line) == line_idx + 1:
                 tile = line[0]
                 color = tile.color
-                for col in range(5):
-                    if player.board.pattern[line_idx, col] == color:
-                        temp_occ[line_idx, col] = 1
-                        gained = self._adjacency_score(temp_occ, line_idx, col)
-                        placements.append((line_idx, col, gained, color))
-                        break
+                col = player.board.row_color_to_col[line_idx][color]
+                temp_occ[line_idx, col] = 1
+                gained = self._adjacency_score(temp_occ, line_idx, col)
+                placements.append((line_idx, col, gained, color))
         return placements
 
     def is_terminal(self) -> bool:
-        """Check if the game is over (a player has completed a row on the wall)."""
-        for player in self.players:
-            # Check rows
-            for i in range(5):
-                if all(player.board.occupancy[i, j] == 1 for j in range(5)):
-                    return True
-        return False
+        """Check if the game is over (任一玩家完成一整列)。O(1) 透過 row_counts。"""
+        return any(count == 5 for p in self.players for count in p.row_counts)
 
     def switch_player(self):
         """切換目前玩家（單純輪替，不處理回合結束邏輯）。"""
@@ -276,39 +274,14 @@ class GameState:
                 _add_to_floor(tile)
         
     def get_winner(self):
-        """Return the winner (player index) or None if tie, and bonuses."""
-        
-        bonuses = []
-        # Calculate end-game bonuses
+        """Return the winner (player index) or None if tie, and bonuses (使用增量計數)。"""
         for player_idx, player in enumerate(self.players):
-            row_bonuses = 0
-            col_bonuses = 0
-            color_bonuses = 0
-            
-            # Bonus for complete rows: 2 points each
-            for i in range(5):
-                if all(player.board.occupancy[i, j] == 1 for j in range(5)):
-                    player.score += 2
-                    row_bonuses += 1
-            
-            # Bonus for complete columns: 7 points each
-            for j in range(5):
-                if all(player.board.occupancy[i, j] == 1 for i in range(5)):
-                    player.score += 7
-                    col_bonuses += 1
-            
-            # Bonus for complete color groups: 10 points each
-            for color in Color:
-                positions = player.board.color_positions[color]
-                if all(player.board.occupancy[pos[0], pos[1]] == 1 for pos in positions):
-                    player.score += 10
-                    color_bonuses += 1
-            
-            bonuses.append((row_bonuses, col_bonuses, color_bonuses))
-            # Print bonus details for this player
+            row_bonuses = sum(1 for c in player.row_counts if c == 5)
+            col_bonuses = sum(1 for c in player.col_counts if c == 5)
+            color_bonuses = sum(1 for color in Color if player.color_counts[color] == 5)
+            player.score += row_bonuses * 2 + col_bonuses * 7 + color_bonuses * 10
             total_bonus = row_bonuses * 2 + col_bonuses * 7 + color_bonuses * 10
             print(f"Player {player_idx} end-game bonuses: rows={row_bonuses} (+{row_bonuses*2}), cols={col_bonuses} (+{col_bonuses*7}), colors={color_bonuses} (+{color_bonuses*10}) => total +{total_bonus}")
-        
         scores = [player.score for player in self.players]
         max_score = max(scores)
         winners = [i for i, score in enumerate(scores) if score == max_score]
@@ -331,13 +304,15 @@ class GameState:
                 factory.tiles.append(tile)
 
     def end_round(self):
-        """正式回合結算：更新牆、丟棄、地板懲罰、補工廠。"""
+        """正式回合結算：更新牆、丟棄、地板懲罰、補工廠。增量更新 row/col/color 計數。"""
         for player_idx, player in enumerate(self.players):
             placements = self._compute_full_line_placements(player)
             # 實際放置並加分（這裡再放一次到真實 occupancy）
             for row, col, gained, color in placements:
                 player.board.occupancy[row, col] = 1
                 player.score += gained
+                # 增量更新統計
+                player._update_counts_after_placement(row, col, color)
                 # 丟棄多餘 tiles 並清空該 pattern line
                 line = player.pattern_lines.lines[row]
                 for extra in line[1:]:
@@ -363,8 +338,6 @@ class GameState:
     def copy(self):
         """Return a deep copy of the game state."""
         return copy.deepcopy(self)
-
-
 
 class FirstPlayerMarker:
     pass

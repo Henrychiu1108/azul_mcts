@@ -46,9 +46,48 @@ class Node:
         return child_node
 
 class MCTS:
-    def __init__(self, root: Node):
+    def __init__(self, root: Node, heuristics=None):
         self.root = root
         self.root_player = root.state.current_player
+        # 可傳入多個 heuristic: (state, move) -> weight
+        self.heuristics = heuristics or [self._default_heuristic]
+
+    # 預設 heuristic（從原 simulate 內抽出）
+    def _default_heuristic(self, state: GameState, move):
+        dest_type = move[3]
+        if dest_type == 'floor':
+            return 0.1
+        if dest_type == 'pattern_line':
+            dest_index = move[4]
+            color = move[2]
+            player = state.players[state.current_player]
+            # 直接查映射，不再遍歷
+            column = player.board.row_color_to_col[dest_index].get(color, None)
+            if column is not None:
+                wall = player.board.occupancy
+                if wall[dest_index][column] == 0:
+                    temp_wall = wall.copy()
+                    temp_wall[dest_index][column] = 1
+                    # 行或列完成給高權重
+                    if all(temp_wall[dest_index]):
+                        return 20
+                    if all(temp_wall[i][column] for i in range(5)):
+                        return 20
+                    # 即將完成行（剩一格）
+                    for row in range(5):
+                        if sum(wall[row]) == 4 and wall[row][column] == 0:
+                            return 15
+            return 1 + (4 - dest_index)
+        return 1
+
+    def _aggregate_heuristic(self, state: GameState, move):
+        total = 0.0
+        for h in self.heuristics:
+            try:
+                total += h(state, move)
+            except Exception:
+                continue
+        return max(total, 0.001)
 
     # 純計算：給定『來源已耗盡、尚未真正 end_round』的狀態，評估結束後雙方暫時分數差
     @staticmethod
@@ -89,39 +128,11 @@ class MCTS:
         # 仍需 copy：模擬過程會改動狀態，但不能影響樹節點
         state = node.state.copy()
 
-        def heuristic_score(move):
-            dest_type = move[3]
-            if dest_type == 'floor':
-                return 0.1
-            if dest_type == 'pattern_line':
-                dest_index = move[4]
-                color = move[2]
-                player = state.players[state.current_player]
-                column = None
-                for col in range(5):
-                    if player.board.pattern[dest_index, col] == color:
-                        column = col
-                        break
-                if column is not None:
-                    wall = player.board.occupancy
-                    if wall[dest_index][column] == 0:
-                        temp_wall = wall.copy()
-                        temp_wall[dest_index][column] = 1
-                        if all(temp_wall[dest_index]):
-                            return 20
-                        if all(temp_wall[i][column] for i in range(5)):
-                            return 20
-                        for row in range(5):
-                            if sum(wall[row]) == 4 and wall[row][column] == 0:
-                                return 15
-                return 1 + (4 - dest_index)
-            return 1
-
         while True:
             moves = state.get_legal_moves()
             if not moves:
                 break
-            scores = [heuristic_score(m) for m in moves]
+            scores = [self._aggregate_heuristic(state, m) for m in moves]
             move = random.choices(moves, weights=scores, k=1)[0]
             state.make_move(move)
             if state.get_legal_moves():
