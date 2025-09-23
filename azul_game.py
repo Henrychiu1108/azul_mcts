@@ -86,8 +86,8 @@ class PatternLine:
         if not (0 <= line_index < 5):
             return False
         line = self.lines[line_index]
-        # Check capacity (line_index + 1 spaces)
-        if len(line) >= line_index + 1:
+        # 使用 is_full 簡化容量判斷
+        if self.is_full(line_index):
             return False
         # Check color consistency (all tiles in line must be same color)
         if line and line[0].color != color:
@@ -117,7 +117,8 @@ class GameState:
         self.current_player = 0
         self.bag = Bag()  # Bag instance
         self.discard = Discard()  # Discard instance
-        self.first_player_marker_holder = None
+        # 以玩家 0 為起始持有人（首回合即為起始玩家）
+        self.first_player_marker_holder = 0
 
     def is_terminal(self) -> bool:
         """Check if the game is over (a player has completed a row on the wall)."""
@@ -127,10 +128,6 @@ class GameState:
                 if all(player.board.occupancy[i, j] == 1 for j in range(5)):
                     return True
         return False
-
-    def is_round_over(self) -> bool:
-        """回合是否應結束：所有工廠皆空且中心無瓷磚。"""
-        return all(not factory.tiles for factory in self.factories) and not self.center.tiles
 
     def switch_player(self):
         """切換目前玩家（單純輪替，不處理回合結束邏輯）。"""
@@ -175,13 +172,11 @@ class GameState:
         source_type, source_index, color, destination_type, destination_index = move
         player = self.players[self.current_player]
         
-        # Take tiles from source
         taken_tiles = []
         if source_type == 'factory':
             factory = self.factories[source_index]
             taken_tiles = [tile for tile in factory.tiles if tile.color == color]
             factory.tiles = [tile for tile in factory.tiles if tile.color != color]
-            # Move remaining tiles to center
             for tile in factory.tiles:
                 self.center.tiles.append(tile)
             factory.tiles = []
@@ -189,58 +184,33 @@ class GameState:
             taken_tiles = [tile for tile in self.center.tiles if tile.color == color]
             self.center.tiles = [tile for tile in self.center.tiles if tile.color != color]
             if self.center.has_first_player_marker:
-                taken_tiles.append(FirstPlayerMarker())
+                # 直接放置標記到地板，不加入 taken_tiles
+                if player.floor.tiles[6] is not None:
+                    self.discard.add(player.floor.tiles[6])
+                for i in range(6, 0, -1):
+                    player.floor.tiles[i] = player.floor.tiles[i-1]
+                player.floor.tiles[0] = FirstPlayerMarker()
                 self.center.has_first_player_marker = False
                 self.first_player_marker_holder = self.current_player
         
-        # Place tiles in destination
+        def _add_to_floor(tile_obj):
+            for i in range(7):
+                if player.floor.tiles[i] is None:
+                    player.floor.tiles[i] = tile_obj
+                    return
+            self.discard.add(tile_obj)
+        
         if destination_type == 'pattern_line':
+            # 使用 is_full 檢查是否已滿；逐一放入，多餘進地板
             for tile in taken_tiles:
-                if isinstance(tile, FirstPlayerMarker):
-                    # Shift the floor to make space at index 0
-                    # If floor[6] is occupied, discard it
-                    if player.floor.tiles[6] is not None:
-                        if not isinstance(player.floor.tiles[6], FirstPlayerMarker):
-                            self.discard.add(player.floor.tiles[6])
-                    # Shift tiles from 5 to 0 to 6 to 1
-                    for i in range(6, 0, -1):
-                        player.floor.tiles[i] = player.floor.tiles[i-1]
-                    # Place marker at 0
-                    player.floor.tiles[0] = tile
-                elif player.pattern_lines.can_place(tile.color, destination_index):
-                    player.pattern_lines.place_tile(tile, destination_index)
+                if player.pattern_lines.is_full(destination_index):
+                    _add_to_floor(tile)
                 else:
-                    # Excess to floor
-                    for i in range(7):
-                        if player.floor.tiles[i] is None:
-                            player.floor.tiles[i] = tile
-                            break
-                    else:
-                        self.discard.add(tile)  # If floor is full, discard
+                    player.pattern_lines.lines[destination_index].append(tile)
         elif destination_type == 'floor':
             for tile in taken_tiles:
-                if isinstance(tile, FirstPlayerMarker):
-                    # Shift the floor to make space at index 0
-                    # If floor[6] is occupied, discard it
-                    if player.floor.tiles[6] is not None:
-                        if not isinstance(player.floor.tiles[6], FirstPlayerMarker):
-                            self.discard.add(player.floor.tiles[6])
-                    # Shift tiles from 5 to 0 to 6 to 1
-                    for i in range(6, 0, -1):
-                        player.floor.tiles[i] = player.floor.tiles[i-1]
-                    # Place marker at 0
-                    player.floor.tiles[0] = tile
-                else:
-                    for i in range(7):
-                        if player.floor.tiles[i] is None:
-                            player.floor.tiles[i] = tile
-                            break
-                    else:
-                        self.discard.add(tile)
+                _add_to_floor(tile)
         
-        # Discard excess tiles if any (though in Azul, you take all of the color)
-        # This is now handled above
-
     def get_winner(self):
         """Return the winner (player index) or None if tie, and bonuses."""
         
@@ -283,19 +253,18 @@ class GameState:
         return None  # Tie
 
     def refill_factories(self):
-        """Refill factories with 4 tiles each from bag, shuffling discard back if needed."""
+        """Refill factories with 4 tiles each from bag. 若需且可，將棄牌洗回。若 bag 與 discard 皆空則拋出錯誤。"""
         for factory in self.factories:
             factory.tiles = []
             for _ in range(4):
                 if self.bag.is_empty():
-                    # Bag is empty, refill from discard
-                    if not self.discard.is_empty():
-                        self.bag.tiles.extend(self.discard.tiles)
-                        self.discard.tiles = []
-                        random.shuffle(self.bag.tiles)
+                    self.bag.tiles.extend(self.discard.tiles)
+                    self.discard.tiles = []
+                    random.shuffle(self.bag.tiles)
                 tile = self.bag.draw()
-                if tile:
-                    factory.tiles.append(tile)
+                if tile is None:
+                    raise RuntimeError("refill_factories: unexpected None tile after refill logic")
+                factory.tiles.append(tile)
 
     def end_round(self):
         """Handle end of round: move tiles from pattern lines to wall, calculate scores, handle floor penalties, and refill factories."""
@@ -307,60 +276,64 @@ class GameState:
                     # Place the tile on the wall
                     tile = line[0]  # All tiles are the same color
                     color = tile.color
-                    # Find the position in the wall for this color and row
+                    # 找到該列顏色對應的位置（已由 can_place 保證未佔用，故不再檢查 occupancy）
                     for col in range(5):
                         if player.board.pattern[line_idx, col] == color:
-                            if player.board.occupancy[line_idx, col] == 0:
-                                player.board.occupancy[line_idx, col] = 1
-                                # Score for placement
-                                score = 1  # Base score
-                                # Add adjacent tiles in row and column
-                                row_score = sum(1 for c in range(5) if player.board.occupancy[line_idx, c] == 1) - 1
-                                col_score = sum(1 for r in range(5) if player.board.occupancy[r, col] == 1) - 1
-                                score += row_score + col_score
-                                player.score += score
-                                break
+                            player.board.occupancy[line_idx, col] = 1
+                            # 簡化得分：中心=1，向四方向延伸連續已佔格累加
+                            gained = 1
+                            # 水平左
+                            c_scan = col - 1
+                            while c_scan >= 0 and player.board.occupancy[line_idx, c_scan] == 1:
+                                gained += 1
+                                c_scan -= 1
+                            # 水平右
+                            c_scan = col + 1
+                            while c_scan < 5 and player.board.occupancy[line_idx, c_scan] == 1:
+                                gained += 1
+                                c_scan += 1
+                            # 垂直上
+                            r_scan = line_idx - 1
+                            while r_scan >= 0 and player.board.occupancy[r_scan, col] == 1:
+                                gained += 1
+                                r_scan -= 1
+                            # 垂直下
+                            r_scan = line_idx + 1
+                            while r_scan < 5 and player.board.occupancy[r_scan, col] == 1:
+                                gained += 1
+                                r_scan += 1
+                            player.score += gained
+                            break
                     # Move remaining tiles to discard
                     remaining_tiles = line[1:]
                     for tile in remaining_tiles:
                         self.discard.add(tile)
-                    # Remove tiles from pattern line (they are placed)
+                    # Clear pattern line
                     player.pattern_lines.lines[line_idx] = []
+            
+            # Handle floor penalties + discard in single pass
+            for i, tile in enumerate(player.floor.tiles):
+                if tile is None:
+                    continue
+                player.score += player.floor.penalties[i]
+                if isinstance(tile, FirstPlayerMarker):
+                    self.center.has_first_player_marker = True
                 else:
-                    # Tiles stay in the pattern line until it is full
-                    pass
-            
-            # Handle floor penalties
-            for i in range(7):
-                if player.floor.tiles[i] is not None:
-                    player.score += player.floor.penalties[i]
-            
+                    self.discard.add(tile)
             # Ensure score does not go negative
             player.score = max(0, player.score)
-            
-            # Move floor tiles to discard
-            for i in range(7):
-                if player.floor.tiles[i] is not None:
-                    if isinstance(player.floor.tiles[i], FirstPlayerMarker):
-                        self.center.has_first_player_marker = True
-                    else:
-                        self.discard.add(player.floor.tiles[i])
-            
             # Clear floor for next round
             player.floor.tiles = [None] * 7
         
-        # Set first player for next round
-        if self.first_player_marker_holder is not None:
-            self.current_player = self.first_player_marker_holder
+        # Set first player for next round：直接使用紀錄的持有人
+        self.current_player = self.first_player_marker_holder
         
         # Refill factories for next round
         self.refill_factories()
         
-        # Reset center (except first player marker if not taken)
+        # Reset center tiles for next round，標記回到中心供下回合使用
         self.center.tiles = []
-        if self.center.has_first_player_marker:
-            # First player marker stays, but for simplicity, reset
-            self.center.has_first_player_marker = True
+        self.center.has_first_player_marker = True
 
     def copy(self):
         """Return a deep copy of the game state."""
