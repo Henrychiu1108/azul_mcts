@@ -120,6 +120,62 @@ class GameState:
         # 以玩家 0 為起始持有人（首回合即為起始玩家）
         self.first_player_marker_holder = 0
 
+    # 共用：計算把 (row,col) 放入後的相鄰得分（含自身 1 點 + 四方向連續）
+    @staticmethod
+    def _adjacency_score(occ: np.ndarray, row: int, col: int) -> int:
+        gained = 1
+        c = col - 1
+        while c >= 0 and occ[row, c] == 1:
+            gained += 1
+            c -= 1
+        c = col + 1
+        while c < 5 and occ[row, c] == 1:
+            gained += 1
+            c += 1
+        r = row - 1
+        while r >= 0 and occ[r, col] == 1:
+            gained += 1
+            r -= 1
+        r = row + 1
+        while r < 5 and occ[r, col] == 1:
+            gained += 1
+            r += 1
+        return gained
+
+    @staticmethod
+    def _floor_penalty_value(floor) -> int:
+        """純計算地板懲罰分（負值），不更動任何狀態。"""
+        total = 0
+        for i, tile in enumerate(floor.tiles):
+            if tile is not None:
+                total += floor.penalties[i]
+        return total
+
+    def evaluate_floor_penalties(self) -> List[int]:
+        """回傳目前每位玩家若立即結算的地板懲罰總和（負值）。"""
+        return [self._floor_penalty_value(player.floor) for player in self.players]
+
+    def _compute_full_line_placements(self, player) -> List[Tuple[int, int, int, Color]]:
+        """回傳本回合結算時，該玩家所有『已滿 pattern line』對應的放置資訊列表。
+        每項: (row, col, gained_score, color)
+        使用行索引 0..4 的順序，並模擬逐行放置（影響後續相鄰得分）。不改動真實 occupancy。"""
+        placements = []
+        temp_occ = player.board.occupancy.copy()
+        for line_idx in range(5):
+            line = player.pattern_lines.lines[line_idx]
+            if len(line) == line_idx + 1:  # 已滿
+                tile = line[0]
+                color = tile.color
+                # 找該列欲放置的位置（按 Azul pattern）
+                for col in range(5):
+                    if player.board.pattern[line_idx, col] == color:
+                        # 模擬放置
+                        temp_occ[line_idx, col] = 1
+                        gained = self._adjacency_score(temp_occ, line_idx, col)
+                        placements.append((line_idx, col, gained, color))
+                        break
+        return placements
+
     def is_terminal(self) -> bool:
         """Check if the game is over (a player has completed a row on the wall)."""
         for player in self.players:
@@ -267,71 +323,32 @@ class GameState:
                 factory.tiles.append(tile)
 
     def end_round(self):
-        """Handle end of round: move tiles from pattern lines to wall, calculate scores, handle floor penalties, and refill factories."""
+        """正式回合結算：更新牆、丟棄、地板懲罰、補工廠。"""
         for player_idx, player in enumerate(self.players):
-            # Process each pattern line
-            for line_idx in range(5):
-                line = player.pattern_lines.lines[line_idx]
-                if player.pattern_lines.is_full(line_idx):
-                    # Place the tile on the wall
-                    tile = line[0]  # All tiles are the same color
-                    color = tile.color
-                    # 找到該列顏色對應的位置（已由 can_place 保證未佔用，故不再檢查 occupancy）
-                    for col in range(5):
-                        if player.board.pattern[line_idx, col] == color:
-                            player.board.occupancy[line_idx, col] = 1
-                            # 簡化得分：中心=1，向四方向延伸連續已佔格累加
-                            gained = 1
-                            # 水平左
-                            c_scan = col - 1
-                            while c_scan >= 0 and player.board.occupancy[line_idx, c_scan] == 1:
-                                gained += 1
-                                c_scan -= 1
-                            # 水平右
-                            c_scan = col + 1
-                            while c_scan < 5 and player.board.occupancy[line_idx, c_scan] == 1:
-                                gained += 1
-                                c_scan += 1
-                            # 垂直上
-                            r_scan = line_idx - 1
-                            while r_scan >= 0 and player.board.occupancy[r_scan, col] == 1:
-                                gained += 1
-                                r_scan -= 1
-                            # 垂直下
-                            r_scan = line_idx + 1
-                            while r_scan < 5 and player.board.occupancy[r_scan, col] == 1:
-                                gained += 1
-                                r_scan += 1
-                            player.score += gained
-                            break
-                    # Move remaining tiles to discard
-                    remaining_tiles = line[1:]
-                    for tile in remaining_tiles:
-                        self.discard.add(tile)
-                    # Clear pattern line
-                    player.pattern_lines.lines[line_idx] = []
-            
-            # Handle floor penalties + discard in single pass
-            for i, tile in enumerate(player.floor.tiles):
+            placements = self._compute_full_line_placements(player)
+            # 實際放置並加分（這裡再放一次到真實 occupancy）
+            for row, col, gained, color in placements:
+                player.board.occupancy[row, col] = 1
+                player.score += gained
+                # 丟棄多餘 tiles 並清空該 pattern line
+                line = player.pattern_lines.lines[row]
+                for extra in line[1:]:
+                    self.discard.add(extra)
+                player.pattern_lines.lines[row] = []
+            # 地板懲罰加總
+            player.score += self._floor_penalty_value(player.floor)
+            # 處理地板實際 tiles 移動（標記 / 丟棄）
+            for tile in player.floor.tiles:
                 if tile is None:
                     continue
-                player.score += player.floor.penalties[i]
                 if isinstance(tile, FirstPlayerMarker):
                     self.center.has_first_player_marker = True
                 else:
                     self.discard.add(tile)
-            # Ensure score does not go negative
             player.score = max(0, player.score)
-            # Clear floor for next round
             player.floor.tiles = [None] * 7
-        
-        # Set first player for next round：直接使用紀錄的持有人
         self.current_player = self.first_player_marker_holder
-        
-        # Refill factories for next round
         self.refill_factories()
-        
-        # Reset center tiles for next round，標記回到中心供下回合使用
         self.center.tiles = []
         self.center.has_first_player_marker = True
 
