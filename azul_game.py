@@ -76,6 +76,39 @@ class Floor:
         self.penalties = [-1, -1, -2, -2, -2, -3, -3]  # Penalty scores for each position
         self.tiles = [None] * 7  # 7 positions, each can hold a tile or None
 
+class PatternLine:
+    def __init__(self, board):
+        self.lines = [[] for _ in range(5)]  # 5 lines for staging tiles
+        self.board = board  # Reference to the player's board for restrictions
+
+    def can_place(self, color: Color, line_index: int) -> bool:
+        """Check if a tile of the given color can be placed in the specified line."""
+        if not (0 <= line_index < 5):
+            return False
+        line = self.lines[line_index]
+        # Check capacity (line_index + 1 spaces)
+        if len(line) >= line_index + 1:
+            return False
+        # Check color consistency (all tiles in line must be same color)
+        if line and line[0].color != color:
+            return False
+        # Check wall restriction (cannot place color if already in wall row)
+        for j in range(5):
+            if self.board.occupancy[line_index, j] == 1 and self.board.pattern[line_index, j] == color:
+                return False
+        return True
+
+    def place_tile(self, tile: Tile, line_index: int) -> bool:
+        """Place a tile in the specified line if possible."""
+        if self.can_place(tile.color, line_index):
+            self.lines[line_index].append(tile)
+            return True
+        return False
+
+    def is_full(self, line_index: int) -> bool:
+        """Check if the line is full."""
+        return len(self.lines[line_index]) == line_index + 1
+    
 class GameState:
     def __init__(self):
         self.factories = [Factory([]) for _ in range(5)]  # 5 factories
@@ -95,56 +128,44 @@ class GameState:
                     return True
         return False
 
+    def is_round_over(self) -> bool:
+        """回合是否應結束：所有工廠皆空且中心無瓷磚。"""
+        return all(not factory.tiles for factory in self.factories) and not self.center.tiles
+
+    def switch_player(self):
+        """切換目前玩家（單純輪替，不處理回合結束邏輯）。"""
+        self.current_player = 1 - self.current_player
+
     def get_legal_moves(self) -> List[Tuple[str, int, Color, str, int]]:
-        """Return list of legal moves as (source_type, source_index, color, destination_type, destination_index)."""
-        moves = []
+        """Return legal moves. 若回傳空列表，表示本回合已無可行動（工廠與中心皆空）。"""
+        moves: List[Tuple[str, int, Color, str, int]] = []
         player = self.players[self.current_player]
         
-        # Helper to get available colors from a source
         def get_colors_from_source(source_type, source_index):
             if source_type == 'factory':
                 factory = self.factories[source_index]
-                colors = set(tile.color for tile in factory.tiles)
-                return colors
-            elif source_type == 'center':
-                colors = set(tile.color for tile in self.center.tiles)
-                return colors
+                return set(tile.color for tile in factory.tiles)
+            if source_type == 'center':
+                return set(tile.color for tile in self.center.tiles)
             return set()
         
-        # Check if a move is legal
-        def is_legal_move(source_type, source_index, color, destination_type, destination_index):
-            # Check if tiles are available in source
-            available_colors = get_colors_from_source(source_type, source_index)
-            if color not in available_colors:
-                return False
-            
-            if destination_type == 'pattern_line':
-                return player.pattern_lines.can_place(color, destination_index)
-            elif destination_type == 'floor':
-                return True  # Floor always accepts
-            return False
-        
-        # Generate moves from factories
+        # Factories
         for factory_idx in range(5):
-            if self.factories[factory_idx].tiles:  # Only if factory has tiles
+            if self.factories[factory_idx].tiles:
                 available_colors = get_colors_from_source('factory', factory_idx)
                 for color in available_colors:
-                    # To pattern lines
                     for line_idx in range(5):
-                        if is_legal_move('factory', factory_idx, color, 'pattern_line', line_idx):
+                        if player.pattern_lines.can_place(color, line_idx):
                             moves.append(('factory', factory_idx, color, 'pattern_line', line_idx))
-                    # To floor
                     moves.append(('factory', factory_idx, color, 'floor', None))
         
-        # Generate moves from center
-        if self.center.tiles:  # Only if center has tiles
+        # Center
+        if self.center.tiles:
             available_colors = get_colors_from_source('center', None)
             for color in available_colors:
-                # To pattern lines
                 for line_idx in range(5):
-                    if is_legal_move('center', None, color, 'pattern_line', line_idx):
+                    if player.pattern_lines.can_place(color, line_idx):
                         moves.append(('center', None, color, 'pattern_line', line_idx))
-                # To floor
                 moves.append(('center', None, color, 'floor', None))
         
         return moves
@@ -345,38 +366,7 @@ class GameState:
         """Return a deep copy of the game state."""
         return copy.deepcopy(self)
 
-class PatternLine:
-    def __init__(self, board):
-        self.lines = [[] for _ in range(5)]  # 5 lines for staging tiles
-        self.board = board  # Reference to the player's board for restrictions
 
-    def can_place(self, color: Color, line_index: int) -> bool:
-        """Check if a tile of the given color can be placed in the specified line."""
-        if not (0 <= line_index < 5):
-            return False
-        line = self.lines[line_index]
-        # Check capacity (line_index + 1 spaces)
-        if len(line) >= line_index + 1:
-            return False
-        # Check color consistency (all tiles in line must be same color)
-        if line and line[0].color != color:
-            return False
-        # Check wall restriction (cannot place color if already in wall row)
-        for j in range(5):
-            if self.board.occupancy[line_index, j] == 1 and self.board.pattern[line_index, j] == color:
-                return False
-        return True
-
-    def place_tile(self, tile: Tile, line_index: int) -> bool:
-        """Place a tile in the specified line if possible."""
-        if self.can_place(tile.color, line_index):
-            self.lines[line_index].append(tile)
-            return True
-        return False
-
-    def is_full(self, line_index: int) -> bool:
-        """Check if the line is full."""
-        return len(self.lines[line_index]) == line_index + 1
 
 class FirstPlayerMarker:
     pass

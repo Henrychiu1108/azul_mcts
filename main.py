@@ -57,6 +57,11 @@ def main():
         while not game.is_terminal():
             print(f"\n--- Player {game.current_player}'s Turn ---")
             legal_moves = game.get_legal_moves()
+            if not legal_moves:
+                game.end_round()
+                print("Round ended.")
+                print_game_state(game)
+                continue
             if is_last_round(game):
                 print("Last round detected. Running Alpha-Beta search for both players.")
                 best_move = get_best_move_alpha_beta(game, depth=10)
@@ -64,20 +69,11 @@ def main():
                 print(f"Current player move: {best_move}")
             else:
                 best_move = mcts(game)
-            
             game.make_move(best_move)
             print_game_state(game)
-            
-            # Check if round should end: all factories empty and center empty
-            if all(not factory.tiles for factory in game.factories) and not game.center.tiles:
-                game.end_round()
-                print("Round ended.")
-                print_game_state(game)
-                
-                game.current_player = game.first_player_marker_holder
+            # 回合結束由下一輪 while 開頭偵測空 moves
 
-        result = game.get_winner()
-        winner = result
+        winner = game.get_winner()
         print(f"\nGame Over. Winner: Player {winner}")
     # Restore stdout
     sys.stdout = original_stdout

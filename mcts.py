@@ -10,9 +10,11 @@ class Node:
         self.visits = 0
         self.value = 0
         self.move = move
+        # 未嘗試之合法手列表（增量擴展）
+        self.untried_moves = state.get_legal_moves()
 
     def is_fully_expanded(self):
-        return len(self.children) == len(self.state.get_legal_moves())
+        return len(self.untried_moves) == 0
 
     def best_child(self, c=1.4):
         choices_weights = [
@@ -22,15 +24,19 @@ class Node:
         return self.children[choices_weights.index(max(choices_weights))]
 
     def expand(self):
-        legal_moves = self.state.get_legal_moves()
-        for move in legal_moves:
-            if not any(child.move == move for child in self.children):
-                new_state = self.state.copy()
-                new_state.make_move(move)
-                child_node = Node(new_state, self, move)
-                self.children.append(child_node)
-                return child_node
-        return None
+        if not self.untried_moves:
+            return None
+        move = self.untried_moves.pop()
+        new_state = self.state.copy()
+        new_state.make_move(move)
+        # 回合結束改以後續空合法手判斷
+        if not new_state.get_legal_moves():
+            new_state.end_round()
+        elif not new_state.is_terminal():
+            new_state.switch_player()
+        child_node = Node(new_state, self, move)
+        self.children.append(child_node)
+        return child_node
 
 class MCTS:
     def __init__(self, root: Node):
@@ -38,18 +44,12 @@ class MCTS:
         self.root_player = root.state.current_player
 
     def search(self, iterations=50000):
-        # Normal MCTS (removed last-turn special-case heuristic)
         for _ in range(iterations):
             node = self.select(self.root)
-            if node.state.is_terminal():
-                reward = self.simulate(node)
-            else:
-                expanded = node.expand()
-                if expanded:
-                    reward = self.simulate(expanded)
-                else:
-                    reward = self.simulate(node)
-            self.backpropagate(node, reward)
+            expanded = node.expand()
+            node_to_sim = expanded if expanded else node
+            reward = self.simulate(node_to_sim)
+            self.backpropagate(node_to_sim, reward)
 
     def select(self, node: Node):
         while node.is_fully_expanded() and not node.state.is_terminal():
@@ -58,17 +58,15 @@ class MCTS:
 
     def simulate(self, node: Node):
         state = node.state
-        
-        # Heuristic scoring for moves
+
         def heuristic_score(move):
             dest_type = move[3]
             if dest_type == 'floor':
-                return 0.1  # Low priority for floor
-            elif dest_type == 'pattern_line':
+                return 0.1
+            if dest_type == 'pattern_line':
                 dest_index = move[4]
                 color = move[2]
                 player = state.players[state.current_player]
-                # Find the column for this color in the row
                 column = None
                 for col in range(5):
                     if player.board.pattern[dest_index, col] == color:
@@ -76,42 +74,34 @@ class MCTS:
                         break
                 if column is not None:
                     wall = player.board.occupancy
-                    if wall[dest_index][column] == 0:  # If not already occupied
-                        # Simulate placement
+                    if wall[dest_index][column] == 0:
                         temp_wall = wall.copy()
                         temp_wall[dest_index][column] = 1
-                        # Check if row is full
                         if all(temp_wall[dest_index]):
-                            return 20  # High bonus for completing a wall row
-                        # Check if column is full
+                            return 20
                         if all(temp_wall[i][column] for i in range(5)):
-                            return 20  # High bonus for completing a wall column
-                        # Check if this move provides the missing color for a row with 4 tiles
+                            return 20
                         for row in range(5):
                             if sum(wall[row]) == 4 and wall[row][column] == 0:
-                                return 15  # High bonus for completing a row with 4 tiles
-                # Prefer lower rows (easier to complete) if not completing
+                                return 15
                 return 1 + (4 - dest_index)
             return 1
-        
-        # Random playout with heuristic bias
+
         while not state.is_terminal():
             moves = state.get_legal_moves()
             if not moves:
                 state.end_round()
                 continue
-            
             scores = [heuristic_score(m) for m in moves]
             move = random.choices(moves, weights=scores, k=1)[0]
-            
             state.make_move(move)
-            # Switch player
-            state.current_player = 1 - state.current_player
-            # Check if round should end after move
-            if all(not factory.tiles for factory in state.factories) and not state.center.tiles:
+            if not state.get_legal_moves():
                 state.end_round()
+            elif not state.is_terminal():
+                state.switch_player()
+
         winner = state.get_winner()
-        scores = [player.score for player in state.players]
+        scores = [p.score for p in state.players]
         return scores[self.root_player] - scores[1 - self.root_player]
 
     def backpropagate(self, node: Node, reward):
