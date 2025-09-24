@@ -78,7 +78,10 @@ def _ensure_csv_header(heuristic_names):
                 'source_type', 'source_index', 'color', 'dest_type', 'dest_row',
                 'total', 'visits', 'value', 'avg'
             ]
-            writer.writerow(base_cols + heuristic_names)
+            extra_metric_cols = [
+                'heuristic_rank', 'q_rank', 'rank_diff', 'spearman', 'top_match', 'num_moves'
+            ]
+            writer.writerow(base_cols + heuristic_names + extra_metric_cols)
     _def_header_written = True
 
 # --- Public logging functions required ---
@@ -139,5 +142,15 @@ def write_move_csv(round_number, turn_index, player, move_info):
     ]
     for hn in heuristic_names:
         row.append(f"{heur_dict.get(hn,0.0):.4f}")
+    # 附加排名與對齊指標（若缺則空白）
+    h_rank = move_info.get('heuristic_rank', '')
+    q_rank = move_info.get('q_rank', '')
+    rank_diff = ''
+    if isinstance(h_rank, int) and isinstance(q_rank, int):
+        rank_diff = q_rank - h_rank
+    spearman = move_info.get('spearman', '')
+    top_match = move_info.get('top_match', '')
+    num_moves = move_info.get('num_moves', '')
+    row.extend([h_rank, q_rank, rank_diff, spearman if spearman != None else '', top_match, num_moves])
     with open(MOVES_CSV_PATH, 'a', newline='') as f:
         csv.writer(f).writerow(row)

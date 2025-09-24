@@ -14,17 +14,14 @@ def mcts(game):
     root = Node(game.copy())
     m = MCTS(root)
     m.search(iterations=300)
-    # 對根節點狀態做解釋
-    breakdowns = m.explain_moves(root.state)
-    # 選擇最高平均 value 的子（若無 visits 以 heuristic total 排）
-    # 與 get_best_move 不同：這裡直接計算，並回傳附帶說明
+    breakdowns = m.explain_moves(root.state)  # 已含排名與指標
     best = None
     best_key = -1e9
     for info in breakdowns:
         if info['visits'] > 0:
             key = info['avg']
         else:
-            key = info['total'] * 0.001  # 尚未模擬的略降權
+            key = info['total'] * 0.001
         if key > best_key:
             best_key = key
             best = info

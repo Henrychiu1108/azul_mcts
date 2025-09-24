@@ -56,7 +56,17 @@ class MCTS:
     # 新增：地板動態評估參數
     FLOOR_BASE = 1.0          # 基礎基準
     FIRST_PLAYER_BONUS = 0.9  # 拿首玩家標記的額外偏好（正值）
-    INSTANT_PLACE_BONUS = 2  # 新增：完成任一 pattern line 固定加成（不依容量）
+    INSTANT_PLACE_BONUS = 1.3  # 完成任一 pattern line 固定加成（不依容量）
+    # Softmax rollout 參數
+    ROLLOUT_TEMPERATURE = 1.2   # 溫度 (越大越平均)
+    ROLLOUT_UNIFORM_MIX = 0.15  # 與均勻分布混合比例，避免機率過度趨零
+    # --- 恢復：自適應權重參數 ---
+    WEIGHT_LEARNING_RATE = 0.002
+    WEIGHT_L2_DECAY = 0.0005
+    WEIGHT_MIN = 0.05
+    WEIGHT_MAX = 5.0
+    WEIGHT_TARGET_MEAN = 1.0
+    WEIGHT_CLIP_NORM = 6.0
 
     # --- 新增：行 / 列 進度共用 helper ---
     def _h_ev_progress(self, current_count: int, bonus: float, exponent: float, kicker_gap1: float) -> float:
@@ -71,18 +81,23 @@ class MCTS:
         shaped = progress_ratio ** exponent
         return bonus * shaped + (kicker_gap1 if gap == 1 else 0.0)
 
-    # --- 新增：解釋用 heuristic 拆解 (不影響搜尋) ---
+    # --- 還原：解釋 + 加權 ---
     def heuristic_breakdown(self, state: GameState, move):
+        """回傳 (加權總分, [(名稱, 原值), ...], raw_feature_list)。
+        raw_feature_list 供權重學習；加權總分 = Σ w_i * raw_i。"""
         details = []
-        total = 0.0
-        for h in self.heuristics:
+        raw_vals = []
+        total_weighted = 0.0
+        for i, h in enumerate(self.heuristics):
             try:
                 val = h(state, move)
             except Exception:
                 val = 0.0
             details.append((h.__name__, val))
-            total += val
-        return total, details
+            raw_vals.append(val)
+            w = self.weights[i]
+            total_weighted += w * val
+        return total_weighted, details, raw_vals
 
     def explain_moves(self, state: GameState):
         """回傳目前 state 所有合法手之 heuristic 拆解與（若已擴展）子節點統計。"""
@@ -94,7 +109,7 @@ class MCTS:
             for c in self.root.children:
                 child_map[c.move] = c
         for mv in moves:
-            total, details = self.heuristic_breakdown(state, mv)
+            total, details, raw = self.heuristic_breakdown(state, mv)
             node = child_map.get(mv)
             visits = node.visits if node else 0
             value = node.value if node else 0.0
@@ -103,10 +118,44 @@ class MCTS:
                 'move': mv,
                 'total': total,
                 'details': details,
+                'raw': raw,             # 新增：原始特徵
                 'visits': visits,
                 'value': value,
                 'avg': avg
             })
+        # --- 新增：計算 heuristic / Q 排名與相關指標 ---
+        if not out:
+            return out
+        # 排序（heuristic total 高到低）
+        sorted_h = sorted(out, key=lambda x: x['total'], reverse=True)
+        # 排序（Q = avg，高到低，未訪問視為極小）
+        sorted_q = sorted(out, key=lambda x: (x['avg'] if x['visits']>0 else -1e9), reverse=True)
+        h_rank_map = {id(m): i for i, m in enumerate(sorted_h)}
+        q_rank_map = {id(m): i for i, m in enumerate(sorted_q)}
+        # Spearman：僅計算有 visits 的節點（避免全部 -1e9 扰動）；若不足兩個則 None
+        visited = [m for m in out if m['visits']>0]
+        spearman = ''
+        if len(visited) >= 2:
+            # 對共同集合（此處即 visited）用 rank
+            d2 = 0
+            n = len(visited)
+            for m in visited:
+                d = h_rank_map[id(m)] - q_rank_map[id(m)]
+                d2 += d*d
+            spearman_val = 1 - 6*d2/(n*(n*n-1)) if n > 1 else 0.0
+            spearman = f"{spearman_val:.4f}"
+        # 確定 top 是否一致
+        top_match = ''
+        if sorted_h and sorted_q:
+            top_match = int(sorted_h[0]['move'] == sorted_q[0]['move'])
+        num_moves = len(out)
+        # 寫回
+        for m in out:
+            m['heuristic_rank'] = h_rank_map[id(m)]
+            m['q_rank'] = q_rank_map[id(m)]
+            m['spearman'] = spearman
+            m['top_match'] = top_match
+            m['num_moves'] = num_moves
         return out
 
     def __init__(self, root: Node, heuristics=None):
@@ -115,14 +164,14 @@ class MCTS:
         self.heuristics = heuristics or [
             self.h_floor_action,
             self.h_first_player_marker,
-            self.h_line_progress,      # 合併：即刻完成 + 可行預備
+            self.h_line_progress,
             self.h_ev_row,
             self.h_ev_col,
-            # self.h_ev_color,
             self.h_adjacency
         ]
+        # 初始化可學習權重
+        self.weights = [1.0] * len(self.heuristics)
 
-    # ---- Heuristic helpers ----
     def _extract_move_context(self, state: GameState, move):
         dest_type = move[3]
         if dest_type != 'pattern_line':
@@ -147,24 +196,21 @@ class MCTS:
         existing = sum(1 for t in player.floor.tiles if t is not None)
         remaining_slots = max(0, 7 - existing)
         effective_tiles = min(tiles_avail, remaining_slots)
-        # 硬編各 slot 嚴重度倍率（第 i 格放置後的放大量化）
-        slot_severity = [1.0, 1.0, 1.2, 1.4, 1.6, 2.15, 2.70]
+
         raw_penalty_sum = 0.0              # 真實 Azul 將扣的合計（不含溢出）
-        weighted_penalty_sum = 0.0         # 加權後（用於 heuristic 放大後段風險）
         for k in range(effective_tiles):
             pos = existing + k
             base_p = player.floor.penalties[pos]
             raw_penalty_sum += base_p
-            weighted_penalty_sum += base_p * slot_severity[pos]
         overflow_tiles = max(0, tiles_avail - remaining_slots)
         overflow_relief = overflow_tiles * 0.3
         # 只針對 raw 做 clipping（真實規則層面），不混合權重
         clipped_raw = max(raw_penalty_sum, -player.score)
         # 風險因子（低分更寬鬆）
         if player.score < 3:
-            risk_factor = 0.1
+            risk_factor = 0.01
         elif player.score < 9:
-            risk_factor = 0.5
+            risk_factor = 0.05
         else:
             risk_factor = 1.0
         adjusted_penalty = clipped_raw * risk_factor
@@ -222,7 +268,7 @@ class MCTS:
         if after == capacity:
             return self.INSTANT_PLACE_BONUS
         remaining_needed = capacity - after
-        if remaining_needed > 3:
+        if remaining_needed > 4:
             return 0.0
         # 估算盤面尚存該色（扣除此次取走）
         total_color = 0
@@ -254,7 +300,7 @@ class MCTS:
         is_pattern, player, dest_row, color, column, _ = self._extract_move_context(state, move)
         if not is_pattern:
             return 0.0
-        return self._h_ev_progress(player.row_counts[dest_row], self.ROW_BONUS, 2.2, 0.55)
+        return self._h_ev_progress(player.row_counts[dest_row], self.ROW_BONUS, 2.4, 0.55)
 
     # 3. 期望值：列完成（移除立即放置判斷）
     def h_ev_col(self, state: GameState, move):
@@ -262,17 +308,8 @@ class MCTS:
         is_pattern, player, dest_row, color, column, _ = self._extract_move_context(state, move)
         if not is_pattern:
             return 0.0
-        return self._h_ev_progress(player.col_counts[column], self.COL_BONUS, 2.4, 0.75)
+        return self._h_ev_progress(player.col_counts[column], self.COL_BONUS, 2.2, 0.75)
 
-    # 4. 期望值：顏色完成（移除立即放置判斷）
-    def h_ev_color(self, state: GameState, move):
-        is_pattern, player, dest_row, color, column, _ = self._extract_move_context(state, move)
-        if not is_pattern:
-            return 0.0
-        new_color_count = player.color_counts[color] + 1
-        gap = 5 - new_color_count
-        prob = self.COLOR_COMPLETE_PROB.get(gap, 0.0)
-        return prob * self.COLOR_BONUS
 
     # 5. 相鄰潛力（移除立即放置判斷，改為預估：只在實際牆上鄰居存在時仍給分）
     def h_adjacency(self, state: GameState, move):
@@ -298,15 +335,41 @@ class MCTS:
         return adjacency
 
     def _aggregate_heuristic(self, state: GameState, move):
+        """以加權後特徵總和作為 rollout 評分（避免單一 raw 尺度支配）。"""
         total = 0.0
-        for h in self.heuristics:
+        for w, h in zip(self.weights, self.heuristics):
             try:
-                total += h(state, move)
+                v = h(state, move)
             except Exception:
-                continue
+                v = 0.0
+            total += w * v
         return max(total, 0.001)
 
-    # 純計算：給定『來源已耗盡、尚未真正 end_round』的狀態，評估結束後雙方暫時分數差
+    # --- 新增：softmax 權重計算，避免壓死低分手 ---
+    def _softmax_weights(self, scores, temperature):
+        if not scores:
+            return []
+        if temperature <= 0:
+            temperature = 1e-6
+        m = max(scores)
+        exps = [math.exp((s - m) / temperature) for s in scores]
+        Z = sum(exps)
+        if Z <= 0:
+            n = len(scores)
+            return [1.0 / n] * n
+        probs = [e / Z for e in exps]
+        # 與均勻分佈混合，保底探索
+        if self.ROLLOUT_UNIFORM_MIX > 0:
+            n = len(probs)
+            mix = self.ROLLOUT_UNIFORM_MIX
+            probs = [(1 - mix) * p + mix * (1.0 / n) for p in probs]
+        # 再次正規化（數值安全）
+        s = sum(probs)
+        if s > 0:
+            probs = [p / s for p in probs]
+        return probs
+
+    # --- 恢復：回合結束（來源耗盡）暫時計分差評估 ---
     @staticmethod
     def _round_end_reward_for_state(state: GameState, root_player: int) -> int:
         provisional = []
@@ -322,16 +385,61 @@ class MCTS:
             provisional.append(score_after)
         return provisional[root_player] - provisional[1 - root_player]
 
-    def search(self, iterations=10_000_000):
+    def search(self, iterations=50_000_000):
         for _ in range(iterations):
             node = self.select(self.root)
             expanded = node.expand()
             if expanded and expanded.round_end_reward is not None:
-                self.backpropagate(expanded, expanded.round_end_reward)
+                reward_local = expanded.round_end_reward
+                self.backpropagate(expanded, reward_local)
+                self._maybe_update_weights(expanded, reward_local)
                 continue
             node_to_sim = expanded if expanded else node
             reward = self.simulate(node_to_sim)
             self.backpropagate(node_to_sim, reward)
+            self._maybe_update_weights(node_to_sim, reward)
+
+    def _maybe_update_weights(self, leaf_node: Node, reward):
+        # 找 root child
+        curr = leaf_node
+        if curr is None:
+            return
+        while curr.parent is not None and curr.parent != self.root:
+            curr = curr.parent
+        if curr.parent != self.root:
+            return
+        move = curr.move
+        if move is None:
+            return
+        raw_vals = []
+        for h in self.heuristics:
+            try:
+                raw_vals.append(h(self.root.state, move))
+            except Exception:
+                raw_vals.append(0.0)
+        predicted = sum(w * x for w, x in zip(self.weights, raw_vals))
+        error = reward - predicted
+        if error == 0:
+            return
+        lr = self.WEIGHT_LEARNING_RATE
+        l2 = self.WEIGHT_L2_DECAY
+        for i, (w, x) in enumerate(zip(self.weights, raw_vals)):
+            grad = error * x - l2 * w
+            new_w = w + lr * grad
+            if new_w < self.WEIGHT_MIN:
+                new_w = self.WEIGHT_MIN
+            elif new_w > self.WEIGHT_MAX:
+                new_w = self.WEIGHT_MAX
+            self.weights[i] = new_w
+        mean_w = sum(self.weights)/len(self.weights)
+        if mean_w > 0:
+            scale = self.WEIGHT_TARGET_MEAN / mean_w
+            self.weights = [max(self.WEIGHT_MIN, min(self.WEIGHT_MAX, w*scale)) for w in self.weights]
+        if self.WEIGHT_CLIP_NORM is not None:
+            norm = math.sqrt(sum(w*w for w in self.weights))
+            if norm > self.WEIGHT_CLIP_NORM:
+                ratio = self.WEIGHT_CLIP_NORM / norm
+                self.weights = [w*ratio for w in self.weights]
 
     def select(self, node: Node):
         while node.is_fully_expanded():
@@ -347,7 +455,8 @@ class MCTS:
             if not moves:
                 break
             scores = [self._aggregate_heuristic(state, m) for m in moves]
-            move = random.choices(moves, weights=scores, k=1)[0]
+            weights = self._softmax_weights(scores, self.ROLLOUT_TEMPERATURE)
+            move = random.choices(moves, weights=weights, k=1)[0]
             state.make_move(move)
             if state.get_legal_moves():
                 state.switch_player()
