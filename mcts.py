@@ -71,6 +71,44 @@ class MCTS:
         shaped = progress_ratio ** exponent
         return bonus * shaped + (kicker_gap1 if gap == 1 else 0.0)
 
+    # --- 新增：解釋用 heuristic 拆解 (不影響搜尋) ---
+    def heuristic_breakdown(self, state: GameState, move):
+        details = []
+        total = 0.0
+        for h in self.heuristics:
+            try:
+                val = h(state, move)
+            except Exception:
+                val = 0.0
+            details.append((h.__name__, val))
+            total += val
+        return total, details
+
+    def explain_moves(self, state: GameState):
+        """回傳目前 state 所有合法手之 heuristic 拆解與（若已擴展）子節點統計。"""
+        moves = state.get_legal_moves()
+        out = []
+        # 建立 move -> child 快取 (root only)
+        child_map = {}
+        if self.root:
+            for c in self.root.children:
+                child_map[c.move] = c
+        for mv in moves:
+            total, details = self.heuristic_breakdown(state, mv)
+            node = child_map.get(mv)
+            visits = node.visits if node else 0
+            value = node.value if node else 0.0
+            avg = (value / visits) if visits > 0 else 0.0
+            out.append({
+                'move': mv,
+                'total': total,
+                'details': details,
+                'visits': visits,
+                'value': value,
+                'avg': avg
+            })
+        return out
+
     def __init__(self, root: Node, heuristics=None):
         self.root = root
         self.root_player = root.state.current_player
@@ -78,7 +116,6 @@ class MCTS:
             self.h_floor_action,
             self.h_first_player_marker,
             self.h_line_progress,      # 合併：即刻完成 + 可行預備
-            self.h_base_priority,
             self.h_ev_row,
             self.h_ev_col,
             # self.h_ev_color,
@@ -210,14 +247,6 @@ class MCTS:
         capacity_scale = 0.85 + 0.15 * (capacity / 5.0)
         score = self.PREP_FACTOR * progress_ratio * feasibility * supply_factor * capacity_scale
         return max(score, 0.02) if score > 0 else 0.0
-
-    # 1. 基礎 pattern line 優先（不處理地板）
-    def h_base_priority(self, state: GameState, move):
-        dest_type = move[3]
-        if dest_type != 'pattern_line':
-            return 1.0  # 其他（應極少）
-        dest_row = move[4]
-        return 1.0 + (4 - dest_row)
 
     # 2. 期望值：行完成（移除立即放置判斷）
     def h_ev_row(self, state: GameState, move):

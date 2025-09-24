@@ -1,64 +1,39 @@
-from azul_game import GameState, Color, FirstPlayerMarker
+from azul_game import GameState
 from mcts import MCTS, Node
 import sys
-
-# 簡化：只需結算回合時的得失分與最終棋盤
-
-def _color_letter(tile_or_color):
-    if tile_or_color is None:
-        return '.'
-    if isinstance(tile_or_color, FirstPlayerMarker):
-        return '★'
-    color = getattr(tile_or_color, 'color', tile_or_color)
-    mapping = {
-        Color.BLUE: 'U',
-        Color.BLACK: 'K',
-        Color.RED: 'R',
-        Color.GREEN: 'G',
-        Color.YELLOW: 'Y'
-    }
-    return mapping.get(color, '?')
-
-# 回合摘要：每位玩家本回合放置所得 (gain) 與地板懲罰 (penalty)，以及淨變化
-
-def log_round_summary(round_number, player_summaries):
-    print(f"=== Round {round_number} Summary ===")
-    for pid, data in enumerate(player_summaries):
-        gain, penalty, pre_score, post_score = data
-        net = gain + penalty
-        print(f"Player {pid}: +{gain} {penalty} (net {net}) -> {pre_score} -> {post_score}")
-    print('-')
-
-# 最終棋盤與分數
-
-def log_final_board(game: GameState):
-    print("=== Final Board State ===")
-    for pid, player in enumerate(game.players):
-        print(f"Player {pid} Board:")
-        for r in range(5):
-            row = []
-            for c in range(5):
-                if player.board.occupancy[r, c] == 1:
-                    row.append(_color_letter(player.board.pattern[r, c]))
-                else:
-                    row.append('.')
-            print('    ' + ' '.join(row))
-        print(f"Player {pid} Final Score: {player.score}")
-        print('-')
+from logging_utils import write_move_csv, log_round_start, log_round_end, log_final_board, reset_move_csv
 
 def mcts(game):
     root = Node(game.copy())
     m = MCTS(root)
-    m.search(iterations=100)
-    return m.get_best_move()
+    m.search(iterations=300)
+    # 對根節點狀態做解釋
+    breakdowns = m.explain_moves(root.state)
+    # 選擇最高平均 value 的子（若無 visits 以 heuristic total 排）
+    # 與 get_best_move 不同：這裡直接計算，並回傳附帶說明
+    best = None
+    best_key = -1e9
+    for info in breakdowns:
+        if info['visits'] > 0:
+            key = info['avg']
+        else:
+            key = info['total'] * 0.001  # 尚未模擬的略降權
+        if key > best_key:
+            best_key = key
+            best = info
+    return best
 
 def main():
     original_stdout = sys.stdout
+    reset_move_csv()
     with open('game_output.txt', 'w') as f:
         sys.stdout = f
+        print('Move CSV: moves_log.csv')
         game = GameState()
         game.refill_factories()
         round_number = 1
+        turn_index = 1
+        log_round_start(round_number, game)
 
         while True:
             legal_moves = game.get_legal_moves()
@@ -75,21 +50,26 @@ def main():
                 summaries = []
                 for (gain, penalty, pre_score), player in zip(pre_infos, game.players):
                     summaries.append((gain, penalty, pre_score, player.score))
-                log_round_summary(round_number, summaries)
+                log_round_end(round_number, summaries, game)
                 if game.is_terminal():
                     break
                 round_number += 1
+                turn_index = 1
+                log_round_start(round_number, game)
                 continue
-            best_move = mcts(game)
+            move_info = mcts(game)
+            write_move_csv(round_number, turn_index, game.current_player, move_info)
+            best_move = move_info['move']
             game.make_move(best_move)
             game.switch_player()
+            turn_index += 1
 
         # 遊戲結束計入終局加分並輸出最終棋盤與分數
         winner = game.get_winner()  # 內部會加終局 bonus
         log_final_board(game)
         print(f"Winner: Player {winner}" if winner is not None else "Winner: Tie")
     sys.stdout = original_stdout
-    print("Output written to game_output.txt")
+    print("Output written to game_output.txt and moves_log.csv")
 
 if __name__ == "__main__":
     main()

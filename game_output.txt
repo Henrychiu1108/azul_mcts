@@ -1,40 +1,171 @@
-=== Round 1 Summary ===
-Player 0: +3 -2 (net 1) -> 0 -> 1
-Player 1: +2 -1 (net 1) -> 0 -> 1
+Move CSV: moves_log.csv
+=== Round 1 Start State ===
+Player 0 Score: 0
+    . . . . .
+    . . . . .
+    . . . . .
+    . . . . .
+    . . . . .
 -
-=== Round 2 Summary ===
-Player 0: +6 -14 (net -8) -> 1 -> 0
-Player 1: +4 -1 (net 3) -> 1 -> 4
+Player 1 Score: 0
+    . . . . .
+    . . . . .
+    . . . . .
+    . . . . .
+    . . . . .
 -
-=== Round 3 Summary ===
-Player 0: +7 -2 (net 5) -> 0 -> 5
-Player 1: +10 -8 (net 2) -> 4 -> 6
+=== Round 1 End State ===
+Player 0: +6 0 (net 6) -> 0 -> 6
+    . . . . K
+    . . . . R
+    . K . . .
+    . R . . .
+    . . . . .
 -
-=== Round 4 Summary ===
-Player 0: +8 -8 (net 0) -> 5 -> 5
-Player 1: +7 0 (net 7) -> 6 -> 13
+Player 1: +3 -1 (net 2) -> 0 -> 2
+    . . . R .
+    . . . G .
+    . . . . .
+    . . . . .
+    . . . . .
 -
-=== Round 5 Summary ===
-Player 0: +12 -1 (net 11) -> 5 -> 16
-Player 1: +11 -14 (net -3) -> 13 -> 10
+=== Round 2 Start State ===
+Player 0 Score: 6
+    . . . . K
+    . . . . R
+    . K . . .
+    . R . . .
+    . . . . .
 -
-Player 0 end-game bonuses: rows=0 (+0), cols=0 (+0), colors=0 (+0) => total +0
+Player 1 Score: 2
+    . . . R .
+    . . . G .
+    . . . . .
+    . . . . .
+    . . . . .
+-
+=== Round 2 End State ===
+Player 0: +7 -4 (net 3) -> 6 -> 9
+    . . . R K
+    . . U . R
+    . K . . G
+    . R . . .
+    U . . . .
+-
+Player 1: +4 -1 (net 3) -> 2 -> 5
+    . . G R .
+    . Y . G .
+    R . . . .
+    . . . . .
+    . . . . .
+-
+=== Round 3 Start State ===
+Player 0 Score: 9
+    . . . R K
+    . . U . R
+    . K . . G
+    . R . . .
+    U . . . .
+-
+Player 1 Score: 5
+    . . G R .
+    . Y . G .
+    R . . . .
+    . . . . .
+    . . . . .
+-
+=== Round 3 End State ===
+Player 0: +11 0 (net 11) -> 9 -> 20
+    . U . R K
+    . . U G R
+    . K . U G
+    . R . . .
+    U . . . .
+-
+Player 1: +11 -6 (net 5) -> 5 -> 10
+    . U G R .
+    . Y . G .
+    R K . . .
+    . . . . .
+    . . . . Y
+-
+=== Round 4 Start State ===
+Player 0 Score: 20
+    . U . R K
+    . . U G R
+    . K . U G
+    . R . . .
+    U . . . .
+-
+Player 1 Score: 10
+    . U G R .
+    . Y . G .
+    R K . . .
+    . . . . .
+    . . . . Y
+-
+=== Round 4 End State ===
+Player 0: +13 -1 (net 12) -> 20 -> 32
+    . U G R K
+    . . U G R
+    . K . U G
+    . R K . .
+    U G . . .
+-
+Player 1: +11 -14 (net -3) -> 10 -> 7
+    . U G R K
+    . Y . G R
+    R K . U .
+    . . . . .
+    . . . . Y
+-
+=== Round 5 Start State ===
+Player 0 Score: 32
+    . U G R K
+    . . U G R
+    . K . U G
+    . R K . .
+    U G . . .
+-
+Player 1 Score: 7
+    . U G R K
+    . Y . G R
+    R K . U .
+    . . . . .
+    . . . . Y
+-
+=== Round 5 End State ===
+Player 0: +12 -2 (net 10) -> 32 -> 42
+    Y U G R K
+    K . U G R
+    . K . U G
+    . R K . .
+    U G R . .
+-
+Player 1: +14 -2 (net 12) -> 7 -> 19
+    Y U G R K
+    K Y . G R
+    R K . U .
+    G . . . .
+    . . . . Y
+-
+Player 0 end-game bonuses: rows=1 (+2), cols=0 (+0), colors=0 (+0) => total +2
 Player 1 end-game bonuses: rows=1 (+2), cols=0 (+0), colors=0 (+0) => total +2
 === Final Board State ===
 Player 0 Board:
-    Y U G R .
-    K Y U G .
-    R . Y U .
-    . . K . .
-    . G . . .
-Player 0 Final Score: 16
+    Y U G R K
+    K . U G R
+    . K . U G
+    . R K . .
+    U G R . .
+Player 0 Final Score: 44
 -
 Player 1 Board:
     Y U G R K
-    K Y U . R
-    R . . . G
-    . . . Y .
-    U G . . .
-Player 1 Final Score: 12
+    K Y . G R
+    R K . U .
+    G . . . .
+    . . . . Y
+Player 1 Final Score: 21
 -
 Winner: Player 0
