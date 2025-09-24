@@ -2,7 +2,7 @@ from azul_game import GameState, Color, FirstPlayerMarker
 from mcts import MCTS, Node
 import sys
 
-# 只保留必要：回合結束時輸出玩家牆、pattern lines、floor、分數
+# 簡化：只需結算回合時的得失分與最終棋盤
 
 def _color_letter(tile_or_color):
     if tile_or_color is None:
@@ -19,27 +19,20 @@ def _color_letter(tile_or_color):
     }
     return mapping.get(color, '?')
 
-# 新增：結算前輸出 pattern lines 與 floor
+# 回合摘要：每位玩家本回合放置所得 (gain) 與地板懲罰 (penalty)，以及淨變化
 
-def print_round_pre_settlement(game: GameState, round_number: int):
-    print(f"=== Round {round_number} Pre-Settlement ===")
-    for pid, player in enumerate(game.players):
-        print(f"Player {pid} Pre-Score: {player.score}")
-        print(f"Player {pid} Pattern Lines:")
-        for line_idx in range(5):
-            line = player.pattern_lines.lines[line_idx]
-            cap = line_idx + 1
-            filled = ''.join(_color_letter(t) for t in line)
-            padded = filled + '.' * (cap - len(line))
-            print(f"    L{line_idx} [{padded}]")
-        floor_line = ' '.join(_color_letter(t) for t in player.floor.tiles)
-        print(f"Player {pid} Floor: {floor_line}")
-        print('-')
+def log_round_summary(round_number, player_summaries):
+    print(f"=== Round {round_number} Summary ===")
+    for pid, data in enumerate(player_summaries):
+        gain, penalty, pre_score, post_score = data
+        net = gain + penalty
+        print(f"Player {pid}: +{gain} {penalty} (net {net}) -> {pre_score} -> {post_score}")
+    print('-')
 
-# 修改：結算後僅輸出 Board（牆）與新分數
+# 最終棋盤與分數
 
-def print_round_post_settlement(game: GameState, round_number: int):
-    print(f"=== Round {round_number} Result ===")
+def log_final_board(game: GameState):
+    print("=== Final Board State ===")
     for pid, player in enumerate(game.players):
         print(f"Player {pid} Board:")
         for r in range(5):
@@ -50,7 +43,7 @@ def print_round_post_settlement(game: GameState, round_number: int):
                 else:
                     row.append('.')
             print('    ' + ' '.join(row))
-        print(f"Player {pid} Score: {player.score}")
+        print(f"Player {pid} Final Score: {player.score}")
         print('-')
 
 def mcts(game):
@@ -69,10 +62,20 @@ def main():
 
         while True:
             legal_moves = game.get_legal_moves()
-            if not legal_moves:  # 回合結束：先印 pattern lines / floor，再結算，再印牆
-                print_round_pre_settlement(game, round_number)
+            if not legal_moves:
+                # 回合結束前預先計算每位玩家的放置 gain 與地板 penalty
+                pre_infos = []  # (gain, penalty, pre_score)
+                for pid, player in enumerate(game.players):
+                    placements = game._compute_full_line_placements(player)
+                    gain = sum(g for _, _, g, _ in placements)
+                    penalty = game._floor_penalty_value(player.floor)
+                    pre_infos.append((gain, penalty, player.score))
                 game.end_round()
-                print_round_post_settlement(game, round_number)
+                # 取結束後分數
+                summaries = []
+                for (gain, penalty, pre_score), player in zip(pre_infos, game.players):
+                    summaries.append((gain, penalty, pre_score, player.score))
+                log_round_summary(round_number, summaries)
                 if game.is_terminal():
                     break
                 round_number += 1
@@ -81,10 +84,9 @@ def main():
             game.make_move(best_move)
             game.switch_player()
 
-        print("=== Game End ===")
-        for idx, p in enumerate(game.players):
-            print(f"Player {idx} Final Score: {p.score}")
-        winner = game.get_winner()
+        # 遊戲結束計入終局加分並輸出最終棋盤與分數
+        winner = game.get_winner()  # 內部會加終局 bonus
+        log_final_board(game)
         print(f"Winner: Player {winner}" if winner is not None else "Winner: Tie")
     sys.stdout = original_stdout
     print("Output written to game_output.txt")

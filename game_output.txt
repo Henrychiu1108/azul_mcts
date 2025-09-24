@@ -1,186 +1,40 @@
-=== Round 1 Pre-Settlement ===
-Player 0 Pre-Score: 0
-Player 0 Pattern Lines:
-    L0 [K]
-    L1 [GG]
-    L2 [RRR]
-    L3 [UUUU]
-    L4 [K....]
-Player 0 Floor: U . . . . . .
+=== Round 1 Summary ===
+Player 0: +3 -2 (net 1) -> 0 -> 1
+Player 1: +2 -1 (net 1) -> 0 -> 1
 -
-Player 1 Pre-Score: 0
-Player 1 Pattern Lines:
-    L0 [G]
-    L1 [KK]
-    L2 [...]
-    L3 [GGGG]
-    L4 [K....]
-Player 1 Floor: ★ . . . . . .
+=== Round 2 Summary ===
+Player 0: +6 -14 (net -8) -> 1 -> 0
+Player 1: +4 -1 (net 3) -> 1 -> 4
 -
-=== Round 1 Result ===
-Player 0 Board:
-    . . . . K
-    . . . G .
-    R . . . .
-    . . . . U
-    . . . . .
-Player 0 Score: 3
+=== Round 3 Summary ===
+Player 0: +7 -2 (net 5) -> 0 -> 5
+Player 1: +10 -8 (net 2) -> 4 -> 6
 -
-Player 1 Board:
-    . . G . .
-    K . . . .
-    . . . . .
-    G . . . .
-    . . . . .
-Player 1 Score: 2
+=== Round 4 Summary ===
+Player 0: +8 -8 (net 0) -> 5 -> 5
+Player 1: +7 0 (net 7) -> 6 -> 13
 -
-=== Round 2 Pre-Settlement ===
-Player 0 Pre-Score: 3
-Player 0 Pattern Lines:
-    L0 [R]
-    L1 [RR]
-    L2 [K..]
-    L3 [GG..]
-    L4 [K....]
-Player 0 Floor: ★ R R . . . .
+=== Round 5 Summary ===
+Player 0: +12 -1 (net 11) -> 5 -> 16
+Player 1: +11 -14 (net -3) -> 13 -> 10
 -
-Player 1 Pre-Score: 2
-Player 1 Pattern Lines:
-    L0 [U]
-    L1 [YY]
-    L2 [GGG]
-    L3 [Y...]
-    L4 [KKKK.]
-Player 1 Floor: Y Y . . . . .
--
-=== Round 2 Result ===
-Player 0 Board:
-    . . . R K
-    . . . G R
-    R . . . .
-    . . . . U
-    . . . . .
-Player 0 Score: 7
--
-Player 1 Board:
-    . U G . .
-    K Y . . .
-    . . . . G
-    G . . . .
-    . . . . .
-Player 1 Score: 7
--
-=== Round 3 Pre-Settlement ===
-Player 0 Pre-Score: 7
-Player 0 Pattern Lines:
-    L0 [U]
-    L1 [YY]
-    L2 [KK.]
-    L3 [GG..]
-    L4 [K....]
-Player 0 Floor: ★ U U U U . .
--
-Player 1 Pre-Score: 7
-Player 1 Pattern Lines:
-    L0 [Y]
-    L1 [UU]
-    L2 [RRR]
-    L3 [YYYY]
-    L4 [KKKK.]
-Player 1 Floor: Y R G . . . .
--
-=== Round 3 Result ===
-Player 0 Board:
-    . U . R K
-    . Y . G R
-    R . . . .
-    . . . . U
-    . . . . .
-Player 0 Score: 2
--
-Player 1 Board:
-    Y U G . .
-    K Y U . .
-    R . . . G
-    G . . Y .
-    . . . . .
-Player 1 Score: 18
--
-=== Round 4 Pre-Settlement ===
-Player 0 Pre-Score: 2
-Player 0 Pattern Lines:
-    L0 [G]
-    L1 [..]
-    L2 [KKK]
-    L3 [GGGG]
-    L4 [KKKKK]
-Player 0 Floor: U K . . . . .
--
-Player 1 Pre-Score: 18
-Player 1 Pattern Lines:
-    L0 [K]
-    L1 [RR]
-    L2 [YYY]
-    L3 [UUUU]
-    L4 [KKKK.]
-Player 1 Floor: ★ . . . . . .
--
-=== Round 4 Result ===
-Player 0 Board:
-    . U G R K
-    . Y . G R
-    R K . . .
-    G . . . U
-    . . . K .
-Player 0 Score: 12
--
-Player 1 Board:
-    Y U G . K
-    K Y U . R
-    R . Y . G
-    G . . Y U
-    . . . . .
-Player 1 Score: 30
--
-=== Round 5 Pre-Settlement ===
-Player 0 Pre-Score: 12
-Player 0 Pattern Lines:
-    L0 [Y]
-    L1 [K.]
-    L2 [GGG]
-    L3 [YYYY]
-    L4 [G....]
-Player 0 Floor: ★ . . . . . .
--
-Player 1 Pre-Score: 30
-Player 1 Pattern Lines:
-    L0 [R]
-    L1 [..]
-    L2 [UU.]
-    L3 [RRRR]
-    L4 [KKKKK]
-Player 1 Floor: R K . . . . .
--
-=== Round 5 Result ===
-Player 0 Board:
-    Y U G R K
-    . Y . G R
-    R K . . G
-    G . . Y U
-    . . . K .
-Player 0 Score: 24
--
-Player 1 Board:
-    Y U G R K
-    K Y U . R
-    R . Y . G
-    G R . Y U
-    . . . K .
-Player 1 Score: 37
--
-=== Game End ===
-Player 0 Final Score: 24
-Player 1 Final Score: 37
-Player 0 end-game bonuses: rows=1 (+2), cols=0 (+0), colors=0 (+0) => total +2
+Player 0 end-game bonuses: rows=0 (+0), cols=0 (+0), colors=0 (+0) => total +0
 Player 1 end-game bonuses: rows=1 (+2), cols=0 (+0), colors=0 (+0) => total +2
-Winner: Player 1
+=== Final Board State ===
+Player 0 Board:
+    Y U G R .
+    K Y U G .
+    R . Y U .
+    . . K . .
+    . G . . .
+Player 0 Final Score: 16
+-
+Player 1 Board:
+    Y U G R K
+    K Y U . R
+    R . . . G
+    . . . Y .
+    U G . . .
+Player 1 Final Score: 12
+-
+Winner: Player 0
