@@ -67,6 +67,9 @@ class MCTS:
     WEIGHT_MAX = 5.0
     WEIGHT_TARGET_MEAN = 1.0
     WEIGHT_CLIP_NORM = 6.0
+    # 取色份額加成：一手拿走該顏色越多（相對全場），越鼓勵
+    TAKE_SHARE_BONUS = 1.0
+    TAKE_SHARE_EXP = 0.1
 
     # --- 新增：行 / 列 進度共用 helper ---
     def _h_ev_progress(self, current_count: int, bonus: float, exponent: float, kicker_gap1: float) -> float:
@@ -257,38 +260,42 @@ class MCTS:
         return max(0.05, base)
 
     def h_line_progress(self, state: GameState, move):
-        """最終重構版：單一 ratio = (場上該色總數) / capacity。
-        規則：
-          ratio < 1: 永遠無法完成，給負分 → penalty = SCARCITY_MISSING_PENALTY * (1 - ratio)
-          ratio ~= 1: 剛好足夠，給峰值 SCARCITY_EXACT_BONUS
-          ratio > 1: 顏色充裕，隨 ratio 遞增做指數衰減：bonus = EXACT * exp(-DECAY * (ratio-1))，但不低於 SCARCITY_ABUNDANCE_MIN
-        不再考慮 placeable / progress / remaining_needed；交由學習權重決定重要性。
+        """精簡版（單一方程 + 份額加成）：
+        ratio = total_color / remaining, diff = ratio - 1
+          diff < 0 → 缺口懲罰  SCARCITY_MISSING_PENALTY * (-diff)
+          diff >=0 → 盈餘遞減  SCARCITY_EXACT_BONUS * exp(-DECAY * diff)
+        再加上 share_bonus = (tiles_avail / total_color)^EXP * TAKE_SHARE_BONUS，鼓勵一手吃大量同色。
         """
         is_pattern, player, dest_row, color, column, _ = self._extract_move_context(state, move)
         if not is_pattern:
             return 0.0
-        line = player.pattern_lines.lines[dest_row]
         capacity = dest_row + 1
+        line = player.pattern_lines.lines[dest_row]
         current = len(line)
-        # 統計場上該色總數（含工廠 + 中央），使用『取前』狀態
+        remaining = capacity - current
+        # 本手來源可取得數（tiles_avail）
+        source_type, source_index = move[0], move[1]
+        if source_type == 'factory':
+            tiles_avail = sum(1 for t in state.factories[source_index].tiles if t.color == color)
+        else:
+            tiles_avail = sum(1 for t in state.center.tiles if t.color == color)
+        # 場上該色總數
         total_color = 0
         for f in state.factories:
             total_color += sum(1 for t in f.tiles if t.color == color)
         total_color += sum(1 for t in state.center.tiles if t.color == color)
-        ratio = total_color / capacity
-        # 判斷區間
-        eps = 1e-6
-        if ratio < 1 - eps:
-            # 不足：無法完成 → 負向懲罰（缺多少乘多少）
-            score = self.SCARCITY_MISSING_PENALTY * (1 - ratio)
-        elif abs(ratio - 1) <= eps:
-            score = self.SCARCITY_EXACT_BONUS
-        else:
-            over = ratio - 1.0
-            score = self.SCARCITY_EXACT_BONUS * math.exp(-self.SCARCITY_ABUNDANCE_DECAY * over)
-            if score < self.SCARCITY_ABUNDANCE_MIN:
-                score = self.SCARCITY_ABUNDANCE_MIN
-        return score
+        if total_color == 0:
+            return 0.0  # 安全保護
+        ratio = total_color / remaining
+        diff = ratio - 1.0
+        SCARCITY_EXACT_BONUS = 1.2
+        SCARCITY_ABUNDANCE_DECAY = 0.1
+        SCARCITY_MISSING_PENALTY = 1.0
+        base = ((diff >= 0) * (SCARCITY_EXACT_BONUS * math.exp(-SCARCITY_ABUNDANCE_DECAY * diff)) +
+                (diff < 0) * (SCARCITY_MISSING_PENALTY * (-diff)))
+        share_ratio = tiles_avail / total_color
+        share_bonus = (share_ratio ** self.TAKE_SHARE_EXP) # (* self.TAKE_SHARE_BONUS)
+        return base * share_bonus
 
     # 新增：地板懲罰（移除立即放置判斷）
     def h_ev_row(self, state: GameState, move):

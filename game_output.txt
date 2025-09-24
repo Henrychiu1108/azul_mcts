@@ -1,42 +1,42 @@
 [Round 1 Turn 1] Factories
-  F0: RYYY
-  F1: GRRY
-  F2: UYKY
-  F3: GYGK
-  F4: RKYG
+  F0: YRRY
+  F1: YKRR
+  F2: KGKU
+  F3: YKGY
+  F4: RKKU
   C : 
 -
 [Round 1 Turn 2] Factories
-  F0: RYYY
-  F1: GRRY
-  F2: 
-  F3: GYGK
-  F4: RKYG
-  C : UYY
+  F0: YRRY
+  F1: YKRR
+  F2: KGKU
+  F3: 
+  F4: RKKU
+  C : YKY
 -
 [Round 1 Turn 3] Factories
-  F0: RYYY
-  F1: GRRY
-  F2: 
-  F3: GYGK
-  F4: 
-  C : UYYRKG
+  F0: YRRY
+  F1: 
+  F2: KGKU
+  F3: 
+  F4: RKKU
+  C : YKYYRR
 -
 [Round 1 Turn 4] Factories
   F0: 
-  F1: GRRY
-  F2: 
-  F3: GYGK
-  F4: 
-  C : UYYRKGYYY
+  F1: 
+  F2: KGKU
+  F3: 
+  F4: RKKU
+  C : YKYYRRRR
 -
 [Round 1 Turn 5] Factories
   F0: 
-  F1: GRRY
+  F1: 
   F2: 
   F3: 
-  F4: 
-  C : UYYRKGYYYYK
+  F4: RKKU
+  C : YKYYRRRRGU
 -
 [Round 1 Turn 6] Factories
   F0: 
@@ -44,7 +44,7 @@
   F2: 
   F3: 
   F4: 
-  C : UYYRKGYYYYKRRY
+  C : YKYYRRRRGURU
 -
 [Round 1 Turn 7] Factories
   F0: 
@@ -52,7 +52,7 @@
   F2: 
   F3: 
   F4: 
-  C : UYYKGYYYYKY
+  C : YKYYGUU
 -
 [Round 1 Turn 8] Factories
   F0: 
@@ -60,7 +60,7 @@
   F2: 
   F3: 
   F4: 
-  C : UYYKYYYYKY
+  C : KGUU
 -
 [Round 1 Turn 9] Factories
   F0: 
@@ -68,7 +68,7 @@
   F2: 
   F3: 
   F4: 
-  C : UYYYYYYY
+  C : GUU
 -
 [Round 1 Turn 10] Factories
   F0: 
@@ -76,7 +76,7 @@
   F2: 
   F3: 
   F4: 
-  C : YYYYYYY
+  C : UU
 -
 === Round 1 Pre-Scoring State ===
 Player 0 Score(before): 0
@@ -85,11 +85,11 @@ Player 0 Score(before): 0
     . . . . .
     . . . . .
     . . . . .
-    L0:R
-    L1:GG
-    L2:U..
-    L3:....
-    L4:K....
+    L0:G
+    L1:YY
+    L2:YYY
+    L3:KK..
+    L4:G....
     F:.......
 -
 Player 1 Score(before): 0
@@ -98,88 +98,88 @@ Player 1 Score(before): 0
     . . . . .
     . . . . .
     . . . . .
-    L0:Y
+    L0:K
     L1:KK
-    L2:GG.
-    L3:YYYY
-    L4:RRR..
-    F:★YYY...
+    L2:K..
+    L3:UU..
+    L4:RRRRR
+    F:★......
 -
 === Round 1 Scores ===
 Player 0: +3 0 (net 3) -> 0 -> 3
-Player 1: +4 -6 (net -2) -> 0 -> 0
+Player 1: +3 -1 (net 2) -> 0 -> 2
 -
 [Round 2 Turn 1] Factories
-  F0: YKUR
-  F1: YUGU
-  F2: GYRY
-  F3: YKKK
-  F4: UKRG
+  F0: KUUY
+  F1: KRGU
+  F2: RUKU
+  F3: UUGG
+  F4: GGRG
   C : 
 -
 [Round 2 Turn 1] Factories
-  F0: YKUR
-  F1: YUGU
-  F2: GYRY
-  F3: YKKK
-  F4: UKRG
+  F0: KUUY
+  F1: KRGU
+  F2: RUKU
+  F3: UUGG
+  F4: GGRG
   C : 
 -
 [Round 2 Turn 2] Factories
-  F0: 
-  F1: YUGU
-  F2: GYRY
-  F3: YKKK
-  F4: UKRG
-  C : YKR
+  F0: KUUY
+  F1: KRGU
+  F2: 
+  F3: UUGG
+  F4: GGRG
+  C : RK
 -
 [Round 2 Turn 3] Factories
-  F0: 
-  F1: YUGU
-  F2: GYRY
-  F3: YKKK
-  F4: 
-  C : YKRURG
+  F0: KUUY
+  F1: 
+  F2: 
+  F3: UUGG
+  F4: GGRG
+  C : RKKRG
 -
 [Round 2 Turn 4] Factories
-  F0: 
+  F0: KUUY
   F1: 
-  F2: GYRY
-  F3: YKKK
+  F2: 
+  F3: UUGG
   F4: 
-  C : YKRURGYG
+  C : RKKRGGGG
 -
 [Round 2 Turn 5] Factories
   F0: 
   F1: 
-  F2: GYRY
-  F3: YKKK
+  F2: 
+  F3: UUGG
   F4: 
-  C : YKUGYG
+  C : RKKRGGGGUUY
 -
 [Round 2 Turn 6] Factories
   F0: 
   F1: 
-  F2: GYRY
-  F3: YKKK
+  F2: 
+  F3: 
   F4: 
-  C : YKGYG
+  C : RKKRGGGGUUYGG
 -
 [Round 2 Turn 7] Factories
   F0: 
   F1: 
   F2: 
-  F3: YKKK
+  F3: 
   F4: 
-  C : YKGYGGR
+  C : RRGGGGUUYGG
 -
 [Round 2 Turn 8] Factories
   F0: 
   F1: 
   F2: 
-  F3: YKKK
+  F3: 
   F4: 
-  C : YGYGGR
+  C : RRGGGGYGG
 -
 [Round 2 Turn 9] Factories
   F0: 
@@ -187,7 +187,7 @@ Player 1: +4 -6 (net -2) -> 0 -> 0
   F2: 
   F3: 
   F4: 
-  C : YGYGGRY
+  C : GGGGYGG
 -
 [Round 2 Turn 10] Factories
   F0: 
@@ -195,94 +195,86 @@ Player 1: +4 -6 (net -2) -> 0 -> 0
   F2: 
   F3: 
   F4: 
-  C : GGGR
--
-[Round 2 Turn 11] Factories
-  F0: 
-  F1: 
-  F2: 
-  F3: 
-  F4: 
-  C : GGG
+  C : GGGGGG
 -
 === Round 2 Pre-Scoring State ===
 Player 0 Score(before): 3
-    . . . R .
-    . . . G .
+    . . G . .
+    . Y . . .
+    . . Y . .
     . . . . .
     . . . . .
-    . . . . .
-    L0:K
+    L0:U
     L1:RR
-    L2:U..
-    L3:YY..
-    L4:KKKK.
-    F:★R.....
+    L2:KKK
+    L3:KK..
+    L4:GGGGG
+    F:★GG....
 -
-Player 1 Score(before): 0
-    Y . . . .
+Player 1 Score(before): 2
+    . . . . K
     K . . . .
     . . . . .
-    . . . Y .
     . . . . .
-    L0:.
-    L1:YY
-    L2:GGG
+    . . R . .
+    L0:R
+    L1:UU
+    L2:K..
     L3:UUUU
-    L4:RRR..
-    F:KYGG...
+    L4:UU...
+    F:Y......
 -
 === Round 2 Scores ===
-Player 0: +6 -2 (net 4) -> 3 -> 7
-Player 1: +7 -6 (net 1) -> 0 -> 1
+Player 0: +11 -4 (net 7) -> 3 -> 10
+Player 1: +4 -1 (net 3) -> 2 -> 5
 -
 [Round 3 Turn 1] Factories
-  F0: UKRU
-  F1: KYKR
-  F2: KUKR
-  F3: YURR
-  F4: GYGU
+  F0: RKRU
+  F1: YRYG
+  F2: UUYY
+  F3: YYYR
+  F4: UYKU
   C : 
 -
 [Round 3 Turn 1] Factories
-  F0: UKRU
-  F1: KYKR
-  F2: KUKR
-  F3: YURR
-  F4: GYGU
+  F0: RKRU
+  F1: YRYG
+  F2: UUYY
+  F3: YYYR
+  F4: UYKU
   C : 
 -
 [Round 3 Turn 2] Factories
-  F0: 
-  F1: KYKR
-  F2: KUKR
-  F3: YURR
-  F4: GYGU
-  C : KR
+  F0: RKRU
+  F1: 
+  F2: UUYY
+  F3: YYYR
+  F4: UYKU
+  C : YYG
 -
 [Round 3 Turn 3] Factories
   F0: 
-  F1: KYKR
-  F2: 
-  F3: YURR
-  F4: GYGU
-  C : KRKUK
+  F1: 
+  F2: UUYY
+  F3: YYYR
+  F4: UYKU
+  C : YYGRRU
 -
 [Round 3 Turn 4] Factories
   F0: 
-  F1: KYKR
+  F1: 
   F2: 
-  F3: YURR
-  F4: 
-  C : KRKUKGYG
+  F3: YYYR
+  F4: UYKU
+  C : YYGRRUYY
 -
 [Round 3 Turn 5] Factories
   F0: 
-  F1: KYKR
+  F1: 
   F2: 
-  F3: 
+  F3: YYYR
   F4: 
-  C : KRKUKGYGYU
+  C : YYGRRUYYUKU
 -
 [Round 3 Turn 6] Factories
   F0: 
@@ -290,7 +282,7 @@ Player 1: +7 -6 (net 1) -> 0 -> 1
   F2: 
   F3: 
   F4: 
-  C : KRKUKGYGYUKKR
+  C : YYGRRUYYUKUR
 -
 [Round 3 Turn 7] Factories
   F0: 
@@ -298,7 +290,7 @@ Player 1: +7 -6 (net 1) -> 0 -> 1
   F2: 
   F3: 
   F4: 
-  C : KRKKGYGYKKR
+  C : YYGRRUYYUUR
 -
 [Round 3 Turn 8] Factories
   F0: 
@@ -306,7 +298,7 @@ Player 1: +7 -6 (net 1) -> 0 -> 1
   F2: 
   F3: 
   F4: 
-  C : KRKKYYKKR
+  C : YYGUYYUU
 -
 [Round 3 Turn 9] Factories
   F0: 
@@ -314,7 +306,7 @@ Player 1: +7 -6 (net 1) -> 0 -> 1
   F2: 
   F3: 
   F4: 
-  C : KKKYYKK
+  C : YYUYYUU
 -
 [Round 3 Turn 10] Factories
   F0: 
@@ -322,94 +314,94 @@ Player 1: +7 -6 (net 1) -> 0 -> 1
   F2: 
   F3: 
   F4: 
-  C : KKKKK
+  C : UUU
 -
 === Round 3 Pre-Scoring State ===
-Player 0 Score(before): 7
-    . . . R K
-    . . . G R
+Player 0 Score(before): 10
+    . U G . .
+    . Y . . R
+    . K Y . .
     . . . . .
-    . . . . .
-    . . . . .
-    L0:G
-    L1:UU
-    L2:UU.
-    L3:YYYY
-    L4:KKKK.
-    F:GY.....
--
-Player 1 Score(before): 1
-    Y . . . .
-    K Y . . .
-    . . . . G
-    . . . Y U
-    . . . . .
+    . G . . .
     L0:R
-    L1:RR
-    L2:UU.
-    L3:KKKK
-    L4:RRRRR
-    F:★K.....
+    L1:UU
+    L2:RRR
+    L3:KK..
+    L4:YYYYY
+    F:YY.....
+-
+Player 1 Score(before): 5
+    . . . R K
+    K . U . .
+    . . . . .
+    . . . . U
+    . . R . .
+    L0:Y
+    L1:G.
+    L2:KK.
+    L3:K...
+    L4:UUUUU
+    F:★......
 -
 === Round 3 Scores ===
-Player 0: +9 -2 (net 7) -> 7 -> 14
-Player 1: +9 -2 (net 7) -> 1 -> 8
+Player 0: +12 -2 (net 10) -> 10 -> 20
+Player 1: +3 -1 (net 2) -> 5 -> 7
 -
 [Round 4 Turn 1] Factories
-  F0: GRUK
-  F1: KGUK
-  F2: GRRY
-  F3: KGUU
-  F4: RRUR
+  F0: YYGU
+  F1: GGYR
+  F2: KKRR
+  F3: RRKG
+  F4: UUGU
   C : 
 -
 [Round 4 Turn 1] Factories
-  F0: GRUK
-  F1: KGUK
-  F2: GRRY
-  F3: KGUU
-  F4: RRUR
+  F0: YYGU
+  F1: GGYR
+  F2: KKRR
+  F3: RRKG
+  F4: UUGU
   C : 
 -
 [Round 4 Turn 2] Factories
-  F0: 
-  F1: KGUK
-  F2: GRRY
-  F3: KGUU
-  F4: RRUR
-  C : GRU
+  F0: YYGU
+  F1: 
+  F2: KKRR
+  F3: RRKG
+  F4: UUGU
+  C : YR
 -
 [Round 4 Turn 3] Factories
-  F0: 
-  F1: KGUK
-  F2: GRRY
-  F3: 
-  F4: RRUR
-  C : GRUGUU
+  F0: YYGU
+  F1: 
+  F2: KKRR
+  F3: RRKG
+  F4: 
+  C : YRUUU
 -
 [Round 4 Turn 4] Factories
-  F0: 
-  F1: 
-  F2: GRRY
-  F3: 
-  F4: RRUR
-  C : GRUGUUKUK
--
-[Round 4 Turn 5] Factories
-  F0: 
+  F0: YYGU
   F1: 
   F2: 
-  F3: 
-  F4: RRUR
-  C : GRUGUUKUKGRR
+  F3: RRKG
+  F4: 
+  C : YRUUURR
 -
-[Round 4 Turn 6] Factories
-  F0: 
+[Round 4 Turn 5] Factories
+  F0: YYGU
   F1: 
   F2: 
   F3: 
   F4: 
-  C : GRUGUUKUKGRRRRR
+  C : YRUUURRRRG
+-
+[Round 4 Turn 6] Factories
+  F0: YYGU
+  F1: 
+  F2: 
+  F3: 
+  F4: 
+  C : YRUUURRRR
 -
 [Round 4 Turn 7] Factories
   F0: 
@@ -417,7 +409,7 @@ Player 1: +9 -2 (net 7) -> 1 -> 8
   F2: 
   F3: 
   F4: 
-  C : RUUUKUKRRRRR
+  C : YRUUURRRRYYU
 -
 [Round 4 Turn 8] Factories
   F0: 
@@ -425,7 +417,7 @@ Player 1: +9 -2 (net 7) -> 1 -> 8
   F2: 
   F3: 
   F4: 
-  C : RKKRRRRR
+  C : YUUUYYU
 -
 [Round 4 Turn 9] Factories
   F0: 
@@ -433,94 +425,94 @@ Player 1: +9 -2 (net 7) -> 1 -> 8
   F2: 
   F3: 
   F4: 
-  C : RRRRRR
+  C : YYY
 -
 === Round 4 Pre-Scoring State ===
-Player 0 Score(before): 14
-    . . G R K
-    . . U G R
+Player 0 Score(before): 20
+    . U G R .
+    . Y U . R
+    R K Y . .
     . . . . .
-    . . . Y .
-    . . . . .
-    L0:.
-    L1:Y.
-    L2:UU.
-    L3:GGG.
-    L4:KKKKK
-    F:★KK....
--
-Player 1 Score(before): 8
-    Y . . R .
-    K Y . . R
-    . . . . G
-    . . K Y U
-    . . R . .
+    . G . . Y
     L0:K
     L1:G.
     L2:UUU
-    L3:RRRR
-    L4:UUUU.
-    F:RR.....
+    L3:KK..
+    L4:.....
+    F:GU.....
+-
+Player 1 Score(before): 7
+    Y . . R K
+    K . U . .
+    . . . . .
+    . . . . U
+    U . R . .
+    L0:.
+    L1:GG
+    L2:KK.
+    L3:KKK.
+    L4:GG...
+    F:★RRRRRY
 -
 === Round 4 Scores ===
-Player 0: +2 -4 (net -2) -> 14 -> 12
-Player 1: +14 -2 (net 12) -> 8 -> 20
+Player 0: +10 -2 (net 8) -> 20 -> 28
+Player 1: +4 -14 (net -10) -> 7 -> 0
 -
 [Round 5 Turn 1] Factories
-  F0: GYGY
-  F1: GGGG
-  F2: KUKU
-  F3: GUYU
-  F4: RUKR
+  F0: YGGK
+  F1: KYKR
+  F2: KUGK
+  F3: GUYG
+  F4: RRKG
   C : 
 -
 [Round 5 Turn 1] Factories
-  F0: GYGY
-  F1: GGGG
-  F2: KUKU
-  F3: GUYU
-  F4: RUKR
+  F0: YGGK
+  F1: KYKR
+  F2: KUGK
+  F3: GUYG
+  F4: RRKG
   C : 
 -
 [Round 5 Turn 2] Factories
-  F0: GYGY
-  F1: GGGG
-  F2: KUKU
-  F3: GUYU
-  F4: 
-  C : RKR
+  F0: 
+  F1: KYKR
+  F2: KUGK
+  F3: GUYG
+  F4: RRKG
+  C : YGG
 -
 [Round 5 Turn 3] Factories
-  F0: GYGY
-  F1: GGGG
-  F2: KUKU
-  F3: 
+  F0: 
+  F1: KYKR
+  F2: KUGK
+  F3: GUYG
   F4: 
-  C : RKRUYU
+  C : YGGRRK
 -
 [Round 5 Turn 4] Factories
-  F0: GYGY
-  F1: 
-  F2: KUKU
+  F0: 
+  F1: KYKR
+  F2: KUGK
   F3: 
   F4: 
-  C : RKRUYU
+  C : YGGRRKGYG
 -
 [Round 5 Turn 5] Factories
   F0: 
-  F1: 
-  F2: KUKU
+  F1: KYKR
+  F2: KUGK
   F3: 
   F4: 
-  C : RKRUYUYY
+  C : YRRKY
 -
 [Round 5 Turn 6] Factories
   F0: 
   F1: 
-  F2: 
+  F2: KUGK
   F3: 
   F4: 
-  C : RKRUYUYYKK
+  C : YRRKYYR
 -
 [Round 5 Turn 7] Factories
   F0: 
@@ -528,7 +520,7 @@ Player 1: +14 -2 (net 12) -> 8 -> 20
   F2: 
   F3: 
   F4: 
-  C : RKRUUKK
+  C : YRRKYYRUG
 -
 [Round 5 Turn 8] Factories
   F0: 
@@ -536,7 +528,7 @@ Player 1: +14 -2 (net 12) -> 8 -> 20
   F2: 
   F3: 
   F4: 
-  C : RKRKK
+  C : RRKRUG
 -
 [Round 5 Turn 9] Factories
   F0: 
@@ -544,162 +536,59 @@ Player 1: +14 -2 (net 12) -> 8 -> 20
   F2: 
   F3: 
   F4: 
-  C : KKK
+  C : RRKRU
+-
+[Round 5 Turn 10] Factories
+  F0: 
+  F1: 
+  F2: 
+  F3: 
+  F4: 
+  C : RRRU
+-
+[Round 5 Turn 11] Factories
+  F0: 
+  F1: 
+  F2: 
+  F3: 
+  F4: 
+  C : RRR
 -
 === Round 5 Pre-Scoring State ===
-Player 0 Score(before): 12
-    . . G R K
-    . . U G R
+Player 0 Score(before): 28
+    . U G R K
+    . Y U . R
+    R K Y U .
     . . . . .
-    . . . Y .
-    . . . K .
-    L0:U
-    L1:Y.
-    L2:UUU
-    L3:GGG.
-    L4:GGGG.
-    F:UUUKKK.
--
-Player 1 Score(before): 20
-    Y . . R K
-    K Y . . R
-    . . . U G
-    . R K Y U
-    . . R . .
+    . G . . Y
     L0:.
     L1:GG
-    L2:YYY
-    L3:GG..
-    L4:UUUU.
-    F:★RR....
+    L2:GGG
+    L3:KKKK
+    L4:U....
+    F:★GG....
+-
+Player 1 Score(before): 0
+    Y . . R K
+    K . U G .
+    . . . . .
+    . . . . U
+    U . R . .
+    L0:U
+    L1:YY
+    L2:KKK
+    L3:KKKK
+    L4:GG...
+    F:KYKRRR.
 -
 === Round 5 Scores ===
-Player 0: +9 -11 (net -2) -> 12 -> 10
-Player 1: +12 -4 (net 8) -> 20 -> 28
+Player 0: +19 -4 (net 15) -> 28 -> 43
+Player 1: +13 -11 (net 2) -> 0 -> 2
 -
-[Round 6 Turn 1] Factories
-  F0: KKRK
-  F1: YKUR
-  F2: GUUU
-  F3: YUKG
-  F4: KGRY
-  C : 
--
-[Round 6 Turn 1] Factories
-  F0: KKRK
-  F1: YKUR
-  F2: GUUU
-  F3: YUKG
-  F4: KGRY
-  C : 
--
-[Round 6 Turn 2] Factories
-  F0: KKRK
-  F1: YKUR
-  F2: GUUU
-  F3: 
-  F4: KGRY
-  C : YKG
--
-[Round 6 Turn 3] Factories
-  F0: KKRK
-  F1: YKUR
-  F2: GUUU
-  F3: 
-  F4: 
-  C : YKGKGR
--
-[Round 6 Turn 4] Factories
-  F0: KKRK
-  F1: 
-  F2: GUUU
-  F3: 
-  F4: 
-  C : YKGKGRYKR
--
-[Round 6 Turn 5] Factories
-  F0: 
-  F1: 
-  F2: GUUU
-  F3: 
-  F4: 
-  C : YKGKGRYKRKKK
--
-[Round 6 Turn 6] Factories
-  F0: 
-  F1: 
-  F2: 
-  F3: 
-  F4: 
-  C : YKGKGRYKRKKKUUU
--
-[Round 6 Turn 7] Factories
-  F0: 
-  F1: 
-  F2: 
-  F3: 
-  F4: 
-  C : YKKRYKRKKKUUU
--
-[Round 6 Turn 8] Factories
-  F0: 
-  F1: 
-  F2: 
-  F3: 
-  F4: 
-  C : YKKRYKRKKK
--
-[Round 6 Turn 9] Factories
-  F0: 
-  F1: 
-  F2: 
-  F3: 
-  F4: 
-  C : YKKYKKKK
--
-[Round 6 Turn 10] Factories
-  F0: 
-  F1: 
-  F2: 
-  F3: 
-  F4: 
-  C : KKKKKK
--
-=== Round 6 Pre-Scoring State ===
-Player 0 Score(before): 10
-    . U G R K
-    . . U G R
-    . . . U .
-    . . . Y .
-    . . . K .
-    L0:Y
-    L1:Y.
-    L2:RRR
-    L3:GGGG
-    L4:GGGG.
-    F:★GKKKKK
--
-Player 1 Score(before): 28
-    Y . . R K
-    K Y . G R
-    . . Y U G
-    . R K Y U
-    . . R . .
-    L0:U
-    L1:UU
-    L2:...
-    L3:GGG.
-    L4:UUUUU
-    F:UYY....
--
-=== Round 6 Scores ===
-Player 0: +8 -14 (net -6) -> 10 -> 4
-Player 1: +14 -4 (net 10) -> 28 -> 38
--
-Player 0 end-game bonuses: rows=1 (+2), cols=1 (+7), colors=0 (+0) => total +9
-Player 1 end-game bonuses: rows=1 (+2), cols=0 (+0), colors=1 (+10) => total +12
+Player 0 end-game bonuses: rows=1 (+2), cols=0 (+0), colors=0 (+0) => total +2
+Player 1 end-game bonuses: rows=0 (+0), cols=0 (+0), colors=0 (+0) => total +0
 === Final Scores ===
-Player 0: 13
-Player 1: 50
+Player 0: 45
+Player 1: 2
 -
-Winner: Player 1
+Winner: Player 0
