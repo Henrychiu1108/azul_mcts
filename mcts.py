@@ -55,7 +55,7 @@ class MCTS:
     PREP_FACTOR = 0.3
     # 新增：地板動態評估參數
     FLOOR_BASE = 1.0          # 基礎基準
-    FIRST_PLAYER_BONUS = 0.9  # 拿首玩家標記的額外偏好（正值）
+    FIRST_PLAYER_BONUS = 1.2  # 拿首玩家標記的額外偏好（正值）
     INSTANT_PLACE_BONUS = 1.3  # 完成任一 pattern line 固定加成（不依容量）
     # Softmax rollout 參數
     ROLLOUT_TEMPERATURE = 1.2   # 溫度 (越大越平均)
@@ -80,6 +80,36 @@ class MCTS:
         progress_ratio = new_count / 5.0
         shaped = progress_ratio ** exponent
         return bonus * shaped + (kicker_gap1 if gap == 1 else 0.0)
+
+    # --- 新增：地板懲罰共用 helper ---
+    def _floor_penalty_heuristic(self, player, tiles_to_floor: int):
+        """給定本手將實際落到地板的瓷磚數，估算地板懲罰特徵值。
+        tiles_to_floor 可為 0（則回 0）。包含：
+          - 直接 floor 動作所有取得的同色數
+          - pattern line 溢出部分
+        """
+        if tiles_to_floor <= 0:
+            return 0.0
+        existing = sum(1 for t in player.floor.tiles if t is not None)
+        remaining_slots = max(0, 7 - existing)
+        effective_tiles = min(tiles_to_floor, remaining_slots)
+        raw_penalty_sum = 0.0
+        for k in range(effective_tiles):
+            pos = existing + k
+            base_p = player.floor.penalties[pos]
+            raw_penalty_sum += base_p
+        overflow_tiles = max(0, tiles_to_floor - remaining_slots)
+        overflow_relief = overflow_tiles * 0.3
+        clipped_raw = max(raw_penalty_sum, -player.score)
+        if player.score < 3:
+            risk_factor = 0.01
+        elif player.score < 9:
+            risk_factor = 0.05
+        else:
+            risk_factor = 1.0
+        adjusted_penalty = clipped_raw * risk_factor
+        weight = self.FLOOR_BASE + adjusted_penalty + overflow_relief
+        return max(0.05, weight)
 
     # --- 還原：解釋 + 加權 ---
     def heuristic_breakdown(self, state: GameState, move):
@@ -185,37 +215,28 @@ class MCTS:
 
     # 新增：專責地板行為評估（加入：分數底線與容量飽和）
     def h_floor_action(self, state: GameState, move):
-        if move[3] != 'floor':
-            return 0.0
+        """統一：
+        - 直接放地板: 以全部同色取得數量計算。
+        - pattern_line 若有溢出到地板: 只以溢出部分計算。
+        其餘不影響地板者回 0。"""
+        source_type, source_index, color, dest_type = move[0], move[1], move[2], move[3]
         player = state.players[state.current_player]
-        source_type, source_index, color = move[0], move[1], move[2]
+        # 取得本次取走的該色總數
         if source_type == 'factory':
             tiles_avail = sum(1 for t in state.factories[source_index].tiles if t.color == color)
-        else:
+        else:  # center
             tiles_avail = sum(1 for t in state.center.tiles if t.color == color)
-        existing = sum(1 for t in player.floor.tiles if t is not None)
-        remaining_slots = max(0, 7 - existing)
-        effective_tiles = min(tiles_avail, remaining_slots)
-
-        raw_penalty_sum = 0.0              # 真實 Azul 將扣的合計（不含溢出）
-        for k in range(effective_tiles):
-            pos = existing + k
-            base_p = player.floor.penalties[pos]
-            raw_penalty_sum += base_p
-        overflow_tiles = max(0, tiles_avail - remaining_slots)
-        overflow_relief = overflow_tiles * 0.3
-        # 只針對 raw 做 clipping（真實規則層面），不混合權重
-        clipped_raw = max(raw_penalty_sum, -player.score)
-        # 風險因子（低分更寬鬆）
-        if player.score < 3:
-            risk_factor = 0.01
-        elif player.score < 9:
-            risk_factor = 0.05
-        else:
-            risk_factor = 1.0
-        adjusted_penalty = clipped_raw * risk_factor
-        weight = self.FLOOR_BASE + adjusted_penalty + overflow_relief
-        return max(0.03, weight)
+        if dest_type == 'floor':
+            return self._floor_penalty_heuristic(player, tiles_avail)
+        if dest_type == 'pattern_line':
+            dest_row = move[4]
+            line = player.pattern_lines.lines[dest_row]
+            capacity = dest_row + 1
+            current = len(line)
+            placeable = min(tiles_avail, capacity - current)
+            overflow_to_floor = max(0, tiles_avail - placeable)
+            return self._floor_penalty_heuristic(player, overflow_to_floor)
+        return 0.0
 
     # 新增：首玩家標記獨立 heuristic
     def h_first_player_marker(self, state: GameState, move):
@@ -224,77 +245,52 @@ class MCTS:
             return 0.0
         if not state.center.has_first_player_marker:
             return 0.0
-        # 基礎加成
         base = self.FIRST_PLAYER_BONUS
-        # 估計是否接近遊戲結束：任一玩家牆上某列已有 4 格 (row_counts == 4) 代表那列差一格即可觸發終局
         current_player_board = state.players[state.current_player]
         other_player_board = state.players[1 - state.current_player]
-        near_rows_cur = sum(1 for v in current_player_board.row_counts if v == 4)
-        near_rows_opp = sum(1 for v in other_player_board.row_counts if v == 4)
-        danger = near_rows_cur + near_rows_opp
-        if danger > 0:
-            # 每個臨界行使先手價值遞減，最多大幅壓低；線性轉衰減係數
-            decay = 1.0 / (1.0 + 0.6 * danger)  # danger=1 -> ~0.625, 2->~0.454, 3->~0.357
-            base *= decay
-        # 若幾乎確定終局（任一玩家已有兩條以上 4 格列）再額外再衰減一點
-        if danger >= 2:
-            base *= 0.85
+        # danger: 只要任一玩家有任一列已達 4 (差一即可終局)
+        danger_flag = any(v == 4 for v in current_player_board.row_counts) or \
+                       any(v == 4 for v in other_player_board.row_counts)
+        if danger_flag:
+            # 危險態勢下先手重要性上升（放大而非衰減）
+            base *= 1.2  # 可日後調整或改為參數
         return max(0.05, base)
 
     def h_line_progress(self, state: GameState, move):
-        """合併即刻完成 (原 h_instant_place) 與可望於本輪完成的預備 (原 h_prep_line)。
-        邏輯：
-          1. 不是 pattern line → 0
-          2. 若本手補滿該行 → INSTANT_PLACE_BONUS
-          3. 否則計算 after 進度；若剩餘需瓷磚數 > 3 → 放棄
-          4. 估算剩餘同色池（不含本次取走）；若不足以完成 → 0
-          5. 根據剩餘需求 (1/2/3) 給 feasibility；再乘進度比例與供給比供應 (supply_factor)
-          6. 最終：score = PREP_FACTOR * progress_ratio * feasibility * supply_factor * capacity_scale
-        目的：在不立即完成時仍鼓勵合理投資有望完成的 pattern line。"""
+        """最終重構版：單一 ratio = (場上該色總數) / capacity。
+        規則：
+          ratio < 1: 永遠無法完成，給負分 → penalty = SCARCITY_MISSING_PENALTY * (1 - ratio)
+          ratio ~= 1: 剛好足夠，給峰值 SCARCITY_EXACT_BONUS
+          ratio > 1: 顏色充裕，隨 ratio 遞增做指數衰減：bonus = EXACT * exp(-DECAY * (ratio-1))，但不低於 SCARCITY_ABUNDANCE_MIN
+        不再考慮 placeable / progress / remaining_needed；交由學習權重決定重要性。
+        """
         is_pattern, player, dest_row, color, column, _ = self._extract_move_context(state, move)
         if not is_pattern:
             return 0.0
         line = player.pattern_lines.lines[dest_row]
         capacity = dest_row + 1
         current = len(line)
-        source_type, source_index = move[0], move[1]
-        if source_type == 'factory':
-            tiles_avail = sum(1 for t in state.factories[source_index].tiles if t.color == color)
-        else:
-            tiles_avail = sum(1 for t in state.center.tiles if t.color == color)
-        placeable = min(tiles_avail, capacity - current)
-        after = current + placeable
-        # Case 1: 立即完成
-        if after == capacity:
-            return self.INSTANT_PLACE_BONUS
-        remaining_needed = capacity - after
-        if remaining_needed > 4:
-            return 0.0
-        # 估算盤面尚存該色（扣除此次取走）
+        # 統計場上該色總數（含工廠 + 中央），使用『取前』狀態
         total_color = 0
         for f in state.factories:
             total_color += sum(1 for t in f.tiles if t.color == color)
         total_color += sum(1 for t in state.center.tiles if t.color == color)
-        remaining_color_pool = max(0, total_color - tiles_avail)
-        if remaining_color_pool < remaining_needed:
-            return 0.0
-        # 進度比例
-        progress_ratio = after / capacity
-        # 剩餘需求可行性
-        if remaining_needed == 1:
-            feasibility = 1.0
-        elif remaining_needed == 2:
-            feasibility = 0.65
-        else:  # ==3
-            feasibility = 0.35
-        # 供給比例（越多剩餘越安心，封頂 1.3 以免膨脹）
-        supply_factor = min(1.3, remaining_color_pool / remaining_needed)
-        # 高容量行前期投入微幅加成
-        capacity_scale = 0.85 + 0.15 * (capacity / 5.0)
-        score = self.PREP_FACTOR * progress_ratio * feasibility * supply_factor * capacity_scale
-        return max(score, 0.02) if score > 0 else 0.0
+        ratio = total_color / capacity
+        # 判斷區間
+        eps = 1e-6
+        if ratio < 1 - eps:
+            # 不足：無法完成 → 負向懲罰（缺多少乘多少）
+            score = self.SCARCITY_MISSING_PENALTY * (1 - ratio)
+        elif abs(ratio - 1) <= eps:
+            score = self.SCARCITY_EXACT_BONUS
+        else:
+            over = ratio - 1.0
+            score = self.SCARCITY_EXACT_BONUS * math.exp(-self.SCARCITY_ABUNDANCE_DECAY * over)
+            if score < self.SCARCITY_ABUNDANCE_MIN:
+                score = self.SCARCITY_ABUNDANCE_MIN
+        return score
 
-    # 2. 期望值：行完成（移除立即放置判斷）
+    # 新增：地板懲罰（移除立即放置判斷）
     def h_ev_row(self, state: GameState, move):
         """行完成進展（Row EV）：非線性後段加權 + gap==1 kicker。"""
         is_pattern, player, dest_row, color, column, _ = self._extract_move_context(state, move)
@@ -335,7 +331,7 @@ class MCTS:
         return adjacency
 
     def _aggregate_heuristic(self, state: GameState, move):
-        """以加權後特徵總和作為 rollout 評分（避免單一 raw 尺度支配）。"""
+        """允許加總為負（表示明顯不佳），交由 softmax 平移處理。"""
         total = 0.0
         for w, h in zip(self.weights, self.heuristics):
             try:
@@ -343,7 +339,7 @@ class MCTS:
             except Exception:
                 v = 0.0
             total += w * v
-        return max(total, 0.001)
+        return total
 
     # --- 新增：softmax 權重計算，避免壓死低分手 ---
     def _softmax_weights(self, scores, temperature):
