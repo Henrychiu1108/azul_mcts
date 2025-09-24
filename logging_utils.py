@@ -18,7 +18,7 @@ def reset_move_csv():
 # --- Tile / board rendering helpers ---
 
 def _color_letter(tile_or_color):
-    from azul_game import Color, FirstPlayerMarker  # lazy import to avoid circular at module load
+    from azul_game import Color, FirstPlayerMarker  # lazy import
     if tile_or_color is None:
         return '.'
     if isinstance(tile_or_color, FirstPlayerMarker):
@@ -34,8 +34,7 @@ def _color_letter(tile_or_color):
     return mapping.get(color, '?')
 
 
-def _print_player_board(player, prefix='    '):
-    # Only wall (no pattern lines) for compactness
+def _print_wall_only(player, prefix='    '):
     rows = []
     for r in range(5):
         row = []
@@ -46,6 +45,23 @@ def _print_player_board(player, prefix='    '):
                 row.append('.')
         rows.append(prefix + ' '.join(row))
     return '\n'.join(rows)
+
+
+def _print_pattern_lines(player, prefix='    '):
+    # Each pattern line: show filled tiles then remaining capacity as '.'
+    lines_out = []
+    for r, line in enumerate(player.pattern_lines.lines):
+        cap = r + 1
+        letters = ''.join(_color_letter(t) for t in line)
+        pad = '.' * (cap - len(line))
+        lines_out.append(f"{prefix}L{r}:{letters}{pad}")
+    return '\n'.join(lines_out)
+
+
+def _print_floor(player, prefix='    '):
+    tiles = ''.join(_color_letter(t) for t in player.floor.tiles if t is not None)
+    empties = 7 - sum(1 for t in player.floor.tiles if t is not None)
+    return f"{prefix}F:{tiles}{'.'*empties}"
 
 # --- CSV header handling ---
 
@@ -65,35 +81,47 @@ def _ensure_csv_header(heuristic_names):
             writer.writerow(base_cols + heuristic_names)
     _def_header_written = True
 
-# --- Public logging functions for game_output.txt (no per-move spam) ---
+# --- Public logging functions required ---
 
-def log_round_start(round_number, game, out_stream=None):
-    print(f"=== Round {round_number} Start State ===", file=out_stream or None)
+def log_turn_start(round_number, turn_index, game, out_stream=None):
+    # Factories + center only
+    print(f"[Round {round_number} Turn {turn_index}] Factories", file=out_stream or None)
+    # Factories
+    for i, fac in enumerate(game.factories):
+        letters = ''.join(_color_letter(t) for t in fac.tiles)
+        print(f"  F{i}: {letters}", file=out_stream or None)
+    # Center
+    center_letters = ''.join(_color_letter(t) for t in game.center.tiles)
+    print(f"  C : {center_letters}", file=out_stream or None)
+    print('-', file=out_stream or None)
+
+
+def log_pre_scoring_state(round_number, game, out_stream=None):
+    print(f"=== Round {round_number} Pre-Scoring State ===", file=out_stream or None)
     for pid, player in enumerate(game.players):
-        print(f"Player {pid} Score: {player.score}", file=out_stream or None)
-        print(_print_player_board(player), file=out_stream or None)
+        print(f"Player {pid} Score(before): {player.score}", file=out_stream or None)
+        print(_print_wall_only(player), file=out_stream or None)
+        print(_print_pattern_lines(player), file=out_stream or None)
+        print(_print_floor(player), file=out_stream or None)
         print('-', file=out_stream or None)
 
 
-def log_round_end(round_number, summaries, game, out_stream=None):
-    print(f"=== Round {round_number} End State ===", file=out_stream or None)
-    # summaries: list of (gain, penalty, pre_score, post_score)
+def log_post_round_scores(round_number, summaries, out_stream=None):
+    # summaries: (gain, penalty, pre_score, post_score)
+    print(f"=== Round {round_number} Scores ===", file=out_stream or None)
     for pid, (gain, penalty, pre_score, post_score) in enumerate(summaries):
         net = gain + penalty
         print(f"Player {pid}: +{gain} {penalty} (net {net}) -> {pre_score} -> {post_score}", file=out_stream or None)
-        print(_print_player_board(game.players[pid]), file=out_stream or None)
-        print('-', file=out_stream or None)
+    print('-', file=out_stream or None)
 
 
-def log_final_board(game, out_stream=None):
-    print("=== Final Board State ===", file=out_stream or None)
-    for pid, player in enumerate(game.players):
-        print(f"Player {pid} Board:", file=out_stream or None)
-        print(_print_player_board(player), file=out_stream or None)
-        print(f"Player {pid} Final Score: {player.score}", file=out_stream or None)
-        print('-', file=out_stream or None)
+def log_final_scores(game, out_stream=None):
+    print("=== Final Scores ===", file=out_stream or None)
+    for pid, p in enumerate(game.players):
+        print(f"Player {pid}: {p.score}", file=out_stream or None)
+    print('-', file=out_stream or None)
 
-# --- CSV move logging (still used; per-move textual logging removed from stdout) ---
+# --- CSV move logging ---
 
 def write_move_csv(round_number, turn_index, player, move_info):
     mv = move_info['move']
@@ -113,11 +141,3 @@ def write_move_csv(round_number, turn_index, player, move_info):
         row.append(f"{heur_dict.get(hn,0.0):.4f}")
     with open(MOVES_CSV_PATH, 'a', newline='') as f:
         csv.writer(f).writerow(row)
-
-# Optional legacy function (kept if you want to quickly re-enable per-move text logging)
-
-def log_move_text(round_number, turn_index, current_player, move_info, out_stream=None):
-    mv = move_info['move']
-    total = move_info['total']
-    details = ', '.join(f"{name}={val:.2f}" for name, val in move_info['details'])
-    print(f"[R{round_number} T{turn_index}] P{current_player} {mv} total={total:.3f} | {details}", file=out_stream or None)
