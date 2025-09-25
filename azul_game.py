@@ -342,3 +342,17 @@ class GameState:
 class FirstPlayerMarker:
     pass
 
+# 新增：色數輔助函式，供新版 encoder 使用
+
+def bag_color_counts(state) -> dict:
+    counts = {c: 0 for c in Color}
+    for t in state.bag.tiles:
+        counts[t.color] += 1
+    return counts
+
+def discard_color_counts(state) -> dict:
+    counts = {c: 0 for c in Color}
+    for t in state.discard.tiles:
+        counts[t.color] += 1
+    return counts
+
